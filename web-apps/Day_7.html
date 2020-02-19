@@ -1,0 +1,280 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Day 7</title>
+	<meta name='Generator' content='Zim 0.68'>
+	<style type='text/css'>
+		a          { text-decoration: none      }
+		a:hover    { text-decoration: underline }
+		a:active   { text-decoration: underline }
+		strike     { color: grey                }
+		u          { text-decoration: none;
+					 background-color: yellow   }
+		tt         { color: #2e3436;            }
+		pre        { color: #2e3436;
+					 margin-left: 20px          }
+		h1         { text-decoration: underline;
+					 color: #4e9a06; margin-bottom: 0 }
+		h2         { color: #4e9a06; margin-bottom: 0 }
+		h3         { color: #4e9a06; margin-bottom: 0 }
+		h4         { color: #4e9a06; margin-bottom: 0 }
+		h5         { color: #4e9a06; margin-bottom: 0 }
+		p          { margin-top: 0              }
+		span.zim-tag {
+			color: #ce5c00;
+		}
+		div.zim-object {
+			border-style:solid;
+			border-width:1px;
+		}
+		.checked-box {list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAANOgAADMQBiN+4gQAAAAd0SU1FB9gKGQ8sMEGsKGkAAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAEBUlEQVRIx62V22tdRRTGf7Nn73P2ybntnNOe3NqkPTGgLTVUUZF6QatSLOKTPgqCIqLgQ0H/A1sQQbBYCBb1QfAxiC8tSO1FqHkwJVKtjdTGNraUmObsc9nXmfGh7cGYpM1D5nHWzPetteZb3wg2eB2YqYm4zSadsMtoboiNBH/3TE0awx6j+MRoxoTg/IYRvP19TQrJS0bzhdHGSyKFkLTtjSKwMjyiEz43ynhtP6bdjBCWyFobAf7eT7VhNF/q1FRbjYjmUohlCVPwnB+6FUxMTJipqSmUUhhjEGKd3bMT4ks/Y6oLBK2Yth8hHYtCJXOix7Nf7xLMzc0xOzvLzp078TyPNE3viW3QJPXzhNWbxFFKHCmMhoLn/FHodd48vGfhapdAacXQlkFK5dL6wIUm6fuTZPuvqDQhaMUYYyiVyuQr6rXDexYuAdi3tSv1ZJNs/R/CaszzT+1na88uXFnCEnJVgivBNN8uTJKmHQI/ptOOcXNZzMz9mOqFs90OHpipWcYwlo5P4ebnuOkrvr5wgrH+h3im7y36MzuwRXYZeKha/OhP0EkadFoxQSdGSotedR/+XwMc2XvKdNUFOFqZx6LKZWIiwjgkikNmLp/hm8sH+K1zjFTHXfBYdTi+eJArzXM0GxFxoBDCopLvo/fqEwi1XPkWkGqjFo2TgB1jOYZUKZTS/D1/ncmLh7jon0IbRWoiTi59ymzzJEEQE3cStNZsGxqlfPE57MBbOR8fP3hDGalOO9fq2DlBvmZw8xa2IxACGn6TydlD/O6f5OzSV/zif0cYhLQaEXGkKBbz7Ov/AOlXV1cxgBJRI3fuSTrpTawt18kWIZN1CFuaONI0w0WOXfsI43YIggh/KUSlhqxrMz74AkOZcWBm9QkH+Gw8NDLuITi+m0yzhluSyJzBLcpblUhFxywSRAEtPwQjsKVN30CNh0uvYuOubSHLtN3J0TO1j0pmBNuFbFWRK0gyPRZpktL2I5JQkclKakNlnh54g6ocvevUr/Ai2a7wineEkcJupA3S1Wg0nVZM2E6wbEF5U5G9Q++wI7sfR7h3N8HVNstykBfzH+KJEZwiWD0aIwxCgJ0R1Mu7GXOeJSuK93bZtQIle4D9pUNU5DC5jEsu55AvZakM5NicGyEj8uuz8bUCQgj67QfY671P3vEoeC69gy695U1U7NG7XV0pUwBjDJa1/JJlWWxzHuflzQe5FJ/GsgUVuZ2t8lEkTvfc0aNHb72flBhjVicQQqCUuvM3/M+WDVguWBrMVdDXEGZlBVEUrVCU9d9s5+fnaTQa2PZyPxEIhJaI1EEoZwX4ncynp6fXrmB4eJjR0VFarRbNZnP9P9rt9gohqNVq1Ov1ZbF/AZGev3hLJ2/zAAAAAElFTkSuQmCC)}
+		.xchecked-box {list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAANOgAADMQBiN+4gQAAAAd0SU1FB9gKGQ8bDYnDxEwAAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAEK0lEQVRIx9WVS2hTWRjHf/eR3CY1nbxMH2YiZRQS6qO13YlMVxY3SnVcuNIBFezGpSADLoQqLu1sHJCqdCFSXFpw4YOCSH3BtFqttTNamabX3DS5bfO6uffMoglja3RGcDMHzuac7/z/53++//cd+L8P6VuCPQYZ8ADNgBd4J31DcDcQs+GnHByRocEDv0kfBSjAOlYCs11Q+gpwDegS8LMJ+3QIK0ATzEhV8Odnz5bzw8P4dJ25aJQ/WlvJ1df/K7hSLtOcTNI+Pk69rpMTgqIQhCDvh1/VSpw79+gRrRMTmLZNezLJJsPg+a5dmOEwQlFqg1sWG16/Jv7sGWXDwBACFQjC9HcwIMONKkGp4PGAJGEDS0IQmZlhnWnye3c3eiyGo6qr3WHbrJ+dJf7gAXI6zSIr72T7/fgzmT4FHnTBsgrQBfYvTU0km5vxz86iADnAm0rRPTWFt7cXZccOJJcLAGHb2K9ekT93jmwmwwdAAFpjI6Ntbfxw5879ag7l6o1sr5eHHR3IsRgeQK/M4sQE+YEB7JcvEY6zAj45SWFgAPPxYwzHoQxIkQjTPT0kIxE+Noj8sexFn4/xnh58iQTeSpHkHAdrbIzi0BCOrmNPTpK/eJHM3bt8sCyKQCiR4NWePWSiUZw1+ZLXJm4pFKLhzBlCsRh2RUXacVgeGaF47RrL58+zcP8+RrmMkCQinZ1EL1zAjERqmkH+tLYl1G3bCJw4QUjT0IA0MJfLMX/5MqmHD0nZNiUgtGULG/r7ccXjINWuWbnmqsuFu7sb/4EDNLlcBIEioNs2KUAFGmMxmk6dQm1tRZI+3xBqEkiShBQOox05Ql1nJ26gvuIUAWiKQnj/ftStW5Fk+YuF+NldsbBA4cYN9KdPmaso8Fc62ZJtk7l1C2t0FGdxESHE1xE4hkHh6lX0oSHSpRIewC/LrPf7CSgKNpCamkI/fZr8pUuIZBIcpyaBunahPp1mub+fDyMjGKUSChCsq6Nh717q9u2jbnSU0uAgRrFIwTThyhUCqRS+hgZKLS1fJvDm87SNjZGcnsYUAjcQ8vsJ9/Xh7u1FDgRQN20iks3iDA+zZFmYhQLqzZtsj8WY3L0baY2Sf55ICCKpFHUzM2SEQAJCHg+hY8fQDh5EDgRWDoRC1J88SePRo2geD0XAcBy8b98Sv3ePYDZbbf2rFQjLIphMsmDbaEBQVQkePox26BCSz7e6i4bDrDt+nGYhmBscpFAskheC4Js3bPR4qHphFYEnlcI7P4/jdqNpGu8TCe4oCsXr1z//F2ga3+/cSfTJE0qmSVYIsKzaOZDcbjKyzFIiwfvt21kMBLA07YsetzWNd+3tLLW0sH5igvT8PH9Go/z44kX+E4LGjg7GDYOcy4XlOEgLC//5P/5LCFzxOPLmzWyIx+m6fduu7v0NVGqyTSycKksAAAAASUVORK5CYII=)}
+		.unchecked-box {list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAANOgAADMQBiN+4gQAAAAd0SU1FB9gKGQ8qAt8h3m8AAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAA60lEQVRIx+2VsQqDMBRF70sCLg5OLoKgjk7+lJ/hh+STXBwcnRz8ArMEkrxOFktbaC3tULzTg5e8k5vADXDq70VbobXmvu/hvQczg4heHrJfXxQFuq67blZbMc8zpmlCXddIkgTOuZcBUko45zCOI6y1Nz2xFSEEZFmGOI7fGg4A3nsQEZqmuXOu9jallACAtm3fvmutNaIoAjM/dkBECCF89KCbk4eAb+kEnIAT8EsAM0OIz3hSyrssUvss8t5fg+uIrLXPs0gIgWVZYIyBUurQyYdheO4gz3NUVQVjDNZ1PfSjpWmKsixvehfB9GBZ3NndrgAAAABJRU5ErkJggg==)}
+		.migrated-box {list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAANOgAADMQBiN+4gQAAAAd0SU1FB+AKHREFA8vJSnkAAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAC1klEQVRIx+2VT0hUURTGf/e958w4Tc3TYowMw1GyEgwr1MqsFmbZIrIWQZsWJUjbdoHQpl3Qps0swnCRECQFYkR/TC1iKkqmfzAKTo2Vf8hoRsfR995tkRMT87RRWkUHHhy495zvnvvu933wP/75EKkkEAjIYDCIaZpIKRFCZN0kfX9xcTGtra2/irVUEolECIfDlJeXo+s6hmFkDaCqKoZhEAqFSCaTv60pqcSyLAoLC/F4PEtqDmCaJkIIKisrMybX0sdUVRWA5ubmPzdNjjI1cpXkZC/O1fV03PXgdDqRUtpPIITAsqxsDz0Z/3CZQv8uqo4N4C8/Tp2/DdM0MiZQlvk41OTkI/LW1SGtCVb5drD3eCc71wcA+VcAHA5vDd8+3UGakxiJV7i9pdQevU5T1R35pJ3MV5QW1pf+0kWBheJ2SWua8EQXZXsu4fVVYEz1sEKvof5EuxjoPvzpcRvrdp9C2gGMx6cpOHBmbImMesds7BZubwMVDTfXDnQ3vQfK7AC8wLfExMX5whyQc3q2OEnjGm5vE76SQxsfBLr77a7CNf+n0r/l6sSMtsBSnurckiIILCobAtVZhpF4gZF4jubaymj4Ch/fd380LE7bAnjc0NPxk2yqpmEuwGxF0ag+0k5uTpzZeBeaazvj0We8fXojainsb2xh2BZgbe0gSIllzSIUh63wfQ6dZ/O2fbjcKlOj58jJ3cVENESw5yErc9nf2MLQ4jwQAkV1Lqiq37/cZ9WaahJjF9AcmxiPDhLs7ePe23oOnmUwg2hSShQle96tKDjA2HAniusgo9FxnvY9Jxw7RWzGYy92QghM00x5g53qp9sHmtB58/o2umOI2NwGolMnMYUHIb7aAyiKwsjICLqu2/qBEIKUUAohMaSHSLyBSMoPTINQ6CX5+fn2AEVFRZSUlBCPx4nFYhl3L4RESjF/GEgX3pSj+Xw+/H7/b3U/AEOZFnp7O5+5AAAAAElFTkSuQmCC)}
+		ul {list-style-image: none}
+		/* ul rule needed to reset style for sub-bullets */
+
+		span.insen { color: grey                }
+
+		.pages {
+			max-width: 1000px;
+			 padding-left: 320px;
+		}
+		.menu{
+			float:left; width: 300px;
+		}
+		hr{clear:both;}
+	</style>
+</head>
+<body>
+
+<!-- Header -->
+<div class='header'>
+	[ <a href='./Day_6.html'>Prev</a> ]
+
+	[ <span class='insen'>Index</span> ]
+
+	[ <a href='./Important_Links.html'>Next</a> ]
+</div>
+
+<hr />
+
+<div class="menu">
+<ul>
+<li><a href="./Day_2.html" title="Day 2" class="page">Day 2</a></li>
+<li><a href="./Day_3.html" title="Day 3" class="page">Day 3</a></li>
+<li><a href="./Day_4.html" title="Day 4" class="page">Day 4</a></li>
+<li><a href="./Day_5.html" title="Day 5" class="page">Day 5</a></li>
+<li><a href="./Day_6.html" title="Day 6" class="page">Day 6</a></li>
+<li><b>Day 7</b></li>
+<li><a href="./Important_Links.html" title="Important Links" class="page">Important Links</a></li>
+<li><a href="./Introduction.html" title="Introduction" class="page">Introduction</a></li>
+</ul>
+
+</div>
+
+<!-- Wiki content -->
+
+<div class='pages'>
+	<div class='heading'>
+	<h1>Day 7 <a name='Day 7'></a></h1>
+	</div>
+
+	<div class='content'>
+	<p>
+Created Tuesday 18 February 2020
+</p>
+
+<p>
+Remember, <b>imperative </b>vs <b>declarative.</b> Imperative means we dictate every little step. We program the how. Declarative is only concerned with the what. You tell it to do something and it just does it. You state what you want and let somebody else handle it.
+</p>
+
+<p>
+Our professor saw that some of us used the <b>set</b> function in the homework. He does not like this. One of the powerful things about functional programming is that the value of the function is always the same whenever we give it the same parameters. This is known as referencial transparency. We know exactly what we're gonna get everytime we invoke a function. This is not true if we use <i>set.</i> Set allows us to mutate the value of variables. This makes it so we don't get the same value when providing the same parameters. <b>This is poison! </b>Observe the following function:
+</p>
+
+<div class="zim-object">
+<pre><code class="cpp">// everytime we invoke this function, we're gonna get a different value i.e. myfunct(2)
+int myfunc(int in){
+	static int var;
+	return (in + var);
+}</code></pre>
+</div>
+
+<br>
+
+<p>
+Using set gives us this problem. People use set because they want scheme to behave like an imperative language over declarative. We technically can have scheme act like an imperative language but our professor doesn't want us to even know how to do this. In fact, there are optimization problems with imperative. We need to do computing in parallel. We can't get by with just one core. We use at least two. Many phones come with at least four. Heck, the threadripper makes use of 64 cores. As with a GPU, we can't make it by with just a single core.
+</p>
+
+<h3>Make</h3>
+
+<p>
+Over time, many people have tried to replace make. <i>They have failed.</i> Why did they try though? <i>It can be a horror.</i>
+</p>
+
+<p>
+Even still, make is relatively simple. (What is a resident routine? Look this up.)
+</p>
+
+<p>
+Compiling code can take a while. Back in the day, compiling the linux kernel could take 45 minutes. Nowadays, 4-5 minutes or so. Even still, it's still useful to control the entire process. Make is good for this. Compile and combine small pieces into a finished structure. Make may realize we don't need to recompile something cause the .obj file is still good. Why waste the effort? This speeds things up considerably.
+</p>
+
+<p>
+The thing is, make can execute any command line program. Anything that combines small pieces into large ones. It can execute the copy command, mv, etc. It can be used to install large systems. It has the ability to make decisions such as if/else. If linux, do this. Else mac do that. If windows,crash. I was the only one who laughed lmao.
+</p>
+
+<p>
+Usually people find somebody else's make file and then make it do what they want. <b>For hw, it seems like he'll give us one to work from.</b> He'll give us two separate files, compile them, and put it together to form an executable. For Java, make a jar. C++ people create an exe.
+</p>
+
+<p>
+For make, we have a <b>makefile.</b> It has some simple commands. 
+</p>
+
+<p>
+target: myprog.o (or .exe. Java people use class or whatever)
+</p>
+
+<div class="zim-object">
+<pre><code class="makefile">target: dependencies (files that are needed to construct the target)</code></pre>
+</div>
+
+<p>
+If any of the dependencies are missing, <b>we can't construct target!</b> If one of the dependencies or whatever has changed, we need to reconstruct it. <i>But how do we know if one of them is newer than target?</i> There's a simple way to find out. Just check the date of when it was last modified. Every date has a time stamp of when it was last modified. Last saved. If the time stamps of target and the dependencies are different, we know if there is a change. We can check the time and date. (Yay I got that one right).
+</p>
+
+<p>
+<b>Now then, how do we find the </b><i>recipe?</i> As per legacy code, we use the tab. You know, \t. Followed by a list of programs to be executed. So, like this:
+</p>
+
+<div class="zim-object">
+<pre><code class="makefile">target: dependencies
+	programs to be executed. This is our recipe</code></pre>
+</div>
+
+<p>
+The previous is the easy part. <i>Caution!</i> It is the only easy part. It gets insane :\
+</p>
+
+<p>
+You do not want to ever accept a make default if you can avoid it. It's gonna take some care... You don't want to let a blender pick the speed for example. The blender speed is always wrong. Make defaults aren't always wrong but it can be.
+</p>
+
+<p>
+We can even substitute strings which is nice.
+</p>
+
+<p>
+There are also some other gimmics. One of which is called a <i>phony target. </i>This is a target that has <b>no dependencies!</b> How can we construct it if there's nothing to build it from? Make knows though. It knows to just <b>DO IT!</b> It has no dependencies so just execute the recipe without further question!
+</p>
+
+<div class="zim-object">
+<pre><code class="makefile">phony:
+	DO IT!</code></pre>
+</div>
+
+<br>
+
+<p>
+There's also <b>clean.</b> It gets rid of all the junk that's left over such as a bunch of object or class files (C++ and Java respectively). We want everything cleaned up. We make it a <i>phony target</i> which means only the recipe is executed.
+</p>
+
+<div class="zim-object">
+<pre><code class="makefile">clean:
+	takes out the garbage</code></pre>
+</div>
+
+<br>
+
+<p>
+Warning, the use of <b>clean</b> is so common that people think it's a keyword. <b>IT ISN'T! CLEAN IS A LABEL THAT WE JUST SO HAPPEN TO COMMONLY USE! WE COULD HAVE CALLED IT GEORGE OR SOMETHING. DO NOT BELIEVE 'CLEAN' IS A KEYWORD!</b>
+</p>
+
+<p>
+Our professor also wants to make it clear that we will be using make at some point. We need to know of how a makefile works. At some point, we may even have to use its attempts at replacing it such as... <i>maven...</i> :'( I hate maven so much.
+</p>
+
+<p>
+Remember, make helps to reduce compile time on large projects. We can use it to control which version of something we have. We could even use it to maintain databases if we're careful about it. So long as we have a large process made out of small pieces, make is great at controlling that process.
+</p>
+
+<p>
+IBM's JCL is the only thing that is close to replacing make. It could execute anything and make decisions. However, it couldn't work off of timestamps...
+</p>
+
+<p>
+Make is used heavily such as for installation or controlling software construction of larger programs. Heck, it's even good for smaller programs to make sure it's correctly constructed to avoid typing.
+</p>
+
+<p>
+<b>By the way! </b>The makefile doesn't have to be named <i>makefile.</i> There's a command that lets you call it something else. However, makefile is the default name and you don't have to type it on the command line. So, it's just easier to leave it at the default.
+</p>
+
+<h3>Group Project</h3>
+
+<p>
+He's lecturing us to make sure we always have something to show. Somebody must always be ready to show. There is a free version of the IEEE you can use btw. Don't use the paid one.
+</p>
+
+<h3>On Submitting HW</h3>
+
+<br>
+
+<p>
+Our professor is also upset about how some people turned in the homework. You can't just hand in the source code. Provide the output too! Evidence that it worked. He's not just gonna look at it and automatically know if it works. <b>No execution = no credit. </b>Thankfully, I gave him both. He's ranting about this now and putting on a Russian accent. I am laughing.
+</p>
+
+<p>
+He's giving an example about a program that would crash if you enter nothing. Clearly, it has not been tested. Haha. A customer wants a working programming and <i>not</i> just the source code.
+</p>
+
+<p>
+Also, make sure the source code is readable. Don't make it too small.
+</p>
+
+<p>
+<b>You got full credit on the first HW. Great job!</b>
+</p>
+
+<h3>Homework</h3>
+
+<p>
+Read sections 1-5 of the make documentation on gnu.org. He wants us to learn about make and also the kernel. He'll give extra details on this upcoming Thursday.
+</p>
+
+<p>
+We are also gonna get another recursion assignment. This one is due next Tuesday. The make assignment is due next Thursday.
+</p>
+
+<p>
+<b>SINCE I AM WORKING IN C++, PRODUCE AN .EXE FOR THE MAKE FILE. </b>Java people will produce a jar. No wildcards. Do everything on the command line.
+</p>
+
+<p>
+<b>Here is the recursion assignment:</b><br>
+Reverse a list. <b>Do not use the build in reverse function! </b>We must write our own. To do this, we may only use <i>car, cdr, cons, </i>and <i>append.</i> We may only use those four functions! We can do this in a single statement even! I suggest doing that. <b>THIS IS DUE TUESDAY NEXT WEEK</b>
+</p>
+
+<h3>Exam</h3>
+
+<p>
+An exam is coming! Don't forget it. Week of March 2nd or 9th. Most likely 2nd.
+</p>
+
+	</div>
+
+	<br />
+
+	<div class='page-footer'>
+
+	</div>
+
+	
+
+</div>
+
+</body>
+</html>
