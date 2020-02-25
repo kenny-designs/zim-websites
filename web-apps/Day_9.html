@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Day 4</title>
+	<title>Day 9</title>
 	<meta name='Generator' content='Zim 0.68'>
 	<style type='text/css'>
 		a          { text-decoration: none      }
@@ -51,11 +51,11 @@
 
 <!-- Header -->
 <div class='header'>
-	[ <a href='./Day_3.html'>Prev</a> ]
+	[ <a href='./Day_8.html'>Prev</a> ]
 
 	[ <span class='insen'>Index</span> ]
 
-	[ <a href='./Day_5.html'>Next</a> ]
+	[ <a href='./Important_Links.html'>Next</a> ]
 </div>
 
 <hr />
@@ -64,12 +64,12 @@
 <ul>
 <li><a href="./Day_2.html" title="Day 2" class="page">Day 2</a></li>
 <li><a href="./Day_3.html" title="Day 3" class="page">Day 3</a></li>
-<li><b>Day 4</b></li>
+<li><a href="./Day_4.html" title="Day 4" class="page">Day 4</a></li>
 <li><a href="./Day_5.html" title="Day 5" class="page">Day 5</a></li>
 <li><a href="./Day_6.html" title="Day 6" class="page">Day 6</a></li>
 <li><a href="./Day_7.html" title="Day 7" class="page">Day 7</a></li>
 <li><a href="./Day_8.html" title="Day 8" class="page">Day 8</a></li>
-<li><a href="./Day_9.html" title="Day 9" class="page">Day 9</a></li>
+<li><b>Day 9</b></li>
 <li><a href="./Important_Links.html" title="Important Links" class="page">Important Links</a></li>
 <li><a href="./Introduction.html" title="Introduction" class="page">Introduction</a></li>
 </ul>
@@ -80,72 +80,103 @@
 
 <div class='pages'>
 	<div class='heading'>
-	<h1>Day 4 <a name='Day 4'></a></h1>
+	<h1>Day 9 <a name='Day 9'></a></h1>
 	</div>
 
 	<div class='content'>
 	<p>
-Created Thursday 06 February 2020
+Created Tuesday 25 February 2020
 </p>
 
 <p>
-A <b>floating point number</b> is an approximation of a real floating point number. With pencil an paper, we know that 1/3 = 0.3333... We as humans can understand that this goes on forever. We know there is a tiny error in there. However, in a floating point number we have 0.333333. And that's it. It doesn't go on forever.
+He's starting the class by telling us how impotant it is to learn to read manuals. Also, when we learn a new programming language it shouldn't take us more than 2 weeks to learn to right competent code. Not necessarily good or elegant but it works.
 </p>
 
 <p>
-Now then, imagine this: the source code can be perfectly correct. The machine code matches the source code. But the results are still wrong! Why? The architecture of the two machines handle the floating points differently!
+Aside: Program titled: as (assembly). Screwed up syntax he says but you can learn it. He recommends we all know how to learn a new language without taking a long course on it.
 </p>
 
 <p>
-<b>It is a mistake to believe that you can get accurate results in business program with floating points numbers.</b> Computer floating point numbers are approximations of real numbers. It's hard to represent in binary. In business programs, you can't get accurate results. People get away with it because the errors are so small no one notices. At one bank, they even stated that if the error was under $5000 then ignore it. That means some programmer could introduce some error and have that excess money come to them!
+He just gave us a handout titled, "Report on the Algorithmic Language AGLGOL 60."
+</p>
+
+<h3>Reverse List HW Review</h3>
+
+<p>
+He's going over the homework now. In particular, the issue with declarative languages. They work by using a two part list.
+</p>
+
+<div class="zim-object">
+<pre><code class="scheme">(define myrev (lambda (x)(if (eq? (cdr x)(list) 
+                          x 
+                          (append (myrev(cdr x))(list(car x)))))))
+cons</code></pre>
+</div>
+
+<br>
+
+<p>
+The cons takes a lot of time which is unfortunate. 
 </p>
 
 <p>
-70% of the countries business is processed by <b>kobol</b> code. No one uses it though! It's lacking programmers. Kobol gets exact results when working with decimals (it is native to kobol. Decimal numbers are native. In Java/C++, they use floating point numbers via binary. You can't get an exact representation for many floating point decimal numbers. Anything to the right of the decimal such as dollars and cents. It gets messier and messier. PL1 and Kobol handle decimals natively). That's why it's still used. The language itself is good but people are mistakenly believing that it's dead. Managers quit advertising today due to lack of people knowing how to use it. You'll have to contact them yourself to inquire for work with Kobol.
+Here is my solution:
+</p>
+<div class="zim-object">
+<pre><code class="scheme">(define rev (lambda (l) (if (eq? l (list)) l (append (rev (cdr l)) (list (car l))))))</code></pre>
+</div>
+
+<br>
+
+<p>
+The stupid approach is to use a stack. He's not even gonna write the code at this should be fairly clear. <i>Oh no he's writing it. The poor soul...</i><br>
+The way it works is to have two args. An input list and an output one. 
+</p>
+
+<div class="zim-object">
+<pre><code class="scheme">; I don't believe this works as he wrote it.
+(define myrev (lambda(in out)
+				(if (eq? (cdr in)(list))(cons(car x) out))))
+				
+(myrev x (list))</code></pre>
+</div>
+
+<br>
+
+<h3>Optimization Advice</h3>
+
+<p>
+Don't worry about speed when first writing code. Just get the damn thing to work. He says this espescially applies to a big project. You can speed it up later. Just get it working.
+</p>
+
+<h3>HW For Thursday</h3>
+
+<p>
+Bring in the three questions. An honest to god one. What you like to see on an exam. A question you wouldn' tlike to see on an exam. And then one you didn't understand or what to know more about. <b>We will be the ones answering the questions!</b>
 </p>
 
 <p>
-The big numbers classes such as in Java have to employ all sorts of rounding techniques to make them work.
+<b>Forbidden subjects</b>: Professor Gross and the Exam. Don't ask about how many questions there will be (he says 632 if you ask). Sinan gets 1 question.
+</p>
+
+<h3>Seltzer Making Machine</h3>
+
+<p>
+He's making fun of Target now.
 </p>
 
 <p>
-Also, don't multiply large numbers by small ones!
+Now he's talking about buying paper, paper towels, and chicken from costco.
+</p>
+
+<h3>Be Prepared to shared</h3>
+
+<p>
+Oof. Couldn't connect my laptop to the monitor. He got it up at finally but he told us to sit down. <b>Have your stuff ready to show whenever you are asked.</b>
 </p>
 
 <p>
-<b>Never ever compare floating point numbers for equality! </b>Why is it possible to get a false on this even if float A and B represent the same number? For example, 1.000000 and 0.999999 are very close but still not equal! What's special about these two numbers? <b>They represent exactly the same real number!</b> That number is 1 of course. In fact, in floating pointer arithmetic +0 != -0. Remember from architecture class, you can represent 0 in both positive and negative!
-</p>
-
-<p>
-Looks at this:<br>
-+12345.00000<br>
-  00000.12345<br>
-________________<br>
-  12345.12345
-</p>
-
-<p>
-The above has 10 digits of precision. How many digits of these are reliable? <b>NONE!</b> You can't trust any of them.
-</p>
-
-<p>
-Many books recommend to always use double. Is this good advice? <b>NO!</b> What if we only have 41bytes of ram? Double takes up too much space! Floating point takes up have the space. Keeping in mind resource ussage is very important.
-</p>
-
-<p>
-All operations on 64bit linux has slowed down. Why? Likely because the programmers decide that this is a good excuse to spam double variables and taking up tons of memory. Regardless of the actual data on this, the main idea is that <b>be wary of resource usage.</b>
-</p>
-
-<p>
-The <b>cloud </b>used to be called a <b>time sharing system</b> by the way. You probably don't need to memorize this but you never know. 
-</p>
-
-<p>
-I am group 1 specs.
-</p>
-
-<p>
-There is an IEEE specification on how to write documents.
+Put phaser in the repo
 </p>
 
 	</div>

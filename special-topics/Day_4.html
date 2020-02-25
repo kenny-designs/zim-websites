@@ -55,23 +55,17 @@
 
 	[ <span class='insen'>Index</span> ]
 
-	[ <a href='./Day_5.html'>Next</a> ]
+	[ <span class='insen'>Next</span> ]
 </div>
 
 <hr />
 
 <div class="menu">
 <ul>
+<li><a href="./Day_1.html" title="Day 1" class="page">Day 1</a></li>
 <li><a href="./Day_2.html" title="Day 2" class="page">Day 2</a></li>
 <li><a href="./Day_3.html" title="Day 3" class="page">Day 3</a></li>
 <li><b>Day 4</b></li>
-<li><a href="./Day_5.html" title="Day 5" class="page">Day 5</a></li>
-<li><a href="./Day_6.html" title="Day 6" class="page">Day 6</a></li>
-<li><a href="./Day_7.html" title="Day 7" class="page">Day 7</a></li>
-<li><a href="./Day_8.html" title="Day 8" class="page">Day 8</a></li>
-<li><a href="./Day_9.html" title="Day 9" class="page">Day 9</a></li>
-<li><a href="./Important_Links.html" title="Important Links" class="page">Important Links</a></li>
-<li><a href="./Introduction.html" title="Introduction" class="page">Introduction</a></li>
 </ul>
 
 </div>
@@ -85,67 +79,93 @@
 
 	<div class='content'>
 	<p>
-Created Thursday 06 February 2020
+Created Sunday 23 February 2020
 </p>
 
 <p>
-A <b>floating point number</b> is an approximation of a real floating point number. With pencil an paper, we know that 1/3 = 0.3333... We as humans can understand that this goes on forever. We know there is a tiny error in there. However, in a floating point number we have 0.333333. And that's it. It doesn't go on forever.
+Second exam will be similar. More code though.
 </p>
 
 <p>
-Now then, imagine this: the source code can be perfectly correct. The machine code matches the source code. But the results are still wrong! Why? The architecture of the two machines handle the floating points differently!
+We're moving on to JavaScript now.
 </p>
 
 <p>
-<b>It is a mistake to believe that you can get accurate results in business program with floating points numbers.</b> Computer floating point numbers are approximations of real numbers. It's hard to represent in binary. In business programs, you can't get accurate results. People get away with it because the errors are so small no one notices. At one bank, they even stated that if the error was under $5000 then ignore it. That means some programmer could introduce some error and have that excess money come to them!
+Bootstrap time.
 </p>
 
 <p>
-70% of the countries business is processed by <b>kobol</b> code. No one uses it though! It's lacking programmers. Kobol gets exact results when working with decimals (it is native to kobol. Decimal numbers are native. In Java/C++, they use floating point numbers via binary. You can't get an exact representation for many floating point decimal numbers. Anything to the right of the decimal such as dollars and cents. It gets messier and messier. PL1 and Kobol handle decimals natively). That's why it's still used. The language itself is good but people are mistakenly believing that it's dead. Managers quit advertising today due to lack of people knowing how to use it. You'll have to contact them yourself to inquire for work with Kobol.
+<b>MVC</b><br>
+Model<br>
+View<br>
+Controller
 </p>
 
 <p>
-The big numbers classes such as in Java have to employ all sorts of rounding techniques to make them work.
+MVC is a design pattern that focuses on separating out logic. 
 </p>
 
 <p>
-Also, don't multiply large numbers by small ones!
+<b>Framework</b>
 </p>
 
 <p>
-<b>Never ever compare floating point numbers for equality! </b>Why is it possible to get a false on this even if float A and B represent the same number? For example, 1.000000 and 0.999999 are very close but still not equal! What's special about these two numbers? <b>They represent exactly the same real number!</b> That number is 1 of course. In fact, in floating pointer arithmetic +0 != -0. Remember from architecture class, you can represent 0 in both positive and negative!
+<b>SS/Bootstrap</b>
 </p>
 
 <p>
-Looks at this:<br>
-+12345.00000<br>
-  00000.12345<br>
-________________<br>
-  12345.12345
+<b>Framework - </b>a platform for developing software applications. Does the groundwork. Basic tools.
 </p>
 
 <p>
-The above has 10 digits of precision. How many digits of these are reliable? <b>NONE!</b> You can't trust any of them.
+Frameworks rid us of having to rewrite the same tools and duplicating the same file structure over and over again. A framework gives us a starting point to work from. Perhaps a folder for models, for controllers, and even views. It may code with code to handle requests, routes, rendering a set style, etc. The key thing to note here is that we often do the same things over and over again. A framework takes care of this busywork.
 </p>
 
 <p>
-Many books recommend to always use double. Is this good advice? <b>NO!</b> What if we only have 41bytes of ram? Double takes up too much space! Floating point takes up have the space. Keeping in mind resource ussage is very important.
+<b>Ruby on rails - </b>For our final project, we may use this. I'm assuming for server-side scripting. I personally will stick with Node.js and Express.
 </p>
 
 <p>
-All operations on 64bit linux has slowed down. Why? Likely because the programmers decide that this is a good excuse to spam double variables and taking up tons of memory. Regardless of the actual data on this, the main idea is that <b>be wary of resource usage.</b>
+Example structure we may have in a big project:<br>
+<ul>
+<li>index</li>
+<li>profile
+<ul>
+<li>id</li>
+<li>username
+<ul>
+<li>names</li>
+</ul></li>
+</ul></li>
+</ul>
 </p>
 
 <p>
-The <b>cloud </b>used to be called a <b>time sharing system</b> by the way. You probably don't need to memorize this but you never know. 
+We can then have functions that are a part of the controller (routes) to make changes to these various files and whatnot.<br>
+In something like <b>Ruby on Rails, </b>we have a way to make it easy to access these various routes and whatnot. We can use the keyword <i>resources</i> and that'll connect it. Much simpler!
 </p>
 
 <p>
-I am group 1 specs.
+<b>Bootstrap </b>is a framework for to help us with CSS.
 </p>
 
 <p>
-There is an IEEE specification on how to write documents.
+download vs link. <b>CDN </b>is a content delivery network. CDN can be a lot faster espescially because you aren't supplying the files from your server. CDN servers are typically pretty fast. However, downloading the files means you can have them even when offline.
+</p>
+
+<p>
+<b>Library vs Framework</b><br>
+Less rules = more likely to be a library. A library is like a box of tools that we can make use of however we like. A framework is much more structured though. It has more rules. You need to abide by these rules more closely. It helps to reduce the work we need to do but the reason there's less work is because the framework is optimized to perform a certain task. If we fight against it, it'll be a bit difficult.
+</p>
+
+<p>
+In a library, we can call the code however we wish. A framework on the other hand forces us to abide by rules. The framework is actually calling to our code. A library has us call it. JQuery is a library cause we can do whatever we want. React is gonna force us to do things a certain way though like make use of components and JSX. 
+</p>
+
+<h3>Bootstrap HW?</h3>
+
+<p>
+Look up GET and POST requests.
 </p>
 
 	</div>
