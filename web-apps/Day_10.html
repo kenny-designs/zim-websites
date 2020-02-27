@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Day 4</title>
+	<title>Day 10</title>
 	<meta name='Generator' content='Zim 0.68'>
 	<style type='text/css'>
 		a          { text-decoration: none      }
@@ -51,11 +51,11 @@
 
 <!-- Header -->
 <div class='header'>
-	[ <a href='./Day_3.html'>Prev</a> ]
+	[ <a href='./Day_9.html'>Prev</a> ]
 
 	[ <span class='insen'>Index</span> ]
 
-	[ <a href='./Day_5.html'>Next</a> ]
+	[ <a href='./Important_Links.html'>Next</a> ]
 </div>
 
 <hr />
@@ -64,13 +64,13 @@
 <ul>
 <li><a href="./Day_2.html" title="Day 2" class="page">Day 2</a></li>
 <li><a href="./Day_3.html" title="Day 3" class="page">Day 3</a></li>
-<li><b>Day 4</b></li>
+<li><a href="./Day_4.html" title="Day 4" class="page">Day 4</a></li>
 <li><a href="./Day_5.html" title="Day 5" class="page">Day 5</a></li>
 <li><a href="./Day_6.html" title="Day 6" class="page">Day 6</a></li>
 <li><a href="./Day_7.html" title="Day 7" class="page">Day 7</a></li>
 <li><a href="./Day_8.html" title="Day 8" class="page">Day 8</a></li>
 <li><a href="./Day_9.html" title="Day 9" class="page">Day 9</a></li>
-<li><a href="./Day_10.html" title="Day 10" class="page">Day 10</a></li>
+<li><b>Day 10</b></li>
 <li><a href="./Important_Links.html" title="Important Links" class="page">Important Links</a></li>
 <li><a href="./Introduction.html" title="Introduction" class="page">Introduction</a></li>
 </ul>
@@ -81,72 +81,170 @@
 
 <div class='pages'>
 	<div class='heading'>
-	<h1>Day 4 <a name='Day 4'></a></h1>
+	<h1>Day 10 <a name='Day 10'></a></h1>
 	</div>
 
 	<div class='content'>
 	<p>
-Created Thursday 06 February 2020
+Created Thursday 27 February 2020
+</p>
+
+<h3>Review Day</h3>
+
+<p>
+Today is a review day.
 </p>
 
 <p>
-A <b>floating point number</b> is an approximation of a real floating point number. With pencil an paper, we know that 1/3 = 0.3333... We as humans can understand that this goes on forever. We know there is a tiny error in there. However, in a floating point number we have 0.333333. And that's it. It doesn't go on forever.
+<b>What was the therac-25 used for?</b> Computerized radiation therapy. Not simply x-rays or proton beams. <br>
+<b>What kind of machine was it?</b> Linear accelerator. That is the kind of machine it was. It could be used to generate various kinds of radiation for therapy.
 </p>
 
 <p>
-Now then, imagine this: the source code can be perfectly correct. The machine code matches the source code. But the results are still wrong! Why? The architecture of the two machines handle the floating points differently!
+<b>What was Algol-60? </b>It was intended as an algorithmic language. However, that doesn't answer the question. What is Algol-60? (He wants us to find the answer. He doesn't want to answer it). A language for comunicating algorithms was one purpose for it but what else? The boros(?) corporation used it for a rather oddball application but it worked.
 </p>
 
 <p>
-<b>It is a mistake to believe that you can get accurate results in business program with floating points numbers.</b> Computer floating point numbers are approximations of real numbers. It's hard to represent in binary. In business programs, you can't get accurate results. People get away with it because the errors are so small no one notices. At one bank, they even stated that if the error was under $5000 then ignore it. That means some programmer could introduce some error and have that excess money come to them!
+<b>He says he doesn't want us to write a program on the exam(?)</b>
 </p>
 
 <p>
-70% of the countries business is processed by <b>kobol</b> code. No one uses it though! It's lacking programmers. Kobol gets exact results when working with decimals (it is native to kobol. Decimal numbers are native. In Java/C++, they use floating point numbers via binary. You can't get an exact representation for many floating point decimal numbers. Anything to the right of the decimal such as dollars and cents. It gets messier and messier. PL1 and Kobol handle decimals natively). That's why it's still used. The language itself is good but people are mistakenly believing that it's dead. Managers quit advertising today due to lack of people knowing how to use it. You'll have to contact them yourself to inquire for work with Kobol.
+<b>Know how to write a scheme program that prints each element of a list a specified number of times. </b>We know we're gonna have to use recurssion
 </p>
 
 <p>
-The big numbers classes such as in Java have to employ all sorts of rounding techniques to make them work.
+<b>Questions of recursion:</b><br>
+<ul>
+<li>Are we there yet? (When n is zero and we are done with the list</li>
+</ul>
+</p>
+
+<div class="zim-object">
+<pre><code class="scheme">; my solution is to have two functions
+; one for iterating through the list
+; and another for printing n number of times
+
+; iterate over the list and feed into print-n-times
+(define print-list-elements-n-times (lambda)(myList n) ())
+
+; print given element n times
+(define print-n-times (lambda)(elm n) ())</code></pre>
+</div>
+
+<br>
+
+<p>
+<b>How do you create a makefile? </b>Use a text editor. make files consist of rules. target, dependencies, and the recipe
 </p>
 
 <p>
-Also, don't multiply large numbers by small ones!
+<b>Under what circumstances would you use cobol?</b> Business applications. It natively works with decimal numbers.
 </p>
 
 <p>
-<b>Never ever compare floating point numbers for equality! </b>Why is it possible to get a false on this even if float A and B represent the same number? For example, 1.000000 and 0.999999 are very close but still not equal! What's special about these two numbers? <b>They represent exactly the same real number!</b> That number is 1 of course. In fact, in floating pointer arithmetic +0 != -0. Remember from architecture class, you can represent 0 in both positive and negative!
+<b>Where is fortran a language of choice? </b>For numerical computation (matrices but that goes under numerical computation). Where else would you use it (say, over cobol)? Fortran has <i>native complex arithmetic.</i>
 </p>
 
 <p>
-Looks at this:<br>
-+12345.00000<br>
-  00000.12345<br>
-________________<br>
-  12345.12345
+<b>Where is C the language of choice? </b>When you need to manage memory. What kinda of program would you expect to be responsible for a lot of memory managment? Operating Systems(?). C was invented specifically for OPs systems. It needed to be small and portable to go on a lot of machine (it is relatively easily ported from machine to machine).
 </p>
 
 <p>
-The above has 10 digits of precision. How many digits of these are reliable? <b>NONE!</b> You can't trust any of them.
+<b>Why use subversion over git? </b>When you want full control over your repo (this is one possibility but not strong enough). Under what circumstances would you use git? <i>When you have unreliable communication.</i> Subversion does very well when you have reliable communication but not so when you don't.
 </p>
 
 <p>
-Many books recommend to always use double. Is this good advice? <b>NO!</b> What if we only have 41bytes of ram? Double takes up too much space! Floating point takes up have the space. Keeping in mind resource ussage is very important.
+<b>git = good for when you have unreliable communication</b><br>
+<b>svn = good for when you have reliable communication</b>
 </p>
 
 <p>
-All operations on 64bit linux has slowed down. Why? Likely because the programmers decide that this is a good excuse to spam double variables and taking up tons of memory. Regardless of the actual data on this, the main idea is that <b>be wary of resource usage.</b>
+<b>What's the next step after determining what the problem is? </b>Solve it then code it. <i>These are two separate steps. </i>Be certain to specify this. You solve and then you program it.
 </p>
 
 <p>
-The <b>cloud </b>used to be called a <b>time sharing system</b> by the way. You probably don't need to memorize this but you never know. 
+<b>What's a class? (in the context of OOP?) </b>It is a blueprint (a specification) for an object.
 </p>
 
 <p>
-I am group 1 specs.
+<b>What is global data? </b>Only way to define this with an example (use java or c++). What is an element of global data? <b>Data that can be accessed anywhere in the object. </b>Fortran is guilty of this. Has something called <i>common storage </i>that is accessible throughout the entire program.
 </p>
 
 <p>
-There is an IEEE specification on how to write documents.
+<b>What's an instance of a class? </b>An object. An instance of what is specified by the class. Remember, do <i>not</i> mix these up! Class is an entry in a catalogue. Object is what you order from an entry in the catalogue.
+</p>
+
+<p>
+<b>Why are global variables poison? </b>If there is an error, it can be hard to find because it can come from any method. Therefore, it is poison.
+</p>
+
+<p>
+<b>What is the difference between decimal and floating point arithmetic and why is floating point treated as inaccurate? </b>floating point is <i>only an approximation.</i> It can be very close but it's still an approximation. Error is effectively built in.
+</p>
+
+<p>
+<b>What is the difference between imperative and declarative programming? </b>Imperative we have to tell the machine how to do something. Declarative we tell the machine what we want.
+</p>
+
+<p>
+<b>What is the definition of a function? </b>In <i>scheme</i>, it is a set of arguments together with a rule for manipulating those arguments to obtain a simpler value. <i>However, this varies widely within the context such as in calculus.</i>
+</p>
+
+<p>
+<b>What is BNF?  (Backus-Nauer Form) </b>It is a language (technically not itself a programming language) for specification of context-free grammars, often used to describe the syntax of languages used in computing, such as computer programming languages, document formats, instruction sets, and communication protocols (partly his words and also a definition I found online).
+</p>
+
+<p>
+<b>What are the components of a scheme list? </b>There are two. Head and tail.
+</p>
+
+<p>
+<b>Advantage of using recursion of loops such as while or for? </b>Recursive functions can be easier to conceptualize (understand). <i>Sometimes could be quickly than a for-loop. </i>It's not always slower than a for loop or take up more memory. This isn't always the case. It'll be at least as fast as a for-loop.
+</p>
+
+<p>
+<b>What does define do in scheme? </b>It binds names to values.
+</p>
+
+<p>
+<b>What were some errors in the therac-25? </b>There was a performance issue. (also, there was a race condition if you were to enter information too quickly) If the machine were faster, it would work properly. It was less a software error and more of a performance error. There was, however, <i>one absolutely clear software error.</i> The answer is <b>there was an arithmetic overflow. </b>What happens if you increment a byte of size 256bits by 256 times? <i>It overflows!</i> 
+</p>
+
+<p>
+<b>What is the purpose of making a trunk in subversion? </b>It is merely a directory. You create directories to keep some order to your repository.
+</p>
+
+<p>
+<b>What is the fundamental difference between git and subversion? </b>This is not the communication answer from before (although git was designed to help with teams that lack in communication). There is one huge difference between the two that makes everything else work. What is that big difference? (He says our silence says says we don't actually know what a git repo is despite using it so much). <b>Git is distributed and subversion is centralized. </b>Subversions repo is monolithic.
+</p>
+
+<p>
+<b>In scheme, what is car and cdr? </b>car is the head and cdr is the tail which is an element.
+</p>
+
+<p>
+<b>In scheme, must all elements of the list be of the same type? </b>The answer is no. They don't have to be.
+</p>
+
+<p>
+<b>What command is used to execute a make program? </b>make. 
+</p>
+
+<p>
+<b>What is one reason RCS was superseded by CVS? </b>The amount of disc space became too much. RCS copied files repeatedly. 
+</p>
+
+<p>
+<b>What does append do in scheme? </b>Combines two lists by adding to the right side of the list. Works with two lists.<br>
+<b>What about cons?</b> Puts an element at the head of a list. At the left end. Cons works on an element and a list.
+</p>
+
+<p>
+<b>How many people were killed by therac-25? </b>Six. The number is actually higher Gross' physician says but they didn't report it.
+</p>
+
+<p>
+<b>When do we use make (what is the general purpose of make?) </b>It has an overarching single purpose that extends beyond programming alone. We use it to construct large things from small ones.
 </p>
 
 	</div>
