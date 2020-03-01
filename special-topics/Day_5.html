@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Day 2</title>
+	<title>Day 5</title>
 	<meta name='Generator' content='Zim 0.68'>
 	<style type='text/css'>
 		a          { text-decoration: none      }
@@ -51,11 +51,11 @@
 
 <!-- Header -->
 <div class='header'>
-	[ <a href='./Day_1.html'>Prev</a> ]
+	[ <a href='./Day_4.html'>Prev</a> ]
 
 	[ <span class='insen'>Index</span> ]
 
-	[ <a href='./Day_3.html'>Next</a> ]
+	[ <span class='insen'>Next</span> ]
 </div>
 
 <hr />
@@ -63,10 +63,10 @@
 <div class="menu">
 <ul>
 <li><a href="./Day_1.html" title="Day 1" class="page">Day 1</a></li>
-<li><b>Day 2</b></li>
+<li><a href="./Day_2.html" title="Day 2" class="page">Day 2</a></li>
 <li><a href="./Day_3.html" title="Day 3" class="page">Day 3</a></li>
 <li><a href="./Day_4.html" title="Day 4" class="page">Day 4</a></li>
-<li><a href="./Day_5.html" title="Day 5" class="page">Day 5</a></li>
+<li><b>Day 5</b></li>
 </ul>
 
 </div>
@@ -75,227 +75,128 @@
 
 <div class='pages'>
 	<div class='heading'>
-	<h1>Day 2 <a name='Day 2'></a></h1>
+	<h1>Day 5 <a name='Day 5'></a></h1>
 	</div>
 
 	<div class='content'>
 	<p>
-Created Sunday 09 February 2020
+Created Sunday 01 March 2020
 </p>
 
 <p>
-<b>Dynamic </b>websites vs <b>Static</b> websites.
+Today is a JavaScript day!
 </p>
 
 <p>
-<b>Dynamic: </b>Much more dynamic. Data driven. More functionality. LinkedIn, Facebook, etc. Even a simple form. HTML5 Games would be static unless we make it more data driven.<br>
-<b>Static:</b> It's static. Not much changes. You get the site and that's it.
-</p>
-
-<p>
-<b>Static Site Pros</b><br>
-eariser to maintain<br>
-easier to create<br>
-<b>Static Site Cons</b><br>
-limitations
-</p>
-
-<p>
-<b>Dynamic Site Pros</b><br>
+Facebook, twitter, tumblr, etc. What do they all have in common?<br>
 <ul>
-<li>work with more data</li>
-<li>functionalities</li>
+<li>Profile pictures</li>
+<li>Posts</li>
+<li>Messages</li>
+<li>Likes</li>
+<li>Etc.</li>
 </ul>
 </p>
 
 <p>
-<b>Dynamic Site Cons</b><br>
+Whenever we click on something like a heart on tumblr, it fires off an event. It may turn red, notify the server that someone liked the post, a counter goes up related to the heart, etc. 
+</p>
+
+<p>
+For today, we're gonna work on selectors with our JavaScript code.
+</p>
+
+<p>
+Think of each object in the DOM (document object model) as something that we can select. <br>
+What is the DOM?<br>
 <ul>
-<li>harder to maintain</li>
-<li>requires more processing</li>
+<li>Document is like a file. In DOM, it is a HTML file. Each element is something that you can access. They are objects we can manipulate. We can do this with javascript</li>
+<li>Object. Each element in the DOM is an object we can manipulate (object being the tags in the HTML)</li>
+<li>Model. </li>
 </ul>
 </p>
 
 <p>
-<b>Client: </b>The web browser. The end user.<br>
-<b>Server: </b>The one serving us the website. Database.
+<b>JavaScript is an Object Oriented Programming langue (OOP for short)</b><br>
+Use let and const. <b>No</b> var due to scoping issues. Refer to the homework at the bottom of the page for more info.<br>
+For loops and while loops are there as we've always known them (JavaScript could be refered to as a <i>C styled language due to its resemblance </i>).<br>
+We also have arrays. <br>
+What if we want to change an element in a table? We can access it by index to change it. We can do this via the selector. This is where arrays would come in.
 </p>
 
 <p>
-The <b>client server model</b> is simple. Say you are calling someone on the phone. The phone is the client, the server is your friend, and if your friend picks up then the server responds. Otherwise, if they don't then it failed. Once again, the <b>phone</b> is the clientand the <b>friend</b> is the server that's getting the request from the phone ie client.
+What is the selector called? We have an object called <b>document</b> and we can select elements in the DOM with it via the <i>query selector.</i>
 </p>
 
 <p>
-As part of the client-server model, the client sends a request to the server. The server will take a look and see if it can fulfill it. If it can't, it'll 404 or whatever. Otherwise, it'll send back the requested web page or whatever. This response from the server is just that, a <b>response.</b> The client sends a request across the network to a server and then the server sends a response even if it's just a 404 (file not found).
-</p>
-
-<h3>Frontend</h3>
-
-<p>
-It consists of what you see. HTML, CSS, JavaScript, etc... We try to make it accessible, readable, provides feedback, etc. It all comes down to <b>visuals.</b> UI (user interface) UX (user experience).
+<b>Here are different ways we can select DOM elements:</b><br>
+document.querySelector()<br>
+document.getElementsByTagName()<br>
+document.getElementsByClassName()<br>
+document.getElementById()
 </p>
 
 <p>
+For more information, just visit the Mozilla Web API pages <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document" title="here" class="https">here</a>.
+</p>
+
+<p>
+What are the pros of functions?<br>
 <ul>
-<li>Design</li>
-<li>Architecture</li>
-<li>Content</li>
-<li>Implementation - the coding part. We do it last to make sure everything is in order first</li>
+<li>Resuable</li>
+<li>Keeps code clean</li>
 </ul>
 </p>
 
 <p>
-<b>Visuals</b> may consist of<br>
-<ul>
-<li>Color</li>
-<li>Fonts</li>
-<li>Images</li>
-<li>Animations</li>
-<li>menus</li>
-<li>navigation</li>
-<li>videos</li>
-<li>layouts</li>
-<li>transition</li>
-</ul>
-</p>
-
-<p>
-<b>HTML</b> is responsible for the text, content, the structure of the website<br>
-<b>CSS</b> is for the style of the site. The way it looks and is colored.<br>
-<b>JavaScript</b> is the behavior.
-</p>
-
-<h3>HTML</h3>
-
-<p>
-Hypertext Markup Language. The file extension is .html and .html.<br>
-HTML is made up of tags. You know:
+Example of a JavaScript function:
 </p>
 <div class="zim-object">
-<pre><code class="html">&lt;p&gt;Hello World!&lt;/p&gt;</code></pre>
-</div>
+<pre><code class="js">function myFunc(param1, param2) {
+	// code
+}
 
-<p>
-&lt;&gt; is the open tag and &lt;/p&gt; is the closing one. <br>
-<b>Tags</b> as are essentially content blocks.
-</p>
-
-<p>
-The basic structure of HTML is like a sandwhich. It has the head, body, and footer.
-</p>
-
-<p>
-Good ol' HTML looks like this:
-</p>
-<div class="zim-object">
-<pre><code class="html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;HTML :(&lt;/title&gt;
-    
-    &lt;!-- This is internal CSS. As opposed to inline and external in another file --&gt;
-    &lt;style&gt;
-      /* We can style tags */
-      h2 {
-        color: blue;
-      }
-      
-      /* We can style a class */
-      .class-style {}
-      
-      /* We can style identifiers */
-      #id-style {}
-    &lt;/style&gt;
-  &lt;/head&gt;
-  
-  &lt;body&gt;
-    &lt;!-- The image tag is one of the ones that doesn't need a closing tag --&gt;
-    &lt;!-- Also note how the tag can have PROPERTIES (not to be confused with stylings) --&gt;
-    &lt;!-- src is an attribute of the image tag --&gt;
-  	&lt;img src="./bigSad.png" alt="this text appears if the image cant"&gt;
-  	
-  	&lt;!-- this is the anchor tag. Put in a link and you'll go to whever --&gt;
-  	&lt;a href="www.google.com"&gt;click here to go to the place&lt;/a&gt;
-  	
-  	&lt;!-- we also have lists --&gt;
-  	&lt;!-- ul is unordered lists which uses bullet points --&gt;
-  	&lt;ul&gt;
-  	  &lt;!-- list item --&gt;
-  	  &lt;li&gt;&lt;/li&gt;
-  	&lt;/ul&gt;
-  	
-  	&lt;!-- ol are ordered lists which uses numbers --&gt;
-  	&lt;ol&gt;&lt;/ol&gt;
-  	
-  	&lt;!-- We also have headers. They go from 1 to 6 --&gt;
-  	&lt;h1&gt;BEEG YOSHI&lt;/h1&gt;
-  	
-  	&lt;!-- We can also make a table full of rows and columns --&gt;
-  	&lt;table&gt;
-  	  &lt;tr&gt;
-  	    &lt;td&gt;First column&lt;/td&gt;
-  	    &lt;td&gt;Second&lt;/td&gt;
-  	    &lt;td&gt;Third&lt;/td&gt;
-  	  &lt;/tr&gt;
-  	&lt;/table&gt;
-  	
-  	&lt;!-- paragraph tag --&gt;
-  	&lt;p&gt;This is my paragraph&lt;/p&gt;
-  	
-  	&lt;!-- break tag --&gt;
-  	&lt;br&gt;
-  	
-  	&lt;!-- div tag best tag. Works like a container. You can get crazy with this thing --&gt;
-  	&lt;div&gt;&lt;/div&gt;
-  	
-  	&lt;!-- Here's an example of inline CSS --&gt;
-  	&lt;h1 style="color: red;"&gt;Look at my red text!&lt;/h1&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</code></pre>
+myFunc('yes', 'no');</code></pre>
 </div>
 
 <br>
 
+<h3>For the next exam, she'll be testing us based on what we did for the class lab</h3>
+
 <p>
-By default, HTML is pretty barebones and not very interesting. That's where CSS comes in!
+The details of this can be seen in the following picture:<br>
+<img src="./javascript-projects-notes.jpg" width="504">
 </p>
 
-<h3>CSS</h3>
+<h3>HW</h3>
 
 <p>
-Cascading style sheets.
+Figure out why var gives us scope issues over let. Hint: 
+</p>
+<div class="zim-object">
+<pre><code class="js">// var
+for(var n = 0; n &lt; 10; n++) {
+	// your code here
+}
+
+console.log(n);
+
+// let
+for(let j = 0; j &lt; 10; j++) {
+	// your code here
+}
+
+console.log(j);</code></pre>
+</div>
+
+<p>
+What will print in the above code?
 </p>
 
-<p>
-There are three types of CSS formatting. <b>External file</b>, <b>internal</b>, and <b>inline.</b> We can have a .css file that we include in the project, we can have the &lt;style&gt; tag and put the CSS code in the HTML file, and inline is where we do it right on the tag itself.
-</p>
+<h3>Project</h3>
 
 <p>
-As for today, we're only gonna do internal and inline. External will be next week.
-</p>
-
-<p>
-We can style our HTML with CSS via selectors such as .class or #id. 
-</p>
-
-<h3>Website from in class lab</h3>
-
-<p>
-<a href="https://github.com/kenny-designs/topics-site" title="https://github.com/kenny-designs/topics-site" class="https">https://github.com/kenny-designs/topics-site</a>
-</p>
-
-<h3>For Homework, look up client server model</h3>
-
-<p>
-It's important to understand this. She'll pick two random people next week to explain it.
-</p>
-
-<p>
-Also, we'll be making a website next week. Be ready for that. A big part of it is making documentation on it. To do this, we can create a diagram that consists of a flowchart that takes you from page to page. You can create one big flowchart of, say, are you a new student? If so, maybe then it'll ask if your information is correct. If so, then maybe it'll ask you what you want to do next. Etc, etc. The point of this flowchart is that we want to design a site and then follow that as a blueprint for creating our website. And then if things go awry in the code we can refer back to our little blueprint.
-</p>
-
-<p>
-Also do her online quiz. If she didn't cover something, just write N/A
+Due next week on 3/8/2020! 
 </p>
 
 	</div>
