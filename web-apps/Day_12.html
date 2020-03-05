@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Day 5</title>
+	<title>Day 12</title>
 	<meta name='Generator' content='Zim 0.68'>
 	<style type='text/css'>
 		a          { text-decoration: none      }
@@ -51,11 +51,11 @@
 
 <!-- Header -->
 <div class='header'>
-	[ <a href='./Day_4.html'>Prev</a> ]
+	[ <a href='./Day_11.html'>Prev</a> ]
 
 	[ <span class='insen'>Index</span> ]
 
-	[ <a href='./Day_6.html'>Next</a> ]
+	[ <a href='./Important_Links.html'>Next</a> ]
 </div>
 
 <hr />
@@ -65,14 +65,14 @@
 <li><a href="./Day_2.html" title="Day 2" class="page">Day 2</a></li>
 <li><a href="./Day_3.html" title="Day 3" class="page">Day 3</a></li>
 <li><a href="./Day_4.html" title="Day 4" class="page">Day 4</a></li>
-<li><b>Day 5</b></li>
+<li><a href="./Day_5.html" title="Day 5" class="page">Day 5</a></li>
 <li><a href="./Day_6.html" title="Day 6" class="page">Day 6</a></li>
 <li><a href="./Day_7.html" title="Day 7" class="page">Day 7</a></li>
 <li><a href="./Day_8.html" title="Day 8" class="page">Day 8</a></li>
 <li><a href="./Day_9.html" title="Day 9" class="page">Day 9</a></li>
 <li><a href="./Day_10.html" title="Day 10" class="page">Day 10</a></li>
 <li><a href="./Day_11.html" title="Day 11" class="page">Day 11</a></li>
-<li><a href="./Day_12.html" title="Day 12" class="page">Day 12</a></li>
+<li><b>Day 12</b></li>
 <li><a href="./Important_Links.html" title="Important Links" class="page">Important Links</a></li>
 <li><a href="./Introduction.html" title="Introduction" class="page">Introduction</a></li>
 </ul>
@@ -83,125 +83,94 @@
 
 <div class='pages'>
 	<div class='heading'>
-	<h1>Day 5 <a name='Day 5'></a></h1>
+	<h1>Day 12 <a name='Day 12'></a></h1>
 	</div>
 
 	<div class='content'>
 	<p>
-Created Tuesday 11 February 2020
+Created Thursday 05 March 2020
 </p>
 
 <p>
-Lesson number 1, <b>global variables are poision. </b>They do pollute the global scope albeit that's not the only reason. Java makes use of them all the time. (Also remember, we have access specifiers public, protected, and private. Also default.)
+He has graded our papers. Lots of people did very poorly. Only four people got above a 75. He states that a lot of people copied wrong previous answers.<br>
+He's spending the first bit of class lecturing us to be sure to actually pay attention and read the things he tells us to read.
 </p>
 
 <p>
-<b>What is an object?</b> It's an <i>instance of a class</i> but this does not mean what you think it is. It is a member of the class of abstract data types. However, that's not what it is. An object is a block of data. It is what is built given the specifications of a class. It has member variables and methods.
+<b>Ticker - </b>answers copied from previous exams.
+</p>
+
+<h3>Review</h3>
+
+<p>
+Q1) He didn't tab the recipe. That's why it was illegal.
 </p>
 
 <p>
-Now, why is the phrase, "<i>an object is an instance of a class" </i>wrong? Well, look at this:
+Q2) It was an arithmetic overflow. (This is a common ticker answer he says)
 </p>
 
+<p>
+Q3) The therac report was important because <b>bad software kills people!.</b> Two detrimental practices were poor documentation and refusal to listen to user reports (using old software is <b>not</b> a detrimental practice btw). However, they did use old software without properly testing it!
+</p>
+
+<p>
+Q4) What is the function of the little old lady? There are various tasks that are well known to be needed in a programming group. She's the one who makes sure all the nasty little details are taken care of (little old lady comes in all genders, shapes, and sizes. Like a ripped body builder dude. Makes sure everything is the way it should be). One reason we refer to her as a 'little old lady' for in the past they were in fact a women who, for many years, worked at McGraw Publications who knew all the special little style techniques. She was very important due to this specialized knowledge.
+</p>
+
+<p>
+Q5) TALK TO THE END USER! Even in the IEEE documentation, it says to do this. They can tell you what should be in the reports, what the screen should look like, etc. You can turn technical specs and turn them into non-technical terms for these people. They know exactly what they need so listen to them. Start from there and you'll avoid a great deal of misery. Don't trust the higher ups. They have no idea of what is actually required. It's cynical but it's a matter of observation says Gross.
+</p>
+
+<p>
+Q6) What is the advantage of recursion over iteration? Nobody asked what they are! <b>Don't just say they are functions that call themselves!</b> In fact, that's wrong. They call <b>copies</b> of themselves. What is the advantage of recursion over iteration? They can be just as fast as for/while loops and can be simpler to write for solving a problem. The answer that he prefers is that: <i>it makes the code much easier to read.</i>
+</p>
+
+<p>
+Q7) What does <i>svn add</i> do? It places a file under the control of Subversion. That's it. Nothing else. <i>It places the file under subversion control. </i>These are his exact words. If you do a commit on that working directory, it moves a copy into the repository.
+</p>
+
+<p>
+Q8) 
+</p>
 <div class="zim-object">
-<pre><code class="cpp">class myclass {
-  int a;
-}
-
-class myclass2 {
-  int b;
-}</code></pre>
-</div>
-
-<br>
-
-<p>
-The above two are both <i>instances</i> of a class. They aren't objects. They are an instance of a member of the class.
-</p>
-
-<p>
-An object is an instance of a member of a class.
-</p>
-
-<p>
-An object is built given from the definitons of a class.
-</p>
-
-<p>
-<b>An object is a block of data together with methods used for manipulating that data.</b>
-</p>
-
-<h3>Global Variables</h3>
-
-<p>
-They can be poison but there are places we must used them. However, this brings us back to the question just why they are poison? Well let's look at the following:
-</p>
-
-<div class="zim-object">
-<pre><code class="cpp">myclass class {
-  int a;
-  void method() {
-    a = 3;
-  }
-  
-  void method2() {
-    a = 3;
-  }
-}</code></pre>
+<pre><code class="scheme">((xfunc 1 2 3) 4 5 6)</code></pre>
 </div>
 
 <p>
-a = 3 but it should be 5. What now?
-</p>
-
-<div class="zim-object">
-<pre><code class="cpp">myclass class {
-  int a;
-  void method() {
-    a = 3;
-  }
-  a = 5;
-  
-  void method2() {
-    a = 3;
-  }
-  a = 5;
-}</code></pre>
-</div>
-
-<p>
-The problem is which method set a to 3? In fact, which method was called? Where was it called? <b>We don't know!</b> This is a huge problem. You have to use global variables in objects but it's gonna be hard to debug. As such, it's better to have them local if you can. This is one reason why we use accessor routines to figure out just who's modifying that variable and giving it the wrong value. Limit the access to variables. Or the modern buzzword <b>encapsulate.</b>
+It's syntactically correct. (func args). Everything hinges on what xfunc returns. That's what it all hinges on. If xfunc returns a function, then it's okay. Otherwise, it doesn't work. Remember, <i>there is only one operator in scheme and that is evaluate!</i> Y'know, ()? That's it.
 </p>
 
 <p>
-<b>What is a function?</b> It is a set of arguments with a rule for manipulating those arguments.
+Q9) Yes. Different files in different working directorys can have different version numbers. I answered yes but I fumbled.
 </p>
 
 <p>
-<b>RECURSION DOESN'T HAVE TO HAVE A BASE CASE. LOOK AT THE BINARY SEARCH FOR SQUARE ROOT. THERE ISN'T ANY. THERE IS A </b><u>TERMINATING CONDITION.</u><br>
-Remember, the first question we ask in recursion is, "are we there yet?"  For the count-e example, the first thing we do is ask if the tail is empty. Is the tail equal to the empty list?
-</p>
-
-<div class="zim-object">
-<pre><code class="scheme">(define ctr (lambda (mylist)(
-  (if (eq? (cdr mylist) (list )) 0
-  (if (eq? (car mylist) "e" )
-    (+ 1 (ctr (cdr mylist)))
-    (ctr (cdr mylist)))))))</code></pre>
-</div>
-
-<br>
-
-<p>
-It has been the programmers job to do whatever the systems analyst told them to. Convert instructions from common language to machine code. The systems analyst was well paid and the programmers were alright. They didn't need much schooling either. Over time, there was a shortage of coders and systems analysts started writing their own code. <i>This was a mistake.</i> Today's classes combine problem solving with coding. This is a bit of a problem. You have to pay attention to controlling a machine while solving a problem. This is difficult to juggle. With an imperative language, you are constantly being distracted by little details such as allocating memory. What does that have to do with your problem? It's a distraction! What is important is to separate the two if you can.
+Q10) Remember, it's not <b>accuracy </b>that changes between single and double precision. Double is more <b>precise </b>as you can tell due to the extra numbers. That doesn't make it more accurate though. 
 </p>
 
 <p>
-This was the point of the orange pyramid problem. You'd think you just need to solve it recursively but then suddenly it gets a little complicated. Suddenly, you need to step away from the code and focus on the problem itself.
+Q11) He gave us a badly written make file he admits. If any of the dependencies are newer than the target, then execute the recipe. Otherwise, don't. (He says don't use the word update unless you defined it in context i.e. <i>up to date. </i>Say older or newer.)
 </p>
 
 <p>
-There is a book our professor recommends we read called: <b>George Polya - How to Solve It. Princeton University Press.</b>
+Q12) BNF was invented to specify the syntax of Algol 60.
+</p>
+
+<p>
+Q13) Java requires a virtual machine. Poor memory management is also true. No pointer arithmetic. Java uses references over pointers. Saying <i>because java has no pointers</i> isn't good.
+</p>
+
+<p>
+Q14) Scheme program time. I'll attach an image for this one. (He does wonder why some of us ended at 0 instead of 1. I terminated at 0 but I forget if I ran through the exponent. I don't believe I did).
+</p>
+
+<p>
+Q15) Declarative, imperative, and OOP
+</p>
+
+<p>
+Q16) Keep a history of a project.
 </p>
 
 	</div>
