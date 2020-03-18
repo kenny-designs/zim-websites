@@ -1,0 +1,342 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Day 6</title>
+	<meta name='Generator' content='Zim 0.68'>
+	<style type='text/css'>
+		a          { text-decoration: none      }
+		a:hover    { text-decoration: underline }
+		a:active   { text-decoration: underline }
+		strike     { color: grey                }
+		u          { text-decoration: none;
+					 background-color: yellow   }
+		tt         { color: #2e3436;            }
+		pre        { color: #2e3436;
+					 margin-left: 20px          }
+		h1         { text-decoration: underline;
+					 color: #4e9a06; margin-bottom: 0 }
+		h2         { color: #4e9a06; margin-bottom: 0 }
+		h3         { color: #4e9a06; margin-bottom: 0 }
+		h4         { color: #4e9a06; margin-bottom: 0 }
+		h5         { color: #4e9a06; margin-bottom: 0 }
+		p          { margin-top: 0              }
+		span.zim-tag {
+			color: #ce5c00;
+		}
+		div.zim-object {
+			border-style:solid;
+			border-width:1px;
+		}
+		.checked-box {list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAANOgAADMQBiN+4gQAAAAd0SU1FB9gKGQ8sMEGsKGkAAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAEBUlEQVRIx62V22tdRRTGf7Nn73P2ybntnNOe3NqkPTGgLTVUUZF6QatSLOKTPgqCIqLgQ0H/A1sQQbBYCBb1QfAxiC8tSO1FqHkwJVKtjdTGNraUmObsc9nXmfGh7cGYpM1D5nHWzPetteZb3wg2eB2YqYm4zSadsMtoboiNBH/3TE0awx6j+MRoxoTg/IYRvP19TQrJS0bzhdHGSyKFkLTtjSKwMjyiEz43ynhtP6bdjBCWyFobAf7eT7VhNF/q1FRbjYjmUohlCVPwnB+6FUxMTJipqSmUUhhjEGKd3bMT4ks/Y6oLBK2Yth8hHYtCJXOix7Nf7xLMzc0xOzvLzp078TyPNE3viW3QJPXzhNWbxFFKHCmMhoLn/FHodd48vGfhapdAacXQlkFK5dL6wIUm6fuTZPuvqDQhaMUYYyiVyuQr6rXDexYuAdi3tSv1ZJNs/R/CaszzT+1na88uXFnCEnJVgivBNN8uTJKmHQI/ptOOcXNZzMz9mOqFs90OHpipWcYwlo5P4ebnuOkrvr5wgrH+h3im7y36MzuwRXYZeKha/OhP0EkadFoxQSdGSotedR/+XwMc2XvKdNUFOFqZx6LKZWIiwjgkikNmLp/hm8sH+K1zjFTHXfBYdTi+eJArzXM0GxFxoBDCopLvo/fqEwi1XPkWkGqjFo2TgB1jOYZUKZTS/D1/ncmLh7jon0IbRWoiTi59ymzzJEEQE3cStNZsGxqlfPE57MBbOR8fP3hDGalOO9fq2DlBvmZw8xa2IxACGn6TydlD/O6f5OzSV/zif0cYhLQaEXGkKBbz7Ov/AOlXV1cxgBJRI3fuSTrpTawt18kWIZN1CFuaONI0w0WOXfsI43YIggh/KUSlhqxrMz74AkOZcWBm9QkH+Gw8NDLuITi+m0yzhluSyJzBLcpblUhFxywSRAEtPwQjsKVN30CNh0uvYuOubSHLtN3J0TO1j0pmBNuFbFWRK0gyPRZpktL2I5JQkclKakNlnh54g6ocvevUr/Ai2a7wineEkcJupA3S1Wg0nVZM2E6wbEF5U5G9Q++wI7sfR7h3N8HVNstykBfzH+KJEZwiWD0aIwxCgJ0R1Mu7GXOeJSuK93bZtQIle4D9pUNU5DC5jEsu55AvZakM5NicGyEj8uuz8bUCQgj67QfY671P3vEoeC69gy695U1U7NG7XV0pUwBjDJa1/JJlWWxzHuflzQe5FJ/GsgUVuZ2t8lEkTvfc0aNHb72flBhjVicQQqCUuvM3/M+WDVguWBrMVdDXEGZlBVEUrVCU9d9s5+fnaTQa2PZyPxEIhJaI1EEoZwX4ncynp6fXrmB4eJjR0VFarRbNZnP9P9rt9gohqNVq1Ov1ZbF/AZGev3hLJ2/zAAAAAElFTkSuQmCC)}
+		.xchecked-box {list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAANOgAADMQBiN+4gQAAAAd0SU1FB9gKGQ8bDYnDxEwAAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAEK0lEQVRIx9WVS2hTWRjHf/eR3CY1nbxMH2YiZRQS6qO13YlMVxY3SnVcuNIBFezGpSADLoQqLu1sHJCqdCFSXFpw4YOCSH3BtFqttTNamabX3DS5bfO6uffMoglja3RGcDMHzuac7/z/53++//cd+L8P6VuCPQYZ8ADNgBd4J31DcDcQs+GnHByRocEDv0kfBSjAOlYCs11Q+gpwDegS8LMJ+3QIK0ATzEhV8Odnz5bzw8P4dJ25aJQ/WlvJ1df/K7hSLtOcTNI+Pk69rpMTgqIQhCDvh1/VSpw79+gRrRMTmLZNezLJJsPg+a5dmOEwQlFqg1sWG16/Jv7sGWXDwBACFQjC9HcwIMONKkGp4PGAJGEDS0IQmZlhnWnye3c3eiyGo6qr3WHbrJ+dJf7gAXI6zSIr72T7/fgzmT4FHnTBsgrQBfYvTU0km5vxz86iADnAm0rRPTWFt7cXZccOJJcLAGHb2K9ekT93jmwmwwdAAFpjI6Ntbfxw5879ag7l6o1sr5eHHR3IsRgeQK/M4sQE+YEB7JcvEY6zAj45SWFgAPPxYwzHoQxIkQjTPT0kIxE+Noj8sexFn4/xnh58iQTeSpHkHAdrbIzi0BCOrmNPTpK/eJHM3bt8sCyKQCiR4NWePWSiUZw1+ZLXJm4pFKLhzBlCsRh2RUXacVgeGaF47RrL58+zcP8+RrmMkCQinZ1EL1zAjERqmkH+tLYl1G3bCJw4QUjT0IA0MJfLMX/5MqmHD0nZNiUgtGULG/r7ccXjINWuWbnmqsuFu7sb/4EDNLlcBIEioNs2KUAFGmMxmk6dQm1tRZI+3xBqEkiShBQOox05Ql1nJ26gvuIUAWiKQnj/ftStW5Fk+YuF+NldsbBA4cYN9KdPmaso8Fc62ZJtk7l1C2t0FGdxESHE1xE4hkHh6lX0oSHSpRIewC/LrPf7CSgKNpCamkI/fZr8pUuIZBIcpyaBunahPp1mub+fDyMjGKUSChCsq6Nh717q9u2jbnSU0uAgRrFIwTThyhUCqRS+hgZKLS1fJvDm87SNjZGcnsYUAjcQ8vsJ9/Xh7u1FDgRQN20iks3iDA+zZFmYhQLqzZtsj8WY3L0baY2Sf55ICCKpFHUzM2SEQAJCHg+hY8fQDh5EDgRWDoRC1J88SePRo2geD0XAcBy8b98Sv3ePYDZbbf2rFQjLIphMsmDbaEBQVQkePox26BCSz7e6i4bDrDt+nGYhmBscpFAskheC4Js3bPR4qHphFYEnlcI7P4/jdqNpGu8TCe4oCsXr1z//F2ga3+/cSfTJE0qmSVYIsKzaOZDcbjKyzFIiwfvt21kMBLA07YsetzWNd+3tLLW0sH5igvT8PH9Go/z44kX+E4LGjg7GDYOcy4XlOEgLC//5P/5LCFzxOPLmzWyIx+m6fduu7v0NVGqyTSycKksAAAAASUVORK5CYII=)}
+		.unchecked-box {list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAANOgAADMQBiN+4gQAAAAd0SU1FB9gKGQ8qAt8h3m8AAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAA60lEQVRIx+2VsQqDMBRF70sCLg5OLoKgjk7+lJ/hh+STXBwcnRz8ArMEkrxOFktbaC3tULzTg5e8k5vADXDq70VbobXmvu/hvQczg4heHrJfXxQFuq67blZbMc8zpmlCXddIkgTOuZcBUko45zCOI6y1Nz2xFSEEZFmGOI7fGg4A3nsQEZqmuXOu9jallACAtm3fvmutNaIoAjM/dkBECCF89KCbk4eAb+kEnIAT8EsAM0OIz3hSyrssUvss8t5fg+uIrLXPs0gIgWVZYIyBUurQyYdheO4gz3NUVQVjDNZ1PfSjpWmKsixvehfB9GBZ3NndrgAAAABJRU5ErkJggg==)}
+		.migrated-box {list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAANOgAADMQBiN+4gQAAAAd0SU1FB+AKHREFA8vJSnkAAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAC1klEQVRIx+2VT0hUURTGf/e958w4Tc3TYowMw1GyEgwr1MqsFmbZIrIWQZsWJUjbdoHQpl3Qps0swnCRECQFYkR/TC1iKkqmfzAKTo2Vf8hoRsfR995tkRMT87RRWkUHHhy495zvnvvu933wP/75EKkkEAjIYDCIaZpIKRFCZN0kfX9xcTGtra2/irVUEolECIfDlJeXo+s6hmFkDaCqKoZhEAqFSCaTv60pqcSyLAoLC/F4PEtqDmCaJkIIKisrMybX0sdUVRWA5ubmPzdNjjI1cpXkZC/O1fV03PXgdDqRUtpPIITAsqxsDz0Z/3CZQv8uqo4N4C8/Tp2/DdM0MiZQlvk41OTkI/LW1SGtCVb5drD3eCc71wcA+VcAHA5vDd8+3UGakxiJV7i9pdQevU5T1R35pJ3MV5QW1pf+0kWBheJ2SWua8EQXZXsu4fVVYEz1sEKvof5EuxjoPvzpcRvrdp9C2gGMx6cpOHBmbImMesds7BZubwMVDTfXDnQ3vQfK7AC8wLfExMX5whyQc3q2OEnjGm5vE76SQxsfBLr77a7CNf+n0r/l6sSMtsBSnurckiIILCobAtVZhpF4gZF4jubaymj4Ch/fd380LE7bAnjc0NPxk2yqpmEuwGxF0ag+0k5uTpzZeBeaazvj0We8fXojainsb2xh2BZgbe0gSIllzSIUh63wfQ6dZ/O2fbjcKlOj58jJ3cVENESw5yErc9nf2MLQ4jwQAkV1Lqiq37/cZ9WaahJjF9AcmxiPDhLs7ePe23oOnmUwg2hSShQle96tKDjA2HAniusgo9FxnvY9Jxw7RWzGYy92QghM00x5g53qp9sHmtB58/o2umOI2NwGolMnMYUHIb7aAyiKwsjICLqu2/qBEIKUUAohMaSHSLyBSMoPTINQ6CX5+fn2AEVFRZSUlBCPx4nFYhl3L4RESjF/GEgX3pSj+Xw+/H7/b3U/AEOZFnp7O5+5AAAAAElFTkSuQmCC)}
+		ul {list-style-image: none}
+		/* ul rule needed to reset style for sub-bullets */
+
+		span.insen { color: grey                }
+
+		.pages {
+			max-width: 1000px;
+			 padding-left: 320px;
+		}
+		.menu{
+			float:left; width: 300px;
+		}
+		hr{clear:both;}
+	</style>
+</head>
+<body>
+
+<!-- Header -->
+<div class='header'>
+	[ <a href='./Day_5.html'>Prev</a> ]
+
+	[ <span class='insen'>Index</span> ]
+
+	[ <span class='insen'>Next</span> ]
+</div>
+
+<hr />
+
+<div class="menu">
+<ul>
+<li><a href="./Day_1.html" title="Day 1" class="page">Day 1</a></li>
+<li><a href="./Day_2.html" title="Day 2" class="page">Day 2</a></li>
+<li><a href="./Day_3.html" title="Day 3" class="page">Day 3</a></li>
+<li><a href="./Day_4.html" title="Day 4" class="page">Day 4</a></li>
+<li><a href="./Day_5.html" title="Day 5" class="page">Day 5</a></li>
+<li><b>Day 6</b></li>
+</ul>
+
+</div>
+
+<!-- Wiki content -->
+
+<div class='pages'>
+	<div class='heading'>
+	<h1>Day 6 <a name='Day 6'></a></h1>
+	</div>
+
+	<div class='content'>
+	<p>
+Created Sunday 08 March 2020
+</p>
+
+<p>
+Today we turned in our project 1 assignments. We'll also be getting our exams back. No one failed. Top score was a 99.
+</p>
+
+<p>
+Essential tags: DOCTYPE, html, head, body, and title.
+</p>
+
+<h3>Data Bases</h3>
+
+<p>
+For the next two weeks, we'll be covering data bases.
+</p>
+
+<p>
+<b>What is a database? </b>A database contains information. Shows relationships amongst said data (such as with a relational database). In her own words, <i>a database handles storage. </i>A database also helps to structure our data.
+</p>
+
+<p>
+<b>DBMS</b> - Databsae Management System. Allows users to read, update, edit, and delete data within a database (remember, CRUD). MySQL, sqlite, oracle, postgres.
+</p>
+
+<p>
+Working with databases mostly revolves around <b>CRUD.</b> Create, read, update (edit), delete.
+</p>
+
+<p>
+<b>Database Challenges:</b><br>
+<ul>
+<li>working with large data</li>
+<li>security breaches</li>
+<li>relationships may not be fully clear</li>
+<li>managing and maintaining a database</li>
+<li>keeping up to date</li>
+</ul>
+</p>
+
+<p>
+<b>Edgar Codd</b>: invented the concept of relational databases (remember this, could be an easy question on the exam).
+</p>
+
+<p>
+<b>Relational Database: </b>Stores data in the style of a table. Rows and columns.<br>
+<b>Primary Key:</b> uniquely identifies an attribute from a table. For example, name, age, and school could be three different columns. Let's say we want to look up a Steve in the table but we have multiple Steves! So, we have a unique <b>ID</b> to refer to that specific row in which we found Steve.<br>
+<b>Record:</b> refers to a row in a relational database table<br>
+<b>SQL: </b>Structured Query Language.
+</p>
+
+<h3>Sample Database Problem</h3>
+
+<p>
+<i>Remember, when first presented a problem we always start by breaking it down!</i>
+</p>
+
+<p>
+Now then, let's say we were hired to do payroll for all of the employees at some company. Every two weeks, you need to look up who gets paid and give them their checks. For every employee that gets paid, you need to let the manager know. The managers get paid once a month.
+</p>
+
+<p>
+<b>Key Info</b><br>
+<ul>
+<li>employees paid every 2 weeks</li>
+<li>alert manager</li>
+<li>manager gets paid every month</li>
+</ul>
+</p>
+
+<p>
+A manager has many employees. An employee belongs to a single manager. This is a <i>one-to-many relationship!</i>
+</p>
+
+<p>
+If we were to make a spreadsheet for this, how would we go about it? Something like the following (pretend the table is filled out):
+</p>
+<table>
+<thead><tr>
+  <th align="left">Employee ID</th>
+  <th align="left">Employee Name</th>
+  <th align="left">Address Employed</th>
+  <th align="left">Date Paid</th>
+  <th align="left">Manager</th>
+  <th align="left">Notification to Manager</th>
+  <th align="left">Manager ID</th>
+</tr></thead>
+<tr>
+  <td align="left">&nbsp;</td>
+  <td align="left">&nbsp;</td>
+  <td align="left">&nbsp;</td>
+  <td align="left">&nbsp;</td>
+  <td align="left">&nbsp;</td>
+  <td align="left">&nbsp;</td>
+  <td align="left">&nbsp;</td>
+</tr>
+</table>
+
+<br>
+<br>
+
+<p>
+Employee Table
+</p>
+<table>
+<thead><tr>
+  <th align="left">ID</th>
+  <th align="left">First Name</th>
+  <th align="left">Last Name</th>
+</tr></thead>
+<tr>
+  <td align="left">&nbsp;</td>
+  <td align="left">&nbsp;</td>
+  <td align="left">&nbsp;</td>
+</tr>
+</table>
+
+<br>
+
+<p>
+Manager Table
+</p>
+<table>
+<thead><tr>
+  <th align="left">ID</th>
+  <th align="left">First Name</th>
+  <th align="left">Last Name</th>
+</tr></thead>
+<tr>
+  <td align="left">&nbsp;</td>
+  <td align="left">&nbsp;</td>
+  <td align="left">&nbsp;</td>
+</tr>
+</table>
+
+<br>
+
+<p>
+<i>Remember, every manager has many employees. As such, we have a </i><b>one-to-many</b> <b>relation!</b>
+</p>
+
+<p>
+Notification Table. We perform a simple <b>Join</b> here.
+</p>
+<table>
+<thead><tr>
+  <th align="left">Notification ID</th>
+  <th align="left">Employee ID</th>
+  <th align="left">Manager ID</th>
+  <th align="left">Date</th>
+</tr></thead>
+<tr>
+  <td align="left">&nbsp;</td>
+  <td align="left">&nbsp;</td>
+  <td align="left">&nbsp;</td>
+  <td align="left">&nbsp;</td>
+</tr>
+</table>
+
+<br>
+
+<p>
+<b>Many-to-many relation. </b>For example, <b>taxis and ubers</b> have many passengers. A <b>ride</b> is a join. <b>Passengers</b> take many ubers/taxis. Taxis/ubers and passengers are connected via the join <i>ride.</i>
+</p>
+
+<p>
+When working with relationship databases, it's not just about setting up tables. We need to see the relationships between the various tables/data and combine them via <b>joins.</b>
+</p>
+
+<h3>Joins</h3>
+
+<p>
+On the next exam, she won't be asking too much about joins but it's good to know about them.
+</p>
+
+<p>
+<i>Remember, a relational database consists of many </i><b>tables. </b><i>To connect those tables, we use </i><b>joins.</b>
+</p>
+
+<p>
+First, we have the <b>inner join. </b>If we had a venn diagram, we'd return where they intersect.<br>
+We also have <b>left outer join</b> and <b>right outer join</b> which would return the outer left and right circle in a venn diagram respectively.<br>
+A <b>full join</b> would return <i>everything!</i><br>
+A <b>left join</b> and a <b>right join</b> would return the entire left and right circles in their entirety.
+</p>
+
+<p>
+Let's examine another relationship such as with Amazon. We have a <b>buyer</b> and a <b>seller</b>.<br>
+On Amazon, we have a <b>cart</b> that holds items we wish to buy. That will be joined with a <b>purchase.</b><br>
+An <b>item</b> and a <b>cart</b> don't do anything on their own. However, we can join them together.
+</p>
+
+<p>
+We have an <b>item, a cart, and a purchase.</b> Each user has their own cart. A single cart can have many items (items can be purchased mulitple times even).
+</p>
+
+<h3>Commands</h3>
+
+<p>
+<i>It is good practice to write all commands in uppercase.</i>
+</p>
+
+<p>
+<b>SELECT * FROM table </b>returns everything from the table. Instead of *, we could put names or ages.
+</p>
+
+<p>
+// creating a table follows column : datatype syntax<br>
+<b>CREATE TABLE cats (</b><br>
+<b>id INTEGER PRIMARY_KEY,</b><br>
+<b>name TEXT</b><br>
+<b>)</b>
+</p>
+
+<p>
+<b>WHERE:</b> filters our selection<br>
+<b>AND: </b>works just like we're used to in Java, C++, etc.<br>
+<b>COUNT:</b><br>
+<b>TOP:</b><br>
+<b>ORDER BY: </b>sorts the records.
+</p>
+
+<h3>Next Exam</h3>
+
+<p>
+Coding portion will be JavaScript. Also, simple SQL. She knows that alot of us aren't used to SQL so she'll give us some slack if the syntax is a little off. What matters is if the logic is right.<br>
+Be sure to know how to determine the relationship from an example she gives as with the Amazon example under Joins.
+</p>
+
+<h3>HW</h3>
+
+<p>
+Learn the difference between <i>one-to-one relations</i>, <i>many-to-many relations</i>, and <i>one-to-many relations</i>. The one-to-one relation we won't be covering in class but definitely be aware of the other two.
+</p>
+
+<p>
+We are also going to receive some SQL assignments. We don't have to turn them in but do them anyways. The best way to <i>git gud</i> is by doing.
+</p>
+
+<h3>Aside</h3>
+
+<p>
+To prepare for this exam, I have been teaching myself SQL from scratch with <a href="https://www.udemy.com/course/the-ultimate-mysql-bootcamp-go-from-sql-beginner-to-expert/" title="this" class="https">this</a> Udemy course. Courses are paid but often very cheap from Udemy due to their constant 10-15 dollar sales. At the time of writing, I am 3/4ths of the way through the course and feel a lot more confident in my SQL skills than I had previously. The course is ~20 hours long but I've been making good headway in the past few days by playing it at double speed. I also recommend installing <a href="https://www.mysql.com/" title="MySQL" class="https">MySQL</a> and working with the course through your terminal. No need for the web applications they recommend unless you truly cannot get MySQL up and running locally on your computer. All you need is a terminal and a text editor (I am using vim which I recommend everyone learn ;3).
+</p>
+
+	</div>
+
+	<br />
+
+	<div class='page-footer'>
+
+	</div>
+
+	
+
+</div>
+
+</body>
+</html>
