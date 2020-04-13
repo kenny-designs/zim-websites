@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Day 8</title>
+	<title>Day 13</title>
 	<meta name='Generator' content='Zim 0.68'>
 	<style type='text/css'>
 		a          { text-decoration: none      }
@@ -51,11 +51,11 @@
 
 <!-- Header -->
 <div class='header'>
-	[ <a href='./Day_7.html'>Prev</a> ]
+	[ <a href='./Day_12.html'>Prev</a> ]
 
 	[ <span class='insen'>Index</span> ]
 
-	[ <a href='./Day_9.html'>Next</a> ]
+	[ <a href='./Day_14.html'>Next</a> ]
 </div>
 
 <hr />
@@ -68,12 +68,12 @@
 <li><a href="./Day_5.html" title="Day 5" class="page">Day 5</a></li>
 <li><a href="./Day_6.html" title="Day 6" class="page">Day 6</a></li>
 <li><a href="./Day_7.html" title="Day 7" class="page">Day 7</a></li>
-<li><b>Day 8</b></li>
+<li><a href="./Day_8.html" title="Day 8" class="page">Day 8</a></li>
 <li><a href="./Day_9.html" title="Day 9" class="page">Day 9</a></li>
 <li><a href="./Day_10.html" title="Day 10" class="page">Day 10</a></li>
 <li><a href="./Day_11.html" title="Day 11" class="page">Day 11</a></li>
 <li><a href="./Day_12.html" title="Day 12" class="page">Day 12</a></li>
-<li><a href="./Day_13.html" title="Day 13" class="page">Day 13</a></li>
+<li><b>Day 13</b></li>
 <li><a href="./Day_14.html" title="Day 14" class="page">Day 14</a></li>
 <li><a href="./Day_15.html" title="Day 15" class="page">Day 15</a></li>
 <li><a href="./Day_16.html" title="Day 16" class="page">Day 16</a></li>
@@ -90,123 +90,122 @@
 
 <div class='pages'>
 	<div class='heading'>
-	<h1>Day 8 <a name='Day 8'></a></h1>
+	<h1>Day 13 <a name='Day 13'></a></h1>
 	</div>
 
 	<div class='content'>
 	<p>
-Created Thursday 20 February 2020
+Created Friday 13 March 2020
 </p>
 
 <p>
-We are starting the day with a handout. It has an example working handout.
+I stayed home today but here are some notes from the wonderful members of group 1!
 </p>
 
 <p>
-Remember, clunky code that works always jumps amazing, excellent, elegant, beautiful code that doesn't.
+<i>Special thanks to Emmanuel D. for recording the class. The following notes were only possible because of this recording. Way to clutch dude!</i>
 </p>
 
 <p>
-Select advanced student in DrRacket if you don't want to see cons being spammed when you make a list. Guile on the other hand would shorten (list a b c) to (a b c). Keep that in mind. It's a short hand for the list.
-</p>
-
-<h3>SVN</h3>
-
-<p>
-You don't have to mention the directory name if you're already inside of there (I believe he meant that for SVN).
+Just now listening to a recording of this lecture two days before exam II. Quite ironic the discussion starts with discussing COVID-19. A lot of speculation about what will happen. This was the last in class session we had before the virus caused everything to be closed down.
 </p>
 
 <p>
-Also, you can do hyphen f instead of manually creating tags, branches, and trunk.
+~7 minutes in. Old code is fine. Nothing wrong with using old code. It's not bad or dangerous just because it's old. However, you should test and make sure it works. In fact, an older piece of code is likely thoroughly tested and is known to work. Remember, all but a small number of computer programs can be proved. The best you can do is to test them and hope all the errors are eleminated.
 </p>
 
 <p>
-You'll find that these directories are necessary for any reasonable version control system. They are there <i>somewhere</i> but their location may not be so easy.
-</p>
-
-<h3>Algol-60</h3>
-
-<p>
-This was an old language designed for communicating algorithms. ACM (Association for Computing Machinery) published a periodical in which people could submit algorithms. The required language of these submissions was Algol-60. Algol-60 was popular in Europe for a while too.
+<b>Just because it's old, it shouldn't be deprecated. </b>If it's old and not tested in a modern environment, <b>then</b> it's bad news!
 </p>
 
 <p>
-Recurrsion was built right into Algol-60.
+A word <b>does not</b> have 32-bits! Most computers today use 32-bits words but nothing requires them to be 32-bits. Lots of machines out there have 36-bit words. Some have 16-bit words. Some had 24-bit words. <b>There is no magical relationship between the number 32 and the word </b><i>word. </i>There isn't.
 </p>
 
 <p>
-We don't have a decent way of defining all of the semantics of a programming language.
+Single precision and double precision is good to know. Double precision uses twice as much memory as single but it doesn't have to.
 </p>
 
 <p>
-PL/1 by IBM is a pretty nice language our professor states. Easy to work with, code is efficient, and has nice tools to assist a programmers efforts. You can turn on bounds checking for arrays which checks if references are in bounds. However, this adds a lot of overhead to our computing. However, we have the option to turn it off. Best of both worlds. We can have an <i>interupt</i> which, I believe he said, allows us to turn it on temporarily. Or we could just let the whole thing crash.
+In the PL-1 Language, you can specify the amount of storage in bits. 
 </p>
 
 <p>
-<i>Take a look at Algol-60's specification language. </i>In fact, XML (extensible markup language) is an <i>extension</i> of a language known as BNF (Backus-Nauer Form. They were the names of the inventors of the language). In fact, BNF only has two symbols which are ::=. This can be just read as <i>is.</i>
+Remember, the <b>sign bit! </b>If you want a 32-bit wide number, you actually need 33-bits so that we can have negatives as well.
 </p>
 
 <p>
-So then, we get this where | is OR and &lt;foo&gt; is metalanguage:
-</p>
-<div class="zim-object">
-<pre><code class="c">&lt;letter&gt; ::= a|b|c</code></pre>
-</div>
-
-<br>
-
-<p>
-The &lt;&gt; are considered a to be a simple modern approach. Look at this:
-</p>
-<div class="zim-object">
-<pre><code class="c">&lt;integer&gt; ::= digit | &lt;integer&gt;&lt;digit&gt;
-&lt;digit&gt; ::= 0|1|2|3|4|5|6|7|8|9</code></pre>
-</div>
-
-<p>
-So then, an integer is a digit or an integer followed by another digit. Isn't it nice and simple? The only thing that might throw you off is the <b>recursion</b> implied in &lt;integer&gt;. Notice how we can just keep adding digit after digit after digit.
+Remember, check what the word size is for the machine that you are using. Don't be shocked if a particular machine doesn't use 32-bits. Some of the fancier super computers use 64-bit words because it's convenient. 64-bit registers are used for a variety of reasons.
 </p>
 
 <p>
-Sadly, BNF does have some shortcomings. For example <i>it can't count!</i>
+Algol-60 has a second l in it! He won't give full credit if you mess up the spelling.
+</p>
+
+<h3>New Topic</h3>
+
+<p>
+Going back to the introduction of the IBM 360, they wanted a series of machines that would allow you to pick up your software from a smaller machine and run it without change to a larger machine. This became a very popular approach for other manufacturers such as GE.
 </p>
 
 <p>
-<b>Think about how you'd use BNF for some business application.</b> How about in this simple form? Think about it. It can be done!
-</p>
-
-<h3>QA</h3>
-
-<p>
-QA should be using SVN or something I believe.
-</p>
-
-<h3>Steam</h3>
-
-<p>
-Add the specs document to the repository.
-</p>
-
-<h3>Exam</h3>
-
-<p>
-It is March 3rd. <b>Give up hope that this will be a multiple choice exam.</b>
-</p>
-
-<h3>Homework</h3>
-
-<p>
-Find a program that has <b>at least two source files!</b> At least 2 .cpp, .java, or .c files that can be separately compile. Compile them separately then fuse them together into a single .exe file (or jar if doing java). For those two files, use whatever you want. You don't have to even write them if you don't want to.
+IBM started this idea to have a series of machines that would have software that was compatible all the way up and down the line. The executable code for one machine could be mounted on a larger machine and it'll work. This wouldn't work with some software but these weren't typical applications.
 </p>
 
 <p>
-Also, don't forget to read those chapters on the GNU website! Refer to to <a href="./Day_7.html" title="Day 7" class="page">Day 7</a> homework for details.
+This all gave IBM a difficult problem. They wanted an advanced OS that could run on all of the machines from the smallest ones, such as the model 30 with its 32kb of storage, all the way up to the model 95 which could handle MB. So, how do you do this? The model 30 only has 32kb and you still need some extra space afterwards.
 </p>
 
-<h5>Exam HW</h5>
+<p>
+They did allow for some differences for the machines. They figured they'd have three versions of the OS. One for small machines like the 30, another for medium machines, and one for bigger machines that took up 256kb. 
+</p>
 
 <p>
-You must come in with three questions. <b>Come in with three question next Thursday! </b>That is, <b>2/27/2020. </b>Question you do want to see, you don't want to see, and 
+The devs knew they'd need some sort of virtual memory. So, they settled to take two 4kb areas and modularize the system. You can write routines that are 4k bytes long and swap them into these two areas as required. Do you know what this did to the discs?
+</p>
+
+<p>
+What happens if you're running several programs that all want to make use of the same facility? We have two choices here: We could give each user their own copy of the code. Or they could all use it at the same time!
+</p>
+
+<p>
+<b>Reentrant code:</b> The developers said no more! What if we wrote the code so that it never, ever changes? If it never changes, then lots of people can use it at the same time right? It never changes so a lot of people can use it at the same time. But then, <i>where's the data?</i> A program without data is useless afterall.
+</p>
+
+<p>
+It's very easy to switch from one user to another. Save all registers, a couple pointers, and it's all over.
+</p>
+
+<p>
+<b>Reentrant code is code that does not modify itself!</b> As long as the user provides any storage that can be modified, many people can use it at the same time.
+</p>
+
+<p>
+The original code doesn't change, only data pointers change. System code doesn't change. 
+</p>
+
+<p>
+<b>What's an object? </b>It is an instance of a member of a class. What do you get when you execute a constructor? You get a pointer to what? A pointer to an object and an object contains two things: <i>Data and methods to manipulate that data!</i> If you want to execute a method, it's got to be in an object. Everytime you execute a constructor, you get not only a block of data but a copy of the methods! Can you smell something sorta not good here? This takes up a ton of space! If we have 5000 elements in a list and each object has 400kb worth of methods, that's bad! Is there a way around this? The answer is yes. The methods that appear in classes point to reentrant methods! That way, the objects provide the data. As you can see, <i>reentrant code is very handy for object orientation! </i><b>We can avoid copying code! </b>We don't have to copy the method for each copy of an object. It's all being shared. 
+</p>
+
+<p>
+What's another application of reentrant code? Consider <b>recursive code.</b> Technically speaking, everytime we recurse we should get a new copy of the code. <i>It's not calling a copy of the function, but a copy of the function slightly changed! </i>What changed? <b>The arguments!</b>
+</p>
+
+<p>
+How can we get around copying the code repeatedly? Well, there it is. Reentrant code. 
+</p>
+
+<p>
+Not all recursive programs reentrant, and not all reentrant programs are recursive! There's constant confusion with reentrantcy and recursion. Most generated code seen today is reentrant. Makes it easy to be recursive if you're carefull. In object oriented code, allows us to avoid copying routines.
+</p>
+
+<p>
+There is another way for programs to share code but they can't use it at the same time. This is called <b>serially reused code. </b>A user can use it and when they're done, it's restored to its original state. Each user can use the code one after the other but not at the <i>same time.</i> 
+</p>
+
+<p>
+Adding people to a project may not speed it up. In fact, it could slow it down. Why? <b>It takes time to bring people up to speed. It takes time to teach people what they have to know in order to contribute and this can seriously slow down a project. </b>
 </p>
 
 	</div>
