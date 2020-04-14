@@ -135,7 +135,7 @@ Why is this useful? Imagine is we have a printer that asks our computer for a li
 </p>
 
 <p>
-Luckily, engineers manages to figure out some clever ways to make this all happen1 In between two instructions after the first is completed but before the next one, we grab the address of the one that has yet to be done. We save that address somewhere and then jump to some subroutine. We take care of the service request. And then we jump back to the address we saved.
+Luckily, engineers managed to figure out some clever ways to make this all happen! In between two instructions after the first is completed but before the next one, we grab the address of the one that has yet to be done. We save that address somewhere and then jump to some subroutine. We take care of the service request. And then we jump back to the address we saved.
 </p>
 
 <p>
@@ -151,7 +151,7 @@ Of course, this may sound simple but there are complications in practice. Even s
 </p>
 
 <p>
-Now then, what would we have to save to restart an interuppted program in such a way that it would never know that it was interrupted in the first place? Well, one answer is the registers. Which ones though? The obvious answer is <i>all of them.</i> There are problems with this approach though. It takes a long time to save all of the registers. If we have a lot of interrupts, that'll eat up the CPU. Now all our CPU time is eaten up so we can't do anything useful. As such, we should instead save all of the registers that we are going to modify. This is much faster than just saving all of the registers. 
+Now then, what would we have to save to restart an interupted program in such a way that it would never know that it was interrupted in the first place? Well, one answer is the registers. Which ones though? The obvious answer is <i>all of them.</i> There are problems with this approach though. It takes a long time to save all of the registers. If we have a lot of interrupts, that'll eat up the CPU. Now all our CPU time is eaten up so we can't do anything useful. As such, we should instead save all of the registers that we are going to modify. This is much faster than just saving all of the registers. 
 </p>
 
 <p>

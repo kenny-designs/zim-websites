@@ -149,7 +149,7 @@ Gross says he'd like to give us a book like he did with Scheme but he hasn't fou
 </p>
 
 <p>
-JS is meant for the web but nowadays it's becoming popular to use it off the web too (Node.js anyone?). He's going to limit our discussion for we pages though.
+JS is meant for the web but nowadays it's becoming popular to use it off the web too (Node.js anyone?). He's going to limit our discussion for web pages though.
 </p>
 
 <p>
@@ -182,7 +182,7 @@ Back with time sharing stuff, people asked how long would a user wait for someth
 </p>
 
 <p>
-So, <b>stick function definitions in the head</b> or <b>stick them in the bottom of the body.</b> You could stick your code wherever but there are various issues that come with this. It's not good practice to just stick your JS code wherever though.
+So, <b>stick function definitions in the head</b> or <b>stick them in the bottom of the body.</b> You could stick your code wherever but there are various issues that come with this. It's not good practice to just stick your JS code wherever.
 </p>
 
 <p>
@@ -190,7 +190,7 @@ Now that we have the basic template of HTML code, let us move on to the script t
 </p>
 
 <p>
-How does the browser now it's dealing with JS? The script tag! In between the script tag we put JS. When the script tag closes, it's back to regular HTML.
+How does the browser know that it's dealing with JS? It uses the script tag! In between the script tag we put JS. When the script tag closes, it's back to regular HTML.
 </p>
 
 <div class="zim-object">
@@ -202,23 +202,35 @@ How does the browser now it's dealing with JS? The script tag! In between the sc
 <br>
 
 <p>
-For a time, browsers didn't support javascript. In fact, some users just disable it! There is a noscript tag we can use to detect if the browser is down to do JS. We can then provide alternative text. Sadly, the code will then display. He's not gonna go into any of this though.
+For a time, browsers didn't support JavaScript. In fact, some users just disable it! There is a <i>noscript</i> tag we can use to detect if the browser is down to do JS. We can then provide alternative text. Sadly, the code will then display. He's not gonna go into any of this though.
 </p>
 
 <p>
-Now then, let us go into JS itself. One of the most important facility in JS is <b>comments.</b> There is // and multiline <a href="file:///*" title="/*" class="file">/*</a> */ are we're used to.
+Now then, let us go into JS itself. One of the most important facility in JS is <b>comments.</b> There is // and multiline <a href="file:///*" title="/*" class="file">/*</a> */ which we're used to.
+</p>
+
+<div class="zim-object">
+<pre><code class="js">// for single line comments
+
+/*
+Multi-
+line
+comments
+*/</code></pre>
+</div>
+
+<br>
+
+<p>
+Remember, <b>if it aint documented it aint! </b>Gross says he did see a documentation issue that is of interest. There is an important simulation of the COVID-19 virus. That model needs some modification. The updating has been seriously delayed because it consists of 1000s of lines of undocumented C code. The updating is delayed now as someone documents it. This is a bloody mess.
 </p>
 
 <p>
-Remember, <b>if it aint documented it aint.</b> Gross says he did see a documentation issue that is of interest. There is an important simulation of the COVID-19 virus. That model needs some modification. The updating has been seriously delayed because it consists of 1000s of lines of undocumented C code. The updating is delayed now as someone documents it. This is a bloody mess.
+As mentors back in Gross' time recommends, it's often easier to rewrite code then figure out how undocumented code works (<i>I feel that professor</i>).
 </p>
 
 <p>
-As mentors back in Gross time recommends, it's often easier to rewrite code then figure out how undocumented code works (I feel that professor).
-</p>
-
-<p>
-Given that speed that COVID-19 is moving, speed is of concern. Document heavily.
+Given the rate that COVID-19 is moving, speed is of great concern. Document heavily!
 </p>
 
 <p>
@@ -246,7 +258,7 @@ a = b + c;      // or we can just use it in an expression. We just declared a!</
 <br>
 
 <p>
-Despite all the different ways of declaring and initializing variables, it's bad practice to just declare+initialize all willnilly and wherever. Declare it first at the top. 
+Despite all the different ways of declaring and initializing variables, it's bad practice to just declare+initialize all willnilly and wherever. <i>Declare it first at the top.</i>
 </p>
 
 <p>
@@ -263,7 +275,7 @@ We do make use of a function keyword followed by a function name, an argument li
 	// when we return, they go away
 	// we don't really have static variables in JS
 	// we instead have global variables.
-	// You can decalre variables outside any function
+	// You can declare variables outside any function
 	// and they remain indefinitely (messy. Very messy)
 	var yourVar;
 	return yourVar;
