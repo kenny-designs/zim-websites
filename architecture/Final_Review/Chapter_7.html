@@ -1,0 +1,280 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Chapter 7</title>
+	<meta name='Generator' content='Zim 0.68'>
+	<style type='text/css'>
+		a          { text-decoration: none      }
+		a:hover    { text-decoration: underline }
+		a:active   { text-decoration: underline }
+		strike     { color: grey                }
+		u          { text-decoration: none;
+					 background-color: yellow   }
+		tt         { color: #2e3436;            }
+		pre        { color: #2e3436;
+					 margin-left: 20px          }
+		h1         { text-decoration: underline;
+					 color: #4e9a06; margin-bottom: 0 }
+		h2         { color: #4e9a06; margin-bottom: 0 }
+		h3         { color: #4e9a06; margin-bottom: 0 }
+		h4         { color: #4e9a06; margin-bottom: 0 }
+		h5         { color: #4e9a06; margin-bottom: 0 }
+		p          { margin-top: 0              }
+		span.zim-tag {
+			color: #ce5c00;
+		}
+		div.zim-object {
+			border-style:solid;
+			border-width:1px;
+		}
+		.checked-box {list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAANOgAADMQBiN+4gQAAAAd0SU1FB9gKGQ8sMEGsKGkAAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAEBUlEQVRIx62V22tdRRTGf7Nn73P2ybntnNOe3NqkPTGgLTVUUZF6QatSLOKTPgqCIqLgQ0H/A1sQQbBYCBb1QfAxiC8tSO1FqHkwJVKtjdTGNraUmObsc9nXmfGh7cGYpM1D5nHWzPetteZb3wg2eB2YqYm4zSadsMtoboiNBH/3TE0awx6j+MRoxoTg/IYRvP19TQrJS0bzhdHGSyKFkLTtjSKwMjyiEz43ynhtP6bdjBCWyFobAf7eT7VhNF/q1FRbjYjmUohlCVPwnB+6FUxMTJipqSmUUhhjEGKd3bMT4ks/Y6oLBK2Yth8hHYtCJXOix7Nf7xLMzc0xOzvLzp078TyPNE3viW3QJPXzhNWbxFFKHCmMhoLn/FHodd48vGfhapdAacXQlkFK5dL6wIUm6fuTZPuvqDQhaMUYYyiVyuQr6rXDexYuAdi3tSv1ZJNs/R/CaszzT+1na88uXFnCEnJVgivBNN8uTJKmHQI/ptOOcXNZzMz9mOqFs90OHpipWcYwlo5P4ebnuOkrvr5wgrH+h3im7y36MzuwRXYZeKha/OhP0EkadFoxQSdGSotedR/+XwMc2XvKdNUFOFqZx6LKZWIiwjgkikNmLp/hm8sH+K1zjFTHXfBYdTi+eJArzXM0GxFxoBDCopLvo/fqEwi1XPkWkGqjFo2TgB1jOYZUKZTS/D1/ncmLh7jon0IbRWoiTi59ymzzJEEQE3cStNZsGxqlfPE57MBbOR8fP3hDGalOO9fq2DlBvmZw8xa2IxACGn6TydlD/O6f5OzSV/zif0cYhLQaEXGkKBbz7Ov/AOlXV1cxgBJRI3fuSTrpTawt18kWIZN1CFuaONI0w0WOXfsI43YIggh/KUSlhqxrMz74AkOZcWBm9QkH+Gw8NDLuITi+m0yzhluSyJzBLcpblUhFxywSRAEtPwQjsKVN30CNh0uvYuOubSHLtN3J0TO1j0pmBNuFbFWRK0gyPRZpktL2I5JQkclKakNlnh54g6ocvevUr/Ai2a7wineEkcJupA3S1Wg0nVZM2E6wbEF5U5G9Q++wI7sfR7h3N8HVNstykBfzH+KJEZwiWD0aIwxCgJ0R1Mu7GXOeJSuK93bZtQIle4D9pUNU5DC5jEsu55AvZakM5NicGyEj8uuz8bUCQgj67QfY671P3vEoeC69gy695U1U7NG7XV0pUwBjDJa1/JJlWWxzHuflzQe5FJ/GsgUVuZ2t8lEkTvfc0aNHb72flBhjVicQQqCUuvM3/M+WDVguWBrMVdDXEGZlBVEUrVCU9d9s5+fnaTQa2PZyPxEIhJaI1EEoZwX4ncynp6fXrmB4eJjR0VFarRbNZnP9P9rt9gohqNVq1Ov1ZbF/AZGev3hLJ2/zAAAAAElFTkSuQmCC)}
+		.xchecked-box {list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAANOgAADMQBiN+4gQAAAAd0SU1FB9gKGQ8bDYnDxEwAAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAEK0lEQVRIx9WVS2hTWRjHf/eR3CY1nbxMH2YiZRQS6qO13YlMVxY3SnVcuNIBFezGpSADLoQqLu1sHJCqdCFSXFpw4YOCSH3BtFqttTNamabX3DS5bfO6uffMoglja3RGcDMHzuac7/z/53++//cd+L8P6VuCPQYZ8ADNgBd4J31DcDcQs+GnHByRocEDv0kfBSjAOlYCs11Q+gpwDegS8LMJ+3QIK0ATzEhV8Odnz5bzw8P4dJ25aJQ/WlvJ1df/K7hSLtOcTNI+Pk69rpMTgqIQhCDvh1/VSpw79+gRrRMTmLZNezLJJsPg+a5dmOEwQlFqg1sWG16/Jv7sGWXDwBACFQjC9HcwIMONKkGp4PGAJGEDS0IQmZlhnWnye3c3eiyGo6qr3WHbrJ+dJf7gAXI6zSIr72T7/fgzmT4FHnTBsgrQBfYvTU0km5vxz86iADnAm0rRPTWFt7cXZccOJJcLAGHb2K9ekT93jmwmwwdAAFpjI6Ntbfxw5879ag7l6o1sr5eHHR3IsRgeQK/M4sQE+YEB7JcvEY6zAj45SWFgAPPxYwzHoQxIkQjTPT0kIxE+Noj8sexFn4/xnh58iQTeSpHkHAdrbIzi0BCOrmNPTpK/eJHM3bt8sCyKQCiR4NWePWSiUZw1+ZLXJm4pFKLhzBlCsRh2RUXacVgeGaF47RrL58+zcP8+RrmMkCQinZ1EL1zAjERqmkH+tLYl1G3bCJw4QUjT0IA0MJfLMX/5MqmHD0nZNiUgtGULG/r7ccXjINWuWbnmqsuFu7sb/4EDNLlcBIEioNs2KUAFGmMxmk6dQm1tRZI+3xBqEkiShBQOox05Ql1nJ26gvuIUAWiKQnj/ftStW5Fk+YuF+NldsbBA4cYN9KdPmaso8Fc62ZJtk7l1C2t0FGdxESHE1xE4hkHh6lX0oSHSpRIewC/LrPf7CSgKNpCamkI/fZr8pUuIZBIcpyaBunahPp1mub+fDyMjGKUSChCsq6Nh717q9u2jbnSU0uAgRrFIwTThyhUCqRS+hgZKLS1fJvDm87SNjZGcnsYUAjcQ8vsJ9/Xh7u1FDgRQN20iks3iDA+zZFmYhQLqzZtsj8WY3L0baY2Sf55ICCKpFHUzM2SEQAJCHg+hY8fQDh5EDgRWDoRC1J88SePRo2geD0XAcBy8b98Sv3ePYDZbbf2rFQjLIphMsmDbaEBQVQkePox26BCSz7e6i4bDrDt+nGYhmBscpFAskheC4Js3bPR4qHphFYEnlcI7P4/jdqNpGu8TCe4oCsXr1z//F2ga3+/cSfTJE0qmSVYIsKzaOZDcbjKyzFIiwfvt21kMBLA07YsetzWNd+3tLLW0sH5igvT8PH9Go/z44kX+E4LGjg7GDYOcy4XlOEgLC//5P/5LCFzxOPLmzWyIx+m6fduu7v0NVGqyTSycKksAAAAASUVORK5CYII=)}
+		.unchecked-box {list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAANOgAADMQBiN+4gQAAAAd0SU1FB9gKGQ8qAt8h3m8AAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAA60lEQVRIx+2VsQqDMBRF70sCLg5OLoKgjk7+lJ/hh+STXBwcnRz8ArMEkrxOFktbaC3tULzTg5e8k5vADXDq70VbobXmvu/hvQczg4heHrJfXxQFuq67blZbMc8zpmlCXddIkgTOuZcBUko45zCOI6y1Nz2xFSEEZFmGOI7fGg4A3nsQEZqmuXOu9jallACAtm3fvmutNaIoAjM/dkBECCF89KCbk4eAb+kEnIAT8EsAM0OIz3hSyrssUvss8t5fg+uIrLXPs0gIgWVZYIyBUurQyYdheO4gz3NUVQVjDNZ1PfSjpWmKsixvehfB9GBZ3NndrgAAAABJRU5ErkJggg==)}
+		.migrated-box {list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAANOgAADMQBiN+4gQAAAAd0SU1FB+AKHREFA8vJSnkAAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAC1klEQVRIx+2VT0hUURTGf/e958w4Tc3TYowMw1GyEgwr1MqsFmbZIrIWQZsWJUjbdoHQpl3Qps0swnCRECQFYkR/TC1iKkqmfzAKTo2Vf8hoRsfR995tkRMT87RRWkUHHhy495zvnvvu933wP/75EKkkEAjIYDCIaZpIKRFCZN0kfX9xcTGtra2/irVUEolECIfDlJeXo+s6hmFkDaCqKoZhEAqFSCaTv60pqcSyLAoLC/F4PEtqDmCaJkIIKisrMybX0sdUVRWA5ubmPzdNjjI1cpXkZC/O1fV03PXgdDqRUtpPIITAsqxsDz0Z/3CZQv8uqo4N4C8/Tp2/DdM0MiZQlvk41OTkI/LW1SGtCVb5drD3eCc71wcA+VcAHA5vDd8+3UGakxiJV7i9pdQevU5T1R35pJ3MV5QW1pf+0kWBheJ2SWua8EQXZXsu4fVVYEz1sEKvof5EuxjoPvzpcRvrdp9C2gGMx6cpOHBmbImMesds7BZubwMVDTfXDnQ3vQfK7AC8wLfExMX5whyQc3q2OEnjGm5vE76SQxsfBLr77a7CNf+n0r/l6sSMtsBSnurckiIILCobAtVZhpF4gZF4jubaymj4Ch/fd380LE7bAnjc0NPxk2yqpmEuwGxF0ag+0k5uTpzZeBeaazvj0We8fXojainsb2xh2BZgbe0gSIllzSIUh63wfQ6dZ/O2fbjcKlOj58jJ3cVENESw5yErc9nf2MLQ4jwQAkV1Lqiq37/cZ9WaahJjF9AcmxiPDhLs7ePe23oOnmUwg2hSShQle96tKDjA2HAniusgo9FxnvY9Jxw7RWzGYy92QghM00x5g53qp9sHmtB58/o2umOI2NwGolMnMYUHIb7aAyiKwsjICLqu2/qBEIKUUAohMaSHSLyBSMoPTINQ6CX5+fn2AEVFRZSUlBCPx4nFYhl3L4RESjF/GEgX3pSj+Xw+/H7/b3U/AEOZFnp7O5+5AAAAAElFTkSuQmCC)}
+		ul {list-style-image: none}
+		/* ul rule needed to reset style for sub-bullets */
+
+		span.insen { color: grey                }
+
+		.pages {
+			max-width: 1000px;
+			 padding-left: 320px;
+		}
+		.menu{
+			float:left; width: 300px;
+		}
+		hr{clear:both;}
+	</style>
+</head>
+<body>
+
+<!-- Header -->
+<div class='header'>
+	[ <a href='./Chapter_6.html'>Prev</a> ]
+
+	[ <span class='insen'>Index</span> ]
+
+	[ <a href='./MARS_Orientation.html'>Next</a> ]
+</div>
+
+<hr />
+
+<div class="menu">
+<ul>
+<li><a href="../Day_1.html" title="Day 1" class="page">Day 1</a></li>
+<li><a href="../Day_2.html" title="Day 2" class="page">Day 2</a></li>
+<li><a href="../Day_3.html" title="Day 3" class="page">Day 3</a></li>
+<li><a href="../Day_4.html" title="Day 4" class="page">Day 4</a></li>
+<li><a href="../Day_5.html" title="Day 5" class="page">Day 5</a></li>
+<li><a href="../Day_6.html" title="Day 6" class="page">Day 6</a></li>
+<li><a href="../Day_7.html" title="Day 7" class="page">Day 7</a></li>
+<li><a href="../Day_8.html" title="Day 8" class="page">Day 8</a></li>
+<li><a href="../Day_9.html" title="Day 9" class="page">Day 9</a></li>
+<li><a href="../Day_10.html" title="Day 10" class="page">Day 10</a></li>
+<li><a href="../Day_11.html" title="Day 11" class="page">Day 11</a></li>
+<li><a href="../Final_Review.html" title="Final Review" class="page">Final Review</a>
+<ul>
+<li><a href="./Assembler_Language.html" title="Assembler Language" class="page">Assembler Language</a></li>
+<li><a href="./Assembler_Language_P2.html" title="Assembler Language P2" class="page">Assembler Language P2</a></li>
+<li><a href="./Chapter_5.html" title="Chapter 5" class="page">Chapter 5</a></li>
+<li><a href="./Chapter_6.html" title="Chapter 6" class="page">Chapter 6</a></li>
+<li><b>Chapter 7</b></li>
+<li><a href="./MARS_Orientation.html" title="MARS Orientation" class="page">MARS Orientation</a></li>
+</ul>
+</li>
+<li><a href="../Midterm_Review.html" title="Midterm Review" class="page">Midterm Review</a></li>
+</ul>
+
+</div>
+
+<!-- Wiki content -->
+
+<div class='pages'>
+	<div class='heading'>
+	<h1>Chapter 7 <a name='Final Review:Chapter 7'></a></h1>
+	</div>
+
+	<div class='content'>
+	<p>
+Congrats! This is the final chapter.
+</p>
+
+<h3>Question 1</h3>
+
+<p>
+Exercise 8.
+</p>
+
+<p>
+<b>Q) </b>Suppose the daytime processing load consists of 60% CPU activity and 40% disk activity. Your customers are complaining that the system is slow. After doing some research, you learn that you can upgrade your disks for $8,000 to make them 2.5 times as fast as they are currently. You have also learned that you can upgrade your CPU to make it 1.4 times as fast for $5,000.
+</p>
+
+<p>
+So then, before answering the following questions let's go ahead and do some number crunching!
+</p>
+
+<p>
+What we need to know here is the formula for <b>Amdahl's Law. </b>Remember, the overall performance of a system is a result of the interaction of all of its components. System performance is most effectively improved when the performance of the most heavily used components is improved.
+</p>
+
+<p>
+With that in mind, we have this formula:
+</p>
+
+<p>
+S = 1 / ((1 -  f) + (f / k))
+</p>
+
+<p>
+Where S is the overall speedup<br>
+f is the fraction of work performed by a faster component<br>
+k is the speedup of the faster component
+</p>
+
+<p>
+Now then, let's go ahead and run this formula by both the CPU and Disk upgrades!
+</p>
+
+<h4>CPU Upgrade</h4>
+
+<p>
+Let f be 0.6 for the CPU is active 60% of the time.<br>
+Let k be 1.4 for the CPU upgrade is 1.4 times faster than the old CPU.
+</p>
+
+<p>
+S	   = 1 / ((1 -  f) + (f / k)) <br>
+<div style='padding-left: 30pt'>
+= 1 / ((1 - 0.6) + (0.6 / 1.4))<br>
+= 1 / (0.4 + (3/7))<br>
+= 1 / (29/35)<br>
+= 35/29<br>
+= ~1.2069
+</div>
+</p>
+
+<p>
+This means that we have a <b>~20.69% speed up for the CPU upgrade!</b><br>
+In this case, how much does it cost us for every 1% improvement in speed from the upgrade?
+</p>
+
+<p>
+$5,000 / 20.69 = $241.66. <b>So, every 1% improvement costs us $241.66 moneys!</b>
+</p>
+
+<h4>Disk Upgrade</h4>
+
+<p>
+Let f be 0.4 for the disk is active 40% of the time.<br>
+Let k be 2.5 for the disk upgrade is 2.5 times faster than the old disk.
+</p>
+
+<p>
+S	   = 1 / ((1 -  f) + (f / k)) <br>
+<div style='padding-left: 30pt'>
+= 1 / ((1 - 0.4) + (0.4 / 2.5))<br>
+= 1/ (0.6 + 0.16)<br>
+= 1 / 0.76<br>
+= ~1.3158
+</div>
+</p>
+
+<p>
+This means that we have a <b>~30.58% speed up for the disk upgrade!</b><br>
+In this case, how much does it cost us for every 1% improvement in speed from the upgrade?
+</p>
+
+<p>
+$8,000 / 30.58 = $253.32. <b>So, every 1% improvement costs us $253.32 moneys!</b>
+</p>
+
+<h4>Answers</h4>
+
+<p>
+Now armed with our calculations, we can wrap this up!
+</p>
+
+<p>
+<b>a) </b>Which would you choose to yield the best performance improvement for the least amount of money?<br>
+Answer: <b>CPU Upgrade. </b>The reason is that $241.66 &lt; $253.32. We get more bang for our buck since the CPU is technically cheaper per 1% of improvement.
+</p>
+
+<p>
+<b>b) </b>Which option would you choose if you don't care about the money, but want a faster system?<br>
+Answer: <b>Disk Upgrade. </b>Reason being that a 31.58% improvement is &gt; a 20.69% improvement. Since money is no issue, we can spring for the that extra ~10% of speed!
+</p>
+
+<p>
+<b>c) </b>What is the break-even point for the upgrades? That is, what price would we need to charge for the CPU (or the disk —change only one) so the result was the same cost per 1% increase for both?
+</p>
+
+<p>
+We can do a little bit of algebra to solve this! Let the numerator be the overall speedup from the upgrade and the denominator be the cost for the upgrade.
+</p>
+
+<p>
+20.69 / a = 31.58 / 8000 =&gt;<br>
+31.58a = 165520 =&gt;<br>
+a = 5241.29
+</p>
+
+<p>
+<b>We need to charge $5241.29 for the CPU upgrade to break even!</b>
+</p>
+
+<h3>Question 2</h3>
+
+<p>
+Exercise 48.
+</p>
+
+<p>
+<b>a) </b>Which of the RAID (Redundant Array of Independent Disks) systems described in this chapter cannot tolerate a single disk failure:<br>
+Answer: <b>Raid Level 0. </b>It has no redundancy so if any of the disks fail then it's YOU DIED! At least it's fast....
+</p>
+
+<p>
+<b>b) </b>Which can tolerate more than one simultaneous disk failure?
+</p>
+
+<p>
+This question was one I was rather confused by. In the very least, the professor gave me full credit on the lab so rest easy that the following are correct.
+</p>
+
+<p>
+<b>Raid Level 6, 2, 1, and Raid DP.</b>
+</p>
+
+<p>
+Level 6 and DP are rather similar. Just note that they both are equiped to handle 2 disks failing at the same time.
+</p>
+
+<p>
+Level 1 is interesting for it <i>can</i> handle multiple disk failures so long as it <b>does not involve a disk and its mirror image.</b> The idea of level 1 is that we keep an exact copy of each disk so if it just so happens that all the disks are destroyed <b>except</b> for their mirror image, then all is well!
+</p>
+
+<p>
+Level 2... This one I don't quite understand why it works. I need to do some additional research. However, it too can handle multiple simultaneous disk failures.
+</p>
+
+
+	</div>
+
+	<br />
+
+	<div class='page-footer'>
+		<b>Backlinks:</b>
+
+		<a href='../Final_Review.html'>Final Review</a>
+
+		<br /><br />
+
+	</div>
+
+	
+
+</div>
+
+</body>
+</html>

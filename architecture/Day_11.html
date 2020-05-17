@@ -1,0 +1,399 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Day 11</title>
+	<meta name='Generator' content='Zim 0.68'>
+	<style type='text/css'>
+		a          { text-decoration: none      }
+		a:hover    { text-decoration: underline }
+		a:active   { text-decoration: underline }
+		strike     { color: grey                }
+		u          { text-decoration: none;
+					 background-color: yellow   }
+		tt         { color: #2e3436;            }
+		pre        { color: #2e3436;
+					 margin-left: 20px          }
+		h1         { text-decoration: underline;
+					 color: #4e9a06; margin-bottom: 0 }
+		h2         { color: #4e9a06; margin-bottom: 0 }
+		h3         { color: #4e9a06; margin-bottom: 0 }
+		h4         { color: #4e9a06; margin-bottom: 0 }
+		h5         { color: #4e9a06; margin-bottom: 0 }
+		p          { margin-top: 0              }
+		span.zim-tag {
+			color: #ce5c00;
+		}
+		div.zim-object {
+			border-style:solid;
+			border-width:1px;
+		}
+		.checked-box {list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAANOgAADMQBiN+4gQAAAAd0SU1FB9gKGQ8sMEGsKGkAAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAEBUlEQVRIx62V22tdRRTGf7Nn73P2ybntnNOe3NqkPTGgLTVUUZF6QatSLOKTPgqCIqLgQ0H/A1sQQbBYCBb1QfAxiC8tSO1FqHkwJVKtjdTGNraUmObsc9nXmfGh7cGYpM1D5nHWzPetteZb3wg2eB2YqYm4zSadsMtoboiNBH/3TE0awx6j+MRoxoTg/IYRvP19TQrJS0bzhdHGSyKFkLTtjSKwMjyiEz43ynhtP6bdjBCWyFobAf7eT7VhNF/q1FRbjYjmUohlCVPwnB+6FUxMTJipqSmUUhhjEGKd3bMT4ks/Y6oLBK2Yth8hHYtCJXOix7Nf7xLMzc0xOzvLzp078TyPNE3viW3QJPXzhNWbxFFKHCmMhoLn/FHodd48vGfhapdAacXQlkFK5dL6wIUm6fuTZPuvqDQhaMUYYyiVyuQr6rXDexYuAdi3tSv1ZJNs/R/CaszzT+1na88uXFnCEnJVgivBNN8uTJKmHQI/ptOOcXNZzMz9mOqFs90OHpipWcYwlo5P4ebnuOkrvr5wgrH+h3im7y36MzuwRXYZeKha/OhP0EkadFoxQSdGSotedR/+XwMc2XvKdNUFOFqZx6LKZWIiwjgkikNmLp/hm8sH+K1zjFTHXfBYdTi+eJArzXM0GxFxoBDCopLvo/fqEwi1XPkWkGqjFo2TgB1jOYZUKZTS/D1/ncmLh7jon0IbRWoiTi59ymzzJEEQE3cStNZsGxqlfPE57MBbOR8fP3hDGalOO9fq2DlBvmZw8xa2IxACGn6TydlD/O6f5OzSV/zif0cYhLQaEXGkKBbz7Ov/AOlXV1cxgBJRI3fuSTrpTawt18kWIZN1CFuaONI0w0WOXfsI43YIggh/KUSlhqxrMz74AkOZcWBm9QkH+Gw8NDLuITi+m0yzhluSyJzBLcpblUhFxywSRAEtPwQjsKVN30CNh0uvYuOubSHLtN3J0TO1j0pmBNuFbFWRK0gyPRZpktL2I5JQkclKakNlnh54g6ocvevUr/Ai2a7wineEkcJupA3S1Wg0nVZM2E6wbEF5U5G9Q++wI7sfR7h3N8HVNstykBfzH+KJEZwiWD0aIwxCgJ0R1Mu7GXOeJSuK93bZtQIle4D9pUNU5DC5jEsu55AvZakM5NicGyEj8uuz8bUCQgj67QfY671P3vEoeC69gy695U1U7NG7XV0pUwBjDJa1/JJlWWxzHuflzQe5FJ/GsgUVuZ2t8lEkTvfc0aNHb72flBhjVicQQqCUuvM3/M+WDVguWBrMVdDXEGZlBVEUrVCU9d9s5+fnaTQa2PZyPxEIhJaI1EEoZwX4ncynp6fXrmB4eJjR0VFarRbNZnP9P9rt9gohqNVq1Ov1ZbF/AZGev3hLJ2/zAAAAAElFTkSuQmCC)}
+		.xchecked-box {list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAANOgAADMQBiN+4gQAAAAd0SU1FB9gKGQ8bDYnDxEwAAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAEK0lEQVRIx9WVS2hTWRjHf/eR3CY1nbxMH2YiZRQS6qO13YlMVxY3SnVcuNIBFezGpSADLoQqLu1sHJCqdCFSXFpw4YOCSH3BtFqttTNamabX3DS5bfO6uffMoglja3RGcDMHzuac7/z/53++//cd+L8P6VuCPQYZ8ADNgBd4J31DcDcQs+GnHByRocEDv0kfBSjAOlYCs11Q+gpwDegS8LMJ+3QIK0ATzEhV8Odnz5bzw8P4dJ25aJQ/WlvJ1df/K7hSLtOcTNI+Pk69rpMTgqIQhCDvh1/VSpw79+gRrRMTmLZNezLJJsPg+a5dmOEwQlFqg1sWG16/Jv7sGWXDwBACFQjC9HcwIMONKkGp4PGAJGEDS0IQmZlhnWnye3c3eiyGo6qr3WHbrJ+dJf7gAXI6zSIr72T7/fgzmT4FHnTBsgrQBfYvTU0km5vxz86iADnAm0rRPTWFt7cXZccOJJcLAGHb2K9ekT93jmwmwwdAAFpjI6Ntbfxw5879ag7l6o1sr5eHHR3IsRgeQK/M4sQE+YEB7JcvEY6zAj45SWFgAPPxYwzHoQxIkQjTPT0kIxE+Noj8sexFn4/xnh58iQTeSpHkHAdrbIzi0BCOrmNPTpK/eJHM3bt8sCyKQCiR4NWePWSiUZw1+ZLXJm4pFKLhzBlCsRh2RUXacVgeGaF47RrL58+zcP8+RrmMkCQinZ1EL1zAjERqmkH+tLYl1G3bCJw4QUjT0IA0MJfLMX/5MqmHD0nZNiUgtGULG/r7ccXjINWuWbnmqsuFu7sb/4EDNLlcBIEioNs2KUAFGmMxmk6dQm1tRZI+3xBqEkiShBQOox05Ql1nJ26gvuIUAWiKQnj/ftStW5Fk+YuF+NldsbBA4cYN9KdPmaso8Fc62ZJtk7l1C2t0FGdxESHE1xE4hkHh6lX0oSHSpRIewC/LrPf7CSgKNpCamkI/fZr8pUuIZBIcpyaBunahPp1mub+fDyMjGKUSChCsq6Nh717q9u2jbnSU0uAgRrFIwTThyhUCqRS+hgZKLS1fJvDm87SNjZGcnsYUAjcQ8vsJ9/Xh7u1FDgRQN20iks3iDA+zZFmYhQLqzZtsj8WY3L0baY2Sf55ICCKpFHUzM2SEQAJCHg+hY8fQDh5EDgRWDoRC1J88SePRo2geD0XAcBy8b98Sv3ePYDZbbf2rFQjLIphMsmDbaEBQVQkePox26BCSz7e6i4bDrDt+nGYhmBscpFAskheC4Js3bPR4qHphFYEnlcI7P4/jdqNpGu8TCe4oCsXr1z//F2ga3+/cSfTJE0qmSVYIsKzaOZDcbjKyzFIiwfvt21kMBLA07YsetzWNd+3tLLW0sH5igvT8PH9Go/z44kX+E4LGjg7GDYOcy4XlOEgLC//5P/5LCFzxOPLmzWyIx+m6fduu7v0NVGqyTSycKksAAAAASUVORK5CYII=)}
+		.unchecked-box {list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAANOgAADMQBiN+4gQAAAAd0SU1FB9gKGQ8qAt8h3m8AAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAA60lEQVRIx+2VsQqDMBRF70sCLg5OLoKgjk7+lJ/hh+STXBwcnRz8ArMEkrxOFktbaC3tULzTg5e8k5vADXDq70VbobXmvu/hvQczg4heHrJfXxQFuq67blZbMc8zpmlCXddIkgTOuZcBUko45zCOI6y1Nz2xFSEEZFmGOI7fGg4A3nsQEZqmuXOu9jallACAtm3fvmutNaIoAjM/dkBECCF89KCbk4eAb+kEnIAT8EsAM0OIz3hSyrssUvss8t5fg+uIrLXPs0gIgWVZYIyBUurQyYdheO4gz3NUVQVjDNZ1PfSjpWmKsixvehfB9GBZ3NndrgAAAABJRU5ErkJggg==)}
+		.migrated-box {list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAANOgAADMQBiN+4gQAAAAd0SU1FB+AKHREFA8vJSnkAAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAC1klEQVRIx+2VT0hUURTGf/e958w4Tc3TYowMw1GyEgwr1MqsFmbZIrIWQZsWJUjbdoHQpl3Qps0swnCRECQFYkR/TC1iKkqmfzAKTo2Vf8hoRsfR995tkRMT87RRWkUHHhy495zvnvvu933wP/75EKkkEAjIYDCIaZpIKRFCZN0kfX9xcTGtra2/irVUEolECIfDlJeXo+s6hmFkDaCqKoZhEAqFSCaTv60pqcSyLAoLC/F4PEtqDmCaJkIIKisrMybX0sdUVRWA5ubmPzdNjjI1cpXkZC/O1fV03PXgdDqRUtpPIITAsqxsDz0Z/3CZQv8uqo4N4C8/Tp2/DdM0MiZQlvk41OTkI/LW1SGtCVb5drD3eCc71wcA+VcAHA5vDd8+3UGakxiJV7i9pdQevU5T1R35pJ3MV5QW1pf+0kWBheJ2SWua8EQXZXsu4fVVYEz1sEKvof5EuxjoPvzpcRvrdp9C2gGMx6cpOHBmbImMesds7BZubwMVDTfXDnQ3vQfK7AC8wLfExMX5whyQc3q2OEnjGm5vE76SQxsfBLr77a7CNf+n0r/l6sSMtsBSnurckiIILCobAtVZhpF4gZF4jubaymj4Ch/fd380LE7bAnjc0NPxk2yqpmEuwGxF0ag+0k5uTpzZeBeaazvj0We8fXojainsb2xh2BZgbe0gSIllzSIUh63wfQ6dZ/O2fbjcKlOj58jJ3cVENESw5yErc9nf2MLQ4jwQAkV1Lqiq37/cZ9WaahJjF9AcmxiPDhLs7ePe23oOnmUwg2hSShQle96tKDjA2HAniusgo9FxnvY9Jxw7RWzGYy92QghM00x5g53qp9sHmtB58/o2umOI2NwGolMnMYUHIb7aAyiKwsjICLqu2/qBEIKUUAohMaSHSLyBSMoPTINQ6CX5+fn2AEVFRZSUlBCPx4nFYhl3L4RESjF/GEgX3pSj+Xw+/H7/b3U/AEOZFnp7O5+5AAAAAElFTkSuQmCC)}
+		ul {list-style-image: none}
+		/* ul rule needed to reset style for sub-bullets */
+
+		span.insen { color: grey                }
+
+		.pages {
+			max-width: 1000px;
+			 padding-left: 320px;
+		}
+		.menu{
+			float:left; width: 300px;
+		}
+		hr{clear:both;}
+	</style>
+</head>
+<body>
+
+<!-- Header -->
+<div class='header'>
+	[ <a href='./Day_10.html'>Prev</a> ]
+
+	[ <span class='insen'>Index</span> ]
+
+	[ <a href='./Final_Review.html'>Next</a> ]
+</div>
+
+<hr />
+
+<div class="menu">
+<ul>
+<li><a href="./Day_1.html" title="Day 1" class="page">Day 1</a></li>
+<li><a href="./Day_2.html" title="Day 2" class="page">Day 2</a></li>
+<li><a href="./Day_3.html" title="Day 3" class="page">Day 3</a></li>
+<li><a href="./Day_4.html" title="Day 4" class="page">Day 4</a></li>
+<li><a href="./Day_5.html" title="Day 5" class="page">Day 5</a></li>
+<li><a href="./Day_6.html" title="Day 6" class="page">Day 6</a></li>
+<li><a href="./Day_7.html" title="Day 7" class="page">Day 7</a></li>
+<li><a href="./Day_8.html" title="Day 8" class="page">Day 8</a></li>
+<li><a href="./Day_9.html" title="Day 9" class="page">Day 9</a></li>
+<li><a href="./Day_10.html" title="Day 10" class="page">Day 10</a></li>
+<li><b>Day 11</b></li>
+<li><a href="./Final_Review.html" title="Final Review" class="page">Final Review</a></li>
+<li><a href="./Midterm_Review.html" title="Midterm Review" class="page">Midterm Review</a></li>
+</ul>
+
+</div>
+
+<!-- Wiki content -->
+
+<div class='pages'>
+	<div class='heading'>
+	<h1>Day 11 <a name='Day 11'></a></h1>
+	</div>
+
+	<div class='content'>
+	<p>
+Created Wednesday 13 May 2020
+</p>
+
+<h3>Welcome to the final lecture</h3>
+
+<p>
+We did it everyone! Congrats! Today is the last lecture. GLHF with the final.
+</p>
+
+<h3>Final Notes</h3>
+
+<p>
+10 questions on the test. As per the midterm, the questions will be padded from the HW. Welcome to bring a 2-page cheatsheet. 2 hours and 30 minutes. Begin at 6:00. The final will be in the assignments section. <b>The absolute deadline is at 8:30! </b>Exam is only on the stuff from the midterm onwards. He says we might not need MARS on hand. I suggest just doing all the HW questions again. Take pics of handwritten work.
+</p>
+
+<h3>Chapter 7: Input/Output Systems</h3>
+
+<p>
+Understand how I/O systems work, including I/O methods and architectures.<br>
+Become familiar with storage media, and the differences in their respective formats.<br>
+Understand how <b>RAID</b> improves disk performance and reliability, and which RAId systems are most useful today.<br>
+Be familiar with emerging data storage technologies and the barriers that remain to be overcome.
+</p>
+
+<p>
+Data storage and retrieval is one of the primary functions of computer systems.<br>
+One could say that computers are more useful to us as data storage and retrieval devices than they are as computational machines.<br>
+All computers have I/O devices connected to them.<br>
+To achieve good performance I/O should be kept to a minmum!
+</p>
+
+<p>
+Sluggish I/O throughput can have a ripple effect, dragging down overall system performance.<br>
+This is espescially true when virtual memory is involved.<br>
+<i>The fastest processor in the world is of little use if it spends most of its time waiting for data!</i>
+</p>
+
+<h3>Amdahl's Law</h3>
+
+<p>
+The overall performance of a system is a result of the interaction of all of its components.<br>
+System performance is most effectively improved when the performance of the most heavily used components is improved.<br>
+This idea is quantified by <b>Amdahl's Law!</b>
+</p>
+
+<p>
+S = 1 / ( (1 - f) + (f / k))<br>
+Where S is the overall speedup;<br>
+f is the faction of work performed by a faster component;<br>
+and k is the speedup of the faster component.<br>
+<b>Calculating k is initially not intuitive!</b><br>
+Only possibility of a speedup is if f is greater than 1.
+</p>
+
+<p>
+On a large system, suppose we can<br>
+<ul>
+<li>upgrade a CPU to make it 50% faster for $10,000 or</li>
+<li>upgrade its disk drive for $7,000 to make them 150% faster.</li>
+</ul>
+</p>
+
+<p>
+Processes spend 70% of their time running in the CPU and 30% of their time waiting for disk service.<br>
+An upgrade of which component would offer the greater benefit for the lesser cost?<br>
+Between the two, CPU is being used the most where else we hardly touch the disk drive. Therefore, we can try and calculate which is better.
+</p>
+
+<h3>Calculating K - The Speedup</h3>
+
+<p>
+The new CPU is 50% faster than the old CPU.<br>
+Restated: The new CPU is 1.5 times faster than the old CPU.<br>
+So, in this case K = 1.5.
+</p>
+
+<p>
+The new disk drive is 150% faster than the old one.<br>
+Restated: The new disk drive is 2.5 times faster than the old one.<br>
+So, in this case : = 2.5
+</p>
+
+<p>
+Using the formula above, the processor option offers a 30% speedup.<br>
+So, Each 1% of improvement for the processor costs $333 ($10,000 / 30)
+</p>
+
+<p>
+The disk drive option gives a 22% speedup.<br>
+So, each 1% of improvement for the disk costs $318. ($7,000 / 22).
+</p>
+
+<p>
+Numbers alone, <b>we see that the disk drive is better for the price!</b>
+</p>
+
+<p>
+There are other factors to consider our professor says. The actual values of CPU and disk service can vary over time. Reliability is an issue. Etc.
+</p>
+
+<h3>Architectures</h3>
+
+<p>
+We define input/output as a subsystem of components that moves coded data between external devices and a host system.
+</p>
+
+<p>
+I/O subsystems include:<br>
+<ul>
+<li><b>Blocks of main memory</b> that are devoted to I/O functions.</li>
+<li><b>Buses </b>that move data into and out of the system.</li>
+<li><b>Control modules</b> in the host and in peripheral devices.</li>
+<li><b>Interfaces to external components</b> such as keyboards and disks.</li>
+<li><b>Cabling or communications links</b> between the host system and its peripherals.</li>
+</ul>
+</p>
+
+<p>
+I/O can be controlled in five general ways:<br>
+<ul>
+<li><b>Programmed I/O</b> reserves a register for each I/O device. Each register is continually polled to detect data arrival.</li>
+<li><b>Interrupt-Driven I/O </b>allows the CPU to do other things until I/O is requested.</li>
+<li><b>Memory-Mapped I/O</b> shares memory address space between I/O devices and program memory.</li>
+<li><b>Direct Memory Access</b> (DMA) offloads I/O processing to a special-purpose chip that takes care of the details.</li>
+<li><b>Channel I/O </b>uses dedicated I/O processors.</li>
+</ul>
+</p>
+
+<p>
+In a system that uses interrupts, the status of the interrupt signal is checked at the top of the <b>fetch-decode-execute</b> cycle.<br>
+The particular code that is executed whenever an interrupt occurs is determined by a set of addresses called <b>interrupt vectors</b> that are stored in low memory.<br>
+The system state is saved before the interrupt service routine is executed and is restored afterward.
+</p>
+
+<h3>Memory-Mapped I/O</h3>
+
+<p>
+In a memory-mapped I/O, devices and main memory share the same address space.<br>
+<ul>
+<li>Each I/O device has its own reserved block of memory.</li>
+<li>Memory-mapped I/O therefore looks just like a memory access from the point of view of the CPU.</li>
+<li>Thus the same instructions to move data to and from both I/O and memory, greatly simplifying system design.</li>
+</ul>
+</p>
+
+<p>
+In small systems, the low-level details of the data transfers are offloaded to the I/O controllers built into the I/O devices.
+</p>
+
+<h3>Direct Memory Access</h3>
+
+<p>
+DMA and the CPU share the same bus.<br>
+The DMA runs at a <b>higher priority</b> and <b>steals memory cycles from the CPU!</b><br>
+<b>Cycle Stealing</b> is a method of accessing computer memory or bus without interfering with the CPU. It is similar to direct memory access for allowing I/O controllers to read or write RAM without CPU intervention.
+</p>
+
+<h3>Channel I/O</h3>
+
+<p>
+Very large systems employ channel I/O<br>
+Channel I/O consists of one or more I/O processors (IOPs) that control various channel paths.<br>
+Slower devices such as terminals and printers are combined (multiplexed) into a single faster channel.<br>
+On IBM mainframes, multiplexed channels are called <b>multiplexor channels</b>, the faster ones are called <b>selector channels.</b>
+</p>
+
+<p>
+Channel I/O is distinguished from DMA by the <b>intelligence of the IOPs.</b><br>
+The IOP negotiates protocols, issues device commands, translates storage coding to memory coding, and can transfer entire files or groups of files independent of the host CPU.<br>
+The host has only to create the program instructions for the I/O operation and tell the IOP where to find them.
+</p>
+
+<h3>Character and Block I/O</h3>
+
+<p>
+<b>Character I/O</b> devices process one byte (or character) at a time.<br>
+<ul>
+<li>Examples include modems, keyboards, and mice.</li>
+<li><i>Keyboards are usually connected through an interrupt-driven I/O system.</i></li>
+</ul>
+</p>
+
+<p>
+<b>Block I/O</b> devices handle bytes in groups.<br>
+<ul>
+<li>Most mass storage devices (disk and tape) are block I/O devices.</li>
+<li>Block I/O systems are most efficiently connected through DMA or channel I/O.</li>
+</ul>
+</p>
+
+<h3>I/O Busses</h3>
+
+<p>
+I/O buses, unlike memory buses, operate <i>asynchronously. </i>Requests for bus access must be arbitrated among the devices involved.<br>
+Bus control lines activate the devices when they are needed, raise signals when errors have occurred, and reset devices when necessary.<br>
+The <b>number of data lines</b> is the <b>width</b> of the bus.<br>
+A <b>bus clock</b> coordinates activites and provides bit cell boundaries.
+</p>
+
+<h3>Serial Vs Parallel Data Transmission</h3>
+
+<p>
+Bytes can be conveyed from one point to another.<br>
+<ul>
+<li>by sending their encoding signals simultaneously using <b>parallel data transmission</b> or</li>
+<li>by sending them one bit at a time in <b>serial data transmission</b></li>
+</ul>
+</p>
+
+<p>
+In a parallel data transmission, the interface requires <b>one conductor for each bit.</b><br>
+Parallel cables are fatter than serial cables.<br>
+Compared with parallel data interfaces, serial communications interfaces:<br>
+<ul>
+<li>Require fewer conductors.</li>
+<li>Are less susceptible to attenuation.</li>
+<li>Can transmit data farther and faster.</li>
+</ul>
+Serial communications interfaces are suitable for time-sensitive (<i>isochronous) </i>data such as voice and video.
+</p>
+
+<h3>Disk Technology</h3>
+
+<p>
+Magnetic disks offer large amounts of durable storage that can be accessed quickly<br>
+Disk drives are called <i>random (or direct) </i>access storage devices, because blocks of data can be accessed according to their location on the disk.<br>
+<ul>
+<li>This term was coined when all other durable storage (e.g., tape) was sequential.</li>
+</ul>
+Magnetic disk organization is shown on the following slide.
+</p>
+
+<p>
+<b>See the hard drive in action:</b><br>
+<a href="https://www.youtube.com/watch?v=NtPc0jI21i0" title="https://www.youtube.com/watch?v=NtPc0jI21i0" class="https">https://www.youtube.com/watch?v=NtPc0jI21i0</a>
+</p>
+
+<h3>Rigid Disk Drives</h3>
+
+<p>
+Disk tracks are numbered from the outside edge, starting with zero. <br>
+Hard disk platters are mounted on spindles.<br>
+Read/write heads are mounted on a comb that swings radially to read the disk.<br>
+The rotating disk forms a logical cylinder beneath the read/write heads.<br>
+Data blocks are addressed by their cylinder, surface, and sector.<br>
+There are a number of <i>electromechanical</i> properties of hard disk drives that determine how fast its data can be accessed.<br>
+<b>Seek time</b> is the time that it takes for a disk arm to move into position over the desired cylinder.<br>
+<b>Rotational delay</b> is the time that it takes for the desired sector to move into position beneath the read/write head.<br>
+<b>Seek time + rotational delay = access time!</b>
+</p>
+
+<p>
+Low cost is the major advantage of hard disks.<br>
+But their limitations include:<br>
+<ul>
+<li>Very slow compared to main memory</li>
+<li>fragility</li>
+<li>moving parts wear out</li>
+</ul>
+Reductions in memory cost enable the widespread adoption of <b>solid state drives (SSDs).</b><br>
+<ul>
+<li>Computers "see" SSDs as just another disk drive, but they store data in non-volatile <i>flash</i> memory circuits.</li>
+<li>Flash memory is also found in memory sticks and MP3 players.</li>
+</ul>
+</p>
+
+<h3>Solid State Drives</h3>
+
+<p>
+SSD access time and transfer rates are <i>typically 100 times faster than magnetic disk, </i>but <b>slower than onboard RAM by a factor of 100,000.</b><br>
+<ul>
+<li>There numbers vary widely among manufacturers and interface methods.</li>
+</ul>
+Unlike RAM, flash is block-addressable (like disk drives).<br>
+The duty cycle of flash is between 30,000 and 1,000,000 updates to a block.<br>
+Updates are spread over the entire medium through <i>wear levling</i>to prolong the life of the SSD.
+</p>
+
+<p>
+The <i>Joint Electron Devices Engineering Council (JEDEC) </i>sets standards for SSD performance and reliability metrics. The most important are:<br>
+<b>Unrecoverable Bit Error Ratio (UBER) </b>measures disk reliability<br>
+<b>UBER </b>is calculated by dividing the number of data errors by the number of bits read using a simulated lifetime workload.<br>
+<b>TeraBytes Written (TBW). TBW </b>measures disk endurance (or service life)<br>
+<b>TBW </b>is the number of terabytes that can be written to the disk before the disk fails to meet specifications for speed and error rates.
+</p>
+
+<h3>Optical Disks</h3>
+
+<p>
+Optical disks provide large storage capacities very inexpensively.<br>
+They come in a number of varieties including CD-ROM, DVD, and WORM.<br>
+Many large computer installations produce document output on optical disk rather than on paper. This idea is called <b>COLD — Computer Output Laser Disk.</b><br>
+It is estimated that optical disks can endure <b>for a hundred years.</b> Other media are good for only <b>a decade</b> — at best.
+</p>
+
+	</div>
+
+	<br />
+
+	<div class='page-footer'>
+
+	</div>
+
+	
+
+</div>
+
+</body>
+</html>
