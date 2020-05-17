@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Day 3</title>
+	<title>Day 20</title>
 	<meta name='Generator' content='Zim 0.68'>
 	<style type='text/css'>
 		a          { text-decoration: none      }
@@ -51,11 +51,11 @@
 
 <!-- Header -->
 <div class='header'>
-	[ <a href='./Day_2.html'>Prev</a> ]
+	[ <a href='./Day_19.html'>Prev</a> ]
 
 	[ <span class='insen'>Index</span> ]
 
-	[ <a href='./Day_4.html'>Next</a> ]
+	[ <a href='./Day_21.html'>Next</a> ]
 </div>
 
 <hr />
@@ -63,7 +63,7 @@
 <div class="menu">
 <ul>
 <li><a href="./Day_2.html" title="Day 2" class="page">Day 2</a></li>
-<li><b>Day 3</b></li>
+<li><a href="./Day_3.html" title="Day 3" class="page">Day 3</a></li>
 <li><a href="./Day_4.html" title="Day 4" class="page">Day 4</a></li>
 <li><a href="./Day_5.html" title="Day 5" class="page">Day 5</a></li>
 <li><a href="./Day_6.html" title="Day 6" class="page">Day 6</a></li>
@@ -80,7 +80,7 @@
 <li><a href="./Day_17.html" title="Day 17" class="page">Day 17</a></li>
 <li><a href="./Day_18.html" title="Day 18" class="page">Day 18</a></li>
 <li><a href="./Day_19.html" title="Day 19" class="page">Day 19</a></li>
-<li><a href="./Day_20.html" title="Day 20" class="page">Day 20</a></li>
+<li><b>Day 20</b></li>
 <li><a href="./Day_21.html" title="Day 21" class="page">Day 21</a></li>
 <li><a href="./Day_22.html" title="Day 22" class="page">Day 22</a></li>
 <li><a href="./Day_23.html" title="Day 23" class="page">Day 23</a></li>
@@ -97,115 +97,172 @@
 
 <div class='pages'>
 	<div class='heading'>
-	<h1>Day 3 <a name='Day 3'></a></h1>
+	<h1>Day 20 <a name='Day 20'></a></h1>
 	</div>
 
 	<div class='content'>
 	<p>
-Created Tuesday 04 February 2020
-</p>
-
-<h3>Scheme Notes</h3>
-
-<p>
-A <b>function </b>is...
+Created Tuesday 28 April 2020
 </p>
 
 <p>
-A set of arguments together with a rule for manipulating those arguments. Even if the rule is the same, it's a different function. In recursion, we keep constructing new functions because we change the arguments. So we change the functions. We don't call ourselves. We don't have a function that calls itself. We have a function that calls a copy of itself with different arguments.
+Video can be seen <a href="https://youtu.be/IBiZXPW_vTU" title="here" class="https">here</a>.
 </p>
 
 <p>
-A <b>lamda expression </b>in scheme is a function that takes two args. A list of args and then a <b>rule</b> for manipulating this argument. The <b>lambda expression</b> is named as such because it is drawn from lambda calculus invented in the 1930s. It was invented to study just what it is we mean by functions.
+He begins the video by telling us how to put our game online. I just used my own home server instead.
 </p>
 
 <p>
-In <b>recurssion,</b> how do we know when we're there yet? When we hit the terminating condition. For a list, we need to check if the <b>tail</b> is empty for iterating over the list. If the tail is empty, then we're done.
+Now he's talking about declarative vs imperative languages. Don't deal with declarative languages as though they are imperative! Imperative languages has us translate some value to some representation inside of the machine. This is what the assignment statements are all about. You have to store the values to operate on them! In <b>imperative</b> on the other hand, we deal with those values directly. Hence the whole aliasing thing we do with define in scheme.
+</p>
+
+<p>
+Internal representations are why we need pointers.
+</p>
+
+<p>
+In imperative, they're recipes that we follow and hope they give us the correct result.<br>
+In imperative, we don't care how it gets the sum. Just tell us the answer!
+</p>
+
+<p>
+In the CADET, there was no arithmetic! Instead, you used a table lookup. (can't add, doesn't even try).
+</p>
+
+<p>
+Procedural languages like C or Java, functions are precedures that we follow. Could be in ram or cache or wahtever. 
+</p>
+
+<p>
+In declarative, we try to avoid the machine all together. No worrying about allocating memory and whatnot. We don't want to bother with all the extra stuff. Just get it done. In fact, there aren't really any pointers in declarative languages either!
+</p>
+
+<p>
+He references an article called, "Computing Without Data" which started quite the storm. This was before declarative was really starting to pickup.
+</p>
+
+<p>
+<i>A little lazyiness is a good thing for a programmer.</i>
+</p>
+
+<p>
+Let us look at scheme again:
 </p>
 
 <div class="zim-object">
-<pre><code class="scheme">(define ctr (lambda (mlist) (if (eq? (cdr mlist) (list)) 1 (+ 1 ctr(cdr mlist)))))</code></pre>
+<pre><code class="scheme">(define a 2)</code></pre>
 </div>
 
 <br>
 
 <p>
-head tail<br>
-car cdr
+a is a symbol and 2 is a value. The scheme function define just connects them. There is <b>no</b> modification here. Whenever you see the symbol a, just replace it with 2.
 </p>
 
 <p>
-The <b>define</b> function doesn't define things. It names them. It simply says replace this with that.
+He notes many people thought define made a into a function. They were getting confused with the following though:
+</p>
+<div class="zim-object">
+<pre><code class="scheme">(define a (lambda (n) (rule)))</code></pre>
+</div>
+
+<p>
+Chances are, the reason for this mixup is because they were using the short form to declare a shceme function that doesn't use lambda.
+</p>
+<div class="zim-object">
+<pre><code class="scheme">(define (a x) (rule))</code></pre>
+</div>
+
+<p>
+The above should translate to the lambda version. As such, people got confused.
 </p>
 
 <p>
-As a scheme programmer, we don't concern ourselves with real efficiency. We leave that for C or assembly language. For results, we don't pay attention to how long the computing is going to take. The object is just getting it to work. <b>Get the program to work and make it understandable before you worry about speed.</b> 
-</p>
-
-<h3>Therac and other Software Disasters</h3>
-
-<p>
-What is the importance of reading the therac report? Only a small number of computer programs can be proved correct. The best we can do is test our software or else we'll get what we got with the therac where people died due to buggy software. Even still, just simply saying <i>it's tested</i> isn't enough. For example, perhaps the program passed all the given test data but what about data that wasn't in the test? What if it crashes for anything outside of the original test? Sure, the program is <i>tested</i> but it doesn't really work!
+<i>He notes that HTML is a remarkably declarative language! </i>&lt;b&gt;text&lt;/b&gt; says that the text between the tags should be bold. The bolding is left up to the browser.
 </p>
 
 <p>
-What we can do is try our best to break it. Come up with good sets of test data. Check the boundary conditions and corner cases. Essentially, we have to <b>test the hell out of it.</b>
+<b>HTML and CSS are declarative languages he notes!</b>
 </p>
 
 <p>
-<b>A race condition</b> is where the output of the computation depends on the order in which the threads complete. The output may be different. It may not be <i>wrong</i> code. It could be right. But it's a performance issue that messes it up. This is a part of what went wrong with the therac.
+Make sense. We declare what we want to happen and then it does it without us worrying about the details.
 </p>
 
 <p>
-Another problem was that the engineers <b>ignored</b> complaints about their software. They believed that the reports of the errors were impossible. <b>Never deny a report.</b> The therac engineers did it over and over again. When a user reports an error, you always follow through and check it even if you end up not being able to recreate the problem. User error is a thing but you should always take their concerns seriously. You can't ignore them no matter how stupid it may seem to be.
+He made the oracle joke again. I think this was upwards the 10th time.
+</p>
+
+<h3>map function</h3>
+
+<p>
+Now he's going over the map function in scheme.
+</p>
+
+<div class="zim-object">
+<pre><code class="scheme">(map function list)</code></pre>
+</div>
+
+<p>
+Let's say we have the list (0 1 2 3 4 5) and we want to square each one.
 </p>
 
 <p>
-The therac engineers failed to comply with the FDA, test, and listen to their users. The therac-25 was a disaster. 
+It would be a real bother to define a whole squaring function so we can do it with just lambda!
+</p>
+
+<div class="zim-object">
+<pre><code class="scheme">(map (lambda (x)(+ x x))
+	(0 1 2 3 4 5))</code></pre>
+</div>
+
+<br>
+
+<p>
+Very useful especially when we only need a function once. There's no need in naming it afterall.
 </p>
 
 <p>
-<b>Bad software kills people.</b>
+Lambda functions were invented because mathematicians realized you really don't need a name. It requires a level of indirection that we'd like to get rid of. Functions that aren't burdoned by names.
 </p>
 
 <p>
-Test thoroughly, document, hardware safety isn't more reliable than software (it has a limited lifetime). In fact, software can go on forever where else hardware will fail at some point. Either way, bad software <b>kills</b>. In fact, all software should be written as though lifes depend on it. Who knows, your code could end up inside a piece of medical equipment. 
+<b>What is a function in a declarative language?</b><br>
+<ol type="1" start="1">
+<li>It is a set of arguments that will be replaced by parameters.</li>
+<li>Together with a <b>rule </b>for combining the parameters (or args) into a simpler expression.
+<ol type="a" start="1">
+<li>Simpler than the rule itself he notes.</li>
+</ol></li>
+</ol>
 </p>
 
 <p>
-<img src="./images/listIteration.jpg" width="1008">
-</p>
-
-<h3>Homework</h3>
-
-<p>
-For HW1, he is adding a third assignment and extending the deadline.<br>
-For the third homework, he wants us to pile up oranges. Each row has twice as many as the previous row. <b>For arbitrary n, how many oranges are there in the pyramid total?</b> There is a shortcut he mentions but he's not gonna tell us. Just add em up. Probably just a factorial. <b>HW1 is due next tuesday for all three problems! (that should be the 11th)</b>
+We'd like to have all the arguments replaced by parameters but we don't have to do that. Functions are merely a sort of value. We don't have to reduce them to a collection of operations. We can think of them as <b>a symbol! </b>A function is merely a symbol just like all the other symbols we work with (a being a symbol for 2 for example).
 </p>
 
 <p>
-<img src="./images/orangeProblem.jpg" width="1008">
+<b>Functions are first class values because they can be passed around. </b>We can pass functions. They're merely symbols.
 </p>
 
 <p>
-He does mention that there is a function called <b>exp</b> that we can use to calculate the number of oranges in each row.
+<b>Functional programming </b>calls for us to treat our program as a transformation of our input data into output data.
 </p>
 
 <p>
-He wants source code, comments, and output by the way.
+<b>IBMs HIPO defines programs strictly in terms of Input, Process, and then Output.</b><br>
+You can then refine each of these levels. <b>Successive Refinement.</b><br>
+This helps us to organize our program. <br>
+You can write pretty good functional programming in C, C++, and Java he notes.
 </p>
 
 <p>
-For doing things command line, he recommends <b>man, script, and cat.</b> Script takes a transcript of whatever comes up on the terminal and print that directly. (double check what script does)
+Variables can be given values only once. This helps with debugging and proving our programs (although only a few programs can be truly proved).
 </p>
 
-<p>
-<s>He says he wants all four functions done in one line. I'm curious if he'd be okay with my version.</s> He saw it and said that's exactly what he was looking for! Hurray!
-</p>
+<br>
 
-<p>
-<b>By the way, he prefers the lambda expression over the short form. So do that.</b>
-</p>
 
 	</div>
 

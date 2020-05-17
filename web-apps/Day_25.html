@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Day 3</title>
+	<title>Day 25</title>
 	<meta name='Generator' content='Zim 0.68'>
 	<style type='text/css'>
 		a          { text-decoration: none      }
@@ -51,11 +51,11 @@
 
 <!-- Header -->
 <div class='header'>
-	[ <a href='./Day_2.html'>Prev</a> ]
+	[ <a href='./Day_24.html'>Prev</a> ]
 
 	[ <span class='insen'>Index</span> ]
 
-	[ <a href='./Day_4.html'>Next</a> ]
+	[ <a href='./Exam_II_Review.html'>Next</a> ]
 </div>
 
 <hr />
@@ -63,7 +63,7 @@
 <div class="menu">
 <ul>
 <li><a href="./Day_2.html" title="Day 2" class="page">Day 2</a></li>
-<li><b>Day 3</b></li>
+<li><a href="./Day_3.html" title="Day 3" class="page">Day 3</a></li>
 <li><a href="./Day_4.html" title="Day 4" class="page">Day 4</a></li>
 <li><a href="./Day_5.html" title="Day 5" class="page">Day 5</a></li>
 <li><a href="./Day_6.html" title="Day 6" class="page">Day 6</a></li>
@@ -85,7 +85,7 @@
 <li><a href="./Day_22.html" title="Day 22" class="page">Day 22</a></li>
 <li><a href="./Day_23.html" title="Day 23" class="page">Day 23</a></li>
 <li><a href="./Day_24.html" title="Day 24" class="page">Day 24</a></li>
-<li><a href="./Day_25.html" title="Day 25" class="page">Day 25</a></li>
+<li><b>Day 25</b></li>
 <li><a href="./Exam_II_Review.html" title="Exam II Review" class="page">Exam II Review</a></li>
 <li><a href="./Important_Links.html" title="Important Links" class="page">Important Links</a></li>
 <li><a href="./Introduction.html" title="Introduction" class="page">Introduction</a></li>
@@ -97,114 +97,52 @@
 
 <div class='pages'>
 	<div class='heading'>
-	<h1>Day 3 <a name='Day 3'></a></h1>
+	<h1>Day 25 <a name='Day 25'></a></h1>
 	</div>
 
 	<div class='content'>
 	<p>
-Created Tuesday 04 February 2020
-</p>
-
-<h3>Scheme Notes</h3>
-
-<p>
-A <b>function </b>is...
+Created Thursday 14 May 2020
 </p>
 
 <p>
-A set of arguments together with a rule for manipulating those arguments. Even if the rule is the same, it's a different function. In recursion, we keep constructing new functions because we change the arguments. So we change the functions. We don't call ourselves. We don't have a function that calls itself. We have a function that calls a copy of itself with different arguments.
+You can view the video <a href="https://youtu.be/z-PAmoL63Rw" title="here" class="https">here</a>.
+</p>
+
+<h3>Final Video (for the morning class)</h3>
+
+<p>
+Hurray! Grats everyone.
 </p>
 
 <p>
-A <b>lamda expression </b>in scheme is a function that takes two args. A list of args and then a <b>rule</b> for manipulating this argument. The <b>lambda expression</b> is named as such because it is drawn from lambda calculus invented in the 1930s. It was invented to study just what it is we mean by functions.
+Problem 1 he states: People changing the question. He asks a question on the exam and then people change it to something that they'd like to see. 
 </p>
 
 <p>
-In <b>recurssion,</b> how do we know when we're there yet? When we hit the terminating condition. For a list, we need to check if the <b>tail</b> is empty for iterating over the list. If the tail is empty, then we're done.
-</p>
-
-<div class="zim-object">
-<pre><code class="scheme">(define ctr (lambda (mlist) (if (eq? (cdr mlist) (list)) 1 (+ 1 ctr(cdr mlist)))))</code></pre>
-</div>
-
-<br>
-
-<p>
-head tail<br>
-car cdr
+Be sure to comment your code. Sure, the reader could try and figure out what it all does but it shouldn't be this way! 
 </p>
 
 <p>
-The <b>define</b> function doesn't define things. It names them. It simply says replace this with that.
+COBOL was a language that was made to help enforce self-documentation. That's why it's so verbose. The creator, Grace Hopper, nocticed a lot of programmers didn't want to document their code. So she made a language that helped to enforce this.
 </p>
 
 <p>
-As a scheme programmer, we don't concern ourselves with real efficiency. We leave that for C or assembly language. For results, we don't pay attention to how long the computing is going to take. The object is just getting it to work. <b>Get the program to work and make it understandable before you worry about speed.</b> 
-</p>
-
-<h3>Therac and other Software Disasters</h3>
-
-<p>
-What is the importance of reading the therac report? Only a small number of computer programs can be proved correct. The best we can do is test our software or else we'll get what we got with the therac where people died due to buggy software. Even still, just simply saying <i>it's tested</i> isn't enough. For example, perhaps the program passed all the given test data but what about data that wasn't in the test? What if it crashes for anything outside of the original test? Sure, the program is <i>tested</i> but it doesn't really work!
+<b>The object of a website is to communicate. </b>Don't make your reader go hunting for things. Don't let your content jump around while they are reading. Don't be annoying and interfere. Even big sites like CNN make this mistake with their ads.
 </p>
 
 <p>
-What we can do is try our best to break it. Come up with good sets of test data. Check the boundary conditions and corner cases. Essentially, we have to <b>test the hell out of it.</b>
+Now he's stating how many websites don't have source code commented on their websites (albeit, a lot of people have their comments removed to reduce the size of their websites when building it). Anyways, <b>always comment your code.</b>
 </p>
 
 <p>
-<b>A race condition</b> is where the output of the computation depends on the order in which the threads complete. The output may be different. It may not be <i>wrong</i> code. It could be right. But it's a performance issue that messes it up. This is a part of what went wrong with the therac.
+Be sure to <b>use the right font!</b>
 </p>
 
-<p>
-Another problem was that the engineers <b>ignored</b> complaints about their software. They believed that the reports of the errors were impossible. <b>Never deny a report.</b> The therac engineers did it over and over again. When a user reports an error, you always follow through and check it even if you end up not being able to recreate the problem. User error is a thing but you should always take their concerns seriously. You can't ignore them no matter how stupid it may seem to be.
-</p>
+<h3>Exam</h3>
 
 <p>
-The therac engineers failed to comply with the FDA, test, and listen to their users. The therac-25 was a disaster. 
-</p>
-
-<p>
-<b>Bad software kills people.</b>
-</p>
-
-<p>
-Test thoroughly, document, hardware safety isn't more reliable than software (it has a limited lifetime). In fact, software can go on forever where else hardware will fail at some point. Either way, bad software <b>kills</b>. In fact, all software should be written as though lifes depend on it. Who knows, your code could end up inside a piece of medical equipment. 
-</p>
-
-<p>
-<img src="./images/listIteration.jpg" width="1008">
-</p>
-
-<h3>Homework</h3>
-
-<p>
-For HW1, he is adding a third assignment and extending the deadline.<br>
-For the third homework, he wants us to pile up oranges. Each row has twice as many as the previous row. <b>For arbitrary n, how many oranges are there in the pyramid total?</b> There is a shortcut he mentions but he's not gonna tell us. Just add em up. Probably just a factorial. <b>HW1 is due next tuesday for all three problems! (that should be the 11th)</b>
-</p>
-
-<p>
-<img src="./images/orangeProblem.jpg" width="1008">
-</p>
-
-<p>
-He does mention that there is a function called <b>exp</b> that we can use to calculate the number of oranges in each row.
-</p>
-
-<p>
-He wants source code, comments, and output by the way.
-</p>
-
-<p>
-For doing things command line, he recommends <b>man, script, and cat.</b> Script takes a transcript of whatever comes up on the terminal and print that directly. (double check what script does)
-</p>
-
-<p>
-<s>He says he wants all four functions done in one line. I'm curious if he'd be okay with my version.</s> He saw it and said that's exactly what he was looking for! Hurray!
-</p>
-
-<p>
-<b>By the way, he prefers the lambda expression over the short form. So do that.</b>
+We have 2 hours total for the final. We should be able to finish in an hour. <b>Make sure to follow instructions! </b>
 </p>
 
 	</div>

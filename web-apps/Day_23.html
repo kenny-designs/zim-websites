@@ -1,0 +1,341 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Day 23</title>
+	<meta name='Generator' content='Zim 0.68'>
+	<style type='text/css'>
+		a          { text-decoration: none      }
+		a:hover    { text-decoration: underline }
+		a:active   { text-decoration: underline }
+		strike     { color: grey                }
+		u          { text-decoration: none;
+					 background-color: yellow   }
+		tt         { color: #2e3436;            }
+		pre        { color: #2e3436;
+					 margin-left: 20px          }
+		h1         { text-decoration: underline;
+					 color: #4e9a06; margin-bottom: 0 }
+		h2         { color: #4e9a06; margin-bottom: 0 }
+		h3         { color: #4e9a06; margin-bottom: 0 }
+		h4         { color: #4e9a06; margin-bottom: 0 }
+		h5         { color: #4e9a06; margin-bottom: 0 }
+		p          { margin-top: 0              }
+		span.zim-tag {
+			color: #ce5c00;
+		}
+		div.zim-object {
+			border-style:solid;
+			border-width:1px;
+		}
+		.checked-box {list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAANOgAADMQBiN+4gQAAAAd0SU1FB9gKGQ8sMEGsKGkAAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAEBUlEQVRIx62V22tdRRTGf7Nn73P2ybntnNOe3NqkPTGgLTVUUZF6QatSLOKTPgqCIqLgQ0H/A1sQQbBYCBb1QfAxiC8tSO1FqHkwJVKtjdTGNraUmObsc9nXmfGh7cGYpM1D5nHWzPetteZb3wg2eB2YqYm4zSadsMtoboiNBH/3TE0awx6j+MRoxoTg/IYRvP19TQrJS0bzhdHGSyKFkLTtjSKwMjyiEz43ynhtP6bdjBCWyFobAf7eT7VhNF/q1FRbjYjmUohlCVPwnB+6FUxMTJipqSmUUhhjEGKd3bMT4ks/Y6oLBK2Yth8hHYtCJXOix7Nf7xLMzc0xOzvLzp078TyPNE3viW3QJPXzhNWbxFFKHCmMhoLn/FHodd48vGfhapdAacXQlkFK5dL6wIUm6fuTZPuvqDQhaMUYYyiVyuQr6rXDexYuAdi3tSv1ZJNs/R/CaszzT+1na88uXFnCEnJVgivBNN8uTJKmHQI/ptOOcXNZzMz9mOqFs90OHpipWcYwlo5P4ebnuOkrvr5wgrH+h3im7y36MzuwRXYZeKha/OhP0EkadFoxQSdGSotedR/+XwMc2XvKdNUFOFqZx6LKZWIiwjgkikNmLp/hm8sH+K1zjFTHXfBYdTi+eJArzXM0GxFxoBDCopLvo/fqEwi1XPkWkGqjFo2TgB1jOYZUKZTS/D1/ncmLh7jon0IbRWoiTi59ymzzJEEQE3cStNZsGxqlfPE57MBbOR8fP3hDGalOO9fq2DlBvmZw8xa2IxACGn6TydlD/O6f5OzSV/zif0cYhLQaEXGkKBbz7Ov/AOlXV1cxgBJRI3fuSTrpTawt18kWIZN1CFuaONI0w0WOXfsI43YIggh/KUSlhqxrMz74AkOZcWBm9QkH+Gw8NDLuITi+m0yzhluSyJzBLcpblUhFxywSRAEtPwQjsKVN30CNh0uvYuOubSHLtN3J0TO1j0pmBNuFbFWRK0gyPRZpktL2I5JQkclKakNlnh54g6ocvevUr/Ai2a7wineEkcJupA3S1Wg0nVZM2E6wbEF5U5G9Q++wI7sfR7h3N8HVNstykBfzH+KJEZwiWD0aIwxCgJ0R1Mu7GXOeJSuK93bZtQIle4D9pUNU5DC5jEsu55AvZakM5NicGyEj8uuz8bUCQgj67QfY671P3vEoeC69gy695U1U7NG7XV0pUwBjDJa1/JJlWWxzHuflzQe5FJ/GsgUVuZ2t8lEkTvfc0aNHb72flBhjVicQQqCUuvM3/M+WDVguWBrMVdDXEGZlBVEUrVCU9d9s5+fnaTQa2PZyPxEIhJaI1EEoZwX4ncynp6fXrmB4eJjR0VFarRbNZnP9P9rt9gohqNVq1Ov1ZbF/AZGev3hLJ2/zAAAAAElFTkSuQmCC)}
+		.xchecked-box {list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAANOgAADMQBiN+4gQAAAAd0SU1FB9gKGQ8bDYnDxEwAAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAEK0lEQVRIx9WVS2hTWRjHf/eR3CY1nbxMH2YiZRQS6qO13YlMVxY3SnVcuNIBFezGpSADLoQqLu1sHJCqdCFSXFpw4YOCSH3BtFqttTNamabX3DS5bfO6uffMoglja3RGcDMHzuac7/z/53++//cd+L8P6VuCPQYZ8ADNgBd4J31DcDcQs+GnHByRocEDv0kfBSjAOlYCs11Q+gpwDegS8LMJ+3QIK0ATzEhV8Odnz5bzw8P4dJ25aJQ/WlvJ1df/K7hSLtOcTNI+Pk69rpMTgqIQhCDvh1/VSpw79+gRrRMTmLZNezLJJsPg+a5dmOEwQlFqg1sWG16/Jv7sGWXDwBACFQjC9HcwIMONKkGp4PGAJGEDS0IQmZlhnWnye3c3eiyGo6qr3WHbrJ+dJf7gAXI6zSIr72T7/fgzmT4FHnTBsgrQBfYvTU0km5vxz86iADnAm0rRPTWFt7cXZccOJJcLAGHb2K9ekT93jmwmwwdAAFpjI6Ntbfxw5879ag7l6o1sr5eHHR3IsRgeQK/M4sQE+YEB7JcvEY6zAj45SWFgAPPxYwzHoQxIkQjTPT0kIxE+Noj8sexFn4/xnh58iQTeSpHkHAdrbIzi0BCOrmNPTpK/eJHM3bt8sCyKQCiR4NWePWSiUZw1+ZLXJm4pFKLhzBlCsRh2RUXacVgeGaF47RrL58+zcP8+RrmMkCQinZ1EL1zAjERqmkH+tLYl1G3bCJw4QUjT0IA0MJfLMX/5MqmHD0nZNiUgtGULG/r7ccXjINWuWbnmqsuFu7sb/4EDNLlcBIEioNs2KUAFGmMxmk6dQm1tRZI+3xBqEkiShBQOox05Ql1nJ26gvuIUAWiKQnj/ftStW5Fk+YuF+NldsbBA4cYN9KdPmaso8Fc62ZJtk7l1C2t0FGdxESHE1xE4hkHh6lX0oSHSpRIewC/LrPf7CSgKNpCamkI/fZr8pUuIZBIcpyaBunahPp1mub+fDyMjGKUSChCsq6Nh717q9u2jbnSU0uAgRrFIwTThyhUCqRS+hgZKLS1fJvDm87SNjZGcnsYUAjcQ8vsJ9/Xh7u1FDgRQN20iks3iDA+zZFmYhQLqzZtsj8WY3L0baY2Sf55ICCKpFHUzM2SEQAJCHg+hY8fQDh5EDgRWDoRC1J88SePRo2geD0XAcBy8b98Sv3ePYDZbbf2rFQjLIphMsmDbaEBQVQkePox26BCSz7e6i4bDrDt+nGYhmBscpFAskheC4Js3bPR4qHphFYEnlcI7P4/jdqNpGu8TCe4oCsXr1z//F2ga3+/cSfTJE0qmSVYIsKzaOZDcbjKyzFIiwfvt21kMBLA07YsetzWNd+3tLLW0sH5igvT8PH9Go/z44kX+E4LGjg7GDYOcy4XlOEgLC//5P/5LCFzxOPLmzWyIx+m6fduu7v0NVGqyTSycKksAAAAASUVORK5CYII=)}
+		.unchecked-box {list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAANOgAADMQBiN+4gQAAAAd0SU1FB9gKGQ8qAt8h3m8AAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAA60lEQVRIx+2VsQqDMBRF70sCLg5OLoKgjk7+lJ/hh+STXBwcnRz8ArMEkrxOFktbaC3tULzTg5e8k5vADXDq70VbobXmvu/hvQczg4heHrJfXxQFuq67blZbMc8zpmlCXddIkgTOuZcBUko45zCOI6y1Nz2xFSEEZFmGOI7fGg4A3nsQEZqmuXOu9jallACAtm3fvmutNaIoAjM/dkBECCF89KCbk4eAb+kEnIAT8EsAM0OIz3hSyrssUvss8t5fg+uIrLXPs0gIgWVZYIyBUurQyYdheO4gz3NUVQVjDNZ1PfSjpWmKsixvehfB9GBZ3NndrgAAAABJRU5ErkJggg==)}
+		.migrated-box {list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAANOgAADMQBiN+4gQAAAAd0SU1FB+AKHREFA8vJSnkAAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAC1klEQVRIx+2VT0hUURTGf/e958w4Tc3TYowMw1GyEgwr1MqsFmbZIrIWQZsWJUjbdoHQpl3Qps0swnCRECQFYkR/TC1iKkqmfzAKTo2Vf8hoRsfR995tkRMT87RRWkUHHhy495zvnvvu933wP/75EKkkEAjIYDCIaZpIKRFCZN0kfX9xcTGtra2/irVUEolECIfDlJeXo+s6hmFkDaCqKoZhEAqFSCaTv60pqcSyLAoLC/F4PEtqDmCaJkIIKisrMybX0sdUVRWA5ubmPzdNjjI1cpXkZC/O1fV03PXgdDqRUtpPIITAsqxsDz0Z/3CZQv8uqo4N4C8/Tp2/DdM0MiZQlvk41OTkI/LW1SGtCVb5drD3eCc71wcA+VcAHA5vDd8+3UGakxiJV7i9pdQevU5T1R35pJ3MV5QW1pf+0kWBheJ2SWua8EQXZXsu4fVVYEz1sEKvof5EuxjoPvzpcRvrdp9C2gGMx6cpOHBmbImMesds7BZubwMVDTfXDnQ3vQfK7AC8wLfExMX5whyQc3q2OEnjGm5vE76SQxsfBLr77a7CNf+n0r/l6sSMtsBSnurckiIILCobAtVZhpF4gZF4jubaymj4Ch/fd380LE7bAnjc0NPxk2yqpmEuwGxF0ag+0k5uTpzZeBeaazvj0We8fXojainsb2xh2BZgbe0gSIllzSIUh63wfQ6dZ/O2fbjcKlOj58jJ3cVENESw5yErc9nf2MLQ4jwQAkV1Lqiq37/cZ9WaahJjF9AcmxiPDhLs7ePe23oOnmUwg2hSShQle96tKDjA2HAniusgo9FxnvY9Jxw7RWzGYy92QghM00x5g53qp9sHmtB58/o2umOI2NwGolMnMYUHIb7aAyiKwsjICLqu2/qBEIKUUAohMaSHSLyBSMoPTINQ6CX5+fn2AEVFRZSUlBCPx4nFYhl3L4RESjF/GEgX3pSj+Xw+/H7/b3U/AEOZFnp7O5+5AAAAAElFTkSuQmCC)}
+		ul {list-style-image: none}
+		/* ul rule needed to reset style for sub-bullets */
+
+		span.insen { color: grey                }
+
+		.pages {
+			max-width: 1000px;
+			 padding-left: 320px;
+		}
+		.menu{
+			float:left; width: 300px;
+		}
+		hr{clear:both;}
+	</style>
+</head>
+<body>
+
+<!-- Header -->
+<div class='header'>
+	[ <a href='./Day_22.html'>Prev</a> ]
+
+	[ <span class='insen'>Index</span> ]
+
+	[ <a href='./Day_24.html'>Next</a> ]
+</div>
+
+<hr />
+
+<div class="menu">
+<ul>
+<li><a href="./Day_2.html" title="Day 2" class="page">Day 2</a></li>
+<li><a href="./Day_3.html" title="Day 3" class="page">Day 3</a></li>
+<li><a href="./Day_4.html" title="Day 4" class="page">Day 4</a></li>
+<li><a href="./Day_5.html" title="Day 5" class="page">Day 5</a></li>
+<li><a href="./Day_6.html" title="Day 6" class="page">Day 6</a></li>
+<li><a href="./Day_7.html" title="Day 7" class="page">Day 7</a></li>
+<li><a href="./Day_8.html" title="Day 8" class="page">Day 8</a></li>
+<li><a href="./Day_9.html" title="Day 9" class="page">Day 9</a></li>
+<li><a href="./Day_10.html" title="Day 10" class="page">Day 10</a></li>
+<li><a href="./Day_11.html" title="Day 11" class="page">Day 11</a></li>
+<li><a href="./Day_12.html" title="Day 12" class="page">Day 12</a></li>
+<li><a href="./Day_13.html" title="Day 13" class="page">Day 13</a></li>
+<li><a href="./Day_14.html" title="Day 14" class="page">Day 14</a></li>
+<li><a href="./Day_15.html" title="Day 15" class="page">Day 15</a></li>
+<li><a href="./Day_16.html" title="Day 16" class="page">Day 16</a></li>
+<li><a href="./Day_17.html" title="Day 17" class="page">Day 17</a></li>
+<li><a href="./Day_18.html" title="Day 18" class="page">Day 18</a></li>
+<li><a href="./Day_19.html" title="Day 19" class="page">Day 19</a></li>
+<li><a href="./Day_20.html" title="Day 20" class="page">Day 20</a></li>
+<li><a href="./Day_21.html" title="Day 21" class="page">Day 21</a></li>
+<li><a href="./Day_22.html" title="Day 22" class="page">Day 22</a></li>
+<li><b>Day 23</b></li>
+<li><a href="./Day_24.html" title="Day 24" class="page">Day 24</a></li>
+<li><a href="./Day_25.html" title="Day 25" class="page">Day 25</a></li>
+<li><a href="./Exam_II_Review.html" title="Exam II Review" class="page">Exam II Review</a></li>
+<li><a href="./Important_Links.html" title="Important Links" class="page">Important Links</a></li>
+<li><a href="./Introduction.html" title="Introduction" class="page">Introduction</a></li>
+</ul>
+
+</div>
+
+<!-- Wiki content -->
+
+<div class='pages'>
+	<div class='heading'>
+	<h1>Day 23 <a name='Day 23'></a></h1>
+	</div>
+
+	<div class='content'>
+	<p>
+Created Wednesday 6 May 2020
+</p>
+
+<h3>Review</h3>
+
+<p>
+Apparently he's going to try and review everything from the beginning of the class.
+</p>
+
+<p>
+<b>A computer program is not merely a set of instructions to be followed/executed by a glorified calculator. A computer program is actually the statement of the solution to a problem in computational terms.</b>
+</p>
+
+<p>
+We use computers to solve problems that require computations for solutions.
+</p>
+
+<p>
+<ul>
+<li>Solve the problem first.</li>
+<li>Then restate your solution in a computer readable form.</li>
+</ul>
+</p>
+
+<p>
+By solving the problem first, you can concentrate on solving the problems. Vice versa, with the problem solved we can just focus on programming the machine.
+</p>
+
+<p>
+Remember these three paradigms of programming:<br>
+<ul>
+<li>Declarative - what it is we want without writing all those statements ourself. We don't care how it does it just get it done.</li>
+<li>Object-Orientation (OOP) - a combination of declarative and imperative programming. We build an object and also provide a set of methods to manipulate that object. The methods are <i>imperatives.</i> </li>
+<li>Imperative - each statement is an instruction for the computer to do something.</li>
+</ul>
+</p>
+
+<p>
+Functional programming (most frequently appears in declarative form) we treat a program as a functional transformation of input data into output data. <b>However,</b> we can do these kinds of things in both imperative and declarative programs so he doesn't consider <i>functional programming </i>to be its own paradigm.
+</p>
+
+<p>
+If you look closely at Java and C++, you'll find that they're actually imperative languages with object extensions. <i>You can write object oriented code in any programming language! </i>It's easier in some languages such as Java and harder in others like prolog. 
+</p>
+
+<p>
+<b>What is an object??? </b>It is a <i>block of data together with methods to manipulate that data.</i><br>
+It is <b>not</b> an object is an instance of a class as we often hear. <b>A class is a specification. An object is something that is built according to a specification.</b>
+</p>
+
+<p>
+He states a big reason why we got over these three paradigms of programming is so that we know what they look like and how to apply them in big applications. Depending on the problem, one paradigm may be better than another.
+</p>
+
+<p>
+In scheme, <b>lambda returns functions that don't have names! </b>This is why we can combine define and lambda as we do. define provides a name for the function from lambda.
+</p>
+
+<p>
+When dealing with very large teams of thousands of people, we need a way to keep all the pieces together. Therefore, we need a <b>version control system! </b>Or VCS for short.
+</p>
+
+<p>
+Subversion he notes does a good job of teaching us the principles of version control.
+</p>
+
+<p>
+<b>import</b> brings in a whole group of files.<br>
+<b>add</b> puts a file under subversion control.
+</p>
+
+<p>
+With <b>checkout</b> and <b>commit, </b>subversion will move and retrieve entire directories.<br>
+The <b>update</b> subcommand makes sure that our directory of code is consistent with everybody elses code.
+</p>
+
+<p>
+<b>Export </b>rips off all of the versioning information. 
+</p>
+
+<p>
+VCS also help us to maintain numerous version of a program. <br>
+Why keep multiple versions? Well, <i>submit early, and submit often! </i>It a common mantra in the field. You want to keep a complete history of development. This is great for regression testing and finding bugs.
+</p>
+
+<p>
+Also, <b>version control does not backup our work!</b> It's not a tool to just backup our work. We still need to backup the version control files too.
+</p>
+
+<p>
+Once we have a bunch of components, we have to be able to put them together. We also need to make sure all versions match (are <i>up to date, whatever that means he notes).</i>
+</p>
+
+<p>
+To do all this, we use <b>make.</b> Maven and cmake tried to replace it but they don't.
+</p>
+
+<p>
+We have a make rule.
+</p>
+
+<p>
+If we want to construct target.o, we will have to use myfile.c and myfile.h. Now makefile, I want you to make sure that these pieces as they exist today are the correct ones for the construction of target.o. <b>And by the way!</b> If target.o was already constructed with these file, <i>don't do it again! </i>Don't bother to waste the effort. How do we do this? <b>By looking at time stamps! </b>If target.o is older than any of the dependencies, then <b>execute the recipe!</b>
+</p>
+
+<p>
+target.o : myfile.c myfile.h<br>
+<div style='padding-left: 30pt'>
+gcc -c myfile.c -o target.o
+</div>
+</p>
+
+<p>
+Also, remember <b>phony targets!</b> What this does is that if make can't possibly construct the target, go ahead and execute the recipe. We do this very frequently for cleaning up our files
+</p>
+
+<p>
+clean :<br>
+<div style='padding-left: 30pt'>
+rm *
+</div>
+</p>
+
+<p>
+<b>clean is not a keyword! </b>We're just using it as a label. We could have named it anything. 
+</p>
+
+<p>
+So then, we use <i>subversion</i> to maintain versions and <i>make</i> to build things properly when we need them. What else are we going to use?
+</p>
+
+<p>
+It would be nice if we could get some assistance in debugging. For this, we can use an <b>IDE </b>(he notes that he avoids them when he can. Same professor. vim 4 lyfe! emacs is okay too. intellij more like... dumb...).
+</p>
+
+<p>
+He says a while back he mentioned a debugging tool called <b>ddt </b>(or its predecessor odt where everything had to be written in octal). In ddt, everything had to be written in hex. Another one is called gdb (which stands for g debug). Has a nice GUI to go with it he mentions. There's also ddd.
+</p>
+
+<p>
+One of the most common tactics with debuggers is executing our code up to a given points and then <b>stop </b>and take a look around. We call these <b>breakpoints.</b> You can exam the contents of registers, variables, etc.
+</p>
+
+<p>
+Another debugging tool is called <b>profilers. </b>These will give you a map of your resource usage such as how much memory are you using. 
+</p>
+
+<p>
+One issue with all these debugging tools is that <b>program optimizers will eleminate unneeded variables</b> from the final code. If you ask to see the content of a particular variable, the optimizer will have gotten rid of it. To get around this, <b>turn off optimization.</b>
+</p>
+
+<p>
+Another problem back in the day was wasting resources by having expensive CPUs sit idle while, waiting for printers. This led to the invention of <b>interrupts!</b> Interrupts are a <b>hardware compelled subroutine call. </b>
+</p>
+
+<p>
+In a language like Java, everything executed by a virtual machine (JVM). In that case, how do we handle what we'd like to be interrupts? The answer is <b>exceptions. </b>Interrupts don't handle exceptions. <b>Exceptions are software simulated interrupts!!!!!!!</b>
+</p>
+
+<p>
+For interrupt handling, you have to first save the state of the machine and then restore it. Such as registers, flags, etc. There are various ways you can save machine state. Gotta refer to a manual for that.
+</p>
+
+<p>
+A <b>process </b>has it's own memory space. Without the help of the operating system, various processes cannot access memory in other process memory states.
+</p>
+
+<p>
+<b>Threads in a given process share memory spaces though!!!!! </b>Communication between threads is one of the places where you need to use global variables. There's no way to avoid this but there are ways to protect it.
+</p>
+
+<p>
+<b>Graphic Displays. </b>This is another topic we went into. The <b>xwindow</b> system is pretty much a model for all graphics displays of today. The problem was <i>trying to have a cheap display to display results from an expensive, high power processor. </i>It is this problem that leads to <b>listeners!</b> The keyboard and mouse in the display unit are not directly connected to the program that is going to use data from them. <i>In fact they can't be connected because they are remote! </i>Therefore, we need <b>special code in the display unit (the server) and the high power processing program (client) to pass data from the keyboard and mouse to the high power processing program (CPU).</b> This code will be different from the code used if the keyboard and mouse was directly connected to the high power processing program
+</p>
+
+<p>
+<b>Web programming is all about communication.</b> 
+</p>
+
+<p>
+HTML was meant to be very simple. However, people wanted more control. As such, we got <b>CSS.</b> People also wanted a way to run programs on the client side. As such, we got <b>JavaScript.</b> JS is an <b>imperative language </b>and fairly simple. It has numerous flaws though. <b>It relies quite heavily on global variables.</b> Also, <b>it is a dynamically typed language (types are assigned to variables on the fly and can be changed on the fly). </b>This is very error prone. 
+</p>
+
+<p>
+Separate your function definitions from the rest of your code. Don't put your javascript right in the middle of the body of the HTML.
+</p>
+
+<p>
+Another key issue is <b>proper selection of fonts! </b>Choose the right font and make sure it's readable. There is also the issue of spacing between letters. Back in the day, we had letters on the metal blocks. To get the letters closer together, you'd have to literally cut the metal! Computers makes it very easy to adjust spacing of our fonts. Even still, we run into issues like with the Arial font. The letters r and n look like an m for examle. rn. <b>Pick fonts for readability! </b>
+</p>
+
+<p>
+Also, <b>be careful of colors! </b>Don't put too many colors on a page and <b>dazzle</b> the viewer. We need to communicate information not impress people with design skills.
+</p>
+
+<p>
+Also, <b>be careful with videos! </b>People expect too much from videos. They have time restraints, can lack detail, you have to be aware of you viewers attention span, and be aware of what you're actually leaving out. Details that may be very, very important. Don't just try to look pretty show off how clever you are. The best videos may be those of actual candid lectures.
+</p>
+
+<p>
+<b>BNF </b>(backus-naur form). People got together in the late 1950s to create a language for communicating algorithms. The purpose wasn't to create a computer programming language, That was a sort of an addon. <b>Algol-60. DO NOT FORGET THAT L! SPELL IT RIGHT! </b>It has no I/O capability at all. However, they wanted a formal way to specify the syntax of a language. It was used to help make xml for example.
+</p>
+
+<p>
+He notes that IDEs are okay for small projects, <b>but you're gonna need to know how to use make for big projects!</b>
+</p>
+
+<p>
+<b>Interrupts</b> are used for scheduling. Would be useful to look up how to create Java threads. Thread class or runnable interface. 
+</p>
+
+<p>
+Also, <b>review the therac-25!</b> It is important for it teaches us how important it is that <b>our code does what we claim it does! </b>The code must be robust and resistant to error. 
+</p>
+
+<p>
+The whole point of the therac-25 report is that <b>BAD SOFTWARE KILLS PEOPLE!</b> 
+</p>
+
+<p>
+Also, be sure to <b>talk to the end users! </b>
+</p>
+
+	</div>
+
+	<br />
+
+	<div class='page-footer'>
+
+	</div>
+
+	
+
+</div>
+
+</body>
+</html>

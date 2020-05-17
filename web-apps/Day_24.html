@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Day 3</title>
+	<title>Day 24</title>
 	<meta name='Generator' content='Zim 0.68'>
 	<style type='text/css'>
 		a          { text-decoration: none      }
@@ -51,11 +51,11 @@
 
 <!-- Header -->
 <div class='header'>
-	[ <a href='./Day_2.html'>Prev</a> ]
+	[ <a href='./Day_23.html'>Prev</a> ]
 
 	[ <span class='insen'>Index</span> ]
 
-	[ <a href='./Day_4.html'>Next</a> ]
+	[ <a href='./Day_25.html'>Next</a> ]
 </div>
 
 <hr />
@@ -63,7 +63,7 @@
 <div class="menu">
 <ul>
 <li><a href="./Day_2.html" title="Day 2" class="page">Day 2</a></li>
-<li><b>Day 3</b></li>
+<li><a href="./Day_3.html" title="Day 3" class="page">Day 3</a></li>
 <li><a href="./Day_4.html" title="Day 4" class="page">Day 4</a></li>
 <li><a href="./Day_5.html" title="Day 5" class="page">Day 5</a></li>
 <li><a href="./Day_6.html" title="Day 6" class="page">Day 6</a></li>
@@ -84,7 +84,7 @@
 <li><a href="./Day_21.html" title="Day 21" class="page">Day 21</a></li>
 <li><a href="./Day_22.html" title="Day 22" class="page">Day 22</a></li>
 <li><a href="./Day_23.html" title="Day 23" class="page">Day 23</a></li>
-<li><a href="./Day_24.html" title="Day 24" class="page">Day 24</a></li>
+<li><b>Day 24</b></li>
 <li><a href="./Day_25.html" title="Day 25" class="page">Day 25</a></li>
 <li><a href="./Exam_II_Review.html" title="Exam II Review" class="page">Exam II Review</a></li>
 <li><a href="./Important_Links.html" title="Important Links" class="page">Important Links</a></li>
@@ -97,115 +97,78 @@
 
 <div class='pages'>
 	<div class='heading'>
-	<h1>Day 3 <a name='Day 3'></a></h1>
+	<h1>Day 24 <a name='Day 24'></a></h1>
 	</div>
 
 	<div class='content'>
 	<p>
-Created Tuesday 04 February 2020
-</p>
-
-<h3>Scheme Notes</h3>
-
-<p>
-A <b>function </b>is...
+Created Tuesday 12 May 2020
 </p>
 
 <p>
-A set of arguments together with a rule for manipulating those arguments. Even if the rule is the same, it's a different function. In recursion, we keep constructing new functions because we change the arguments. So we change the functions. We don't call ourselves. We don't have a function that calls itself. We have a function that calls a copy of itself with different arguments.
+The video can be seen <a href="https://youtu.be/dehZKS7O168" title="here" class="https">here</a>.
 </p>
 
 <p>
-A <b>lamda expression </b>in scheme is a function that takes two args. A list of args and then a <b>rule</b> for manipulating this argument. The <b>lambda expression</b> is named as such because it is drawn from lambda calculus invented in the 1930s. It was invented to study just what it is we mean by functions.
+He starts by stating how limits are important. Some people wrote 7 page long reports. For this class, that's okay but in the real world it's important to follow the guidelines.
 </p>
 
 <p>
-In <b>recurssion,</b> how do we know when we're there yet? When we hit the terminating condition. For a list, we need to check if the <b>tail</b> is empty for iterating over the list. If the tail is empty, then we're done.
-</p>
-
-<div class="zim-object">
-<pre><code class="scheme">(define ctr (lambda (mlist) (if (eq? (cdr mlist) (list)) 1 (+ 1 ctr(cdr mlist)))))</code></pre>
-</div>
-
-<br>
-
-<p>
-head tail<br>
-car cdr
+Large scale efforts are important. Gross notes that many people are unaware of the tools you need to use in large scale applications. This is due to people only having smaller projects in college courses.
 </p>
 
 <p>
-The <b>define</b> function doesn't define things. It names them. It simply says replace this with that.
+Object Oriented Programming were often considered good practice back in the day. Encapsulating data, organizing our code, reusing code, etc.
 </p>
 
 <p>
-As a scheme programmer, we don't concern ourselves with real efficiency. We leave that for C or assembly language. For results, we don't pay attention to how long the computing is going to take. The object is just getting it to work. <b>Get the program to work and make it understandable before you worry about speed.</b> 
-</p>
-
-<h3>Therac and other Software Disasters</h3>
-
-<p>
-What is the importance of reading the therac report? Only a small number of computer programs can be proved correct. The best we can do is test our software or else we'll get what we got with the therac where people died due to buggy software. Even still, just simply saying <i>it's tested</i> isn't enough. For example, perhaps the program passed all the given test data but what about data that wasn't in the test? What if it crashes for anything outside of the original test? Sure, the program is <i>tested</i> but it doesn't really work!
+Object orientation is just good programming practice.
 </p>
 
 <p>
-What we can do is try our best to break it. Come up with good sets of test data. Check the boundary conditions and corner cases. Essentially, we have to <b>test the hell out of it.</b>
+The xwindow system was originally written in C. It's easy to simulate objects in C but separating things out in to different files. That way, it'll look like how we do things in Java or C++. However, then we'll need to be able to connect all these files together! As such, <b>make</b> files are important.
 </p>
 
 <p>
-<b>A race condition</b> is where the output of the computation depends on the order in which the threads complete. The output may be different. It may not be <i>wrong</i> code. It could be right. But it's a performance issue that messes it up. This is a part of what went wrong with the therac.
+It's easy to know how to learn products but harder to learn the actual underlying principles. New products (new languages and whatnot) appear all the time. But! They all rely off of the same underlying principles. As such, when people switch to a new language they become completely lost. They may have gotten quite good at a language like COBOL but then sink when switching to something like PL/I.
 </p>
 
 <p>
-Another problem was that the engineers <b>ignored</b> complaints about their software. They believed that the reports of the errors were impossible. <b>Never deny a report.</b> The therac engineers did it over and over again. When a user reports an error, you always follow through and check it even if you end up not being able to recreate the problem. User error is a thing but you should always take their concerns seriously. You can't ignore them no matter how stupid it may seem to be.
+As such, Gross prefers to lean on older products that rely more on the underlying principles than all this extra complex functionality. 
 </p>
 
 <p>
-The therac engineers failed to comply with the FDA, test, and listen to their users. The therac-25 was a disaster. 
+Next to <b>principles,</b> the next major thing is <b>communication. </b>For small groups, this isn't too bad but when working with huge groups of hundreds then it's a real problem! This is why adding a ton of people to a project doesn't necessarily speed up the project. <b>Communication is key and keep everyone up to speed is important.</b> 
 </p>
 
 <p>
-<b>Bad software kills people.</b>
+<b>It is important to document properly and keep a log of all your changes! </b>That helps us to go back and remind us how we solve certain problems and whatnot. 
 </p>
 
 <p>
-Test thoroughly, document, hardware safety isn't more reliable than software (it has a limited lifetime). In fact, software can go on forever where else hardware will fail at some point. Either way, bad software <b>kills</b>. In fact, all software should be written as though lifes depend on it. Who knows, your code could end up inside a piece of medical equipment. 
+<i>Commit early, commit often! </i>Keep a record of what you're doing. You never know when you'll need to go back and go over the things that you've done.
 </p>
 
 <p>
-<img src="./images/listIteration.jpg" width="1008">
-</p>
-
-<h3>Homework</h3>
-
-<p>
-For HW1, he is adding a third assignment and extending the deadline.<br>
-For the third homework, he wants us to pile up oranges. Each row has twice as many as the previous row. <b>For arbitrary n, how many oranges are there in the pyramid total?</b> There is a shortcut he mentions but he's not gonna tell us. Just add em up. Probably just a factorial. <b>HW1 is due next tuesday for all three problems! (that should be the 11th)</b>
+JavaScript is essentially an extension of HTML. HTML was written to be easy for computer-phobes. JavaScript was designed with that same mindset hence why it has dynamic typing which is easy at first but then difficult when problems start to arise. 
 </p>
 
 <p>
-<img src="./images/orangeProblem.jpg" width="1008">
+Programming paradigms are also important! Know the tools that we have so we can apply it properly.
 </p>
 
 <p>
-He does mention that there is a function called <b>exp</b> that we can use to calculate the number of oranges in each row.
+He also has us break into groups to help teach us to focus on our own thing and, hopefully we can all put it together!
 </p>
 
 <p>
-He wants source code, comments, and output by the way.
+Please read questions carefully on the exams. Don't look for keywords and give an answer based on that. Such as, why versus how.
 </p>
 
 <p>
-For doing things command line, he recommends <b>man, script, and cat.</b> Script takes a transcript of whatever comes up on the terminal and print that directly. (double check what script does)
+<b>Why is strong typing useful? </b>Because it helps to catch errors at compile time rather than debugging.
 </p>
 
-<p>
-<s>He says he wants all four functions done in one line. I'm curious if he'd be okay with my version.</s> He saw it and said that's exactly what he was looking for! Hurray!
-</p>
-
-<p>
-<b>By the way, he prefers the lambda expression over the short form. So do that.</b>
-</p>
 
 	</div>
 

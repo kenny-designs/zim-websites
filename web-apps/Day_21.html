@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Day 3</title>
+	<title>Day 21</title>
 	<meta name='Generator' content='Zim 0.68'>
 	<style type='text/css'>
 		a          { text-decoration: none      }
@@ -51,11 +51,11 @@
 
 <!-- Header -->
 <div class='header'>
-	[ <a href='./Day_2.html'>Prev</a> ]
+	[ <a href='./Day_20.html'>Prev</a> ]
 
 	[ <span class='insen'>Index</span> ]
 
-	[ <a href='./Day_4.html'>Next</a> ]
+	[ <a href='./Day_22.html'>Next</a> ]
 </div>
 
 <hr />
@@ -63,7 +63,7 @@
 <div class="menu">
 <ul>
 <li><a href="./Day_2.html" title="Day 2" class="page">Day 2</a></li>
-<li><b>Day 3</b></li>
+<li><a href="./Day_3.html" title="Day 3" class="page">Day 3</a></li>
 <li><a href="./Day_4.html" title="Day 4" class="page">Day 4</a></li>
 <li><a href="./Day_5.html" title="Day 5" class="page">Day 5</a></li>
 <li><a href="./Day_6.html" title="Day 6" class="page">Day 6</a></li>
@@ -81,7 +81,7 @@
 <li><a href="./Day_18.html" title="Day 18" class="page">Day 18</a></li>
 <li><a href="./Day_19.html" title="Day 19" class="page">Day 19</a></li>
 <li><a href="./Day_20.html" title="Day 20" class="page">Day 20</a></li>
-<li><a href="./Day_21.html" title="Day 21" class="page">Day 21</a></li>
+<li><b>Day 21</b></li>
 <li><a href="./Day_22.html" title="Day 22" class="page">Day 22</a></li>
 <li><a href="./Day_23.html" title="Day 23" class="page">Day 23</a></li>
 <li><a href="./Day_24.html" title="Day 24" class="page">Day 24</a></li>
@@ -97,114 +97,140 @@
 
 <div class='pages'>
 	<div class='heading'>
-	<h1>Day 3 <a name='Day 3'></a></h1>
+	<h1>Day 21 <a name='Day 21'></a></h1>
 	</div>
 
 	<div class='content'>
 	<p>
-Created Tuesday 04 February 2020
-</p>
-
-<h3>Scheme Notes</h3>
-
-<p>
-A <b>function </b>is...
+Created Wednesday 29 April 2020
 </p>
 
 <p>
-A set of arguments together with a rule for manipulating those arguments. Even if the rule is the same, it's a different function. In recursion, we keep constructing new functions because we change the arguments. So we change the functions. We don't call ourselves. We don't have a function that calls itself. We have a function that calls a copy of itself with different arguments.
+Video can be seen <a href="https://youtu.be/JIKHJQsA7lc" title="here" class="https">here</a>.
+</p>
+
+<h3>More on the Map Function</h3>
+
+<p>
+Professor is back at it again with the white sketchpad.
 </p>
 
 <p>
-A <b>lamda expression </b>in scheme is a function that takes two args. A list of args and then a <b>rule</b> for manipulating this argument. The <b>lambda expression</b> is named as such because it is drawn from lambda calculus invented in the 1930s. It was invented to study just what it is we mean by functions.
+He says to buckle up cause we'll be deep diving into the map function and a few other things as well.<br>
+He says the map function has some very interesting applications in modern computing.
 </p>
 
 <p>
-In <b>recurssion,</b> how do we know when we're there yet? When we hit the terminating condition. For a list, we need to check if the <b>tail</b> is empty for iterating over the list. If the tail is empty, then we're done.
+We've run out of computing power he says. We can't solve modern computing problems with the single CPU machines of not that long ago.
 </p>
 
+<p>
+As such, <b>we've had to move to parallel computing. </b>Hardly anyone uses a single processor now. It's all 2 or more at this point! Even GPUs he has in his lab have over a 1000 processors each.
+</p>
+
+<p>
+In the future, we're gonna need more core as problems get more difficult. For example, modeling explosions. The volume to be affected by the explosion is split up into many small cubes. Then calculations are performed for each of these cubes. It doesn't take a lot of cubes to create a rather horrendous computation. We need all those multiple processors.
+</p>
+
+<p>
+There is a strong correlation between how you should look at the map function and parallel computing.
+</p>
+
+<p>
+Let's take a step back: <b>what's a list?</b><br>
+A list is a set of elements. As in scheme: (1 2 3 4 5)<br>
+There is an important property though: <b>the list is ordered!</b><br>
+Each item in the list has a position. 3 comes after 2 but before the 4 for example. This allows us to have a shorthand for locating items within the list. We can assign an integer to each item in the list (yknow, the index?). We then use that integer to help locate/identify each number in the list.
+</p>
+
+<p>
+Having this index makes life pretty quick. You want the number 3? Go to list index 2 (remember, we start from 0).
+</p>
+
+<p>
+We identify each item in an <b>array</b> with an index. (I believe he might be trying to make a point that an array and a list are two different things. Might be useful on the final.)
+</p>
+
+<p>
+<b>There is a difference!</b><br>
+Inside the computer, all of the elements in an array have to be <b>next to eachother! </b>Yknow, contiguous?<br>
+For a list, they don't have to be.
+</p>
+
+<p>
+To locate an item in a list, we must use a procedure. For an array, just use the index and multiply by the size of each element in the array.
+</p>
+
+<p>
+In a decarative language, we <b>don't care</b> about everything in memory. From our viewpoint, lists and arrays are the same.
+</p>
+
+<h3>What does this all have to do with map?</h3>
+
+<p>
+Well, remember map looks like this:
+</p>
 <div class="zim-object">
-<pre><code class="scheme">(define ctr (lambda (mlist) (if (eq? (cdr mlist) (list)) 1 (+ 1 ctr(cdr mlist)))))</code></pre>
+<pre><code class="scheme">(map function list)</code></pre>
 </div>
 
-<br>
-
 <p>
-head tail<br>
-car cdr
+We apply the function to all of the elements in this list and give us back a list with the results.<br>
+If we gave (1 2 3) and had each multiply by itself, then we'd get (1 4 9). <b>However! </b>Noticed how he never specified the order in which this is all done. This is crucial.
 </p>
 
 <p>
-The <b>define</b> function doesn't define things. It names them. It simply says replace this with that.
+All of those elements in the list are subjected to the function at the same time. In an imperative language, we'd have to loop over the elements and keep track of everything with, say, having an int i as we do in for loops. We can only calculate one cell at a time though! 
 </p>
 
 <p>
-As a scheme programmer, we don't concern ourselves with real efficiency. We leave that for C or assembly language. For results, we don't pay attention to how long the computing is going to take. The object is just getting it to work. <b>Get the program to work and make it understandable before you worry about speed.</b> 
-</p>
-
-<h3>Therac and other Software Disasters</h3>
-
-<p>
-What is the importance of reading the therac report? Only a small number of computer programs can be proved correct. The best we can do is test our software or else we'll get what we got with the therac where people died due to buggy software. Even still, just simply saying <i>it's tested</i> isn't enough. For example, perhaps the program passed all the given test data but what about data that wasn't in the test? What if it crashes for anything outside of the original test? Sure, the program is <i>tested</i> but it doesn't really work!
+<b>Can we get rid of that index?</b><br>
+The answer is yes! This is an advantage of working with the recursive approach to iteration.<br>
+What happens if we have more than one processor? Can we do a bunch of processes in parallel? <b>Yes we can!</b>
 </p>
 
 <p>
-What we can do is try our best to break it. Come up with good sets of test data. Check the boundary conditions and corner cases. Essentially, we have to <b>test the hell out of it.</b>
+Break up our input and spread them about the processors to grind away at. 
 </p>
 
 <p>
-<b>A race condition</b> is where the output of the computation depends on the order in which the threads complete. The output may be different. It may not be <i>wrong</i> code. It could be right. But it's a performance issue that messes it up. This is a part of what went wrong with the therac.
+<b>One problem</b> we have with the for loop is dealing with interrupts while we're trying to keep track of where we are (the int i). We could parallelize if we know the index will be referred to in an interrupt. However, <b>it is impossible to do this! </b>We have to assume it will be referred to in an interrupt and generate code accordingly.
 </p>
 
 <p>
-Another problem was that the engineers <b>ignored</b> complaints about their software. They believed that the reports of the errors were impossible. <b>Never deny a report.</b> The therac engineers did it over and over again. When a user reports an error, you always follow through and check it even if you end up not being able to recreate the problem. User error is a thing but you should always take their concerns seriously. You can't ignore them no matter how stupid it may seem to be.
+So, if we're working with a list how do we know where we left off? In a crude way, we could just start from the beginning again. Problem is, this is a lot of work! 
 </p>
 
 <p>
-The therac engineers failed to comply with the FDA, test, and listen to their users. The therac-25 was a disaster. 
+This all brings us back to our friend map.
 </p>
 
 <p>
-<b>Bad software kills people.</b>
+<b>Map</b> is a parallel instruction from our viewpoint as a programmer. <b>Map applies it's operations to all of the elements in the input list at the same time.</b>
 </p>
 
 <p>
-Test thoroughly, document, hardware safety isn't more reliable than software (it has a limited lifetime). In fact, software can go on forever where else hardware will fail at some point. Either way, bad software <b>kills</b>. In fact, all software should be written as though lifes depend on it. Who knows, your code could end up inside a piece of medical equipment. 
+Scheme does have a for structure but it's used to create lists. He recommends we don't use it.
 </p>
 
 <p>
-<img src="./images/listIteration.jpg" width="1008">
-</p>
-
-<h3>Homework</h3>
-
-<p>
-For HW1, he is adding a third assignment and extending the deadline.<br>
-For the third homework, he wants us to pile up oranges. Each row has twice as many as the previous row. <b>For arbitrary n, how many oranges are there in the pyramid total?</b> There is a shortcut he mentions but he's not gonna tell us. Just add em up. Probably just a factorial. <b>HW1 is due next tuesday for all three problems! (that should be the 11th)</b>
+It takes a very long time to do things like processing videos. As such, we need a way to do things in parallel.
 </p>
 
 <p>
-<img src="./images/orangeProblem.jpg" width="1008">
+NP-complete problems are ones in which the only known solutions are brute force. We have to try all possibilities in order to find a solution. It can be pretty costly though in the amount of time it'll take to figure it all out.
 </p>
 
 <p>
-He does mention that there is a function called <b>exp</b> that we can use to calculate the number of oranges in each row.
+<b>The only time you can communicate between threads is via global variables! </b>This can be a bit of a problem in trying to keep threads from being confused about the values of variables.
 </p>
 
 <p>
-He wants source code, comments, and output by the way.
+Working with imperative, it sucks to have to worry about what's going on inside the machine. 
 </p>
 
 <p>
-For doing things command line, he recommends <b>man, script, and cat.</b> Script takes a transcript of whatever comes up on the terminal and print that directly. (double check what script does)
-</p>
-
-<p>
-<s>He says he wants all four functions done in one line. I'm curious if he'd be okay with my version.</s> He saw it and said that's exactly what he was looking for! Hurray!
-</p>
-
-<p>
-<b>By the way, he prefers the lambda expression over the short form. So do that.</b>
+The only prob with decalarative languages is having to trust the runtime system. However, they're quite good.
 </p>
 
 	</div>

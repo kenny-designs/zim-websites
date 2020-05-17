@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Day 3</title>
+	<title>Day 19</title>
 	<meta name='Generator' content='Zim 0.68'>
 	<style type='text/css'>
 		a          { text-decoration: none      }
@@ -51,11 +51,11 @@
 
 <!-- Header -->
 <div class='header'>
-	[ <a href='./Day_2.html'>Prev</a> ]
+	[ <a href='./Day_18.html'>Prev</a> ]
 
 	[ <span class='insen'>Index</span> ]
 
-	[ <a href='./Day_4.html'>Next</a> ]
+	[ <a href='./Day_20.html'>Next</a> ]
 </div>
 
 <hr />
@@ -63,7 +63,7 @@
 <div class="menu">
 <ul>
 <li><a href="./Day_2.html" title="Day 2" class="page">Day 2</a></li>
-<li><b>Day 3</b></li>
+<li><a href="./Day_3.html" title="Day 3" class="page">Day 3</a></li>
 <li><a href="./Day_4.html" title="Day 4" class="page">Day 4</a></li>
 <li><a href="./Day_5.html" title="Day 5" class="page">Day 5</a></li>
 <li><a href="./Day_6.html" title="Day 6" class="page">Day 6</a></li>
@@ -79,7 +79,7 @@
 <li><a href="./Day_16.html" title="Day 16" class="page">Day 16</a></li>
 <li><a href="./Day_17.html" title="Day 17" class="page">Day 17</a></li>
 <li><a href="./Day_18.html" title="Day 18" class="page">Day 18</a></li>
-<li><a href="./Day_19.html" title="Day 19" class="page">Day 19</a></li>
+<li><b>Day 19</b></li>
 <li><a href="./Day_20.html" title="Day 20" class="page">Day 20</a></li>
 <li><a href="./Day_21.html" title="Day 21" class="page">Day 21</a></li>
 <li><a href="./Day_22.html" title="Day 22" class="page">Day 22</a></li>
@@ -97,114 +97,173 @@
 
 <div class='pages'>
 	<div class='heading'>
-	<h1>Day 3 <a name='Day 3'></a></h1>
+	<h1>Day 19 <a name='Day 19'></a></h1>
 	</div>
 
 	<div class='content'>
 	<p>
-Created Tuesday 04 February 2020
-</p>
-
-<h3>Scheme Notes</h3>
-
-<p>
-A <b>function </b>is...
+Created Monday 20 April 2020
 </p>
 
 <p>
-A set of arguments together with a rule for manipulating those arguments. Even if the rule is the same, it's a different function. In recursion, we keep constructing new functions because we change the arguments. So we change the functions. We don't call ourselves. We don't have a function that calls itself. We have a function that calls a copy of itself with different arguments.
+Video can be seen <a href="https://youtu.be/_xSdkGXrjMs" title="here" class="https">here</a>.
 </p>
 
-<p>
-A <b>lamda expression </b>in scheme is a function that takes two args. A list of args and then a <b>rule</b> for manipulating this argument. The <b>lambda expression</b> is named as such because it is drawn from lambda calculus invented in the 1930s. It was invented to study just what it is we mean by functions.
-</p>
-
-<p>
-In <b>recurssion,</b> how do we know when we're there yet? When we hit the terminating condition. For a list, we need to check if the <b>tail</b> is empty for iterating over the list. If the tail is empty, then we're done.
-</p>
-
-<div class="zim-object">
-<pre><code class="scheme">(define ctr (lambda (mlist) (if (eq? (cdr mlist) (list)) 1 (+ 1 ctr(cdr mlist)))))</code></pre>
-</div>
+<h3>Exam Answers</h3>
 
 <br>
 
 <p>
-head tail<br>
-car cdr
+<b>Question 1:</b><br>
+At one point during the Therac-25 investigation, a person repeatedly entered the same data into the machine through the keyboard. Why did he do so?
 </p>
 
 <p>
-The <b>define</b> function doesn't define things. It names them. It simply says replace this with that.
+<b>A) </b>Was trying to recreate the error. <i>Not because it wasn't responding.</i>
 </p>
 
 <p>
-As a scheme programmer, we don't concern ourselves with real efficiency. We leave that for C or assembly language. For results, we don't pay attention to how long the computing is going to take. The object is just getting it to work. <b>Get the program to work and make it understandable before you worry about speed.</b> 
-</p>
-
-<h3>Therac and other Software Disasters</h3>
-
-<p>
-What is the importance of reading the therac report? Only a small number of computer programs can be proved correct. The best we can do is test our software or else we'll get what we got with the therac where people died due to buggy software. Even still, just simply saying <i>it's tested</i> isn't enough. For example, perhaps the program passed all the given test data but what about data that wasn't in the test? What if it crashes for anything outside of the original test? Sure, the program is <i>tested</i> but it doesn't really work!
+<b>Question 3:</b><br>
+Translate into plain English the Scheme statement {\tt (define a 2)}. ({\bf Hints:} 1) Don't use the word "assign." 2) This question is hard; don't waste time on this that could be used more productively on other questions.).
 </p>
 
 <p>
-What we can do is try our best to break it. Come up with good sets of test data. Check the boundary conditions and corner cases. Essentially, we have to <b>test the hell out of it.</b>
+<b>A)</b> define is a function that connects a name with a value. It doesn't actually create anything.
 </p>
 
 <p>
-<b>A race condition</b> is where the output of the computation depends on the order in which the threads complete. The output may be different. It may not be <i>wrong</i> code. It could be right. But it's a performance issue that messes it up. This is a part of what went wrong with the therac.
+<b>Question 4:</b><br>
+What is the purpose of the {\tt update} subcommand of Subversion? (That is, why do you use the command {\tt svn update}?
 </p>
 
 <p>
-Another problem was that the engineers <b>ignored</b> complaints about their software. They believed that the reports of the errors were impossible. <b>Never deny a report.</b> The therac engineers did it over and over again. When a user reports an error, you always follow through and check it even if you end up not being able to recreate the problem. User error is a thing but you should always take their concerns seriously. You can't ignore them no matter how stupid it may seem to be.
+<b>A) </b>To synchronize a working copy with the current state of the repository.
 </p>
 
 <p>
-The therac engineers failed to comply with the FDA, test, and listen to their users. The therac-25 was a disaster. 
+<b>Question 5:</b><br>
+Give an example of where it would be desirable to use reentrant code.
 </p>
 
 <p>
-<b>Bad software kills people.</b>
+<b>A) </b>Reentrant code is not desireble in recursion. <b>Nor is it good for RAM</b>. It's ROM. In fact, it's necessary. ROM can't modify itself so it has to be reentrant.
 </p>
 
 <p>
-Test thoroughly, document, hardware safety isn't more reliable than software (it has a limited lifetime). In fact, software can go on forever where else hardware will fail at some point. Either way, bad software <b>kills</b>. In fact, all software should be written as though lifes depend on it. Who knows, your code could end up inside a piece of medical equipment. 
+<b>Question 6:</b><br>
+How does an application program communicate with and X-Server?
 </p>
 
 <p>
-<img src="./images/listIteration.jpg" width="1008">
-</p>
-
-<h3>Homework</h3>
-
-<p>
-For HW1, he is adding a third assignment and extending the deadline.<br>
-For the third homework, he wants us to pile up oranges. Each row has twice as many as the previous row. <b>For arbitrary n, how many oranges are there in the pyramid total?</b> There is a shortcut he mentions but he's not gonna tell us. Just add em up. Probably just a factorial. <b>HW1 is due next tuesday for all three problems! (that should be the 11th)</b>
+<b>A) </b>The only correct answer is TCP/IP.
 </p>
 
 <p>
-<img src="./images/orangeProblem.jpg" width="1008">
+<b>Question 8:</b><br>
+(5 pts.) In one <u>SHORT</u> sentence each, state a) one thing you like about this course, and b) one thing you don't like about it (please don't say anything about it's being converted to an online course).
 </p>
 
 <p>
-He does mention that there is a function called <b>exp</b> that we can use to calculate the number of oranges in each row.
+<b>A) </b>Anything works. He says a common complaint is that he doesn't teach modern web stuff. He says he's more focused on the <i>underlying principles.</i>
 </p>
 
 <p>
-He wants source code, comments, and output by the way.
+<b>Question 9:</b><br>
+What is the difference between what the symbol + means in Scheme and what it means in C/C++ or Java?
 </p>
 
 <p>
-For doing things command line, he recommends <b>man, script, and cat.</b> Script takes a transcript of whatever comes up on the terminal and print that directly. (double check what script does)
+<b>A) </b>In Scheme, + is merely the name of a function. In Java and C/C++, it is an operator.
 </p>
 
 <p>
-<s>He says he wants all four functions done in one line. I'm curious if he'd be okay with my version.</s> He saw it and said that's exactly what he was looking for! Hurray!
+<b>Question 10:</b><br>
+Why must programs that use the X-Window system for displaying graphics use listeners (or an equivalent facility) to handle the mouse and keyboard for a GUI?
 </p>
 
 <p>
-<b>By the way, he prefers the lambda expression over the short form. So do that.</b>
+<b>A) </b>Because we can't get a direct connection between the keyboard or mouse in the application program. We need to be able to get input from the keyboard or mouse back to the application program. <i>We need to be able to get the information to the CPU. </i>It has nothing to do with the implementation of abstract methods.
+</p>
+
+<p>
+<b>Question 12:</b><br>
+(5 pts.) Consider the (admittedly silly) program fragment
+</p>
+
+<p>
+int myfunc(float a, float b) {<br>
+  float c;<br>
+  c = a + b;<br>
+  if (c == 2) return (1);<br>
+  }
+</p>
+
+<p>
+This code fragment compiles without error. Is the code correct<br>
+or not? If it is not correct, what is the error?
+</p>
+
+<p>
+<b>A) </b>He says the problem isn't the missing return albeit g++ won't let you compile. The real issue if c == 2. The problem isn't float vs int but that we're trying to <i>compare floats for equality!</i> Two floats can have the same value but still not compare correctly. You'd have to use difference and epsilon.
+</p>
+
+<p>
+<b>Question 13</b><br>
+Define the terms "precision of a number" and "number of significant digits."
+</p>
+
+<p>
+<b>A) </b>The precision of a number is simply the number of digits available for that number. The number of significant digits in a number are the number of digits that can be trusted to be as accurate as needed. 
+</p>
+
+<p>
+<b>Question 14</b> <br>
+A recent newspaper report suggests that programs should be rewritten in a "more modern language" simply because they are written in an old language. Is this suggestion correct? If not, why is it incorrect?
+</p>
+
+<p>
+<b>A) </b>It is <b>not</b> correct! They screwed up in their management writing new code and not maintaining old code. People can still learn COBOL.
+</p>
+
+<p>
+<b>Question 17</b><br>
+Rewrite the expression
+</p>
+
+<p>
+<div style='padding-left: 120pt'>
+5<br>
+____<br>
+\
+</div>
+<div style='padding-left: 60pt'>
+  c =  /    n
+</div>
+<div style='padding-left: 120pt'>
+----<br>
+n = 1
+</div>
+</p>
+
+<br>
+
+<p>
+  in a form that does not use the large sigma (the summation sign).<br>
+(Note: for a better formatted form of the centered expression, see<br>
+the pdf version of the exam.)
+</p>
+
+<p>
+<b>A) </b>The answer is just: c = 1 + 2 + 3 + 4 + 5
+</p>
+
+<p>
+<b>Question 18</b><br>
+Imperative programming languages are converted by compilers into a collection of machine language instructions that specify both the operations to be performed by the computer and the order in which they are to be performed. Do modern computers always execute instructions in the order specified by the machine language version of a program?
+</p>
+
+<p>
+<b>A)</b> Simple answer is no. Remember, there is such a thing as out of order execution. Also, optimizers may move code around to improve performance.
 </p>
 
 	</div>

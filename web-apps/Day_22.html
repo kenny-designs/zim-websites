@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Day 3</title>
+	<title>Day 22</title>
 	<meta name='Generator' content='Zim 0.68'>
 	<style type='text/css'>
 		a          { text-decoration: none      }
@@ -51,11 +51,11 @@
 
 <!-- Header -->
 <div class='header'>
-	[ <a href='./Day_2.html'>Prev</a> ]
+	[ <a href='./Day_21.html'>Prev</a> ]
 
 	[ <span class='insen'>Index</span> ]
 
-	[ <a href='./Day_4.html'>Next</a> ]
+	[ <a href='./Day_23.html'>Next</a> ]
 </div>
 
 <hr />
@@ -63,7 +63,7 @@
 <div class="menu">
 <ul>
 <li><a href="./Day_2.html" title="Day 2" class="page">Day 2</a></li>
-<li><b>Day 3</b></li>
+<li><a href="./Day_3.html" title="Day 3" class="page">Day 3</a></li>
 <li><a href="./Day_4.html" title="Day 4" class="page">Day 4</a></li>
 <li><a href="./Day_5.html" title="Day 5" class="page">Day 5</a></li>
 <li><a href="./Day_6.html" title="Day 6" class="page">Day 6</a></li>
@@ -82,7 +82,7 @@
 <li><a href="./Day_19.html" title="Day 19" class="page">Day 19</a></li>
 <li><a href="./Day_20.html" title="Day 20" class="page">Day 20</a></li>
 <li><a href="./Day_21.html" title="Day 21" class="page">Day 21</a></li>
-<li><a href="./Day_22.html" title="Day 22" class="page">Day 22</a></li>
+<li><b>Day 22</b></li>
 <li><a href="./Day_23.html" title="Day 23" class="page">Day 23</a></li>
 <li><a href="./Day_24.html" title="Day 24" class="page">Day 24</a></li>
 <li><a href="./Day_25.html" title="Day 25" class="page">Day 25</a></li>
@@ -97,114 +97,119 @@
 
 <div class='pages'>
 	<div class='heading'>
-	<h1>Day 3 <a name='Day 3'></a></h1>
+	<h1>Day 22 <a name='Day 22'></a></h1>
 	</div>
 
 	<div class='content'>
 	<p>
-Created Tuesday 04 February 2020
-</p>
-
-<h3>Scheme Notes</h3>
-
-<p>
-A <b>function </b>is...
+Created Monday 4 May 2020
 </p>
 
 <p>
-A set of arguments together with a rule for manipulating those arguments. Even if the rule is the same, it's a different function. In recursion, we keep constructing new functions because we change the arguments. So we change the functions. We don't call ourselves. We don't have a function that calls itself. We have a function that calls a copy of itself with different arguments.
+Video can be seen <a href="https://youtu.be/26gRzCFCeks" title="here" class="https">here</a>.
+</p>
+
+<h3>Communication</h3>
+
+<p>
+In particular, failures in communication. He got the reports about our projects on from the morning section.
 </p>
 
 <p>
-A <b>lamda expression </b>in scheme is a function that takes two args. A list of args and then a <b>rule</b> for manipulating this argument. The <b>lambda expression</b> is named as such because it is drawn from lambda calculus invented in the 1930s. It was invented to study just what it is we mean by functions.
+The objective of a webpage is to communicate.
 </p>
 
 <p>
-In <b>recurssion,</b> how do we know when we're there yet? When we hit the terminating condition. For a list, we need to check if the <b>tail</b> is empty for iterating over the list. If the tail is empty, then we're done.
-</p>
-
-<div class="zim-object">
-<pre><code class="scheme">(define ctr (lambda (mlist) (if (eq? (cdr mlist) (list)) 1 (+ 1 ctr(cdr mlist)))))</code></pre>
-</div>
-
-<br>
-
-<p>
-head tail<br>
-car cdr
+The arial font has an interesting history. It is a version of helvetica. Helvetica was useful for being used in advertisements.
 </p>
 
 <p>
-The <b>define</b> function doesn't define things. It names them. It simply says replace this with that.
+For fonts on metal, they had to put in a lot of effort to make sure the space between characters was correct.
 </p>
 
 <p>
-As a scheme programmer, we don't concern ourselves with real efficiency. We leave that for C or assembly language. For results, we don't pay attention to how long the computing is going to take. The object is just getting it to work. <b>Get the program to work and make it understandable before you worry about speed.</b> 
-</p>
-
-<h3>Therac and other Software Disasters</h3>
-
-<p>
-What is the importance of reading the therac report? Only a small number of computer programs can be proved correct. The best we can do is test our software or else we'll get what we got with the therac where people died due to buggy software. Even still, just simply saying <i>it's tested</i> isn't enough. For example, perhaps the program passed all the given test data but what about data that wasn't in the test? What if it crashes for anything outside of the original test? Sure, the program is <i>tested</i> but it doesn't really work!
+Computerized type-setting was a change in the game though. It was no difficulty to change the space between characters. Squeezing letters as close together as possible got popular but made it <i>incredibly difficult to read!</i>
 </p>
 
 <p>
-What we can do is try our best to break it. Come up with good sets of test data. Check the boundary conditions and corner cases. Essentially, we have to <b>test the hell out of it.</b>
+For example, the letters r and n makes it look like an m. rn. Arial isn't so great for readability he states.
 </p>
 
 <p>
-<b>A race condition</b> is where the output of the computation depends on the order in which the threads complete. The output may be different. It may not be <i>wrong</i> code. It could be right. But it's a performance issue that messes it up. This is a part of what went wrong with the therac.
+When you choose fonts for you pages, <b>choose them for your readability! </b>The only way to make sure is to actually read over it.
 </p>
 
 <p>
-Another problem was that the engineers <b>ignored</b> complaints about their software. They believed that the reports of the errors were impossible. <b>Never deny a report.</b> The therac engineers did it over and over again. When a user reports an error, you always follow through and check it even if you end up not being able to recreate the problem. User error is a thing but you should always take their concerns seriously. You can't ignore them no matter how stupid it may seem to be.
+Remember, <b>the point of a web page is to communicate!</b>
 </p>
 
 <p>
-The therac engineers failed to comply with the FDA, test, and listen to their users. The therac-25 was a disaster. 
+Another error with Arial is what happens when you put an l next to an i? The dot on the i can be hard to tell if it's an L or an I. li.
 </p>
 
 <p>
-<b>Bad software kills people.</b>
+Next, <b>colors!</b> Colors matter as well. We automatically get a minimum of 256 colors on a web page. And yet, people like to people colors together that blend in and make it incredibly difficult to read.
 </p>
 
 <p>
-Test thoroughly, document, hardware safety isn't more reliable than software (it has a limited lifetime). In fact, software can go on forever where else hardware will fail at some point. Either way, bad software <b>kills</b>. In fact, all software should be written as though lifes depend on it. Who knows, your code could end up inside a piece of medical equipment. 
+<b>Don't dazzle your reader!</b>
 </p>
 
 <p>
-<img src="./images/listIteration.jpg" width="1008">
-</p>
-
-<h3>Homework</h3>
-
-<p>
-For HW1, he is adding a third assignment and extending the deadline.<br>
-For the third homework, he wants us to pile up oranges. Each row has twice as many as the previous row. <b>For arbitrary n, how many oranges are there in the pyramid total?</b> There is a shortcut he mentions but he's not gonna tell us. Just add em up. Probably just a factorial. <b>HW1 is due next tuesday for all three problems! (that should be the 11th)</b>
+Color is eye-candy, sure. But where the heck is the text? If the text is gone, the information is gone. <b>The objective is to get information to the reader! Not impress them with how talented the web designer is!</b>
 </p>
 
 <p>
-<img src="./images/orangeProblem.jpg" width="1008">
+For example, look at the yahoo home page and the google one. For the google page, you know exactly what to do. For yahoo, you get <b>dazzled! </b>There's so much junk and it's confusing. Perhaps that's why their search engine went down in popularity.
 </p>
 
 <p>
-He does mention that there is a function called <b>exp</b> that we can use to calculate the number of oranges in each row.
+As such, let's follow this: <b>KISS</b><br>
+<b>Keep</b><br>
+<b>It</b><br>
+<b>Simple</b><br>
+<b>Silly</b>
 </p>
 
 <p>
-He wants source code, comments, and output by the way.
+You want <b>emphasis without significant distraction! </b>Quit trying to be clever. You're trying to bring across information silly!
 </p>
 
 <p>
-For doing things command line, he recommends <b>man, script, and cat.</b> Script takes a transcript of whatever comes up on the terminal and print that directly. (double check what script does)
+Another problem is <b>videos.</b> How long can you hold the attention of someone watching a video? For Sesame Street, you'll find that all the sketches are incredibly short. If they didn't change quickly enough, they'll lose the attention of young viewers. Not as great for adults but fantastic for little kids.
 </p>
 
 <p>
-<s>He says he wants all four functions done in one line. I'm curious if he'd be okay with my version.</s> He saw it and said that's exactly what he was looking for! Hurray!
+When teaching in person, it's important to be able to see if your audience is still paying attention. After about an hour, they'll start losing them. As such, lecturers do their best to be aware of this.
 </p>
 
 <p>
-<b>By the way, he prefers the lambda expression over the short form. So do that.</b>
+Apparently he watched YouTube videos to learn how to make printed circuit boards. He notes how many of those videos can be rather amateurish. These videos have a limited amount of time and they limit the info they get across. As such, they gloss over the nuances of many important details. As he notes, circuit boards have many tricky little things that come with them such as cleaning them. And yet, the video completely glosses over it! Technical literature on the other hand is sure to note this.
+</p>
+
+<p>
+What this comes down to is that you have to <b>be careful with your videos! </b>Be as complete as you can be. Don't leave out important facts and don't just <i>show off</i> to the audience.
+</p>
+
+<h3>Reports</h3>
+
+<p>
+Now he's going over the reports and saying a few words about communication.<br>
+He's happy that the grammar and all is okay.
+</p>
+
+<p>
+He's now giving some advice to ESL people and speaking about his experience writing French then having others double check his writing.
+</p>
+
+<p>
+One issue is that people <b>used terms before they were defined!</b> Don't do that in your reports. For example, one report referred to the website but didn't say where it was.
+</p>
+
+<h3>Finals</h3>
+
+<p>
+You should be able to finish in an hour. However, we will have 2 hours for the exam. It will be cumulative. Everything from the beginning of class to the end is fair game.
 </p>
 
 	</div>
