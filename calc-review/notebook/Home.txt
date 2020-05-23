@@ -1,0 +1,8 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-05-23T08:40:43-04:00
+
+====== Home ======
+
+==== Intro ====
+During the summer of 2020, I will be taking Multivariable Calculus. It has been about a year since I've taken Calc 2. As such, I am in desperate need to review. This website is dedicated to that review!

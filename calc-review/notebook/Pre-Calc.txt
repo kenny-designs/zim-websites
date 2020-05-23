@@ -1,0 +1,7 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-05-23T08:42:03-04:00
+
+====== Pre-Calc ======
+
+Notes dedicated to pre-calc subjects.
