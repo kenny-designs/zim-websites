@@ -1,0 +1,1 @@
+plot sqrt(x+2), -sqrt(x+2)

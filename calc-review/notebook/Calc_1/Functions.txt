@@ -1,0 +1,108 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-05-23T11:03:52-04:00
+
+====== Functions ======
+
+The fundamental objects that we deal with in calculus are //functions.//
+
+A **function** //f// is a rule that assigns to each element //x// in a set //D// exactly one element, called //f//(//x//), in a set //E.//
+
+Set D is known as the **domain** of the function.
+The **range** of //f// is the set of all possible values of //f(x)// as //x// varies throughout the domain.
+A symbol that represents an arbitrary number in the //domain// of a function //f// is called an **independent variable.**
+A symbol that represents a number in the //range //of //f// is called a **dependent variable.** 
+
+The most common way to visualize a function is via its graph. If //f// is a function with domain D, then its **graph** is the set of ordered pairs {{./equation.png?type=equation}}
+
+The following is known as the **difference quotient**. It represents the average rate of change of //f(x) //between x = a and x = a + h.
+
+{{./equation001.png?type=equation}}
+
+**The Vertical Line Test** states that a curve in the xy-plane is the graph of a function of x if and only if no vertical line intersects the curve more than once. 
+
+For example, x = y^{2} - 2 would give us the following parabola. Needless to say, it is **not** a function for a vertical line intersects the curve more than once!
+{{./gnuplot.png?type=gnuplot}}
+
+A **piecewise defined function** is defined by different formulas in different parts of the domain.
+{{./equation002.png?type=equation}}
+
+If a function //f// satisfies //f(-x) //= //f(x) //for every number x in its domain, then //f// is called an **even function**. The geometric significance of an even function is that its graph is symmetric with respect to the  y-axis as seen below.
+
+{{./equation003.png?type=equation}}
+{{./gnuplot001.png?type=gnuplot}}
+
+If //f// satisfies //f(-x) = -f(x)// for every number x in its domain, then //f// is called an **odd function. **The graph of an odd function is symmetric about the //origin //as seen in the graph below by rotating it 180 degrees about the origin.
+
+{{./equation004.png?type=equation}}
+{{./gnuplot002.png?type=gnuplot}}
+
+When we say that y is a **linear function** of x, we mean that the graph of the function is a //line.// As such, we can use the slope-intercept form of the equation of a line to write a formula for the function as:
+{{./equation005.png?type=equation}}
+Where //m// is the slope of the line and //b// is the y-intercept. 
+For the function {{./equation006.png?type=equation}}, we see that the slope is 3 and the y-intercept is -2 as can be observed in the following graph.
+{{./gnuplot003.png?type=gnuplot}}
+
+A function //P// is called a **polynomial** if
+{{./equation007.png?type=equation}}
+where n is a nonnegative integer and the numbers a_{0}, a_{1}, a_{2}, ..., a_{n} are constants called the **coefficients** of the polynomial. The domain of any polynomial is {{./equation008.png?type=equation}}. If the leading coefficient a_{n} != 0, then the **degree** of the polynomial is n.
+{{./equation009.png?type=equation}}
+The polynomial above has a **degree of 6.**
+
+A polynomial of degree 1 is of the form P(x) = mx + b and so it is a linear function.
+
+A polynomial of degree 2 is of the form {{./equation010.png?type=equation}} and is called a **quadratic function.** Its graph is always a parabola obtained by shifting the parabola y = ax^2. The parabola opens upward if a > 0 and downward if a < 0.
+
+A polynomial of degree 3 is of the form
+{{./equation011.png?type=equation}}
+is called a **cubic function.**
+
+A function of the form {{./equation012.png?type=equation}}, where a is a constant, is called a **power function**.
+
+A **rational function** //f// is a ratio of two polynomials
+{{./equation013.png?type=equation}}
+where P and Q are polynomials. Domain consists of all values of x such that Q(x) != 0.
+
+A function //f// is called an **algebraic function** if it can be constructed using algebraic operations (such as addition, subtraction, multiplication, division, and taking roots) starting with polynomials. Any rational function is automatically an algebraic function.
+
+The **exponential functions **are the functions of the form {{./equation014.png?type=equation}}, where the base b is a positive constant. 
+
+The **logarithmic functions **{{./equation015.png?type=equation}}, where the base b is a positive constant, are the inverse functions of the exponential functions.
+
+Given two functions //f// and //g, //the **composite function **{{./equation016.png?type=equation}} (also called the **composition** of //f// and //g//) is defined by
+{{./equation017.png?type=equation}}
+
+{{./equation018.png?type=equation}} is known as the **natural exponential function.**
+
+A function //f// is called a **one-to-one function** if it never takes on the same value twice; t hat is
+{{./equation019.png?type=equation}}
+
+A function is one-to-one if and only if no horizontal line intersects its graph more than once.
+
+Let //f// be a one-to-one function with domain A and range B. Then its **inverse function** //f//^{-1} has domain B and range A and is defined by
+{{./equation020.png?type=equation}}
+for any y in B.
+
+We also have **cancellation equations**
+{{./equation021.png?type=equation}}
+{{./equation022.png?type=equation}}
+
+=== Laws of Logarithms ===
+If x and y are positive numbers, then
+1. {{./equation023.png?type=equation}}
+2. {{./equation024.png?type=equation}}
+3. {{./equation025.png?type=equation}} where r is any real number
+
+The logarithm with base //e// is called the **natural logarithm** and has a special notation:
+{{./equation026.png?type=equation}}
+{{./equation027.png?type=equation}}
+{{./equation028.png?type=equation}}
+{{./equation029.png?type=equation}}
+{{./equation030.png?type=equation}}
+
+For any positive number b (where b != 1), we have
+{{./equation031.png?type=equation}}
+
+==== Inverse Trigonometric Functions ====
+{{./equation032.png?type=equation}}
+

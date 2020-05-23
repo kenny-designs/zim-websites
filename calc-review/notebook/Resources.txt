@@ -1,0 +1,17 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-05-23T10:41:40-04:00
+
+====== Resources ======
+
+The following are various resources I'm using to help me learn:
+
+[[http://userhome.brooklyn.cuny.edu/skingan/calculus/|BC College Professor's website.]] I am uncertain how long this link will be useful for. A fellow student shared it with me so I'll be using it so long as it's around.
+
+[[https://www.desmos.com/calculator|Desmos Graphing Calculator.]]
+
+[[http://userhome.brooklyn.cuny.edu/skingan/calculusbook/CalculusBook-18-02-09.pdf|Calculus 1 Textbook by BC Professor S. R. Kingan.]] Once again, no idea how long this link will be alive. If you like the book download it immediately.
+
+[[https://www.amazon.com/Calculus-James-Stewart/dp/1285740629|Calculus 8th Edition by James Stewart.]] This was my textbook for calculus 1 and 2. I quite like it and recommend checking it out. You could purchase it on amazon or take a look around online for a //free// pdf.
+
+[[https://www.amazon.com/Algebra-Trigonometry-James-Stewart/dp/1305071743|Algebra and Trigonometry 4th Edition by James Stewart.]] The book I used all throughout my time in pre-calc. Once again, not a bad book and you could probably find it online for //free// if you try.
