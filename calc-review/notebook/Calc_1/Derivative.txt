@@ -5,3 +5,49 @@ Creation-Date: 2020-05-23T11:04:16-04:00
 ====== Derivative ======
 
 Welcome to a very exciting part of calculus! The derivative.
+
+Building off of what we learned in the [[Limits]] section, limits of the form
+{{./equation.png?type=equation}}
+arise whenever we calculate a rate of change in any of the sciences or engineering, such as a rate of reaction in chemistry or a marginal cost in economics. Since this type of limit occurs so widely, it is given a special name and notation.
+
+The **derivative of a function f at a number a, **denoted by {{./equation001.png?type=equation}}, is
+{{./equation002.png?type=equation}}
+if this limit exists.
+
+If we write x = a + h, then we have h = x - a and h approaches 0 if and only if x approaches a. Therefore an equivalent way of stating the definition of the derivative, as we saw in finding tangent lines, is
+{{./equation003.png?type=equation}}
+
+As an aside, if we use the point-slope form of the equation of a line, we can write an equation of the tangent line to the curve y = //f(x)// at the point (a, //f(a))// like so:
+{{./equation004.png?type=equation}}
+
+The **instantaneous rate of change** is equal to:
+{{./equation005.png?type=equation}}
+We recognize this limit as being the derivative //f'(x//_{1}).
+
+To recap, the derivative //f'(a)// is the instantaneous rate of change of y = //f(x)// with respect to x when x = a.
+
+==== Derivative Notations ====
+If we use the traditional notation y = //f(x)// to indicate that the independent variable is x and the dependent variable is y, then some common alternative notations for the derivative are as follow:
+{{./equation006.png?type=equation}}
+The symbols D and d/dx are called **differentiation operators** because they indicate the operation of **differentiation**, which is the process of calculating a derivative.
+
+The symbol dy/dx, which was introduced by Leibniz, should not be regarded as a ratio (for the time being); it is simply a synonym for //f'(x). //Nonetheless, it is a very useful and suggestive notation, especailly when used in conjunction with increment notation.
+
+A function //f// is **differentiable at a** if //f'(a)// exists. It is **differentiable on an open interval** (a, b) [or {{./equation007.png?type=equation}}] if it is differentiable at every number in the interval.
+
+If //f// is differentiable at a, then //f//is continuous at a.
+
+We can go even further beyond a single derivative! //(f')' = f''//. This new function //f''// is called the **second derivative** of //f// because it is the derivative of the derivative of f.
+
+==== Differentiation Rules ====
+The formula we use for finding derivatives is useful but quite tedious and painfully slow. As such, there are various rules we can use to speed up this process!
+
+
+
+
+
+
+
+
+
+
