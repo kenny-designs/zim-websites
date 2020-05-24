@@ -3,5 +3,5 @@ Wiki-Format: zim 0.4
 Creation-Date: 2020-05-23T11:04:16-04:00
 
 ====== Derivative ======
-Created Saturday 23 May 2020
 
+Welcome to a very exciting part of calculus! The derivative.

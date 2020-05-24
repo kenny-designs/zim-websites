@@ -135,5 +135,34 @@ If //g// is a continuous at a and //f// is continuous at //g(a),// then the comp
 ==== The Intermediate Value Theorem ====
 Suppose that //f// is continuous on the closed interval [a,b] and let N be any number between //f(a) //and //f(b)//, where {{./equation039.png?type=equation}}. Then there exists a number c in (a, b) such that //f(c) = N.//
 
+==== Limit at Infinity ====
+Let //f// be a function defined on some interval {{./equation040.png?type=equation}}. Then
+{{./equation041.png?type=equation}}
+means that the values of //f(x)// can be made arbitarily close to L by requiring x to be sufficiently large.
+
+The opposite holds true as well when the function //f// is defined on some interval {{./equation042.png?type=equation}}.
+
+The line y = L is called a **horizontal asymptote** of the curve y = //f(x)// if either
+{{./equation043.png?type=equation}}
+
+For example, the following equation has a horizontal asymptote of y = 1.
+{{./equation044.png?type=equation}}
+{{./gnuplot.png?type=gnuplot}}
+
+If r > 0 is a rational number, then
+{{./equation045.png?type=equation}}
+If r > 0 is a rational number such that x^{r} is defined for all x, then
+{{./equation046.png?type=equation}}
+
+==== Derivatives and Rates of Change ====
+The **tangent line** to the curve y = //f(x)// at the point P(a, //f(a))// is the line through P with slope
+{{./equation047.png?type=equation}}
+provided that this limit exists.
+
+There is also another expression for the slope of a tangent line that is sometimes easier to use! If h = x - a, then x = a + h and so the slope of the secand line PQ is
+{{./equation048.png?type=equation}}
+
+For more information, we shall continue our lessons on derivatives [[Derivative|here]].
+
 
 
