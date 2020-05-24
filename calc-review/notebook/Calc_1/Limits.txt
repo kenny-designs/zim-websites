@@ -3,5 +3,137 @@ Wiki-Format: zim 0.4
 Creation-Date: 2020-05-23T11:03:29-04:00
 
 ====== Limits ======
-Created Saturday 23 May 2020
+
+==== The Tangent Problem ====
+The word **tangent** is derived from the Latin word //tangens, //which means "touching." Thus a tangent to a curve is a line that touches the curve. In other words, a tangent line should have the same direction as the curve at the point of contact.
+
+A **secant line**, from the Latin word //secans, //meaning cutting, is a line that cuts (intersects) a curve more than once.
+
+We say that the slope of the tangent line is the **limit** of the slopes of the secant lines, and we can express this symbolically by writing
+{{./equation.png?type=equation}}
+(we assume that the slope of the tangent line is indeed 2 based on a table of data I was given when writing this example)
+Using the **point-slope form** of the equation of a line (y - y_{1} = m(x - x_{1})) we can write the equation of the tangent line through (1, 1) as
+{{./equation001.png?type=equation}}
+
+==== Definition of a Limit ====
+Suppose //f(x) //is defined when x is near the number a. (This means that //f// is defined on some open interval that contains a, except possibly at a itself.) Then we write
+{{./equation002.png?type=equation}}
+and say "the limit of //f(x)//, as x approaches a, equals L" if we can make the values of //f(x)// arbitrarily close to L (as close to L as we like) by restricting x to be sufficiently close to a (on either side of a) but not equal to a.
+
+**However! **x != a. When finding the limit of //f(x) //as x approaches a, we never consider x = a. In fact, //f(x)// need not even be defined when x = a. The only thing that matters is how //f// is defined //near a.//
+
+==== Definition of a One-Sided Limit ====
+We write
+{{./equation003.png?type=equation}}
+and say the **left-hand limit of f(x) as x approaches a **[or the **limit of f(x) as x approaches a from the left**] is equal to L if we can make the values of //f(x)// arbitrarily close to L by taking x to be sufficiently close to a with x less than a.
+
+On the otherhand, let's say we require x to be greater than a, we then get a **right-hand limit of f(x) as x approaches a** is equal to L. We write this as:
+{{./equation004.png?type=equation}}
+Instead of x approaching a from the left, we now have x approaching a //from the right.//
+
+We can also see that the following is true:
+{{./equation005.png?type=equation}}
+
+==== Definition of an Infinite Limit ====
+Let //f// be a function defined on both sides of a, except possibly at a itself. Then
+{{./equation006.png?type=equation}}
+means that the values of //f(x)// can be made arbitarily large (as large as we please) by taking x sufficiently close to a, but not equal to a.
+
+The above also applies to negative infinity!
+{{./equation007.png?type=equation}}
+
+Extending upon this, we can also have infinity for one-sided limits.
+
+==== Calculating Limits Using the Limit Laws ====
+We can use calculators and the like to help us guess the limit to various functions but we need not rely on this! In fact, we can even obtain incorrect answers via using pure intuition. Instead, let us explore various properties of limits, known as the **Limit Laws,** to help us calculate limits!
+
+Suppose that c is a constant and the limits
+{{./equation008.png?type=equation}}
+exist. Then
+1. {{./equation009.png?type=equation}}
+2. {{./equation010.png?type=equation}}
+3. {{./equation011.png?type=equation}}
+4. {{./equation012.png?type=equation}}
+5. {{./equation013.png?type=equation}}
+
+From top to bottom, these laws are known as
+1. Sum Law
+2. Difference Law
+3. Constant Multiple Law
+4. Product Law
+5. Quotient Law
+
+We also have the **Power Law** and it looks like this:
+{{./equation014.png?type=equation}} where n is a positive integer.
+
+We also have the following two special limits:
+{{./equation015.png?type=equation}}
+{{./equation016.png?type=equation}}
+
+Building on this, we also have this other special limit:
+{{./equation017.png?type=equation}} where n is a positive number.
+
+A similar limit holds for roots as follows:
+{{./equation018.png?type=equation}} where n is a positive integer (If n is even, we assume that a > 0.)
+
+More generally, we have the following law known as the **Root Law**
+{{./equation019.png?type=equation}} where n is a positive integer. [If n is even, we assume that {{./equation020.png?type=equation}}]
+
+==== Direct Substitution Property ====
+If //f// is a polynomial or a rational function and a is in the domain of //f, //then
+{{./equation021.png?type=equation}}
+
+It's also good to note that we can simplify our function and even manipulate it algebraically so that we can apply direct substitution. For example,
+{{./equation022.png?type=equation}}
+
+For this next problem, I won't be writing out all the steps. Just not that you need to //rationalize the numerator// to solve it.
+{{./equation023.png?type=equation}}
+The answer is 1/6. Figure it out.
+
+==== Squeeze Theorem ====
+Firstly, if {{./equation024.png?type=equation}} when x is near a (except possibly at a) and the limits of //f// and //g// both exist as x approaches a, then
+{{./equation025.png?type=equation}}
+
+In regards to the **Squeeze Theorem, **if {{./equation026.png?type=equation}} when x is near a (except possibly at a) and
+{{./equation027.png?type=equation}}
+then
+{{./equation028.png?type=equation}}
+
+==== Continuity ====
+A function //f// is **continuous at a number a** if
+{{./equation029.png?type=equation}}
+
+This definition implicitly requires the following three things if //f// is continuous at a:
+1. //f(a)// is defined (that is, a is in the domain of //f//)
+2. {{./equation030.png?type=equation}}
+3. {{./equation031.png?type=equation}}
+
+If //f// is defined near a (in other words, //f// is defined on an open interval containing a, except perhaps at a), we say that //f// is **discontinuous at a **(or //f// has a **discontinuity** at a) if //f// is not continuous at a.
+
+There are several types of discontinuity. For example:
+1. **Removable **is when there is a 'hole' in the graph.
+2. **Infinite discontinuity **is just as it implies. Infinity.
+3. **Jump discontinuities **are when the function 'jumps' from one value to another. Think of a staircase and not necessarily a hole.
+
+A function //f// is **continuous on an interval **if it is continuous at every number in the interval.
+
+If //f// and //g// are continuous at a and c is a constant, then the following functions are also continuous at a:
+1. //f// + //g//
+2. //f //- //g//
+3. c//f//
+4. //fg//
+5. {{./equation032.png?type=equation}} if g(a) != 0
+
+Any polynomial is continuous everywhere; that is, it is continuous on {{./equation033.png?type=equation}}
+Any rational function is continuous wherever it is defined; that is, it is continuous on its domain.
+
+If //f// is continuous at b and {{./equation034.png?type=equation}}, then {{./equation035.png?type=equation}}. In other words,
+{{./equation036.png?type=equation}}
+
+If //g// is a continuous at a and //f// is continuous at //g(a),// then the composite function {{./equation037.png?type=equation}} given by {{./equation038.png?type=equation}} is continuous at a.
+
+==== The Intermediate Value Theorem ====
+Suppose that //f// is continuous on the closed interval [a,b] and let N be any number between //f(a) //and //f(b)//, where {{./equation039.png?type=equation}}. Then there exists a number c in (a, b) such that //f(c) = N.//
+
+
 
