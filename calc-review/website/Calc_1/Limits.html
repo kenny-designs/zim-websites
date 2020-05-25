@@ -1,0 +1,679 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Limits</title>
+	<meta name='Generator' content='Zim 0.68'>
+	<style type='text/css'>
+		a          { text-decoration: none      }
+		a:hover    { text-decoration: underline }
+		a:active   { text-decoration: underline }
+		strike     { color: grey                }
+		u          { text-decoration: none;
+					 background-color: yellow   }
+		tt         { color: #2e3436;            }
+		pre        { color: #2e3436;
+					 margin-left: 20px          }
+		h1         { text-decoration: underline;
+					 color: #4e9a06; margin-bottom: 0 }
+		h2         { color: #4e9a06; margin-bottom: 0 }
+		h3         { color: #4e9a06; margin-bottom: 0 }
+		h4         { color: #4e9a06; margin-bottom: 0 }
+		h5         { color: #4e9a06; margin-bottom: 0 }
+		p          { margin-top: 0              }
+		span.zim-tag {
+			color: #ce5c00;
+		}
+		div.zim-object {
+			border-style:solid;
+			border-width:1px;
+		}
+		.checked-box {list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAANOgAADMQBiN+4gQAAAAd0SU1FB9gKGQ8sMEGsKGkAAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAEBUlEQVRIx62V22tdRRTGf7Nn73P2ybntnNOe3NqkPTGgLTVUUZF6QatSLOKTPgqCIqLgQ0H/A1sQQbBYCBb1QfAxiC8tSO1FqHkwJVKtjdTGNraUmObsc9nXmfGh7cGYpM1D5nHWzPetteZb3wg2eB2YqYm4zSadsMtoboiNBH/3TE0awx6j+MRoxoTg/IYRvP19TQrJS0bzhdHGSyKFkLTtjSKwMjyiEz43ynhtP6bdjBCWyFobAf7eT7VhNF/q1FRbjYjmUohlCVPwnB+6FUxMTJipqSmUUhhjEGKd3bMT4ks/Y6oLBK2Yth8hHYtCJXOix7Nf7xLMzc0xOzvLzp078TyPNE3viW3QJPXzhNWbxFFKHCmMhoLn/FHodd48vGfhapdAacXQlkFK5dL6wIUm6fuTZPuvqDQhaMUYYyiVyuQr6rXDexYuAdi3tSv1ZJNs/R/CaszzT+1na88uXFnCEnJVgivBNN8uTJKmHQI/ptOOcXNZzMz9mOqFs90OHpipWcYwlo5P4ebnuOkrvr5wgrH+h3im7y36MzuwRXYZeKha/OhP0EkadFoxQSdGSotedR/+XwMc2XvKdNUFOFqZx6LKZWIiwjgkikNmLp/hm8sH+K1zjFTHXfBYdTi+eJArzXM0GxFxoBDCopLvo/fqEwi1XPkWkGqjFo2TgB1jOYZUKZTS/D1/ncmLh7jon0IbRWoiTi59ymzzJEEQE3cStNZsGxqlfPE57MBbOR8fP3hDGalOO9fq2DlBvmZw8xa2IxACGn6TydlD/O6f5OzSV/zif0cYhLQaEXGkKBbz7Ov/AOlXV1cxgBJRI3fuSTrpTawt18kWIZN1CFuaONI0w0WOXfsI43YIggh/KUSlhqxrMz74AkOZcWBm9QkH+Gw8NDLuITi+m0yzhluSyJzBLcpblUhFxywSRAEtPwQjsKVN30CNh0uvYuOubSHLtN3J0TO1j0pmBNuFbFWRK0gyPRZpktL2I5JQkclKakNlnh54g6ocvevUr/Ai2a7wineEkcJupA3S1Wg0nVZM2E6wbEF5U5G9Q++wI7sfR7h3N8HVNstykBfzH+KJEZwiWD0aIwxCgJ0R1Mu7GXOeJSuK93bZtQIle4D9pUNU5DC5jEsu55AvZakM5NicGyEj8uuz8bUCQgj67QfY671P3vEoeC69gy695U1U7NG7XV0pUwBjDJa1/JJlWWxzHuflzQe5FJ/GsgUVuZ2t8lEkTvfc0aNHb72flBhjVicQQqCUuvM3/M+WDVguWBrMVdDXEGZlBVEUrVCU9d9s5+fnaTQa2PZyPxEIhJaI1EEoZwX4ncynp6fXrmB4eJjR0VFarRbNZnP9P9rt9gohqNVq1Ov1ZbF/AZGev3hLJ2/zAAAAAElFTkSuQmCC)}
+		.xchecked-box {list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAANOgAADMQBiN+4gQAAAAd0SU1FB9gKGQ8bDYnDxEwAAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAEK0lEQVRIx9WVS2hTWRjHf/eR3CY1nbxMH2YiZRQS6qO13YlMVxY3SnVcuNIBFezGpSADLoQqLu1sHJCqdCFSXFpw4YOCSH3BtFqttTNamabX3DS5bfO6uffMoglja3RGcDMHzuac7/z/53++//cd+L8P6VuCPQYZ8ADNgBd4J31DcDcQs+GnHByRocEDv0kfBSjAOlYCs11Q+gpwDegS8LMJ+3QIK0ATzEhV8Odnz5bzw8P4dJ25aJQ/WlvJ1df/K7hSLtOcTNI+Pk69rpMTgqIQhCDvh1/VSpw79+gRrRMTmLZNezLJJsPg+a5dmOEwQlFqg1sWG16/Jv7sGWXDwBACFQjC9HcwIMONKkGp4PGAJGEDS0IQmZlhnWnye3c3eiyGo6qr3WHbrJ+dJf7gAXI6zSIr72T7/fgzmT4FHnTBsgrQBfYvTU0km5vxz86iADnAm0rRPTWFt7cXZccOJJcLAGHb2K9ekT93jmwmwwdAAFpjI6Ntbfxw5879ag7l6o1sr5eHHR3IsRgeQK/M4sQE+YEB7JcvEY6zAj45SWFgAPPxYwzHoQxIkQjTPT0kIxE+Noj8sexFn4/xnh58iQTeSpHkHAdrbIzi0BCOrmNPTpK/eJHM3bt8sCyKQCiR4NWePWSiUZw1+ZLXJm4pFKLhzBlCsRh2RUXacVgeGaF47RrL58+zcP8+RrmMkCQinZ1EL1zAjERqmkH+tLYl1G3bCJw4QUjT0IA0MJfLMX/5MqmHD0nZNiUgtGULG/r7ccXjINWuWbnmqsuFu7sb/4EDNLlcBIEioNs2KUAFGmMxmk6dQm1tRZI+3xBqEkiShBQOox05Ql1nJ26gvuIUAWiKQnj/ftStW5Fk+YuF+NldsbBA4cYN9KdPmaso8Fc62ZJtk7l1C2t0FGdxESHE1xE4hkHh6lX0oSHSpRIewC/LrPf7CSgKNpCamkI/fZr8pUuIZBIcpyaBunahPp1mub+fDyMjGKUSChCsq6Nh717q9u2jbnSU0uAgRrFIwTThyhUCqRS+hgZKLS1fJvDm87SNjZGcnsYUAjcQ8vsJ9/Xh7u1FDgRQN20iks3iDA+zZFmYhQLqzZtsj8WY3L0baY2Sf55ICCKpFHUzM2SEQAJCHg+hY8fQDh5EDgRWDoRC1J88SePRo2geD0XAcBy8b98Sv3ePYDZbbf2rFQjLIphMsmDbaEBQVQkePox26BCSz7e6i4bDrDt+nGYhmBscpFAskheC4Js3bPR4qHphFYEnlcI7P4/jdqNpGu8TCe4oCsXr1z//F2ga3+/cSfTJE0qmSVYIsKzaOZDcbjKyzFIiwfvt21kMBLA07YsetzWNd+3tLLW0sH5igvT8PH9Go/z44kX+E4LGjg7GDYOcy4XlOEgLC//5P/5LCFzxOPLmzWyIx+m6fduu7v0NVGqyTSycKksAAAAASUVORK5CYII=)}
+		.unchecked-box {list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAANOgAADMQBiN+4gQAAAAd0SU1FB9gKGQ8qAt8h3m8AAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAA60lEQVRIx+2VsQqDMBRF70sCLg5OLoKgjk7+lJ/hh+STXBwcnRz8ArMEkrxOFktbaC3tULzTg5e8k5vADXDq70VbobXmvu/hvQczg4heHrJfXxQFuq67blZbMc8zpmlCXddIkgTOuZcBUko45zCOI6y1Nz2xFSEEZFmGOI7fGg4A3nsQEZqmuXOu9jallACAtm3fvmutNaIoAjM/dkBECCF89KCbk4eAb+kEnIAT8EsAM0OIz3hSyrssUvss8t5fg+uIrLXPs0gIgWVZYIyBUurQyYdheO4gz3NUVQVjDNZ1PfSjpWmKsixvehfB9GBZ3NndrgAAAABJRU5ErkJggg==)}
+		.migrated-box {list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAANOgAADMQBiN+4gQAAAAd0SU1FB+AKHREFA8vJSnkAAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAC1klEQVRIx+2VT0hUURTGf/e958w4Tc3TYowMw1GyEgwr1MqsFmbZIrIWQZsWJUjbdoHQpl3Qps0swnCRECQFYkR/TC1iKkqmfzAKTo2Vf8hoRsfR995tkRMT87RRWkUHHhy495zvnvvu933wP/75EKkkEAjIYDCIaZpIKRFCZN0kfX9xcTGtra2/irVUEolECIfDlJeXo+s6hmFkDaCqKoZhEAqFSCaTv60pqcSyLAoLC/F4PEtqDmCaJkIIKisrMybX0sdUVRWA5ubmPzdNjjI1cpXkZC/O1fV03PXgdDqRUtpPIITAsqxsDz0Z/3CZQv8uqo4N4C8/Tp2/DdM0MiZQlvk41OTkI/LW1SGtCVb5drD3eCc71wcA+VcAHA5vDd8+3UGakxiJV7i9pdQevU5T1R35pJ3MV5QW1pf+0kWBheJ2SWua8EQXZXsu4fVVYEz1sEKvof5EuxjoPvzpcRvrdp9C2gGMx6cpOHBmbImMesds7BZubwMVDTfXDnQ3vQfK7AC8wLfExMX5whyQc3q2OEnjGm5vE76SQxsfBLr77a7CNf+n0r/l6sSMtsBSnurckiIILCobAtVZhpF4gZF4jubaymj4Ch/fd380LE7bAnjc0NPxk2yqpmEuwGxF0ag+0k5uTpzZeBeaazvj0We8fXojainsb2xh2BZgbe0gSIllzSIUh63wfQ6dZ/O2fbjcKlOj58jJ3cVENESw5yErc9nf2MLQ4jwQAkV1Lqiq37/cZ9WaahJjF9AcmxiPDhLs7ePe23oOnmUwg2hSShQle96tKDjA2HAniusgo9FxnvY9Jxw7RWzGYy92QghM00x5g53qp9sHmtB58/o2umOI2NwGolMnMYUHIb7aAyiKwsjICLqu2/qBEIKUUAohMaSHSLyBSMoPTINQ6CX5+fn2AEVFRZSUlBCPx4nFYhl3L4RESjF/GEgX3pSj+Xw+/H7/b3U/AEOZFnp7O5+5AAAAAElFTkSuQmCC)}
+		ul {list-style-image: none}
+		/* ul rule needed to reset style for sub-bullets */
+
+		span.insen { color: grey                }
+
+		.pages {
+			max-width: 1000px;
+			 padding-left: 320px;
+		}
+		.menu{
+			float:left; width: 300px;
+		}
+		hr{clear:both;}
+	</style>
+</head>
+<body>
+
+<!-- Header -->
+<div class='header'>
+	[ <a href='./Integrals.html'>Prev</a> ]
+
+	[ <span class='insen'>Index</span> ]
+
+	[ <a href='../Calc_2.html'>Next</a> ]
+</div>
+
+<hr />
+
+<div class="menu">
+<ul>
+<li><a href="../Calc_1.html" title="Calc 1" class="page">Calc 1</a>
+<ul>
+<li><a href="./Derivative.html" title="Derivative" class="page">Derivative</a></li>
+<li><a href="./Functions.html" title="Functions" class="page">Functions</a></li>
+<li><a href="./Integrals.html" title="Integrals" class="page">Integrals</a></li>
+<li><b>Limits</b></li>
+</ul>
+</li>
+<li><a href="../Calc_2.html" title="Calc 2" class="page">Calc 2</a></li>
+<li><a href="../Home.html" title="Home" class="page">Home</a></li>
+<li><a href="../Pre-Calc.html" title="Pre-Calc" class="page">Pre-Calc</a></li>
+<li><a href="../Resources.html" title="Resources" class="page">Resources</a></li>
+</ul>
+
+</div>
+
+<!-- Wiki content -->
+
+<div class='pages'>
+	<div class='heading'>
+	<h1>Limits <a name='Calc 1:Limits'></a></h1>
+	</div>
+
+	<div class='content'>
+	<h3>The Tangent Problem</h3>
+
+<p>
+The word <b>tangent</b> is derived from the Latin word <i>tangens, </i>which means "touching." Thus a tangent to a curve is a line that touches the curve. In other words, a tangent line should have the same direction as the curve at the point of contact.
+</p>
+
+<p>
+A <b>secant line</b>, from the Latin word <i>secans, </i>meaning cutting, is a line that cuts (intersects) a curve more than once.
+</p>
+
+<p>
+We say that the slope of the tangent line is the <b>limit</b> of the slopes of the secant lines, and we can express this symbolically by writing<br>
+<img src="./Limits/equation.png"><br>
+(we assume that the slope of the tangent line is indeed 2 based on a table of data I was given when writing this example)<br>
+Using the <b>point-slope form</b> of the equation of a line (y - y<sub>1</sub> = m(x - x<sub>1</sub>)) we can write the equation of the tangent line through (1, 1) as<br>
+<img src="./Limits/equation001.png">
+</p>
+
+<h3>Definition of a Limit</h3>
+
+<p>
+Suppose <i>f(x) </i>is defined when x is near the number a. (This means that <i>f</i> is defined on some open interval that contains a, except possibly at a itself.) Then we write<br>
+<img src="./Limits/equation002.png"><br>
+and say "the limit of <i>f(x)</i>, as x approaches a, equals L" if we can make the values of <i>f(x)</i> arbitrarily close to L (as close to L as we like) by restricting x to be sufficiently close to a (on either side of a) but not equal to a.
+</p>
+
+<p>
+<b>However! </b>x != a. When finding the limit of <i>f(x) </i>as x approaches a, we never consider x = a. In fact, <i>f(x)</i> need not even be defined when x = a. The only thing that matters is how <i>f</i> is defined <i>near a.</i>
+</p>
+
+<h3>Definition of a One-Sided Limit</h3>
+
+<p>
+We write<br>
+<img src="./Limits/equation003.png"><br>
+and say the <b>left-hand limit of f(x) as x approaches a </b>[or the <b>limit of f(x) as x approaches a from the left</b>] is equal to L if we can make the values of <i>f(x)</i> arbitrarily close to L by taking x to be sufficiently close to a with x less than a.
+</p>
+
+<p>
+On the otherhand, let's say we require x to be greater than a, we then get a <b>right-hand limit of f(x) as x approaches a</b> is equal to L. We write this as:<br>
+<img src="./Limits/equation004.png"><br>
+Instead of x approaching a from the left, we now have x approaching a <i>from the right.</i>
+</p>
+
+<p>
+We can also see that the following is true:<br>
+<img src="./Limits/equation005.png">
+</p>
+
+<h3>Definition of an Infinite Limit</h3>
+
+<p>
+Let <i>f</i> be a function defined on both sides of a, except possibly at a itself. Then<br>
+<img src="./Limits/equation006.png"><br>
+means that the values of <i>f(x)</i> can be made arbitarily large (as large as we please) by taking x sufficiently close to a, but not equal to a.
+</p>
+
+<p>
+The above also applies to negative infinity!<br>
+<img src="./Limits/equation007.png">
+</p>
+
+<p>
+Extending upon this, we can also have infinity for one-sided limits.
+</p>
+
+<h3>Calculating Limits Using the Limit Laws</h3>
+
+<p>
+We can use calculators and the like to help us guess the limit to various functions but we need not rely on this! In fact, we can even obtain incorrect answers via using pure intuition. Instead, let us explore various properties of limits, known as the <b>Limit Laws,</b> to help us calculate limits!
+</p>
+
+<p>
+Suppose that c is a constant and the limits<br>
+<img src="./Limits/equation008.png"><br>
+exist. Then<br>
+<ol type="1" start="1">
+<li><img src="./Limits/equation009.png"></li>
+<li><img src="./Limits/equation010.png"></li>
+<li><img src="./Limits/equation011.png"></li>
+<li><img src="./Limits/equation012.png"></li>
+<li><img src="./Limits/equation013.png"></li>
+</ol>
+</p>
+
+<p>
+From top to bottom, these laws are known as<br>
+<ol type="1" start="1">
+<li>Sum Law</li>
+<li>Difference Law</li>
+<li>Constant Multiple Law</li>
+<li>Product Law</li>
+<li>Quotient Law</li>
+</ol>
+</p>
+
+<p>
+We also have the <b>Power Law</b> and it looks like this:<br>
+<img src="./Limits/equation014.png"> where n is a positive integer.
+</p>
+
+<p>
+We also have the following two special limits:<br>
+<img src="./Limits/equation015.png"><br>
+<img src="./Limits/equation016.png">
+</p>
+
+<p>
+Building on this, we also have this other special limit:<br>
+<img src="./Limits/equation017.png"> where n is a positive number.
+</p>
+
+<p>
+A similar limit holds for roots as follows:<br>
+<img src="./Limits/equation018.png"> where n is a positive integer (If n is even, we assume that a &gt; 0.)
+</p>
+
+<p>
+More generally, we have the following law known as the <b>Root Law</b><br>
+<img src="./Limits/equation019.png"> where n is a positive integer. [If n is even, we assume that <img src="./Limits/equation020.png">]
+</p>
+
+<h3>Direct Substitution Property</h3>
+
+<p>
+If <i>f</i> is a polynomial or a rational function and a is in the domain of <i>f, </i>then<br>
+<img src="./Limits/equation021.png">
+</p>
+
+<p>
+It's also good to note that we can simplify our function and even manipulate it algebraically so that we can apply direct substitution. For example,<br>
+<img src="./Limits/equation022.png">
+</p>
+
+<p>
+For this next problem, I won't be writing out all the steps. Just not that you need to <i>rationalize the numerator</i> to solve it.<br>
+<img src="./Limits/equation023.png"><br>
+The answer is 1/6. Figure it out.
+</p>
+
+<h3>Squeeze Theorem</h3>
+
+<p>
+Firstly, if <img src="./Limits/equation024.png"> when x is near a (except possibly at a) and the limits of <i>f</i> and <i>g</i> both exist as x approaches a, then<br>
+<img src="./Limits/equation025.png">
+</p>
+
+<p>
+In regards to the <b>Squeeze Theorem, </b>if <img src="./Limits/equation026.png"> when x is near a (except possibly at a) and<br>
+<img src="./Limits/equation027.png"><br>
+then<br>
+<img src="./Limits/equation028.png">
+</p>
+
+<h3>Continuity</h3>
+
+<p>
+A function <i>f</i> is <b>continuous at a number a</b> if<br>
+<img src="./Limits/equation029.png">
+</p>
+
+<p>
+This definition implicitly requires the following three things if <i>f</i> is continuous at a:<br>
+<ol type="1" start="1">
+<li><i>f(a)</i> is defined (that is, a is in the domain of <i>f</i>)</li>
+<li><img src="./Limits/equation030.png"></li>
+<li><img src="./Limits/equation031.png"></li>
+</ol>
+</p>
+
+<p>
+If <i>f</i> is defined near a (in other words, <i>f</i> is defined on an open interval containing a, except perhaps at a), we say that <i>f</i> is <b>discontinuous at a </b>(or <i>f</i> has a <b>discontinuity</b> at a) if <i>f</i> is not continuous at a.
+</p>
+
+<p>
+There are several types of discontinuity. For example:<br>
+<ol type="1" start="1">
+<li><b>Removable </b>is when there is a 'hole' in the graph.</li>
+<li><b>Infinite discontinuity </b>is just as it implies. Infinity.</li>
+<li><b>Jump discontinuities </b>are when the function 'jumps' from one value to another. Think of a staircase and not necessarily a hole.</li>
+</ol>
+</p>
+
+<p>
+A function <i>f</i> is <b>continuous on an interval </b>if it is continuous at every number in the interval.
+</p>
+
+<p>
+If <i>f</i> and <i>g</i> are continuous at a and c is a constant, then the following functions are also continuous at a:<br>
+<ol type="1" start="1">
+<li><i>f</i> + <i>g</i></li>
+<li><i>f </i>- <i>g</i></li>
+<li>c<i>f</i></li>
+<li><i>fg</i></li>
+<li><img src="./Limits/equation032.png"> if g(a) != 0</li>
+</ol>
+</p>
+
+<p>
+Any polynomial is continuous everywhere; that is, it is continuous on <img src="./Limits/equation033.png"><br>
+Any rational function is continuous wherever it is defined; that is, it is continuous on its domain.
+</p>
+
+<p>
+If <i>f</i> is continuous at b and <img src="./Limits/equation034.png">, then <img src="./Limits/equation035.png">. In other words,<br>
+<img src="./Limits/equation036.png">
+</p>
+
+<p>
+If <i>g</i> is a continuous at a and <i>f</i> is continuous at <i>g(a),</i> then the composite function <img src="./Limits/equation037.png"> given by <img src="./Limits/equation038.png"> is continuous at a.
+</p>
+
+<h3>The Intermediate Value Theorem</h3>
+
+<p>
+Suppose that <i>f</i> is continuous on the closed interval [a,b] and let N be any number between <i>f(a) </i>and <i>f(b)</i>, where <img src="./Limits/equation039.png">. Then there exists a number c in (a, b) such that <i>f(c) = N.</i>
+</p>
+
+<h3>Limit at Infinity</h3>
+
+<p>
+Let <i>f</i> be a function defined on some interval <img src="./Limits/equation040.png">. Then<br>
+<img src="./Limits/equation041.png"><br>
+means that the values of <i>f(x)</i> can be made arbitarily close to L by requiring x to be sufficiently large.
+</p>
+
+<p>
+The opposite holds true as well when the function <i>f</i> is defined on some interval <img src="./Limits/equation042.png">.
+</p>
+
+<p>
+The line y = L is called a <b>horizontal asymptote</b> of the curve y = <i>f(x)</i> if either<br>
+<img src="./Limits/equation043.png">
+</p>
+
+<p>
+For example, the following equation has a horizontal asymptote of y = 1.<br>
+<img src="./Limits/equation044.png"><br>
+<img src="./Limits/gnuplot.png">
+</p>
+
+<p>
+If r &gt; 0 is a rational number, then<br>
+<img src="./Limits/equation045.png"><br>
+If r &gt; 0 is a rational number such that x<sup>r</sup> is defined for all x, then<br>
+<img src="./Limits/equation046.png">
+</p>
+
+<h3>Derivatives and Rates of Change</h3>
+
+<p>
+The <b>tangent line</b> to the curve y = <i>f(x)</i> at the point P(a, <i>f(a))</i> is the line through P with slope<br>
+<img src="./Limits/equation047.png"><br>
+provided that this limit exists.
+</p>
+
+<p>
+There is also another expression for the slope of a tangent line that is sometimes easier to use! If h = x - a, then x = a + h and so the slope of the secand line PQ is<br>
+<img src="./Limits/equation048.png">
+</p>
+
+<p>
+For more information, we shall continue our lessons on derivatives <a href="./Derivative.html" title="here" class="page">here</a>.
+</p>
+
+<br>
+<br>
+
+
+	</div>
+
+	<br />
+
+	<div class='page-footer'>
+		<b>Backlinks:</b>
+
+		<a href='./Derivative.html'>Calc 1:Derivative</a>
+
+		<br /><br />
+
+			<b>Attachments:</b>
+			<table>
+
+			<tr><td><a href='./Limits/equation.png'>equation.png</a></td><td>&nbsp;</td><td>1.02kb</td></tr>
+
+
+			<tr><td><a href='./Limits/equation.tex'>equation.tex</a></td><td>&nbsp;</td><td>71b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation001.png'>equation001.png</a></td><td>&nbsp;</td><td>790b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation001.tex'>equation001.tex</a></td><td>&nbsp;</td><td>42b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation002.png'>equation002.png</a></td><td>&nbsp;</td><td>600b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation002.tex'>equation002.tex</a></td><td>&nbsp;</td><td>22b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation003.png'>equation003.png</a></td><td>&nbsp;</td><td>611b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation003.tex'>equation003.tex</a></td><td>&nbsp;</td><td>26b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation004.png'>equation004.png</a></td><td>&nbsp;</td><td>629b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation004.tex'>equation004.tex</a></td><td>&nbsp;</td><td>24b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation005.png'>equation005.png</a></td><td>&nbsp;</td><td>1.57kb</td></tr>
+
+
+			<tr><td><a href='./Limits/equation005.tex'>equation005.tex</a></td><td>&nbsp;</td><td>118b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation006.png'>equation006.png</a></td><td>&nbsp;</td><td>625b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation006.tex'>equation006.tex</a></td><td>&nbsp;</td><td>27b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation007.png'>equation007.png</a></td><td>&nbsp;</td><td>637b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation007.tex'>equation007.tex</a></td><td>&nbsp;</td><td>28b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation008.png'>equation008.png</a></td><td>&nbsp;</td><td>979b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation008.tex'>equation008.tex</a></td><td>&nbsp;</td><td>53b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation009.png'>equation009.png</a></td><td>&nbsp;</td><td>1.17kb</td></tr>
+
+
+			<tr><td><a href='./Limits/equation009.tex'>equation009.tex</a></td><td>&nbsp;</td><td>70b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation010.png'>equation010.png</a></td><td>&nbsp;</td><td>989b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation010.tex'>equation010.tex</a></td><td>&nbsp;</td><td>69b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation011.png'>equation011.png</a></td><td>&nbsp;</td><td>843b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation011.tex'>equation011.tex</a></td><td>&nbsp;</td><td>43b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation012.png'>equation012.png</a></td><td>&nbsp;</td><td>1.12kb</td></tr>
+
+
+			<tr><td><a href='./Limits/equation012.tex'>equation012.tex</a></td><td>&nbsp;</td><td>77b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation013.png'>equation013.png</a></td><td>&nbsp;</td><td>1.50kb</td></tr>
+
+
+			<tr><td><a href='./Limits/equation013.tex'>equation013.tex</a></td><td>&nbsp;</td><td>113b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation014.png'>equation014.png</a></td><td>&nbsp;</td><td>774b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation014.tex'>equation014.tex</a></td><td>&nbsp;</td><td>47b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation015.png'>equation015.png</a></td><td>&nbsp;</td><td>402b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation015.tex'>equation015.tex</a></td><td>&nbsp;</td><td>19b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation016.png'>equation016.png</a></td><td>&nbsp;</td><td>439b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation016.tex'>equation016.tex</a></td><td>&nbsp;</td><td>19b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation017.png'>equation017.png</a></td><td>&nbsp;</td><td>496b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation017.tex'>equation017.tex</a></td><td>&nbsp;</td><td>23b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation018.png'>equation018.png</a></td><td>&nbsp;</td><td>610b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation018.tex'>equation018.tex</a></td><td>&nbsp;</td><td>39b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation019.png'>equation019.png</a></td><td>&nbsp;</td><td>988b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation019.tex'>equation019.tex</a></td><td>&nbsp;</td><td>59b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation020.png'>equation020.png</a></td><td>&nbsp;</td><td>619b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation020.tex'>equation020.tex</a></td><td>&nbsp;</td><td>22b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation021.png'>equation021.png</a></td><td>&nbsp;</td><td>648b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation021.tex'>equation021.tex</a></td><td>&nbsp;</td><td>25b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation022.png'>equation022.png</a></td><td>&nbsp;</td><td>1.29kb</td></tr>
+
+
+			<tr><td><a href='./Limits/equation022.tex'>equation022.tex</a></td><td>&nbsp;</td><td>108b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation023.png'>equation023.png</a></td><td>&nbsp;</td><td>882b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation023.tex'>equation023.tex</a></td><td>&nbsp;</td><td>58b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation024.png'>equation024.png</a></td><td>&nbsp;</td><td>499b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation024.tex'>equation024.tex</a></td><td>&nbsp;</td><td>14b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation025.png'>equation025.png</a></td><td>&nbsp;</td><td>793b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation025.tex'>equation025.tex</a></td><td>&nbsp;</td><td>42b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation026.png'>equation026.png</a></td><td>&nbsp;</td><td>710b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation026.tex'>equation026.tex</a></td><td>&nbsp;</td><td>24b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation027.png'>equation027.png</a></td><td>&nbsp;</td><td>747b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation027.tex'>equation027.tex</a></td><td>&nbsp;</td><td>43b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation028.png'>equation028.png</a></td><td>&nbsp;</td><td>597b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation028.tex'>equation028.tex</a></td><td>&nbsp;</td><td>22b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation029.png'>equation029.png</a></td><td>&nbsp;</td><td>648b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation029.tex'>equation029.tex</a></td><td>&nbsp;</td><td>25b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation030.png'>equation030.png</a></td><td>&nbsp;</td><td>696b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation030.tex'>equation030.tex</a></td><td>&nbsp;</td><td>27b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation031.png'>equation031.png</a></td><td>&nbsp;</td><td>648b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation031.tex'>equation031.tex</a></td><td>&nbsp;</td><td>25b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation032.png'>equation032.png</a></td><td>&nbsp;</td><td>306b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation032.tex'>equation032.tex</a></td><td>&nbsp;</td><td>11b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation033.png'>equation033.png</a></td><td>&nbsp;</td><td>502b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation033.tex'>equation033.tex</a></td><td>&nbsp;</td><td>30b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation034.png'>equation034.png</a></td><td>&nbsp;</td><td>589b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation034.tex'>equation034.tex</a></td><td>&nbsp;</td><td>22b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation035.png'>equation035.png</a></td><td>&nbsp;</td><td>746b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation035.tex'>equation035.tex</a></td><td>&nbsp;</td><td>28b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation036.png'>equation036.png</a></td><td>&nbsp;</td><td>869b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation036.tex'>equation036.tex</a></td><td>&nbsp;</td><td>45b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation037.png'>equation037.png</a></td><td>&nbsp;</td><td>341b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation037.tex'>equation037.tex</a></td><td>&nbsp;</td><td>9b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation038.png'>equation038.png</a></td><td>&nbsp;</td><td>745b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation038.tex'>equation038.tex</a></td><td>&nbsp;</td><td>24b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation039.png'>equation039.png</a></td><td>&nbsp;</td><td>554b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation039.tex'>equation039.tex</a></td><td>&nbsp;</td><td>14b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation040.png'>equation040.png</a></td><td>&nbsp;</td><td>405b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation040.tex'>equation040.tex</a></td><td>&nbsp;</td><td>11b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation041.png'>equation041.png</a></td><td>&nbsp;</td><td>615b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation041.tex'>equation041.tex</a></td><td>&nbsp;</td><td>27b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation042.png'>equation042.png</a></td><td>&nbsp;</td><td>416b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation042.tex'>equation042.tex</a></td><td>&nbsp;</td><td>12b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation043.png'>equation043.png</a></td><td>&nbsp;</td><td>1.07kb</td></tr>
+
+
+			<tr><td><a href='./Limits/equation043.tex'>equation043.tex</a></td><td>&nbsp;</td><td>71b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation044.png'>equation044.png</a></td><td>&nbsp;</td><td>637b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation044.tex'>equation044.tex</a></td><td>&nbsp;</td><td>46b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation045.png'>equation045.png</a></td><td>&nbsp;</td><td>535b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation045.tex'>equation045.tex</a></td><td>&nbsp;</td><td>36b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation046.png'>equation046.png</a></td><td>&nbsp;</td><td>548b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation046.tex'>equation046.tex</a></td><td>&nbsp;</td><td>37b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation047.png'>equation047.png</a></td><td>&nbsp;</td><td>835b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation047.tex'>equation047.tex</a></td><td>&nbsp;</td><td>43b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation048.png'>equation048.png</a></td><td>&nbsp;</td><td>994b</td></tr>
+
+
+			<tr><td><a href='./Limits/equation048.tex'>equation048.tex</a></td><td>&nbsp;</td><td>43b</td></tr>
+
+
+			<tr><td><a href='./Limits/gnuplot.gnu'>gnuplot.gnu</a></td><td>&nbsp;</td><td>33b</td></tr>
+
+
+			<tr><td><a href='./Limits/gnuplot.png'>gnuplot.png</a></td><td>&nbsp;</td><td>6.11kb</td></tr>
+
+			</table>
+	</div>
+
+	
+
+</div>
+
+</body>
+</html>

@@ -40,14 +40,46 @@ If //f// is differentiable at a, then //f//is continuous at a.
 We can go even further beyond a single derivative! //(f')' = f''//. This new function //f''// is called the **second derivative** of //f// because it is the derivative of the derivative of f.
 
 ==== Differentiation Rules ====
-The formula we use for finding derivatives is useful but quite tedious and painfully slow. As such, there are various rules we can use to speed up this process!
+The formula we use for finding derivatives is useful but quite tedious and painfully slow. As such, there are various rules we can use to speed up this process! These rules are used heavily all throughout calc 1 and calc 2 so get them down really well.
 
+**Derivative of a Constant Function**
+{{./equation008.png?type=equation}}
 
+**Power Rule (General Version)**
+If n is a //any real number//, then
+{{./equation009.png?type=equation}}
 
+**The Constant Multiple Rule**
+If c is a constant and //f// is a differentiable function, then
+{{./equation011.png?type=equation}}
 
+**The Sum Rule**
+If //f// and //g// are both differentiable, then
+{{./equation012.png?type=equation}}
 
+**The Difference Rule**
+If //f// and //g// are both differentiable, then
+{{./equation013.png?type=equation}}
 
+**Definition of the Number e**
+//e// is a pretty special boy. It is a number such that
+{{./equation014.png?type=equation}}
 
+**Derivative of the Natural Exponential Function**
+{{./equation015.png?type=equation}}
 
+**The Product Rule**
+If //f// and //g// are both differentiable, then
+{{./equation016.png?type=equation}}
 
+In prime notation, it looks like this: {{./equation017.png?type=equation}}
+
+**The Quotient Rule**
+If //f// and //g// are differentiable, then
+{{./equation018.png?type=equation}}
+
+In prime notation, we have:
+{{./equation019.png?type=equation}}
+
+One way to remember this is //low dee high, high dee low. //Low refers to the denominator and high the numerator. The dee refers to taking the derivative.
 
