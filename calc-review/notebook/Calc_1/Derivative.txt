@@ -83,3 +83,125 @@ In prime notation, we have:
 
 One way to remember this is //low dee high, high dee low. //Low refers to the denominator and high the numerator. The dee refers to taking the derivative.
 
+==== Derivatives of Trigonometric Functions ====
+I won't lie when I say this is probably the hardest part of calculus (at least, in calc 1 and 2). Trig identities are a bit rough to work with but keep at it!
+
+One thing to note is that //f// is defined for all real numbers x by //f(x)// = sin(x).
+Also, it is understood that sin(x) means the sine of the angle whose **radian** measure is x. The same goes for the rest of the trigonometric functions such as cos, tan, csc, sec, and cot.
+
+Also, it's good to note that
+{{./equation020.png?type=equation}}
+and
+{{./equation021.png?type=equation}}
+
+Now then, **please memorize the following!** These derivatives are the bread and butter of working with trigonometric functions.
+
+* {{./equation022.png?type=equation}}
+* {{./equation024.png?type=equation}}
+* {{./equation023.png?type=equation}}
+* {{./equation025.png?type=equation}}
+* {{./equation026.png?type=equation}}
+* {{./equation027.png?type=equation}}
+
+Unfortunately, when it comes to simplifying you will also need to be aware of the trig identities. Refer to the following image to help with this:
+{{~/Documents/projects/zim-websites/calc-review/images/trig-identities.png}}
+
+==== The Chain Rule ====
+Let's say we wish to derive the following:
+{{./equation028.png?type=equation}}
+
+Sadly, the formulas we've learned thus far aren't enough to tackle this! However, notice that //F// is a composite function. Let y = //f(u) = //{{./equation030.png?type=equation}} and let u = //g(x)// = {{./equation031.png?type=equation}}. We can then write y = F(x) = //f(g(x))//. Or F = {{./equation032.png?type=equation}}. We know how to differentiate both //f// and //g//, so it would be useful to have a rule that tells us how to find the derivative of {{./equation033.png?type=equation}} in terms of the derivatives of //f// and //g//.
+
+As it turns out, the derivative of the composite function {{./equation034.png?type=equation}} is the product of the derivatives of //f// and //g//. This fact is one of the most important of the differentiation rules and is called the **Chain Rule.** 
+
+It seems plausible if we interpret derivatives as rates of change. Regard //du/dx// as the rate of change of u with respect to x, //dy/du// as the rate of change of y with respect to u, and //dy/dx// as the rate of change of y with respect to x. If u changes twice as fast as x and y changes three times as fast as u, then it seems reasonable that y changes size times as fast as x, and so we expect that
+{{./equation035.png?type=equation}}
+
+Now then, let's get a more formal definition of the **chain rule:**
+If //g// is differentiable at x and //f// is differentiable at //g(x), //then the composite function {{./equation037.png?type=equation}} defined by {{./equation036.png?type=equation}} is differentiable at  x and F' is given by the product
+{{./equation038.png?type=equation}}
+
+In Leibniz notation, if y = //f(u)// and u = //g(x)// are both differentiable functions, then
+{{./equation039.png?type=equation}}
+
+To make things simple, you can remember the **Chain Rule** in prime notation like so:
+{{./equation040.png?type=equation}}
+
+You can also remember it in Leibniz notation as well:
+{{./equation041.png?type=equation}}
+
+==== The Power rule Combined with the Chain Rule ====
+If n is any real number and u = g(x) is differentiable, then
+{{./equation042.png?type=equation}}
+
+Alternatively,
+{{./equation043.png?type=equation}}
+
+
+==== Implicit Differentiation ====
+Thus far, the functions we've encountered can be described by expressing one variable explicitly in terms of another like so:
+{{./equation044.png?type=equation}}
+In general, we get y = f(x).
+
+However! Some functions are defined //implicitly// by a relation between x and y such as
+{{./equation045.png?type=equation}}
+
+When it comes to **implicit differentiation,** we differentiate both sides of the equation with respect to x and then solve the resulting equation for y'.
+
+{{~/Documents/projects/zim-websites/calc-review/images/derivatives-inverse-trig-functions.png}}
+
+==== Derivatives of Logarithmic Functions ====
+{{./equation046.png?type=equation}}
+
+{{./equation047.png?type=equation}}
+
+{{./equation048.png?type=equation}}
+
+For when things get a little extra hairy, we can simplify by taking logarithms of both sides. This is known as **logarithmic differentiation. **It looks a little something like this:
+
+{{./equation049.png?type=equation}}
+
+We want to differentiate this but look how complicated it looks! No matter. Let us take logarithms of both sides to trim this down like so:
+
+{{./equation050.png?type=equation}}
+
+Now we can differentiate with respect to x.
+{{./equation051.png?type=equation}}
+
+Then we can just solve for dy/dx
+{{./equation052.png?type=equation}}
+
+==== Steps in Logarithmic Differentiation ====
+1. Take natural logarithms of both sides of an equation y = //f(x)// and use the Laws of Logarithms to simplify.
+2. Differentiate implicitly with respect to x.
+3. Solve the resulting equation for y'.
+
+==== L'Hospital's Rule ====
+Suppose //f// and //g// are differentiable and {{./equation053.png?type=equation}} on an open interval //I //that contains a (except possibly at a). Suppose that
+{{./equation054.png?type=equation}}
+
+or that
+{{./equation055.png?type=equation}}
+
+(In other words, we have an indeterminate form of type {{./equation056.png?type=equation}} or {{./equation057.png?type=equation}}.) Then 
+{{./equation058.png?type=equation}}
+
+if the limit on the right side exists (or is {{./equation059.png?type=equation}}).
+
+==== Indeterminate Powers ====
+Several indeterminate forms arise from the limit
+{{./equation060.png?type=equation}}
+
+1. {{./equation061.png?type=equation}}
+2. {{./equation062.png?type=equation}}
+3. {{./equation063.png?type=equation}}
+
+Each of these three cases can be treated either by taking the natural logarithm:
+{{./equation064.png?type=equation}}
+
+or by writing the function as an exponential:
+{{./equation065.png?type=equation}}
+
+
+
+
