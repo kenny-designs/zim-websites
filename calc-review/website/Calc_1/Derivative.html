@@ -217,6 +217,220 @@ In prime notation, we have:<br>
 One way to remember this is <i>low dee high, high dee low. </i>Low refers to the denominator and high the numerator. The dee refers to taking the derivative.
 </p>
 
+<h3>Derivatives of Trigonometric Functions</h3>
+
+<p>
+I won't lie when I say this is probably the hardest part of calculus (at least, in calc 1 and 2). Trig identities are a bit rough to work with but keep at it!
+</p>
+
+<p>
+One thing to note is that <i>f</i> is defined for all real numbers x by <i>f(x)</i> = sin(x).<br>
+Also, it is understood that sin(x) means the sine of the angle whose <b>radian</b> measure is x. The same goes for the rest of the trigonometric functions such as cos, tan, csc, sec, and cot.
+</p>
+
+<p>
+Also, it's good to note that<br>
+<img src="./Derivative/equation020.png"><br>
+and<br>
+<img src="./Derivative/equation021.png">
+</p>
+
+<p>
+Now then, <b>please memorize the following!</b> These derivatives are the bread and butter of working with trigonometric functions.
+</p>
+
+<p>
+<ul>
+<li><img src="./Derivative/equation022.png"></li>
+<li><img src="./Derivative/equation024.png"></li>
+<li><img src="./Derivative/equation023.png"></li>
+<li><img src="./Derivative/equation025.png"></li>
+<li><img src="./Derivative/equation026.png"></li>
+<li><img src="./Derivative/equation027.png"></li>
+</ul>
+</p>
+
+<p>
+Unfortunately, when it comes to simplifying you will also need to be aware of the trig identities. Refer to the following image to help with this:<br>
+<img src="file:///home/crowly/Documents/projects/zim-websites/calc-review/images/trig-identities.png">
+</p>
+
+<h3>The Chain Rule</h3>
+
+<p>
+Let's say we wish to derive the following:<br>
+<img src="./Derivative/equation028.png">
+</p>
+
+<p>
+Sadly, the formulas we've learned thus far aren't enough to tackle this! However, notice that <i>F</i> is a composite function. Let y = <i>f(u) = </i><img src="./Derivative/equation030.png"> and let u = <i>g(x)</i> = <img src="./Derivative/equation031.png">. We can then write y = F(x) = <i>f(g(x))</i>. Or F = <img src="./Derivative/equation032.png">. We know how to differentiate both <i>f</i> and <i>g</i>, so it would be useful to have a rule that tells us how to find the derivative of <img src="./Derivative/equation033.png"> in terms of the derivatives of <i>f</i> and <i>g</i>.
+</p>
+
+<p>
+As it turns out, the derivative of the composite function <img src="./Derivative/equation034.png"> is the product of the derivatives of <i>f</i> and <i>g</i>. This fact is one of the most important of the differentiation rules and is called the <b>Chain Rule.</b> 
+</p>
+
+<p>
+It seems plausible if we interpret derivatives as rates of change. Regard <i>du/dx</i> as the rate of change of u with respect to x, <i>dy/du</i> as the rate of change of y with respect to u, and <i>dy/dx</i> as the rate of change of y with respect to x. If u changes twice as fast as x and y changes three times as fast as u, then it seems reasonable that y changes size times as fast as x, and so we expect that<br>
+<img src="./Derivative/equation035.png">
+</p>
+
+<p>
+Now then, let's get a more formal definition of the <b>chain rule:</b><br>
+If <i>g</i> is differentiable at x and <i>f</i> is differentiable at <i>g(x), </i>then the composite function <img src="./Derivative/equation037.png"> defined by <img src="./Derivative/equation036.png"> is differentiable at  x and F' is given by the product<br>
+<img src="./Derivative/equation038.png">
+</p>
+
+<p>
+In Leibniz notation, if y = <i>f(u)</i> and u = <i>g(x)</i> are both differentiable functions, then<br>
+<img src="./Derivative/equation039.png">
+</p>
+
+<p>
+To make things simple, you can remember the <b>Chain Rule</b> in prime notation like so:<br>
+<img src="./Derivative/equation040.png">
+</p>
+
+<p>
+You can also remember it in Leibniz notation as well:<br>
+<img src="./Derivative/equation041.png">
+</p>
+
+<h3>The Power rule Combined with the Chain Rule</h3>
+
+<p>
+If n is any real number and u = g(x) is differentiable, then<br>
+<img src="./Derivative/equation042.png">
+</p>
+
+<p>
+Alternatively,<br>
+<img src="./Derivative/equation043.png">
+</p>
+
+<br>
+
+<h3>Implicit Differentiation</h3>
+
+<p>
+Thus far, the functions we've encountered can be described by expressing one variable explicitly in terms of another like so:<br>
+<img src="./Derivative/equation044.png"><br>
+In general, we get y = f(x).
+</p>
+
+<p>
+However! Some functions are defined <i>implicitly</i> by a relation between x and y such as<br>
+<img src="./Derivative/equation045.png">
+</p>
+
+<p>
+When it comes to <b>implicit differentiation,</b> we differentiate both sides of the equation with respect to x and then solve the resulting equation for y'.
+</p>
+
+<p>
+<img src="file:///home/crowly/Documents/projects/zim-websites/calc-review/images/derivatives-inverse-trig-functions.png">
+</p>
+
+<h3>Derivatives of Logarithmic Functions</h3>
+
+<p>
+<img src="./Derivative/equation046.png">
+</p>
+
+<p>
+<img src="./Derivative/equation047.png">
+</p>
+
+<p>
+<img src="./Derivative/equation048.png">
+</p>
+
+<p>
+For when things get a little extra hairy, we can simplify by taking logarithms of both sides. This is known as <b>logarithmic differentiation. </b>It looks a little something like this:
+</p>
+
+<p>
+<img src="./Derivative/equation049.png">
+</p>
+
+<p>
+We want to differentiate this but look how complicated it looks! No matter. Let us take logarithms of both sides to trim this down like so:
+</p>
+
+<p>
+<img src="./Derivative/equation050.png">
+</p>
+
+<p>
+Now we can differentiate with respect to x.<br>
+<img src="./Derivative/equation051.png">
+</p>
+
+<p>
+Then we can just solve for dy/dx<br>
+<img src="./Derivative/equation052.png">
+</p>
+
+<h3>Steps in Logarithmic Differentiation</h3>
+
+<p>
+<ol type="1" start="1">
+<li>Take natural logarithms of both sides of an equation y = <i>f(x)</i> and use the Laws of Logarithms to simplify.</li>
+<li>Differentiate implicitly with respect to x.</li>
+<li>Solve the resulting equation for y'.</li>
+</ol>
+</p>
+
+<h3>L'Hospital's Rule</h3>
+
+<p>
+Suppose <i>f</i> and <i>g</i> are differentiable and <img src="./Derivative/equation053.png"> on an open interval <i>I </i>that contains a (except possibly at a). Suppose that<br>
+<img src="./Derivative/equation054.png">
+</p>
+
+<p>
+or that<br>
+<img src="./Derivative/equation055.png">
+</p>
+
+<p>
+(In other words, we have an indeterminate form of type <img src="./Derivative/equation056.png"> or <img src="./Derivative/equation057.png">.) Then <br>
+<img src="./Derivative/equation058.png">
+</p>
+
+<p>
+if the limit on the right side exists (or is <img src="./Derivative/equation059.png">).
+</p>
+
+<h3>Indeterminate Powers</h3>
+
+<p>
+Several indeterminate forms arise from the limit<br>
+<img src="./Derivative/equation060.png">
+</p>
+
+<p>
+<ol type="1" start="1">
+<li><img src="./Derivative/equation061.png"></li>
+<li><img src="./Derivative/equation062.png"></li>
+<li><img src="./Derivative/equation063.png"></li>
+</ol>
+</p>
+
+<p>
+Each of these three cases can be treated either by taking the natural logarithm:<br>
+<img src="./Derivative/equation064.png">
+</p>
+
+<p>
+or by writing the function as an exponential:<br>
+<img src="./Derivative/equation065.png">
+</p>
+
+<br>
+<br>
+<br>
+
 
 	</div>
 
@@ -350,6 +564,282 @@ One way to remember this is <i>low dee high, high dee low. </i>Low refers to the
 
 
 			<tr><td><a href='./Derivative/equation019.tex'>equation019.tex</a></td><td>&nbsp;</td><td>49b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation020.png'>equation020.png</a></td><td>&nbsp;</td><td>620b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation020.tex'>equation020.tex</a></td><td>&nbsp;</td><td>48b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation021.png'>equation021.png</a></td><td>&nbsp;</td><td>716b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation021.tex'>equation021.tex</a></td><td>&nbsp;</td><td>53b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation022.png'>equation022.png</a></td><td>&nbsp;</td><td>761b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation022.tex'>equation022.tex</a></td><td>&nbsp;</td><td>29b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation023.png'>equation023.png</a></td><td>&nbsp;</td><td>732b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation023.tex'>equation023.tex</a></td><td>&nbsp;</td><td>30b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation024.png'>equation024.png</a></td><td>&nbsp;</td><td>796b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation024.tex'>equation024.tex</a></td><td>&nbsp;</td><td>40b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation025.png'>equation025.png</a></td><td>&nbsp;</td><td>789b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation025.tex'>equation025.tex</a></td><td>&nbsp;</td><td>39b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation026.png'>equation026.png</a></td><td>&nbsp;</td><td>763b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation026.tex'>equation026.tex</a></td><td>&nbsp;</td><td>29b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation027.png'>equation027.png</a></td><td>&nbsp;</td><td>783b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation027.tex'>equation027.tex</a></td><td>&nbsp;</td><td>30b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation028.png'>equation028.png</a></td><td>&nbsp;</td><td>585b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation028.tex'>equation028.tex</a></td><td>&nbsp;</td><td>21b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation029.png'>equation029.png</a></td><td>&nbsp;</td><td>394b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation029.tex'>equation029.tex</a></td><td>&nbsp;</td><td>8b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation030.png'>equation030.png</a></td><td>&nbsp;</td><td>300b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation030.tex'>equation030.tex</a></td><td>&nbsp;</td><td>8b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation031.png'>equation031.png</a></td><td>&nbsp;</td><td>317b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation031.tex'>equation031.tex</a></td><td>&nbsp;</td><td>7b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation032.png'>equation032.png</a></td><td>&nbsp;</td><td>341b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation032.tex'>equation032.tex</a></td><td>&nbsp;</td><td>9b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation033.png'>equation033.png</a></td><td>&nbsp;</td><td>426b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation033.tex'>equation033.tex</a></td><td>&nbsp;</td><td>13b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation034.png'>equation034.png</a></td><td>&nbsp;</td><td>341b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation034.tex'>equation034.tex</a></td><td>&nbsp;</td><td>9b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation035.png'>equation035.png</a></td><td>&nbsp;</td><td>599b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation035.tex'>equation035.tex</a></td><td>&nbsp;</td><td>43b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation036.png'>equation036.png</a></td><td>&nbsp;</td><td>589b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation036.tex'>equation036.tex</a></td><td>&nbsp;</td><td>14b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation037.png'>equation037.png</a></td><td>&nbsp;</td><td>426b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation037.tex'>equation037.tex</a></td><td>&nbsp;</td><td>13b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation038.png'>equation038.png</a></td><td>&nbsp;</td><td>735b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation038.tex'>equation038.tex</a></td><td>&nbsp;</td><td>28b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation039.png'>equation039.png</a></td><td>&nbsp;</td><td>599b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation039.tex'>equation039.tex</a></td><td>&nbsp;</td><td>43b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation040.png'>equation040.png</a></td><td>&nbsp;</td><td>813b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation040.tex'>equation040.tex</a></td><td>&nbsp;</td><td>38b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation041.png'>equation041.png</a></td><td>&nbsp;</td><td>599b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation041.tex'>equation041.tex</a></td><td>&nbsp;</td><td>43b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation042.png'>equation042.png</a></td><td>&nbsp;</td><td>741b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation042.tex'>equation042.tex</a></td><td>&nbsp;</td><td>41b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation043.png'>equation043.png</a></td><td>&nbsp;</td><td>915b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation043.tex'>equation043.tex</a></td><td>&nbsp;</td><td>48b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation044.png'>equation044.png</a></td><td>&nbsp;</td><td>763b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation044.tex'>equation044.tex</a></td><td>&nbsp;</td><td>47b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation045.png'>equation045.png</a></td><td>&nbsp;</td><td>863b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation045.tex'>equation045.tex</a></td><td>&nbsp;</td><td>45b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation046.png'>equation046.png</a></td><td>&nbsp;</td><td>825b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation046.tex'>equation046.tex</a></td><td>&nbsp;</td><td>43b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation047.png'>equation047.png</a></td><td>&nbsp;</td><td>662b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation047.tex'>equation047.tex</a></td><td>&nbsp;</td><td>33b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation048.png'>equation048.png</a></td><td>&nbsp;</td><td>591b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation048.tex'>equation048.tex</a></td><td>&nbsp;</td><td>33b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation049.png'>equation049.png</a></td><td>&nbsp;</td><td>890b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation049.tex'>equation049.tex</a></td><td>&nbsp;</td><td>44b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation050.png'>equation050.png</a></td><td>&nbsp;</td><td>1.25kb</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation050.tex'>equation050.tex</a></td><td>&nbsp;</td><td>69b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation051.png'>equation051.png</a></td><td>&nbsp;</td><td>1.31kb</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation051.tex'>equation051.tex</a></td><td>&nbsp;</td><td>124b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation052.png'>equation052.png</a></td><td>&nbsp;</td><td>1.30kb</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation052.tex'>equation052.tex</a></td><td>&nbsp;</td><td>82b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation053.png'>equation053.png</a></td><td>&nbsp;</td><td>519b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation053.tex'>equation053.tex</a></td><td>&nbsp;</td><td>12b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation054.png'>equation054.png</a></td><td>&nbsp;</td><td>1.09kb</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation054.tex'>equation054.tex</a></td><td>&nbsp;</td><td>63b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation055.png'>equation055.png</a></td><td>&nbsp;</td><td>1.15kb</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation055.tex'>equation055.tex</a></td><td>&nbsp;</td><td>79b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation056.png'>equation056.png</a></td><td>&nbsp;</td><td>218b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation056.tex'>equation056.tex</a></td><td>&nbsp;</td><td>11b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation057.png'>equation057.png</a></td><td>&nbsp;</td><td>258b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation057.tex'>equation057.tex</a></td><td>&nbsp;</td><td>21b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation058.png'>equation058.png</a></td><td>&nbsp;</td><td>881b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation058.tex'>equation058.tex</a></td><td>&nbsp;</td><td>67b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation059.png'>equation059.png</a></td><td>&nbsp;</td><td>395b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation059.tex'>equation059.tex</a></td><td>&nbsp;</td><td>21b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation060.png'>equation060.png</a></td><td>&nbsp;</td><td>676b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation060.tex'>equation060.tex</a></td><td>&nbsp;</td><td>30b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation061.png'>equation061.png</a></td><td>&nbsp;</td><td>1.34kb</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation061.tex'>equation061.tex</a></td><td>&nbsp;</td><td>79b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation062.png'>equation062.png</a></td><td>&nbsp;</td><td>1.21kb</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation062.tex'>equation062.tex</a></td><td>&nbsp;</td><td>90b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation063.png'>equation063.png</a></td><td>&nbsp;</td><td>1.31kb</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation063.tex'>equation063.tex</a></td><td>&nbsp;</td><td>93b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation064.png'>equation064.png</a></td><td>&nbsp;</td><td>1.25kb</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation064.tex'>equation064.tex</a></td><td>&nbsp;</td><td>68b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation065.png'>equation065.png</a></td><td>&nbsp;</td><td>705b</td></tr>
+
+
+			<tr><td><a href='./Derivative/equation065.tex'>equation065.tex</a></td><td>&nbsp;</td><td>34b</td></tr>
 
 			</table>
 	</div>
