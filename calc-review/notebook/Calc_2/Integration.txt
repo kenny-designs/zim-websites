@@ -3,5 +3,131 @@ Wiki-Format: zim 0.4
 Creation-Date: 2020-05-23T11:12:12-04:00
 
 ====== Integration ======
-Created Saturday 23 May 2020
+
+The main theme of calc 2 is the **antiderivative. **Also, series. Let us begin with defining what an antiderivative is. Good luck!
+
+==== Antiderivatives ====
+A function //F //is called an **antiderivative** of //f// on an interval //I// if F'(x) = f(x) for all x in //I.//
+
+If //F// is an antiderivative of //f// on an interval //I//, then the most general antiderivative of //f// on //I// is
+{{./equation.png?type=equation}}
+where C is an arbitrary constant.
+
+As it may be apparent, a antiderivative is pretty much just the opposite of a derivative. Here is a table of antidifferentiation formulas:
+
+{{~/Documents/projects/zim-websites/calc-review/images/antiderivative-formulas.png}}
+
+Also, an equation that involves the derivatives of a function is called a **differential dequation.** 
+
+==== Integrals ====
+Derivatives are all about change where else antiderivatives focus on area. In this way, integrals are used to solve problems concerning volumes, lengths of curves, population predictions, cardiac output, forces on a dam, work, consumer surplus, and baseball, among many others.
+
+There is a connection between integral calculus and differential calculus. The **Fundamental Theorem of Calculus** relates the integral to the derivative.
+
+==== Area ====
+So then, what is //area? //You may be used to understanding area for, say, a rectangle to be it's width times its height. For a triangle, we multiply the length of it's base by that of its height then divide by 2. And for a polygon, we can break it up into triangles and add the resulting area for each triangle.
+
+Now then, this is all well and good for each of these shapes have straight sides. What if they didn't though? What if we wish to find the area of a region with //curved// sides? We have an intuitive idea of what the area of a region is but part of the area problem is to make this intuitive idea precise by giving an exact definition of area.
+
+==== The Definite Integral ====
+The symbol {{./equation003.png?type=equation}} was introduced by Leibniz and is called an **integral sign**. It is an elongated S and was chosen because an integral is a //limit of sums//.
+
+In the notation {{./equation004.png?type=equation}}, f(x) is called the **integrand** and a and b are called the **limits of integration;** a is the **lower limit** and b is the **upper limit. **For now, the symbolx dx has no meaning by itself; {{./equation005.png?type=equation}} is all one symbol. The dx simply indicates that the independent variable is x. The procedure of calculating an integral is called **integration.** 
+
+If //f// is continuous on [a, b], or if //f// has only a finite number of jump discontinuities, then //f// is integrable on [a, b]; that is, the definite integral {{./equation006.png?type=equation}} exists.
+
+{{~/Documents/projects/zim-websites/calc-review/images/properties-of-the-integral.png}}
+{{~/Documents/projects/zim-websites/calc-review/images/properties-of-the-integral-2.png}}
+{{~/Documents/projects/zim-websites/calc-review/images/comparison-properties-of-the-integral.png}}
+
+==== The Fundamental Theorem of Calculus ====
+The fundamental theorem connects derivatives to integrals.
+
+**Fundamental Theorem Pt. 1**
+If //f// is continuous on [a, b], then the function //g// defined by
+{{./equation007.png?type=equation}}
+is continuous on [a, b] and differentiable on (a, b), and g'(x) = f(x).
+
+**Fundamental Theorem Pt. 2**
+If //f// is continuous on [a, b], then
+{{./equation008.png?type=equation}}
+where F is any antiderivative of //f//, that is, a function such that F' = //f//.
+
+For example, let us evaluate the integral {{./equation009.png?type=equation}}.
+{{./equation010.png?type=equation}}
+
+We can also write:
+{{./equation011.png?type=equation}}
+
+**To Recap:**
+For the //Fundamental Theorem of Calculus,// suppose that //f// is continuous on [a, b].
+1. If {{./equation012.png?type=equation}}, then {{./equation013.png?type=equation}}.
+2. {{./equation014.png?type=equation}}, where //F// is any derivative of //f//, that is, //F' = f.//
+
+It's important to note that the Fundamental Theorem of Calculus says that differentiation and integration are //inverse processes.// Each undoes what the other does.
+
+==== Indefinite Integrals ====
+It's good to note that a definite integral of the form {{./equation015.png?type=equation}} is a **number.**
+On the other hand, an indefinite integral of the form {{./equation016.png?type=equation}} is a **function **(or a family of functions).
+
+They are connected given by part 2 of the Fundamental Theorem of Calculus where if //f// is continuous on [a, b] then:
+{{./equation017.png?type=equation}}
+
+{{~/Documents/projects/zim-websites/calc-review/images/table-of-indefinite-integrals.png}}
+
+Also good to note the following for tangent:
+{{./equation022.png?type=equation}}
+
+==== The Substitution Rule ====
+So far, antidifferentiation hasn't been so bad. We've been working with simple functions that are almost one-to-one with their derivative counterparts. But let's say we kick things up a notch with a problem such as this:
+{{./equation018.png?type=equation}}
+
+Well, now things aren't so easy! As such, perhaps we could try //introducing a little something extra. //That 'something extra' shall be a new variable!
+
+Let us change the variable x into u. Let u be the quantitiy under the root sign like so: u = 1 + x^{2}. Then the differential of u is du = 2x dx. This is done as follows:
+{{./equation019.png?type=equation}}
+
+Armed with this, we can then find the indefinite integral for the whole thing:
+{{./equation020.png?type=equation}}
+
+This is all referred to as the **substitution rule**. If u = //g(x)// is a differentiable function whose range is an interval I and f is continuous on I, then
+{{./equation021.png?type=equation}}
+
+**The Substitution Rule for Definite Integrals**
+If g' is continuous on [a, b] and //f// is continuous on the range of u = g(x), then
+{{./equation023.png?type=equation}}
+
+==== Applications of Integration ====
+The area A of the region bounded by the curves y = f(x), y = g(x), and the lines x = a, x = b, where f and g are continuous and f(x) >= g(x) for all x in [a, b], is
+{{./equation024.png?type=equation}}
+
+Put simply, this is the //area between two curves.//
+
+The rest of Chapter 7: Applications of Integration in the book I am following (Single Variable Calculus Early Transcendentals by James Stewart) goes over finding area and volume. For the sake of time, I'm moving on to the next chapter. I may finish this section later on if it proves useful.
+
+==== Techniques of Integration ====
+Thus far, we've learned basic integration and how to use the substitution rule. Now, it's time we get a little more complex! Unlike finding the derivative, integration isn't so straight foward.
+
+It's good to note that every differentiation rule has a corresponding integration rule. For instance, the **Substitution Rule** for integration corresponds to the **Chain Rule** for differentiation. Likewise, the rule that corresopnds to the **Product Rule** for differentiation is called the rule for **integration by parts.** As such, let us begin learning about this rule!
+
+==== Integration by Parts ====
+As a refresher, the Product Rule states that if //f// and //g// are differentiable functions, then we have the following:
+{{./equation025.png?type=equation}}
+
+As you may infer, the notation for indefinite integrals with this equation becomes:
+{{./equation026.png?type=equation}}
+
+Likewise, we also have this:
+{{./equation027.png?type=equation}}
+
+Why is this important? Because with a little bit of rearranging we have the **formula for integration by parts!** That is the following:
+{{./equation028.png?type=equation}}
+
+Personally, this is a little difficult to remember. As such, let u = f(x) and v = g(x). Then the differentials are du = f'(x)dx and dv = g'(x)dx, so, by the Substitution Rule, the formula for integration by parts becomes:
+{{./equation029.png?type=equation}}
+
+This seems a bit messy so why all the fuss? Well, the point of integration by parts to to give us an integral that's easier to deal with. It might seem extra but it is in fact incredibly helpful for making things managable!
+
+
+
 

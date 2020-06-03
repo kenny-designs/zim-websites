@@ -202,6 +202,5 @@ Each of these three cases can be treated either by taking the natural logarithm:
 or by writing the function as an exponential:
 {{./equation065.png?type=equation}}
 
-
-
-
+==== Complete! ====
+For the most part, this is pretty much everything you need to know about calc 1. Moving forward, calc 2 is mostly about antiderivatives (also series after that).
