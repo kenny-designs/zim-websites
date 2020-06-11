@@ -1,0 +1,983 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Inner Prod Norm Pt. 1</title>
+	<meta name='Generator' content='Zim 0.68'>
+	<style type='text/css'>
+		a          { text-decoration: none      }
+		a:hover    { text-decoration: underline }
+		a:active   { text-decoration: underline }
+		strike     { color: grey                }
+		u          { text-decoration: none;
+					 background-color: yellow   }
+		tt         { color: #2e3436;            }
+		pre        { color: #2e3436;
+					 margin-left: 20px          }
+		h1         { text-decoration: underline;
+					 color: #4e9a06; margin-bottom: 0 }
+		h2         { color: #4e9a06; margin-bottom: 0 }
+		h3         { color: #4e9a06; margin-bottom: 0 }
+		h4         { color: #4e9a06; margin-bottom: 0 }
+		h5         { color: #4e9a06; margin-bottom: 0 }
+		p          { margin-top: 0              }
+		span.zim-tag {
+			color: #ce5c00;
+		}
+		div.zim-object {
+			border-style:solid;
+			border-width:1px;
+		}
+		.checked-box {list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAANOgAADMQBiN+4gQAAAAd0SU1FB9gKGQ8sMEGsKGkAAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAEBUlEQVRIx62V22tdRRTGf7Nn73P2ybntnNOe3NqkPTGgLTVUUZF6QatSLOKTPgqCIqLgQ0H/A1sQQbBYCBb1QfAxiC8tSO1FqHkwJVKtjdTGNraUmObsc9nXmfGh7cGYpM1D5nHWzPetteZb3wg2eB2YqYm4zSadsMtoboiNBH/3TE0awx6j+MRoxoTg/IYRvP19TQrJS0bzhdHGSyKFkLTtjSKwMjyiEz43ynhtP6bdjBCWyFobAf7eT7VhNF/q1FRbjYjmUohlCVPwnB+6FUxMTJipqSmUUhhjEGKd3bMT4ks/Y6oLBK2Yth8hHYtCJXOix7Nf7xLMzc0xOzvLzp078TyPNE3viW3QJPXzhNWbxFFKHCmMhoLn/FHodd48vGfhapdAacXQlkFK5dL6wIUm6fuTZPuvqDQhaMUYYyiVyuQr6rXDexYuAdi3tSv1ZJNs/R/CaszzT+1na88uXFnCEnJVgivBNN8uTJKmHQI/ptOOcXNZzMz9mOqFs90OHpipWcYwlo5P4ebnuOkrvr5wgrH+h3im7y36MzuwRXYZeKha/OhP0EkadFoxQSdGSotedR/+XwMc2XvKdNUFOFqZx6LKZWIiwjgkikNmLp/hm8sH+K1zjFTHXfBYdTi+eJArzXM0GxFxoBDCopLvo/fqEwi1XPkWkGqjFo2TgB1jOYZUKZTS/D1/ncmLh7jon0IbRWoiTi59ymzzJEEQE3cStNZsGxqlfPE57MBbOR8fP3hDGalOO9fq2DlBvmZw8xa2IxACGn6TydlD/O6f5OzSV/zif0cYhLQaEXGkKBbz7Ov/AOlXV1cxgBJRI3fuSTrpTawt18kWIZN1CFuaONI0w0WOXfsI43YIggh/KUSlhqxrMz74AkOZcWBm9QkH+Gw8NDLuITi+m0yzhluSyJzBLcpblUhFxywSRAEtPwQjsKVN30CNh0uvYuOubSHLtN3J0TO1j0pmBNuFbFWRK0gyPRZpktL2I5JQkclKakNlnh54g6ocvevUr/Ai2a7wineEkcJupA3S1Wg0nVZM2E6wbEF5U5G9Q++wI7sfR7h3N8HVNstykBfzH+KJEZwiWD0aIwxCgJ0R1Mu7GXOeJSuK93bZtQIle4D9pUNU5DC5jEsu55AvZakM5NicGyEj8uuz8bUCQgj67QfY671P3vEoeC69gy695U1U7NG7XV0pUwBjDJa1/JJlWWxzHuflzQe5FJ/GsgUVuZ2t8lEkTvfc0aNHb72flBhjVicQQqCUuvM3/M+WDVguWBrMVdDXEGZlBVEUrVCU9d9s5+fnaTQa2PZyPxEIhJaI1EEoZwX4ncynp6fXrmB4eJjR0VFarRbNZnP9P9rt9gohqNVq1Ov1ZbF/AZGev3hLJ2/zAAAAAElFTkSuQmCC)}
+		.xchecked-box {list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAANOgAADMQBiN+4gQAAAAd0SU1FB9gKGQ8bDYnDxEwAAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAEK0lEQVRIx9WVS2hTWRjHf/eR3CY1nbxMH2YiZRQS6qO13YlMVxY3SnVcuNIBFezGpSADLoQqLu1sHJCqdCFSXFpw4YOCSH3BtFqttTNamabX3DS5bfO6uffMoglja3RGcDMHzuac7/z/53++//cd+L8P6VuCPQYZ8ADNgBd4J31DcDcQs+GnHByRocEDv0kfBSjAOlYCs11Q+gpwDegS8LMJ+3QIK0ATzEhV8Odnz5bzw8P4dJ25aJQ/WlvJ1df/K7hSLtOcTNI+Pk69rpMTgqIQhCDvh1/VSpw79+gRrRMTmLZNezLJJsPg+a5dmOEwQlFqg1sWG16/Jv7sGWXDwBACFQjC9HcwIMONKkGp4PGAJGEDS0IQmZlhnWnye3c3eiyGo6qr3WHbrJ+dJf7gAXI6zSIr72T7/fgzmT4FHnTBsgrQBfYvTU0km5vxz86iADnAm0rRPTWFt7cXZccOJJcLAGHb2K9ekT93jmwmwwdAAFpjI6Ntbfxw5879ag7l6o1sr5eHHR3IsRgeQK/M4sQE+YEB7JcvEY6zAj45SWFgAPPxYwzHoQxIkQjTPT0kIxE+Noj8sexFn4/xnh58iQTeSpHkHAdrbIzi0BCOrmNPTpK/eJHM3bt8sCyKQCiR4NWePWSiUZw1+ZLXJm4pFKLhzBlCsRh2RUXacVgeGaF47RrL58+zcP8+RrmMkCQinZ1EL1zAjERqmkH+tLYl1G3bCJw4QUjT0IA0MJfLMX/5MqmHD0nZNiUgtGULG/r7ccXjINWuWbnmqsuFu7sb/4EDNLlcBIEioNs2KUAFGmMxmk6dQm1tRZI+3xBqEkiShBQOox05Ql1nJ26gvuIUAWiKQnj/ftStW5Fk+YuF+NldsbBA4cYN9KdPmaso8Fc62ZJtk7l1C2t0FGdxESHE1xE4hkHh6lX0oSHSpRIewC/LrPf7CSgKNpCamkI/fZr8pUuIZBIcpyaBunahPp1mub+fDyMjGKUSChCsq6Nh717q9u2jbnSU0uAgRrFIwTThyhUCqRS+hgZKLS1fJvDm87SNjZGcnsYUAjcQ8vsJ9/Xh7u1FDgRQN20iks3iDA+zZFmYhQLqzZtsj8WY3L0baY2Sf55ICCKpFHUzM2SEQAJCHg+hY8fQDh5EDgRWDoRC1J88SePRo2geD0XAcBy8b98Sv3ePYDZbbf2rFQjLIphMsmDbaEBQVQkePox26BCSz7e6i4bDrDt+nGYhmBscpFAskheC4Js3bPR4qHphFYEnlcI7P4/jdqNpGu8TCe4oCsXr1z//F2ga3+/cSfTJE0qmSVYIsKzaOZDcbjKyzFIiwfvt21kMBLA07YsetzWNd+3tLLW0sH5igvT8PH9Go/z44kX+E4LGjg7GDYOcy4XlOEgLC//5P/5LCFzxOPLmzWyIx+m6fduu7v0NVGqyTSycKksAAAAASUVORK5CYII=)}
+		.unchecked-box {list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAANOgAADMQBiN+4gQAAAAd0SU1FB9gKGQ8qAt8h3m8AAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAA60lEQVRIx+2VsQqDMBRF70sCLg5OLoKgjk7+lJ/hh+STXBwcnRz8ArMEkrxOFktbaC3tULzTg5e8k5vADXDq70VbobXmvu/hvQczg4heHrJfXxQFuq67blZbMc8zpmlCXddIkgTOuZcBUko45zCOI6y1Nz2xFSEEZFmGOI7fGg4A3nsQEZqmuXOu9jallACAtm3fvmutNaIoAjM/dkBECCF89KCbk4eAb+kEnIAT8EsAM0OIz3hSyrssUvss8t5fg+uIrLXPs0gIgWVZYIyBUurQyYdheO4gz3NUVQVjDNZ1PfSjpWmKsixvehfB9GBZ3NndrgAAAABJRU5ErkJggg==)}
+		.migrated-box {list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAANOgAADMQBiN+4gQAAAAd0SU1FB+AKHREFA8vJSnkAAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAC1klEQVRIx+2VT0hUURTGf/e958w4Tc3TYowMw1GyEgwr1MqsFmbZIrIWQZsWJUjbdoHQpl3Qps0swnCRECQFYkR/TC1iKkqmfzAKTo2Vf8hoRsfR995tkRMT87RRWkUHHhy495zvnvvu933wP/75EKkkEAjIYDCIaZpIKRFCZN0kfX9xcTGtra2/irVUEolECIfDlJeXo+s6hmFkDaCqKoZhEAqFSCaTv60pqcSyLAoLC/F4PEtqDmCaJkIIKisrMybX0sdUVRWA5ubmPzdNjjI1cpXkZC/O1fV03PXgdDqRUtpPIITAsqxsDz0Z/3CZQv8uqo4N4C8/Tp2/DdM0MiZQlvk41OTkI/LW1SGtCVb5drD3eCc71wcA+VcAHA5vDd8+3UGakxiJV7i9pdQevU5T1R35pJ3MV5QW1pf+0kWBheJ2SWua8EQXZXsu4fVVYEz1sEKvof5EuxjoPvzpcRvrdp9C2gGMx6cpOHBmbImMesds7BZubwMVDTfXDnQ3vQfK7AC8wLfExMX5whyQc3q2OEnjGm5vE76SQxsfBLr77a7CNf+n0r/l6sSMtsBSnurckiIILCobAtVZhpF4gZF4jubaymj4Ch/fd380LE7bAnjc0NPxk2yqpmEuwGxF0ag+0k5uTpzZeBeaazvj0We8fXojainsb2xh2BZgbe0gSIllzSIUh63wfQ6dZ/O2fbjcKlOj58jJ3cVENESw5yErc9nf2MLQ4jwQAkV1Lqiq37/cZ9WaahJjF9AcmxiPDhLs7ePe23oOnmUwg2hSShQle96tKDjA2HAniusgo9FxnvY9Jxw7RWzGYy92QghM00x5g53qp9sHmtB58/o2umOI2NwGolMnMYUHIb7aAyiKwsjICLqu2/qBEIKUUAohMaSHSLyBSMoPTINQ6CX5+fn2AEVFRZSUlBCPx4nFYhl3L4RESjF/GEgX3pSj+Xw+/H7/b3U/AEOZFnp7O5+5AAAAAElFTkSuQmCC)}
+		ul {list-style-image: none}
+		/* ul rule needed to reset style for sub-bullets */
+
+		span.insen { color: grey                }
+
+		.pages {
+			max-width: 1000px;
+			 padding-left: 320px;
+		}
+		.menu{
+			float:left; width: 300px;
+		}
+		hr{clear:both;}
+	</style>
+</head>
+<body>
+
+<!-- Header -->
+<div class='header'>
+	[ <a href='../Vectors.html'>Prev</a> ]
+
+	[ <span class='insen'>Index</span> ]
+
+	[ <a href='./Inner_Prod_Norm_Pt._2.html'>Next</a> ]
+</div>
+
+<hr />
+
+<div class="menu">
+<ul>
+<li><a href="../Home.html" title="Home" class="page">Home</a></li>
+<li><a href="../Homework.html" title="Homework" class="page">Homework</a></li>
+<li><a href="../Introduction.html" title="Introduction" class="page">Introduction</a></li>
+<li><a href="../Matrices.html" title="Matrices" class="page">Matrices</a></li>
+<li><a href="../Monday_Meetings.html" title="Monday Meetings" class="page">Monday Meetings</a></li>
+<li><a href="../Vectors.html" title="Vectors" class="page">Vectors</a>
+<ul>
+<li><b>Inner Prod Norm Pt. 1</b></li>
+<li><a href="./Inner_Prod_Norm_Pt._2.html" title="Inner Prod Norm Pt. 2" class="page">Inner Prod Norm Pt. 2</a></li>
+<li><a href="./Vectors_Pt._1.html" title="Vectors Pt. 1" class="page">Vectors Pt. 1</a></li>
+<li><a href="./Vectors_Pt._2.html" title="Vectors Pt. 2" class="page">Vectors Pt. 2</a></li>
+<li><a href="./Vectors_Pt._3.html" title="Vectors Pt. 3" class="page">Vectors Pt. 3</a></li>
+</ul></li>
+</ul>
+
+</div>
+
+<!-- Wiki content -->
+
+<div class='pages'>
+	<div class='heading'>
+	<h1>Inner Prod Norm Pt. 1 <a name='Vectors:Inner Prod Norm Pt. 1'></a></h1>
+	</div>
+
+	<div class='content'>
+	<p>
+Created Monday 08 June 2020
+</p>
+
+<p>
+This is the fourth video our professor has uploaded.
+</p>
+
+<p>
+We start the video by continuing our discussion of <b>linearly independent vectors.</b>
+</p>
+
+<p>
+As a recap, we have two linearly independant vectors if the <b>only way</b> to add them to get a 0 vector is when their scalar coefficient are 0 as follows:<br>
+<img src="./Inner_Prod_Norm_Pt._1/equation.png">
+</p>
+
+<p>
+Definition: Let <b>v</b><sub>1</sub>, <b>v</b><sub>2</sub>, ..., <b>v</b><sub>k</sub> be vectors in V. We call the <b>linear span</b> of these vectors:<br>
+lin. span. {<b>v</b><sub>1</sub>, ..., <b>v</b><sub>k</sub>} = <img src="./Inner_Prod_Norm_Pt._1/equation001.png">
+</p>
+
+<p>
+Then the linear span {<b>v</b><sub>1, </sub><b>v</b><sub>2, ..., </sub><b>v</b><sub>k</sub>} is a vector space. 
+</p>
+
+<p>
+Let <img src="./Inner_Prod_Norm_Pt._1/equation002.png">, <img src="./Inner_Prod_Norm_Pt._1/equation003.png">
+</p>
+
+<p>
+linear span of {<img src="./Inner_Prod_Norm_Pt._1/equation004.png">} = <br>
+<div style='padding-left: 180pt'>
+  {<img src="./Inner_Prod_Norm_Pt._1/equation005.png">} = <br>
+  {<img src="./Inner_Prod_Norm_Pt._1/equation006.png">} =<br>
+  {<img src="./Inner_Prod_Norm_Pt._1/equation007.png">} = <img src="./Inner_Prod_Norm_Pt._1/equation008.png">
+</div>
+</p>
+
+<p>
+How about an example that is not <img src="./Inner_Prod_Norm_Pt._1/equation009.png">? Observe:<br>
+Let <b>v</b><sub>1</sub> = (1, 3) and <b>v</b><sub>2</sub> = (-1/3, -1)
+</p>
+
+<p>
+<img src="./Inner_Prod_Norm_Pt._1/equation010.png">
+</p>
+
+<p>
+Notice how <b>v</b><sub>1</sub> and <b>v</b><sub>2</sub> are multiples of eachother!
+</p>
+
+<p>
+Definition: If <img src="./Inner_Prod_Norm_Pt._1/equation011.png"> are vectors of space V such that:<br>
+<ol type="1" start="1">
+<li><img src="./Inner_Prod_Norm_Pt._1/equation012.png"> are linearly independent</li>
+<li>linear span <img src="./Inner_Prod_Norm_Pt._1/equation013.png"> = V</li>
+</ol>
+</p>
+
+<p>
+=&gt; we call <img src="./Inner_Prod_Norm_Pt._1/equation014.png"> a <b>basis</b> of V and we call the number k the dimension of V and we write dimension of V = k. In otherwords, the number of vectors we have in our linear span is the number of dimensions we have for our basis.
+</p>
+
+<p>
+dim V = k
+</p>
+
+<p>
+We know that the vectors (1, 3) and (0, 1) are <i>linearly independent.</i> But how do we check this?<br>
+Let <img src="./Inner_Prod_Norm_Pt._1/equation015.png"><br>
+We need to prove that both lambda and mu are 0.<br>
+So, we have this:<br>
+<img src="./Inner_Prod_Norm_Pt._1/equation016.png"><br>
+<img src="./Inner_Prod_Norm_Pt._1/equation017.png"><br>
+<img src="./Inner_Prod_Norm_Pt._1/equation018.png">
+</p>
+
+<p>
+We such, we proved that these two vectors are <b>linearly independent.</b>
+</p>
+
+<p>
+<i>Remember, whenever we want to prove something we go immediately to the definition. Then we see if it applies to the problem we're working on. You will need to know your theory very well to make it through exercises.</i>
+</p>
+
+<p>
+Now then, why can any <img src="./Inner_Prod_Norm_Pt._1/equation019.png"> be written as a linear combination of (1, 3), (0, 1)?
+</p>
+
+<p>
+<img src="./Inner_Prod_Norm_Pt._1/equation020.png"><br>
+Find <img src="./Inner_Prod_Norm_Pt._1/equation021.png"><br>
+<img src="./Inner_Prod_Norm_Pt._1/equation022.png">
+</p>
+
+<p>
+Now we can solve for the lambdas!<br>
+<img src="./Inner_Prod_Norm_Pt._1/equation023.png">
+</p>
+
+<p>
+With this, we can write (1, 2) as a <b>linear combination</b> of the vectors: <img src="./Inner_Prod_Norm_Pt._1/equation024.png">
+</p>
+
+<p>
+Considering this, we have the following:<br>
+<img src="./Inner_Prod_Norm_Pt._1/equation025.png"><br>
+Since we can write any other vector from this two vectors, we have a <b>basis.</b>
+</p>
+
+<p>
+<img src="../images/basis-vectors.png">
+</p>
+
+<p>
+The diagram above shows basis vectors in action.
+</p>
+
+<p>
+This applies to any dimension! 1D, 2D, 3D, 4D, 5D, ..., nD.<br>
+Linearly independent vectors are basis vectors.
+</p>
+
+<h3>More on Basis Vectors</h3>
+
+<p>
+For <img src="./Inner_Prod_Norm_Pt._1/equation026.png">, (1) is a basis vector and so is (-10) for any other vector can be written as a multiple of it. For example, <img src="./Inner_Prod_Norm_Pt._1/equation027.png"><br>
+However, (1) is known as the <b>natural basis.</b>
+</p>
+
+<p>
+For <img src="./Inner_Prod_Norm_Pt._1/equation028.png">, we use two vectors: <img src="./Inner_Prod_Norm_Pt._1/equation029.png"> and <img src="./Inner_Prod_Norm_Pt._1/equation030.png">
+</p>
+
+<p>
+Likewise, we also have basis vectors for <img src="./Inner_Prod_Norm_Pt._1/equation031.png"> like so:<br>
+<img src="./Inner_Prod_Norm_Pt._1/equation032.png"><br>
+<img src="./Inner_Prod_Norm_Pt._1/equation033.png"><br>
+<img src="./Inner_Prod_Norm_Pt._1/equation034.png">
+</p>
+
+<p>
+Finally, we have <img src="./Inner_Prod_Norm_Pt._1/equation035.png"><br>
+<img src="./Inner_Prod_Norm_Pt._1/equation036.png"><br>
+<img src="./Inner_Prod_Norm_Pt._1/equation037.png"><br>
+...<br>
+<img src="./Inner_Prod_Norm_Pt._1/equation038.png">
+</p>
+
+<p>
+This all make up the <b>natural basis in </b><img src="./Inner_Prod_Norm_Pt._1/equation039.png">
+</p>
+
+<h3>And Even More on Basis Vectors...</h3>
+
+<p>
+The following is a linear combination of the basis vectors:<br>
+<img src="./Inner_Prod_Norm_Pt._1/equation040.png">
+</p>
+
+<p>
+If <img src="./Inner_Prod_Norm_Pt._1/equation041.png"> is a basis for V then any vector <img src="./Inner_Prod_Norm_Pt._1/equation042.png"> is written as a linear combination (sum): <img src="./Inner_Prod_Norm_Pt._1/equation043.png"> <br>
+I couldn't quite tell if I got that formula written correctly. The camera is very blurry.
+</p>
+
+<h3>Example of Vector Space Where It Cannot be Written Using Coordinates</h3>
+
+<p>
+<img src="./Inner_Prod_Norm_Pt._1/equation044.png"> {all continuous functions <img src="./Inner_Prod_Norm_Pt._1/equation045.png">}<br>
+This reads that we have a set C and continuous function f from a to b that maps onto R.
+</p>
+
+<p>
+We want to prove that C is a vector space. How do we do this?<br>
+For addition +, we have functions f and g. <img src="./Inner_Prod_Norm_Pt._1/equation046.png"> such that <img src="./Inner_Prod_Norm_Pt._1/equation047.png">
+</p>
+
+<p>
+For example:<br>
+We have the <img src="./Inner_Prod_Norm_Pt._1/equation048.png"> function. <img src="./Inner_Prod_Norm_Pt._1/equation049.png"><br>
+<img src="./Inner_Prod_Norm_Pt._1/equation050.png"> which read the 0 vector plus any function <i>f</i> is equal to <i>f</i>.
+</p>
+
+<p>
+What about the additive inverse?<br>
+<img src="./Inner_Prod_Norm_Pt._1/equation051.png">
+</p>
+
+<p>
+We also know it is commutative and associative in regards to addition
+</p>
+
+<p>
+What about scalar multiplication?<br>
+<img src="./Inner_Prod_Norm_Pt._1/equation052.png"><br>
+So, that works just fine as well!
+</p>
+
+<p>
+So, we have a vector space. <b>But!</b> And then he says we can't have a set of something. I couldn't make out what he was referring to.<br>
+He goes on to say that we have an inifinite number of basis.
+</p>
+
+<h3>Inner Product or Dot Product</h3>
+
+<p>
+Yay my favorite!
+</p>
+
+<p>
+Definition: The <b>inner product</b> is denoted by &lt; , &gt; : V * V <img src="./Inner_Prod_Norm_Pt._1/equation053.png"><br>
+This reads "&lt; , &gt; is a function that..."<br>
+Also, <img src="./Inner_Prod_Norm_Pt._1/equation057.png"> is the inner product! The dots are placeholders for numbers we input.<br>
+&lt; , &gt; is <b>not</b> an operation though.
+</p>
+
+<p>
+So, we have the following:<br>
+<img src="./Inner_Prod_Norm_Pt._1/equation054.png">
+</p>
+
+<p>
+<ol type="1" start="1">
+<li><img src="./Inner_Prod_Norm_Pt._1/equation055.png"> it is = 0 only if <img src="./Inner_Prod_Norm_Pt._1/equation056.png"></li>
+<li><img src="./Inner_Prod_Norm_Pt._1/equation058.png"> which means it's symmetric.</li>
+<li>Most importantly, the inner product is <b>bilinear.</b></li>
+</ol>
+</p>
+
+<p>
+What do we mean by bilinear? Observe:<br>
+<img src="./Inner_Prod_Norm_Pt._1/equation059.png"><br>
+By the way, due to symmetry we can combine &lt;v, w&gt; and &lt;w, v&gt; as seen in the equation above.
+</p>
+
+<p>
+If you have <img src="./Inner_Prod_Norm_Pt._1/equation060.png"><br>
+The a<b>v</b> + b<b>w</b> is linear and so is the <b>z</b>. Since both are linear, we having something that is <i>bilinear.</i> 
+</p>
+
+<h3>Continuing on...</h3>
+
+<p>
+In <img src="./Inner_Prod_Norm_Pt._1/equation061.png"> the inner product:<br>
+Suppose <img src="./Inner_Prod_Norm_Pt._1/equation063.png"> and <img src="./Inner_Prod_Norm_Pt._1/equation064.png">
+</p>
+
+<p>
+For the following, we take the product of the corresponding coordinates.<br>
+<img src="./Inner_Prod_Norm_Pt._1/equation062.png">
+</p>
+
+<p>
+Here is an example of what we just did but with actual numbers:<br>
+<img src="./Inner_Prod_Norm_Pt._1/equation065.png">
+</p>
+
+<p>
+Furthermore:<br>
+<img src="./Inner_Prod_Norm_Pt._1/equation066.png"><br>
+The inner product is 0 only if a and b are both equal to 0.
+</p>
+
+<p>
+Likewise,<br>
+<img src="./Inner_Prod_Norm_Pt._1/equation067.png">
+</p>
+
+<p>
+We can make this more general as well. For example:<br>
+For <img src="./Inner_Prod_Norm_Pt._1/equation068.png"> let <img src="./Inner_Prod_Norm_Pt._1/equation069.png"><br>
+When finding the inner product, we get the following:<br>
+<img src="./Inner_Prod_Norm_Pt._1/equation070.png">
+</p>
+
+<h3>Norm</h3>
+
+<p>
+Next, what is a <b>Norm</b> in a vector space? <br>
+Let Y be a vector space.<br>
+The norm is <img src="./Inner_Prod_Norm_Pt._1/equation071.png"> such that:<br>
+<ol type="1" start="1">
+<li>The norm of any vector <b>v </b>is positive. Also can be written as: <img src="./Inner_Prod_Norm_Pt._1/equation072.png">.
+<ol type="a" start="1">
+<li>It is only equal 0 if <img src="./Inner_Prod_Norm_Pt._1/equation073.png"></li>
+</ol>
+</li>
+<li><img src="./Inner_Prod_Norm_Pt._1/equation074.png"></li>
+<li><img src="./Inner_Prod_Norm_Pt._1/equation075.png"> this is known as the <b>triangle inequality.</b> </li>
+</ol>
+</p>
+
+<p>
+In <img src="./Inner_Prod_Norm_Pt._1/equation076.png">, the absolute value || satisfies all 3 of the above so in the vector space <img src="./Inner_Prod_Norm_Pt._1/equation077.png"> the absolute value |*| measures length or distance between points! (The * is just a standin for some value).
+</p>
+
+<p>
+We can check that in <img src="./Inner_Prod_Norm_Pt._1/equation078.png"><br>
+<img src="./Inner_Prod_Norm_Pt._1/equation079.png">
+</p>
+
+<p>
+Knowing this, we get something similar to that of the Pythagorean Theorem:
+</p>
+
+<p>
+<img src="./Inner_Prod_Norm_Pt._1/equation080.png">
+</p>
+
+<p>
+So then, let's say we want the length of (a, b). Then we do this:<br>
+<img src="./Inner_Prod_Norm_Pt._1/equation081.png">
+</p>
+
+<p>
+Let the following be a vector space: <img src="./Inner_Prod_Norm_Pt._1/equation082.png">
+</p>
+
+<p>
+Prove that <img src="./Inner_Prod_Norm_Pt._1/equation083.png">
+</p>
+
+<p>
+<img src="./Inner_Prod_Norm_Pt._1/equation084.png">
+</p>
+
+<p>
+<img src="./Inner_Prod_Norm_Pt._1/equation085.png"> has also a norm<br>
+<img src="./Inner_Prod_Norm_Pt._1/equation086.png">
+</p>
+
+<p>
+We have to check if this is a norm in <img src="./Inner_Prod_Norm_Pt._1/equation087.png">.
+</p>
+
+<p>
+As we can see, the norm and inner product can be applied to <b>any</b> vector space!
+</p>
+
+<p>
+<i>The video ends here.</i>
+</p>
+
+<br>
+<br>
+<br>
+
+
+	</div>
+
+	<br />
+
+	<div class='page-footer'>
+
+			<b>Attachments:</b>
+			<table>
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation.png'>equation.png</a></td><td>&nbsp;</td><td>949b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation.tex'>equation.tex</a></td><td>&nbsp;</td><td>107b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation001.png'>equation001.png</a></td><td>&nbsp;</td><td>811b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation001.tex'>equation001.tex</a></td><td>&nbsp;</td><td>64b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation002.png'>equation002.png</a></td><td>&nbsp;</td><td>536b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation002.tex'>equation002.tex</a></td><td>&nbsp;</td><td>59b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation003.png'>equation003.png</a></td><td>&nbsp;</td><td>804b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation003.tex'>equation003.tex</a></td><td>&nbsp;</td><td>67b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation004.png'>equation004.png</a></td><td>&nbsp;</td><td>381b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation004.tex'>equation004.tex</a></td><td>&nbsp;</td><td>42b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation005.png'>equation005.png</a></td><td>&nbsp;</td><td>673b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation005.tex'>equation005.tex</a></td><td>&nbsp;</td><td>36b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation006.png'>equation006.png</a></td><td>&nbsp;</td><td>921b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation006.tex'>equation006.tex</a></td><td>&nbsp;</td><td>79b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation007.png'>equation007.png</a></td><td>&nbsp;</td><td>763b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation007.tex'>equation007.tex</a></td><td>&nbsp;</td><td>73b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation008.png'>equation008.png</a></td><td>&nbsp;</td><td>273b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation008.tex'>equation008.tex</a></td><td>&nbsp;</td><td>12b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation009.png'>equation009.png</a></td><td>&nbsp;</td><td>273b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation009.tex'>equation009.tex</a></td><td>&nbsp;</td><td>12b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation010.png'>equation010.png</a></td><td>&nbsp;</td><td>3.99kb</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation010.tex'>equation010.tex</a></td><td>&nbsp;</td><td>413b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation011.png'>equation011.png</a></td><td>&nbsp;</td><td>500b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation011.tex'>equation011.tex</a></td><td>&nbsp;</td><td>51b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation012.png'>equation012.png</a></td><td>&nbsp;</td><td>500b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation012.tex'>equation012.tex</a></td><td>&nbsp;</td><td>51b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation013.png'>equation013.png</a></td><td>&nbsp;</td><td>500b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation013.tex'>equation013.tex</a></td><td>&nbsp;</td><td>51b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation014.png'>equation014.png</a></td><td>&nbsp;</td><td>500b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation014.tex'>equation014.tex</a></td><td>&nbsp;</td><td>51b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation015.png'>equation015.png</a></td><td>&nbsp;</td><td>909b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation015.tex'>equation015.tex</a></td><td>&nbsp;</td><td>55b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation016.png'>equation016.png</a></td><td>&nbsp;</td><td>742b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation016.tex'>equation016.tex</a></td><td>&nbsp;</td><td>39b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation017.png'>equation017.png</a></td><td>&nbsp;</td><td>903b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation017.tex'>equation017.tex</a></td><td>&nbsp;</td><td>83b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation018.png'>equation018.png</a></td><td>&nbsp;</td><td>531b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation018.tex'>equation018.tex</a></td><td>&nbsp;</td><td>37b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation019.png'>equation019.png</a></td><td>&nbsp;</td><td>437b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation019.tex'>equation019.tex</a></td><td>&nbsp;</td><td>35b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation020.png'>equation020.png</a></td><td>&nbsp;</td><td>687b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation020.tex'>equation020.tex</a></td><td>&nbsp;</td><td>36b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation021.png'>equation021.png</a></td><td>&nbsp;</td><td>343b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation021.tex'>equation021.tex</a></td><td>&nbsp;</td><td>20b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation022.png'>equation022.png</a></td><td>&nbsp;</td><td>1.25kb</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation022.tex'>equation022.tex</a></td><td>&nbsp;</td><td>92b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation023.png'>equation023.png</a></td><td>&nbsp;</td><td>958b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation023.tex'>equation023.tex</a></td><td>&nbsp;</td><td>91b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation024.png'>equation024.png</a></td><td>&nbsp;</td><td>729b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation024.tex'>equation024.tex</a></td><td>&nbsp;</td><td>26b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation025.png'>equation025.png</a></td><td>&nbsp;</td><td>936b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation025.tex'>equation025.tex</a></td><td>&nbsp;</td><td>59b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation026.png'>equation026.png</a></td><td>&nbsp;</td><td>268b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation026.tex'>equation026.tex</a></td><td>&nbsp;</td><td>12b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation027.png'>equation027.png</a></td><td>&nbsp;</td><td>690b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation027.tex'>equation027.tex</a></td><td>&nbsp;</td><td>43b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation028.png'>equation028.png</a></td><td>&nbsp;</td><td>273b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation028.tex'>equation028.tex</a></td><td>&nbsp;</td><td>12b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation029.png'>equation029.png</a></td><td>&nbsp;</td><td>588b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation029.tex'>equation029.tex</a></td><td>&nbsp;</td><td>50b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation030.png'>equation030.png</a></td><td>&nbsp;</td><td>620b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation030.tex'>equation030.tex</a></td><td>&nbsp;</td><td>50b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation031.png'>equation031.png</a></td><td>&nbsp;</td><td>278b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation031.tex'>equation031.tex</a></td><td>&nbsp;</td><td>12b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation032.png'>equation032.png</a></td><td>&nbsp;</td><td>630b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation032.tex'>equation032.tex</a></td><td>&nbsp;</td><td>53b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation033.png'>equation033.png</a></td><td>&nbsp;</td><td>651b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation033.tex'>equation033.tex</a></td><td>&nbsp;</td><td>53b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation034.png'>equation034.png</a></td><td>&nbsp;</td><td>658b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation034.tex'>equation034.tex</a></td><td>&nbsp;</td><td>53b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation035.png'>equation035.png</a></td><td>&nbsp;</td><td>266b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation035.tex'>equation035.tex</a></td><td>&nbsp;</td><td>12b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation036.png'>equation036.png</a></td><td>&nbsp;</td><td>571b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation036.tex'>equation036.tex</a></td><td>&nbsp;</td><td>37b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation037.png'>equation037.png</a></td><td>&nbsp;</td><td>584b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation037.tex'>equation037.tex</a></td><td>&nbsp;</td><td>37b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation038.png'>equation038.png</a></td><td>&nbsp;</td><td>595b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation038.tex'>equation038.tex</a></td><td>&nbsp;</td><td>37b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation039.png'>equation039.png</a></td><td>&nbsp;</td><td>266b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation039.tex'>equation039.tex</a></td><td>&nbsp;</td><td>12b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation040.png'>equation040.png</a></td><td>&nbsp;</td><td>1.88kb</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation040.tex'>equation040.tex</a></td><td>&nbsp;</td><td>151b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation041.png'>equation041.png</a></td><td>&nbsp;</td><td>406b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation041.tex'>equation041.tex</a></td><td>&nbsp;</td><td>45b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation042.png'>equation042.png</a></td><td>&nbsp;</td><td>394b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation042.tex'>equation042.tex</a></td><td>&nbsp;</td><td>24b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation043.png'>equation043.png</a></td><td>&nbsp;</td><td>661b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation043.tex'>equation043.tex</a></td><td>&nbsp;</td><td>64b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation044.png'>equation044.png</a></td><td>&nbsp;</td><td>386b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation044.tex'>equation044.tex</a></td><td>&nbsp;</td><td>12b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation045.png'>equation045.png</a></td><td>&nbsp;</td><td>548b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation045.tex'>equation045.tex</a></td><td>&nbsp;</td><td>31b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation046.png'>equation046.png</a></td><td>&nbsp;</td><td>650b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation046.tex'>equation046.tex</a></td><td>&nbsp;</td><td>37b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation047.png'>equation047.png</a></td><td>&nbsp;</td><td>669b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation047.tex'>equation047.tex</a></td><td>&nbsp;</td><td>25b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation048.png'>equation048.png</a></td><td>&nbsp;</td><td>276b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation048.tex'>equation048.tex</a></td><td>&nbsp;</td><td>18b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation049.png'>equation049.png</a></td><td>&nbsp;</td><td>871b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation049.tex'>equation049.tex</a></td><td>&nbsp;</td><td>78b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation050.png'>equation050.png</a></td><td>&nbsp;</td><td>434b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation050.tex'>equation050.tex</a></td><td>&nbsp;</td><td>26b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation051.png'>equation051.png</a></td><td>&nbsp;</td><td>873b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation051.tex'>equation051.tex</a></td><td>&nbsp;</td><td>31b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation052.png'>equation052.png</a></td><td>&nbsp;</td><td>1.10kb</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation052.tex'>equation052.tex</a></td><td>&nbsp;</td><td>76b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation053.png'>equation053.png</a></td><td>&nbsp;</td><td>295b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation053.tex'>equation053.tex</a></td><td>&nbsp;</td><td>22b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation054.png'>equation054.png</a></td><td>&nbsp;</td><td>999b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation054.tex'>equation054.tex</a></td><td>&nbsp;</td><td>128b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation055.png'>equation055.png</a></td><td>&nbsp;</td><td>527b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation055.tex'>equation055.tex</a></td><td>&nbsp;</td><td>47b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation056.png'>equation056.png</a></td><td>&nbsp;</td><td>384b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation056.tex'>equation056.tex</a></td><td>&nbsp;</td><td>39b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation057.png'>equation057.png</a></td><td>&nbsp;</td><td>295b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation057.tex'>equation057.tex</a></td><td>&nbsp;</td><td>13b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation058.png'>equation058.png</a></td><td>&nbsp;</td><td>653b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation058.tex'>equation058.tex</a></td><td>&nbsp;</td><td>83b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation059.png'>equation059.png</a></td><td>&nbsp;</td><td>3.33kb</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation059.tex'>equation059.tex</a></td><td>&nbsp;</td><td>563b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation060.png'>equation060.png</a></td><td>&nbsp;</td><td>1.06kb</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation060.tex'>equation060.tex</a></td><td>&nbsp;</td><td>151b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation061.png'>equation061.png</a></td><td>&nbsp;</td><td>273b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation061.tex'>equation061.tex</a></td><td>&nbsp;</td><td>13b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation062.png'>equation062.png</a></td><td>&nbsp;</td><td>702b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation062.tex'>equation062.tex</a></td><td>&nbsp;</td><td>60b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation063.png'>equation063.png</a></td><td>&nbsp;</td><td>509b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation063.tex'>equation063.tex</a></td><td>&nbsp;</td><td>31b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation064.png'>equation064.png</a></td><td>&nbsp;</td><td>535b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation064.tex'>equation064.tex</a></td><td>&nbsp;</td><td>31b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation065.png'>equation065.png</a></td><td>&nbsp;</td><td>1.01kb</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation065.tex'>equation065.tex</a></td><td>&nbsp;</td><td>54b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation066.png'>equation066.png</a></td><td>&nbsp;</td><td>804b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation066.tex'>equation066.tex</a></td><td>&nbsp;</td><td>35b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation067.png'>equation067.png</a></td><td>&nbsp;</td><td>543b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation067.tex'>equation067.tex</a></td><td>&nbsp;</td><td>15b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation068.png'>equation068.png</a></td><td>&nbsp;</td><td>266b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation068.tex'>equation068.tex</a></td><td>&nbsp;</td><td>12b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation069.png'>equation069.png</a></td><td>&nbsp;</td><td>980b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation069.tex'>equation069.tex</a></td><td>&nbsp;</td><td>89b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation070.png'>equation070.png</a></td><td>&nbsp;</td><td>867b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation070.tex'>equation070.tex</a></td><td>&nbsp;</td><td>65b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation071.png'>equation071.png</a></td><td>&nbsp;</td><td>515b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation071.tex'>equation071.tex</a></td><td>&nbsp;</td><td>45b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation072.png'>equation072.png</a></td><td>&nbsp;</td><td>456b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation072.tex'>equation072.tex</a></td><td>&nbsp;</td><td>29b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation073.png'>equation073.png</a></td><td>&nbsp;</td><td>384b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation073.tex'>equation073.tex</a></td><td>&nbsp;</td><td>39b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation074.png'>equation074.png</a></td><td>&nbsp;</td><td>585b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation074.tex'>equation074.tex</a></td><td>&nbsp;</td><td>73b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation075.png'>equation075.png</a></td><td>&nbsp;</td><td>734b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation075.tex'>equation075.tex</a></td><td>&nbsp;</td><td>96b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation076.png'>equation076.png</a></td><td>&nbsp;</td><td>234b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation076.tex'>equation076.tex</a></td><td>&nbsp;</td><td>10b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation077.png'>equation077.png</a></td><td>&nbsp;</td><td>234b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation077.tex'>equation077.tex</a></td><td>&nbsp;</td><td>10b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation078.png'>equation078.png</a></td><td>&nbsp;</td><td>266b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation078.tex'>equation078.tex</a></td><td>&nbsp;</td><td>12b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation079.png'>equation079.png</a></td><td>&nbsp;</td><td>647b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation079.tex'>equation079.tex</a></td><td>&nbsp;</td><td>46b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation080.png'>equation080.png</a></td><td>&nbsp;</td><td>802b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation080.tex'>equation080.tex</a></td><td>&nbsp;</td><td>51b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation081.png'>equation081.png</a></td><td>&nbsp;</td><td>700b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation081.tex'>equation081.tex</a></td><td>&nbsp;</td><td>29b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation082.png'>equation082.png</a></td><td>&nbsp;</td><td>1.11kb</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation082.tex'>equation082.tex</a></td><td>&nbsp;</td><td>62b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation083.png'>equation083.png</a></td><td>&nbsp;</td><td>980b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation083.tex'>equation083.tex</a></td><td>&nbsp;</td><td>32b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation084.png'>equation084.png</a></td><td>&nbsp;</td><td>1.17kb</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation084.tex'>equation084.tex</a></td><td>&nbsp;</td><td>57b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation085.png'>equation085.png</a></td><td>&nbsp;</td><td>347b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation085.tex'>equation085.tex</a></td><td>&nbsp;</td><td>10b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation086.png'>equation086.png</a></td><td>&nbsp;</td><td>1.73kb</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation086.tex'>equation086.tex</a></td><td>&nbsp;</td><td>89b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation087.png'>equation087.png</a></td><td>&nbsp;</td><td>347b</td></tr>
+
+
+			<tr><td><a href='./Inner_Prod_Norm_Pt._1/equation087.tex'>equation087.tex</a></td><td>&nbsp;</td><td>10b</td></tr>
+
+			</table>
+	</div>
+
+	
+
+</div>
+
+</body>
+</html>

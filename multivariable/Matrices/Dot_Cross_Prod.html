@@ -1,0 +1,741 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Dot Cross Prod</title>
+	<meta name='Generator' content='Zim 0.68'>
+	<style type='text/css'>
+		a          { text-decoration: none      }
+		a:hover    { text-decoration: underline }
+		a:active   { text-decoration: underline }
+		strike     { color: grey                }
+		u          { text-decoration: none;
+					 background-color: yellow   }
+		tt         { color: #2e3436;            }
+		pre        { color: #2e3436;
+					 margin-left: 20px          }
+		h1         { text-decoration: underline;
+					 color: #4e9a06; margin-bottom: 0 }
+		h2         { color: #4e9a06; margin-bottom: 0 }
+		h3         { color: #4e9a06; margin-bottom: 0 }
+		h4         { color: #4e9a06; margin-bottom: 0 }
+		h5         { color: #4e9a06; margin-bottom: 0 }
+		p          { margin-top: 0              }
+		span.zim-tag {
+			color: #ce5c00;
+		}
+		div.zim-object {
+			border-style:solid;
+			border-width:1px;
+		}
+		.checked-box {list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAANOgAADMQBiN+4gQAAAAd0SU1FB9gKGQ8sMEGsKGkAAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAEBUlEQVRIx62V22tdRRTGf7Nn73P2ybntnNOe3NqkPTGgLTVUUZF6QatSLOKTPgqCIqLgQ0H/A1sQQbBYCBb1QfAxiC8tSO1FqHkwJVKtjdTGNraUmObsc9nXmfGh7cGYpM1D5nHWzPetteZb3wg2eB2YqYm4zSadsMtoboiNBH/3TE0awx6j+MRoxoTg/IYRvP19TQrJS0bzhdHGSyKFkLTtjSKwMjyiEz43ynhtP6bdjBCWyFobAf7eT7VhNF/q1FRbjYjmUohlCVPwnB+6FUxMTJipqSmUUhhjEGKd3bMT4ks/Y6oLBK2Yth8hHYtCJXOix7Nf7xLMzc0xOzvLzp078TyPNE3viW3QJPXzhNWbxFFKHCmMhoLn/FHodd48vGfhapdAacXQlkFK5dL6wIUm6fuTZPuvqDQhaMUYYyiVyuQr6rXDexYuAdi3tSv1ZJNs/R/CaszzT+1na88uXFnCEnJVgivBNN8uTJKmHQI/ptOOcXNZzMz9mOqFs90OHpipWcYwlo5P4ebnuOkrvr5wgrH+h3im7y36MzuwRXYZeKha/OhP0EkadFoxQSdGSotedR/+XwMc2XvKdNUFOFqZx6LKZWIiwjgkikNmLp/hm8sH+K1zjFTHXfBYdTi+eJArzXM0GxFxoBDCopLvo/fqEwi1XPkWkGqjFo2TgB1jOYZUKZTS/D1/ncmLh7jon0IbRWoiTi59ymzzJEEQE3cStNZsGxqlfPE57MBbOR8fP3hDGalOO9fq2DlBvmZw8xa2IxACGn6TydlD/O6f5OzSV/zif0cYhLQaEXGkKBbz7Ov/AOlXV1cxgBJRI3fuSTrpTawt18kWIZN1CFuaONI0w0WOXfsI43YIggh/KUSlhqxrMz74AkOZcWBm9QkH+Gw8NDLuITi+m0yzhluSyJzBLcpblUhFxywSRAEtPwQjsKVN30CNh0uvYuOubSHLtN3J0TO1j0pmBNuFbFWRK0gyPRZpktL2I5JQkclKakNlnh54g6ocvevUr/Ai2a7wineEkcJupA3S1Wg0nVZM2E6wbEF5U5G9Q++wI7sfR7h3N8HVNstykBfzH+KJEZwiWD0aIwxCgJ0R1Mu7GXOeJSuK93bZtQIle4D9pUNU5DC5jEsu55AvZakM5NicGyEj8uuz8bUCQgj67QfY671P3vEoeC69gy695U1U7NG7XV0pUwBjDJa1/JJlWWxzHuflzQe5FJ/GsgUVuZ2t8lEkTvfc0aNHb72flBhjVicQQqCUuvM3/M+WDVguWBrMVdDXEGZlBVEUrVCU9d9s5+fnaTQa2PZyPxEIhJaI1EEoZwX4ncynp6fXrmB4eJjR0VFarRbNZnP9P9rt9gohqNVq1Ov1ZbF/AZGev3hLJ2/zAAAAAElFTkSuQmCC)}
+		.xchecked-box {list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAANOgAADMQBiN+4gQAAAAd0SU1FB9gKGQ8bDYnDxEwAAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAEK0lEQVRIx9WVS2hTWRjHf/eR3CY1nbxMH2YiZRQS6qO13YlMVxY3SnVcuNIBFezGpSADLoQqLu1sHJCqdCFSXFpw4YOCSH3BtFqttTNamabX3DS5bfO6uffMoglja3RGcDMHzuac7/z/53++//cd+L8P6VuCPQYZ8ADNgBd4J31DcDcQs+GnHByRocEDv0kfBSjAOlYCs11Q+gpwDegS8LMJ+3QIK0ATzEhV8Odnz5bzw8P4dJ25aJQ/WlvJ1df/K7hSLtOcTNI+Pk69rpMTgqIQhCDvh1/VSpw79+gRrRMTmLZNezLJJsPg+a5dmOEwQlFqg1sWG16/Jv7sGWXDwBACFQjC9HcwIMONKkGp4PGAJGEDS0IQmZlhnWnye3c3eiyGo6qr3WHbrJ+dJf7gAXI6zSIr72T7/fgzmT4FHnTBsgrQBfYvTU0km5vxz86iADnAm0rRPTWFt7cXZccOJJcLAGHb2K9ekT93jmwmwwdAAFpjI6Ntbfxw5879ag7l6o1sr5eHHR3IsRgeQK/M4sQE+YEB7JcvEY6zAj45SWFgAPPxYwzHoQxIkQjTPT0kIxE+Noj8sexFn4/xnh58iQTeSpHkHAdrbIzi0BCOrmNPTpK/eJHM3bt8sCyKQCiR4NWePWSiUZw1+ZLXJm4pFKLhzBlCsRh2RUXacVgeGaF47RrL58+zcP8+RrmMkCQinZ1EL1zAjERqmkH+tLYl1G3bCJw4QUjT0IA0MJfLMX/5MqmHD0nZNiUgtGULG/r7ccXjINWuWbnmqsuFu7sb/4EDNLlcBIEioNs2KUAFGmMxmk6dQm1tRZI+3xBqEkiShBQOox05Ql1nJ26gvuIUAWiKQnj/ftStW5Fk+YuF+NldsbBA4cYN9KdPmaso8Fc62ZJtk7l1C2t0FGdxESHE1xE4hkHh6lX0oSHSpRIewC/LrPf7CSgKNpCamkI/fZr8pUuIZBIcpyaBunahPp1mub+fDyMjGKUSChCsq6Nh717q9u2jbnSU0uAgRrFIwTThyhUCqRS+hgZKLS1fJvDm87SNjZGcnsYUAjcQ8vsJ9/Xh7u1FDgRQN20iks3iDA+zZFmYhQLqzZtsj8WY3L0baY2Sf55ICCKpFHUzM2SEQAJCHg+hY8fQDh5EDgRWDoRC1J88SePRo2geD0XAcBy8b98Sv3ePYDZbbf2rFQjLIphMsmDbaEBQVQkePox26BCSz7e6i4bDrDt+nGYhmBscpFAskheC4Js3bPR4qHphFYEnlcI7P4/jdqNpGu8TCe4oCsXr1z//F2ga3+/cSfTJE0qmSVYIsKzaOZDcbjKyzFIiwfvt21kMBLA07YsetzWNd+3tLLW0sH5igvT8PH9Go/z44kX+E4LGjg7GDYOcy4XlOEgLC//5P/5LCFzxOPLmzWyIx+m6fduu7v0NVGqyTSycKksAAAAASUVORK5CYII=)}
+		.unchecked-box {list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAANOgAADMQBiN+4gQAAAAd0SU1FB9gKGQ8qAt8h3m8AAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAA60lEQVRIx+2VsQqDMBRF70sCLg5OLoKgjk7+lJ/hh+STXBwcnRz8ArMEkrxOFktbaC3tULzTg5e8k5vADXDq70VbobXmvu/hvQczg4heHrJfXxQFuq67blZbMc8zpmlCXddIkgTOuZcBUko45zCOI6y1Nz2xFSEEZFmGOI7fGg4A3nsQEZqmuXOu9jallACAtm3fvmutNaIoAjM/dkBECCF89KCbk4eAb+kEnIAT8EsAM0OIz3hSyrssUvss8t5fg+uIrLXPs0gIgWVZYIyBUurQyYdheO4gz3NUVQVjDNZ1PfSjpWmKsixvehfB9GBZ3NndrgAAAABJRU5ErkJggg==)}
+		.migrated-box {list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAANOgAADMQBiN+4gQAAAAd0SU1FB+AKHREFA8vJSnkAAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAC1klEQVRIx+2VT0hUURTGf/e958w4Tc3TYowMw1GyEgwr1MqsFmbZIrIWQZsWJUjbdoHQpl3Qps0swnCRECQFYkR/TC1iKkqmfzAKTo2Vf8hoRsfR995tkRMT87RRWkUHHhy495zvnvvu933wP/75EKkkEAjIYDCIaZpIKRFCZN0kfX9xcTGtra2/irVUEolECIfDlJeXo+s6hmFkDaCqKoZhEAqFSCaTv60pqcSyLAoLC/F4PEtqDmCaJkIIKisrMybX0sdUVRWA5ubmPzdNjjI1cpXkZC/O1fV03PXgdDqRUtpPIITAsqxsDz0Z/3CZQv8uqo4N4C8/Tp2/DdM0MiZQlvk41OTkI/LW1SGtCVb5drD3eCc71wcA+VcAHA5vDd8+3UGakxiJV7i9pdQevU5T1R35pJ3MV5QW1pf+0kWBheJ2SWua8EQXZXsu4fVVYEz1sEKvof5EuxjoPvzpcRvrdp9C2gGMx6cpOHBmbImMesds7BZubwMVDTfXDnQ3vQfK7AC8wLfExMX5whyQc3q2OEnjGm5vE76SQxsfBLr77a7CNf+n0r/l6sSMtsBSnurckiIILCobAtVZhpF4gZF4jubaymj4Ch/fd380LE7bAnjc0NPxk2yqpmEuwGxF0ag+0k5uTpzZeBeaazvj0We8fXojainsb2xh2BZgbe0gSIllzSIUh63wfQ6dZ/O2fbjcKlOj58jJ3cVENESw5yErc9nf2MLQ4jwQAkV1Lqiq37/cZ9WaahJjF9AcmxiPDhLs7ePe23oOnmUwg2hSShQle96tKDjA2HAniusgo9FxnvY9Jxw7RWzGYy92QghM00x5g53qp9sHmtB58/o2umOI2NwGolMnMYUHIb7aAyiKwsjICLqu2/qBEIKUUAohMaSHSLyBSMoPTINQ6CX5+fn2AEVFRZSUlBCPx4nFYhl3L4RESjF/GEgX3pSj+Xw+/H7/b3U/AEOZFnp7O5+5AAAAAElFTkSuQmCC)}
+		ul {list-style-image: none}
+		/* ul rule needed to reset style for sub-bullets */
+
+		span.insen { color: grey                }
+
+		.pages {
+			max-width: 1000px;
+			 padding-left: 320px;
+		}
+		.menu{
+			float:left; width: 300px;
+		}
+		hr{clear:both;}
+	</style>
+</head>
+<body>
+
+<!-- Header -->
+<div class='header'>
+	[ <a href='../Matrices.html'>Prev</a> ]
+
+	[ <span class='insen'>Index</span> ]
+
+	[ <a href='./Matrix_Pt._1.html'>Next</a> ]
+</div>
+
+<hr />
+
+<div class="menu">
+<ul>
+<li><a href="../Home.html" title="Home" class="page">Home</a></li>
+<li><a href="../Homework.html" title="Homework" class="page">Homework</a></li>
+<li><a href="../Introduction.html" title="Introduction" class="page">Introduction</a></li>
+<li><a href="../Matrices.html" title="Matrices" class="page">Matrices</a>
+<ul>
+<li><b>Dot Cross Prod</b></li>
+<li><a href="./Matrix_Pt._1.html" title="Matrix Pt. 1" class="page">Matrix Pt. 1</a></li>
+</ul>
+</li>
+<li><a href="../Monday_Meetings.html" title="Monday Meetings" class="page">Monday Meetings</a></li>
+<li><a href="../Vectors.html" title="Vectors" class="page">Vectors</a></li>
+</ul>
+
+</div>
+
+<!-- Wiki content -->
+
+<div class='pages'>
+	<div class='heading'>
+	<h1>Dot Cross Prod <a name='Matrices:Dot Cross Prod'></a></h1>
+	</div>
+
+	<div class='content'>
+	<p>
+Created Thursday 11 June 2020
+</p>
+
+<h3>Foreword</h3>
+
+<p>
+He says that we don't have to wait until Monday to ask questions. He needs us to be specific though. Merely writing, "I'm having problem with the homework" isn't enough. He needs to know just <i>what</i> the issue is.
+</p>
+
+<p>
+Any day of the week you can message him! 
+</p>
+
+<h3>Determinants</h3>
+
+<p>
+Firstly, a <b>unit vector</b> is a vector <b>v</b> in which the length is 1. Or more mathematically: <br>
+<img src="./Dot_Cross_Prod/equation.png">
+</p>
+
+<p>
+Suppose <b>v</b> is any vector != the <b>0</b> vector. Then the following gives us a unit vector:<br>
+<img src="./Dot_Cross_Prod/equation001.png">
+</p>
+
+<p>
+Then we also get the following:<br>
+<img src="./Dot_Cross_Prod/equation002.png">
+</p>
+
+<p>
+Now, on to <b>determinants!</b><br>
+A determinant exists <b>only </b>for nxn matrices. In other words, a square matrix! Otherwise, there is no determinant.<br>
+Definition: <br>
+<i>det() is determinant by the way</i>
+</p>
+
+<p>
+<img src="./Dot_Cross_Prod/equation003.png"><br>
+<img src="./Dot_Cross_Prod/equation004.png"><br>
+:= means <i>by definition.</i>
+</p>
+
+<p>
+So then, we have this:<br>
+<img src="./Dot_Cross_Prod/equation005.png">
+</p>
+
+<p>
+<img src="./Dot_Cross_Prod/equation006.png"><br>
+Notice we replace () with ||. This means we are looking for the determinant.
+</p>
+
+<p>
+So then, what exactly does the determinant represent (geometrically at least)?
+</p>
+
+<p>
+Let us have the following:<br>
+<img src="./Dot_Cross_Prod/equation007.png">
+</p>
+
+<p>
+He goes through a very interesting proof to show how this is done. I'm not gonna write it all out right now but it all simplifies to show that we get ad - bc.
+</p>
+
+<p>
+So then, the determinant of <img src="./Dot_Cross_Prod/equation008.png"> is the area of the parallelogram spanned by the 2 vectors (a, b) and (c, d). This is what he drew out but I won't be doing that myself (due to laziness).
+</p>
+
+<p>
+He then states that a <b>determinant represents a volume!</b> You can consider the area as the volume of a flat body.
+</p>
+
+<h3>3D Determinant.</h3>
+
+<p>
+We just found the determinant for a <img src="./Dot_Cross_Prod/equation009.png"> but what about for the third dimension?
+</p>
+
+<p>
+<img src="./Dot_Cross_Prod/equation010.png">
+</p>
+
+<p>
+So, we have the first row act as coefficients and multiply by determinants on the two rows below.<br>
+You might be wondering if there is a pattern to when we should add or subtract. For each coefficient of the determinants, add the i and j values. If <b>even</b>, then add. If <b>odd,</b> then subtract. So, a<sub>11</sub> is 1+1=2 which is even. Likewise, a<sub>12</sub> is 1+2=3 which is odd. Therefore, we add the a<sub>11</sub> and subtract the a<sub>12</sub>.
+</p>
+
+<p>
+What if we have an even bigger matrix? We do the same thing! We just keep breaking it down to that 2x2.<br>
+Also, we don't have to take the first row. We could take the second or third but don't bother. Might as well just do the first one.
+</p>
+
+<p>
+Also, he won't be proving this. It will be much too complicated right now.<br>
+In addition, he mentions it will take pages upon pages of work to find the determinant of matrices that are even bigger than this! For that reason, if we need to work with a determinant he'll just tell us what it is to save time. Or it'll be very easy to calculate.
+</p>
+
+<h3>Properties of the Determinant</h3>
+
+<br>
+
+<h5>First</h5>
+
+<p>
+For the first property, if we have two square matrices A and B...<br>
+det(AB) = det(A) * det(b)<br>
+Once again, the determinate of AB is just the determinate of A times the determinate of B.
+</p>
+
+<h5>Second</h5>
+
+<p>
+det(A) = det(A<sup>T</sup>)
+</p>
+
+<p>
+What this says is that the determinate of the matrix A is equal to the determinate of its transpose.<br>
+This makes sense to me since if the determinate of just area and we're just flipping the matrix around when we transpose it, then the area should stay the same. We merely repositioned things but we didn't affect the scaling.
+</p>
+
+<p>
+<img src="./Dot_Cross_Prod/equation011.png">
+</p>
+
+<h5>Third</h5>
+
+<p>
+det(I<sub>nxn</sub>) = 1
+</p>
+
+<p>
+Why? Look at this:<br>
+<img src="./Dot_Cross_Prod/equation012.png"><br>
+Remember, only that diagonal will have 1s. No matter the dimensions, <b>the determinate of I</b><sub>nxn</sub> <b>is always 1.</b>
+</p>
+
+<h5>Fourth</h5>
+
+<p>
+If one row or column is a multiple of another row or column, then the determinate of A is 0.
+</p>
+
+<p>
+<img src="./Dot_Cross_Prod/equation013.png">
+</p>
+
+<h5>Fifth</h5>
+
+<p>
+<i>He notes that this one is very important and we will be using it a lot!</i>
+</p>
+
+<p>
+<img src="./Dot_Cross_Prod/equation014.png">
+</p>
+
+<p>
+This reads that matrix A times the inverse of matrix A gives us the identity of dimension n by n.
+</p>
+
+<p>
+He says cannot give us proof for this definition for when this inverse exists.
+</p>
+
+<p>
+The matrix A has an inverse matrix A<sup>-1</sup> if and only if <img src="./Dot_Cross_Prod/equation015.png">
+</p>
+
+<p>
+So then...<br>
+<img src="./Dot_Cross_Prod/equation016.png"> does <b>not</b> have an inverse matrix because its determinate is 0.
+</p>
+
+<p>
+However, <img src="./Dot_Cross_Prod/equation017.png"> <b>does</b> have an inverse materix because it's determinate is <b>not</b> equal to 0.
+</p>
+
+<h3>Cross-Product</h3>
+
+<p>
+The next and final big operation we can do with vectors!
+</p>
+
+<p>
+The cross-product is <b>exclusively</b> for vectors in <b>3</b> dimensions!<br>
+We consider the vector space <img src="./Dot_Cross_Prod/equation018.png"> (and no other vector space of some other dimension. <b>do not forget this</b>).
+</p>
+
+<p>
+So then, how do we find this cross-product? Take the following:
+</p>
+
+<p>
+<img src="./Dot_Cross_Prod/equation019.png"><br>
+Remember, we have the basis vectors <img src="./Dot_Cross_Prod/equation020.png">
+</p>
+
+<p>
+Definition: We define the <b>cross-product</b> <img src="./Dot_Cross_Prod/equation021.png"> as the vector...<br>
+<i>By the way, I typed × but he couldn't do this on paper so he used a ^ sort of symbol to denote cross-product.</i>
+</p>
+
+<p>
+Now we have this:<br>
+<img src="./Dot_Cross_Prod/equation022.png">
+</p>
+
+<p>
+Remember, the determinates become a single scalar value. So we just take that scalar and multiply it by the vector. And then we just do simple vector addition!
+</p>
+
+<p>
+Also, he wrote the cross-product as he did above to make it easier for us to remember how to do it. 
+</p>
+
+<h3>Properties of Cross-Product</h3>
+
+<br>
+
+<h5>First</h5>
+
+<p>
+If you cross-multiply two vectors you get the following:<br>
+<img src="./Dot_Cross_Prod/equation023.png">
+</p>
+
+<p>
+Why is this? Well, we merely flip the rows in the determinate from before like so:<br>
+<img src="./Dot_Cross_Prod/equation024.png">
+</p>
+
+<p>
+<i>I believe I write that correctly. Might have to check the sign.</i>
+</p>
+
+<p>
+Either way, the cross-product is <b>anti-commutative. </b>In other words, <b>a × b </b>≠<b> b × a</b>
+</p>
+
+<p>
+Continuing on, we also have the following for two equal vectors:<br>
+<img src="./Dot_Cross_Prod/equation025.png"><br>
+This also means that...<br>
+<img src="./Dot_Cross_Prod/equation026.png">
+</p>
+
+<p>
+So then, anytime we cross-multiply a vector by itself we get a <b>0</b> vector.
+</p>
+
+<h5>Second</h5>
+
+<p>
+<img src="./Dot_Cross_Prod/equation027.png"><br>
+In other words, the <b>distributive </b>property holds here.<br>
+He also recommends we give this a try and check it. You learn by doing!
+</p>
+
+<h5>Third</h5>
+
+<p>
+<img src="./Dot_Cross_Prod/equation028.png"><br>
+We also have this little interesting thing as well:<br>
+<img src="./Dot_Cross_Prod/equation029.png"><br>
+<img src="./Dot_Cross_Prod/equation030.png"><br>
+<img src="./Dot_Cross_Prod/equation031.png">
+</p>
+
+<p>
+Notice how this is rather circular! Draw this as a circle with i on the right, j on the bottom, and k on the left. Then rotate clockwise. That's a good way to remember this.<br>
+Also, give this a go! You can check and see if it works.
+</p>
+
+<h3>Geometric Interpretation of the Cross-Product</h3>
+
+<p>
+Let <img src="./Dot_Cross_Prod/equation032.png">
+</p>
+
+<p>
+Consider the following inner product:<br>
+<img src="./Dot_Cross_Prod/equation033.png">
+</p>
+
+<p>
+After some number crunching, we get this:<br>
+<img src="./Dot_Cross_Prod/equation039.png">
+</p>
+
+<p>
+So the vector <img src="./Dot_Cross_Prod/equation034.png"> to both <img src="./Dot_Cross_Prod/equation035.png"> and <img src="./Dot_Cross_Prod/equation036.png">. So it is <b>perpendicular</b> to the plane spanned by <img src="./Dot_Cross_Prod/equation037.png"> and <img src="./Dot_Cross_Prod/equation038.png">.
+</p>
+
+<p>
+Knowing what we know above, we also have this:<br>
+<img src="./Dot_Cross_Prod/equation040.png"><br>
+<b>Notice how we have two rows that are equal!</b> As we learned earlier, if this happens then the result is 0. <b>Also,</b> we know that if the dot product of two vectors are zero then we know that they are <b>perpendicular!</b>
+</p>
+
+<p>
+Once again, the cross-product of two vectors gives us a vector that is <b>perpendicular</b> to the <b>plane</b> defined by two vectors!
+</p>
+
+<h3>Length of the Cross-Product</h3>
+
+<p>
+So, now that we've calculated the cross-product how do we get the length of it? We do the following:<br>
+<img src="./Dot_Cross_Prod/equation041.png"><br>
+We read this as the square of the norm of the cross-product between vector <b>b </b>and <b>c</b>.
+</p>
+
+<p>
+There's a bunch of math here and I couldn't quite see what he was writing. In any case, it all simplifies out like so:<br>
+The cross-product of two vectors <img src="./Dot_Cross_Prod/equation042.png"> is a vector in <img src="./Dot_Cross_Prod/equation043.png"> and is of the length:<br>
+<img src="./Dot_Cross_Prod/equation044.png">
+</p>
+
+<h3>Remark</h3>
+
+<p>
+So if we were to draw out the vectors <b>b</b> and <b>c</b>, we can draw out a parallelogram  in which:<br>
+<img src="./Dot_Cross_Prod/equation045.png"> the area of the parallelogram<br>
+θ is the angle between vectors <b>b</b> and <b>c</b>.
+</p>
+
+<p>
+This boils down to a simple little theorem:<br>
+<img src="./Dot_Cross_Prod/equation046.png"> area of the parallelogram which is spanned by <b>b</b> and <b>c</b>.
+</p>
+
+<h3>This Coming Monday</h3>
+
+<p>
+We will begin learning about the equations of the line and plane.
+</p>
+
+<h3>Quiz</h3>
+
+<p>
+Once again, <b>the quiz is next Wednesday!</b> At 10am on the dot. You will go onto blackboard to find our exam. Same place we find all of our lectures (<i>course documents</i>). You will have until 10:30 to answer the questions. We will then send it to an email address he will be giving us Monday.
+</p>
+
+<h3>HW</h3>
+
+<p>
+He posted homework. Go ahead and do that. This Saturday he will send us solution.
+</p>
+
+<br>
+<br>
+
+
+	</div>
+
+	<br />
+
+	<div class='page-footer'>
+
+			<b>Attachments:</b>
+			<table>
+
+			<tr><td><a href='./Dot_Cross_Prod/equation.png'>equation.png</a></td><td>&nbsp;</td><td>490b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation.tex'>equation.tex</a></td><td>&nbsp;</td><td>47b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation001.png'>equation001.png</a></td><td>&nbsp;</td><td>465b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation001.tex'>equation001.tex</a></td><td>&nbsp;</td><td>57b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation002.png'>equation002.png</a></td><td>&nbsp;</td><td>1.04kb</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation002.tex'>equation002.tex</a></td><td>&nbsp;</td><td>146b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation003.png'>equation003.png</a></td><td>&nbsp;</td><td>587b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation003.tex'>equation003.tex</a></td><td>&nbsp;</td><td>31b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation004.png'>equation004.png</a></td><td>&nbsp;</td><td>1.75kb</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation004.tex'>equation004.tex</a></td><td>&nbsp;</td><td>150b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation005.png'>equation005.png</a></td><td>&nbsp;</td><td>612b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation005.tex'>equation005.tex</a></td><td>&nbsp;</td><td>35b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation006.png'>equation006.png</a></td><td>&nbsp;</td><td>1.24kb</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation006.tex'>equation006.tex</a></td><td>&nbsp;</td><td>115b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation007.png'>equation007.png</a></td><td>&nbsp;</td><td>1.14kb</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation007.tex'>equation007.tex</a></td><td>&nbsp;</td><td>73b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation008.png'>equation008.png</a></td><td>&nbsp;</td><td>609b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation008.tex'>equation008.tex</a></td><td>&nbsp;</td><td>44b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation009.png'>equation009.png</a></td><td>&nbsp;</td><td>273b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation009.tex'>equation009.tex</a></td><td>&nbsp;</td><td>12b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation010.png'>equation010.png</a></td><td>&nbsp;</td><td>3.19kb</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation010.tex'>equation010.tex</a></td><td>&nbsp;</td><td>422b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation011.png'>equation011.png</a></td><td>&nbsp;</td><td>952b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation011.tex'>equation011.tex</a></td><td>&nbsp;</td><td>96b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation012.png'>equation012.png</a></td><td>&nbsp;</td><td>695b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation012.tex'>equation012.tex</a></td><td>&nbsp;</td><td>55b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation013.png'>equation013.png</a></td><td>&nbsp;</td><td>937b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation013.tex'>equation013.tex</a></td><td>&nbsp;</td><td>63b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation014.png'>equation014.png</a></td><td>&nbsp;</td><td>415b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation014.tex'>equation014.tex</a></td><td>&nbsp;</td><td>17b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation015.png'>equation015.png</a></td><td>&nbsp;</td><td>579b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation015.tex'>equation015.tex</a></td><td>&nbsp;</td><td>13b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation016.png'>equation016.png</a></td><td>&nbsp;</td><td>547b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation016.tex'>equation016.tex</a></td><td>&nbsp;</td><td>44b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation017.png'>equation017.png</a></td><td>&nbsp;</td><td>581b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation017.tex'>equation017.tex</a></td><td>&nbsp;</td><td>44b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation018.png'>equation018.png</a></td><td>&nbsp;</td><td>278b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation018.tex'>equation018.tex</a></td><td>&nbsp;</td><td>12b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation019.png'>equation019.png</a></td><td>&nbsp;</td><td>861b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation019.tex'>equation019.tex</a></td><td>&nbsp;</td><td>79b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation020.png'>equation020.png</a></td><td>&nbsp;</td><td>469b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation020.tex'>equation020.tex</a></td><td>&nbsp;</td><td>58b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation021.png'>equation021.png</a></td><td>&nbsp;</td><td>404b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation021.tex'>equation021.tex</a></td><td>&nbsp;</td><td>44b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation022.png'>equation022.png</a></td><td>&nbsp;</td><td>2.69kb</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation022.tex'>equation022.tex</a></td><td>&nbsp;</td><td>403b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation023.png'>equation023.png</a></td><td>&nbsp;</td><td>544b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation023.tex'>equation023.tex</a></td><td>&nbsp;</td><td>92b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation024.png'>equation024.png</a></td><td>&nbsp;</td><td>2.28kb</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation024.tex'>equation024.tex</a></td><td>&nbsp;</td><td>358b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation025.png'>equation025.png</a></td><td>&nbsp;</td><td>827b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation025.tex'>equation025.tex</a></td><td>&nbsp;</td><td>168b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation026.png'>equation026.png</a></td><td>&nbsp;</td><td>474b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation026.tex'>equation026.tex</a></td><td>&nbsp;</td><td>65b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation027.png'>equation027.png</a></td><td>&nbsp;</td><td>1.10kb</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation027.tex'>equation027.tex</a></td><td>&nbsp;</td><td>185b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation028.png'>equation028.png</a></td><td>&nbsp;</td><td>808b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation028.tex'>equation028.tex</a></td><td>&nbsp;</td><td>159b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation029.png'>equation029.png</a></td><td>&nbsp;</td><td>509b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation029.tex'>equation029.tex</a></td><td>&nbsp;</td><td>65b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation030.png'>equation030.png</a></td><td>&nbsp;</td><td>480b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation030.tex'>equation030.tex</a></td><td>&nbsp;</td><td>65b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation031.png'>equation031.png</a></td><td>&nbsp;</td><td>492b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation031.tex'>equation031.tex</a></td><td>&nbsp;</td><td>65b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation032.png'>equation032.png</a></td><td>&nbsp;</td><td>656b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation032.tex'>equation032.tex</a></td><td>&nbsp;</td><td>75b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation033.png'>equation033.png</a></td><td>&nbsp;</td><td>726b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation033.tex'>equation033.tex</a></td><td>&nbsp;</td><td>81b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation034.png'>equation034.png</a></td><td>&nbsp;</td><td>487b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation034.tex'>equation034.tex</a></td><td>&nbsp;</td><td>55b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation035.png'>equation035.png</a></td><td>&nbsp;</td><td>280b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation035.tex'>equation035.tex</a></td><td>&nbsp;</td><td>18b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation036.png'>equation036.png</a></td><td>&nbsp;</td><td>259b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation036.tex'>equation036.tex</a></td><td>&nbsp;</td><td>18b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation037.png'>equation037.png</a></td><td>&nbsp;</td><td>280b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation037.tex'>equation037.tex</a></td><td>&nbsp;</td><td>18b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation038.png'>equation038.png</a></td><td>&nbsp;</td><td>259b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation038.tex'>equation038.tex</a></td><td>&nbsp;</td><td>18b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation039.png'>equation039.png</a></td><td>&nbsp;</td><td>1.41kb</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation039.tex'>equation039.tex</a></td><td>&nbsp;</td><td>152b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation040.png'>equation040.png</a></td><td>&nbsp;</td><td>1.40kb</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation040.tex'>equation040.tex</a></td><td>&nbsp;</td><td>157b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation041.png'>equation041.png</a></td><td>&nbsp;</td><td>504b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation041.tex'>equation041.tex</a></td><td>&nbsp;</td><td>51b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation042.png'>equation042.png</a></td><td>&nbsp;</td><td>391b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation042.tex'>equation042.tex</a></td><td>&nbsp;</td><td>44b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation043.png'>equation043.png</a></td><td>&nbsp;</td><td>639b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation043.tex'>equation043.tex</a></td><td>&nbsp;</td><td>66b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation044.png'>equation044.png</a></td><td>&nbsp;</td><td>944b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation044.tex'>equation044.tex</a></td><td>&nbsp;</td><td>119b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation045.png'>equation045.png</a></td><td>&nbsp;</td><td>739b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation045.tex'>equation045.tex</a></td><td>&nbsp;</td><td>71b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation046.png'>equation046.png</a></td><td>&nbsp;</td><td>488b</td></tr>
+
+
+			<tr><td><a href='./Dot_Cross_Prod/equation046.tex'>equation046.tex</a></td><td>&nbsp;</td><td>51b</td></tr>
+
+			</table>
+	</div>
+
+	
+
+</div>
+
+</body>
+</html>
