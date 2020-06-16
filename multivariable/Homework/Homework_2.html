@@ -86,9 +86,285 @@
 	</div>
 
 	<div class='content'>
-	<p>
-1)
+	<h3>Question 1</h3>
+
+<p>
+For this first problem, I was a little perplexed by the solution our professor gave. He said to just use the dot product formula which is as follows:<br>
+<img src="./Homework_2/equation.png">
 </p>
+
+<p>
+This of course confused the hell out of me. I wasn't quite sure how this formula was to be used to find the projection of vector <b>v</b> onto <b>u</b>. Luckily, in the <a href="../Monday_Meetings/3rd.html" title="Monday Meetings:3rd" class="page">Monday Meetings:3rd</a> stream, he explains that <img src="./Homework_2/equation001.png"> gives us that projection of <b>v</b> onto <b>u</b> that we are looking for.
+</p>
+
+<p>
+So then, we end up with this:<br>
+<img src="./Homework_2/equation002.png"> = projection of <b>v</b> onto <b>u</b>
+</p>
+
+<p>
+Now we can crunch the numbers like so:<br>
+Let <b>v</b> = (2, 1, -3) and <b>u</b> = (-1, 1, 1)
+</p>
+
+<p>
+&lt;<b>u</b>, <b>v</b>&gt; = 2 * -1 + 1 * 1 + -3 * 1 = -4
+</p>
+
+<p>
+The dot product is -4.<br>
+Now lets get the norm of <b>u </b>like so:<br>
+<img src="./Homework_2/equation003.png">
+</p>
+
+<p>
+We then have the following answer for the projection of <b>v</b> onto <b>u</b>:<br>
+<img src="./Homework_2/equation004.png">
+</p>
+
+<p>
+Going online, symbolab says that this is the <b>scalar projection</b> of our <b>v</b> onto <b>u</b>. 
+</p>
+
+<h3>Question 2</h3>
+
+<p>
+This one is a little less obscure but still poorly written. To solve, we need to find the cross-product of vector -3i + 2j + k and vector k. Once we find that, it becomes quite obvious what λ needs to be for vector 2i + λj. At least, it will in a moment here. Observe:
+</p>
+
+<p>
+Let <b>v</b> = (-3, 2, 1) and <b>u</b> = (0, 0, 1)
+</p>
+
+<p>
+<img src="./Homework_2/equation005.png">
+</p>
+
+<p>
+So then, we know that the vector (2, 3, 0) is orthogonal to vectors <b>v</b> and <b>u</b>. Looking at vector 2i + λj, we have (2, λ, 0). Simply replace λ with 2 and we now have a vector orthogonal to <b>v</b> and <b>u</b>! We did it yay!
+</p>
+
+<h3>Question 3</h3>
+
+<p>
+Finally! A question that's easy to understand just what the heck we gotta do!<br>
+We have the following:<br>
+Let <b>v </b>= i + j = (1, 1, 0), <b>u</b> = j + k = (0, 1, 1)<br>
+We need a <b>unit vector </b>that is <b>orthogonal</b> to these two vectors.
+</p>
+
+<p>
+To begin, let us find a vector orthogonal to vectors <b>v</b> and <b>u</b>. To do this, we find the cross-product like so:<br>
+<img src="./Homework_2/equation006.png">
+</p>
+
+<p>
+So then, our cross-product of <b>v</b> and <b>u</b> is the vector (1, -1, 1). In case this wasn't clear, the cross-product gives us a vector that is orthogonal to vectors <b>v</b> and <b>u</b>. However, we're not done yet! Now we need this as a <b>unit vector</b> which is a vector with a length of 1. Luckily, this is simple to compute! Just divide the result of our cross-product by it's length (or norm) like so:<br>
+<img src="./Homework_2/equation007.png">
+</p>
+
+<p>
+And that's it! The answer is, as he put it in the solutions, <img src="./Homework_2/equation008.png">. You could also distribute the fraction over the vector if you want. Either way works fine.
+</p>
+
+<h3>Question 4</h3>
+
+<p>
+This question gave me a bit of confusion. Mostly in figuring out the <i>right</i> way he wanted us to do this. Luckily, we got him to explain what he was looking for and it makes a lot more sense!
+</p>
+
+<p>
+Firstly, check out this diagram:
+</p>
+
+<p>
+<img src="../images/hw-2-q4.png">
+</p>
+
+<p>
+What we did here was take point (0, 2) as the origin. We then offset points (3, 2) and (1, 1) by point (0, 2).<br>
+Next, we need to find the <b>area of the parallelogram</b> formed by our newly created vectors <b>u</b> and <b>v</b>. To do this, we simply find the length (or norm) of the cross product between <b>u</b> and <b>v</b>. This gives us area A which is a parallelogram. But! We want the area of the triangle formed by these three points! Simply divide A by 2 and we have our answer.
+</p>
+
+<p>
+Enough typing, let's crunch out these numbers like so:<br>
+Let <b>u </b>= (1, -1, 0) and <b>v</b> = (3, 0, 0). Notice that we add on a third dimension! This was intentional for we need a 3 dimensional vector to find the cross-product. 
+</p>
+
+<p>
+Let A be the area of the parallelogram form by <b>u</b> and <b>v</b>. We then have:<br>
+<img src="./Homework_2/equation009.png">
+</p>
+
+<p>
+As such, the area of the parallelogram is 3. <b>However!</b> We need the area of the triangle! As such, simply divide A by 2.
+</p>
+
+<p>
+The final answer is <img src="./Homework_2/equation010.png"> which is precisely what the professor wrote on the solutions.
+</p>
+
+<h3>Question 5</h3>
+
+<p>
+This one threw me off slightly but it's quite simple. It does take a tiny bit of intuition to realize what's going on though!
+</p>
+
+<p>
+First, let's observe what the question is asking us. It wants us to prove the following:<br>
+<img src="./Homework_2/equation012.png">
+</p>
+
+<p>
+If you're anything like me, you immediately felt bad about yourself. At the same time, a part of you notices something. That something is the following:<br>
+Let <b>v</b> = (x, y). Then <img src="./Homework_2/equation011.png">.
+</p>
+
+<p>
+Oh! We're just adding together the norm of three vectors! In that case, let us have the following:<br>
+<img src="./Homework_2/equation013.png">
+</p>
+
+<p>
+In that case, our right side of the equation is:<br>
+<img src="./Homework_2/equation014.png">
+</p>
+
+<p>
+But what about our left side? I won't lie, this takes a little bit of intuition as well. What you'll realize is that we just add our three vectors and take the norm like so:<br>
+<img src="./Homework_2/equation015.png">
+</p>
+
+<p>
+Now, this last part I don't fully get. He states that if we refer to the <b>triangle inequality</b>, we will see the following:<br>
+<img src="./Homework_2/equation016.png">
+</p>
+
+<p>
+After looking online, I now know what the triangle inequality is. It is as follows:<br>
+<img src="../images/triangle-inequality.png" width="404"><br>
+We of course expanded this to 3D space since we're working with the z componenet as well.
+</p>
+
+<h3>Question 6</h3>
+
+<p>
+Another question I wasn't so sure how to start.
+</p>
+
+<p>
+So, we are asked to prove that two non-zero perpendicular vectors in <img src="./Homework_2/equation017.png"> must be linearly independent.
+</p>
+
+<p>
+Firstly, vectors are <b>linearly independent</b> if the only way to achieve a <b>0</b> when adding them all together is to set their coefficients to 0.
+</p>
+
+<p>
+Keeping this in mind, let us have vectors <b>x</b> and <b>y</b> that are two non-zero perpendicular vectors. Let us make the assumption that λx + μy = 0.
+</p>
+
+<p>
+We then have the following:<br>
+<img src="./Homework_2/equation018.png">
+</p>
+
+<p>
+In case you're wondering why we removed μ&lt;<b>x</b>, <b>y</b>&gt;, the dot product of two perpendicular vectors is 0. In case you're further wondering why this is the case, observe the formula:<br>
+<img src="./Homework_2/equation019.png"><br>
+If two vectors are perpendicular, then θ is 90 degrees or π/2 radians. As such, cos θ gives us 0 whether we set θ to 90 degrees or π/2 radians. 
+</p>
+
+<p>
+Since <b>x</b> and <b>y</b> are perpendicular, we know that μ&lt;<b>x</b>, <b>y</b>&gt; = 0.
+</p>
+
+<p>
+This of course leaves us with just λ &lt;<b>x</b>, <b>x</b>&gt;.
+</p>
+
+<p>
+As such, for λ&lt;<b>x</b>, <b>x</b>&gt; to be zero λ must equal 0.
+</p>
+
+<p>
+If you were to repeat everything we just did but with &lt;<b>y</b>, λ<b>x</b> + μ<b>y</b>&gt; you'll see that μ must also equal 0.
+</p>
+
+<p>
+Therefore, λ<b>x</b> + μ<b>y</b> = 0 iff λ = μ = 0.
+</p>
+
+<p>
+Since our coefficients must be 0, <b>we can safely say that two non-zero perpendicular vectors in </b><img src="./Homework_2/equation020.png"><b> must be linearly independent.</b>
+</p>
+
+<h3>Question 7</h3>
+
+<p>
+We are asked to find all matrices in which <img src="./Homework_2/equation021.png"> such that <img src="./Homework_2/equation022.png">
+</p>
+
+<p>
+To begin, let us have the following:<br>
+<img src="./Homework_2/equation023.png"><br>
+This also implies the following:<br>
+<img src="./Homework_2/equation024.png">
+</p>
+
+<p>
+Now we need to know what values a, b, c, and d must take on to give us a 0 matrix. In order words:<br>
+<img src="./Homework_2/equation025.png">
+</p>
+
+<p>
+Right off the bat, we can see that if a + d = 0 then all that's left to worry about is that pesky bc.
+</p>
+
+<p>
+We also know that det(AB) = det(A) * det(B). In this case, if the det(A) = 0 then det(A<sup>2</sup>) = det(A) * det(A) = 0 * 0 = 0.<br>
+<b>As such, ad - bc = 0. </b>We know this for if the determinate is 0 then we effectively have an area of 0 which is what the <b>0</b> matrix would have. 
+</p>
+
+<h3>Question 8</h3>
+
+<p>
+This one isn't too bad despite the anxiety I am cursed with upon seeing it is a multipart question.
+</p>
+
+<p>
+All we need to do is find what values t should equal to satisfy the following three subquestions. But first, let <b>u</b> = (1, t, 2) and <b>v</b> = (t, 4, 4)
+</p>
+
+<h5>a)</h5>
+
+<p>
+For what value must <i>t</i> be for the two vectors to be parallel?
+</p>
+
+<p>
+My initial thought was perhaps we need the dot (inner) product. However, we should instead use the cross-product! If the cross-product between <b>u</b> and <b>v</b> is the <b>0</b> vector, then we know them to be parallel. Let us crunch some numbers then:
+</p>
+
+<p>
+<img src="./Homework_2/equation026.png">
+</p>
+
+<h5>b)</h5>
+
+<p>
+Orthogonal?
+</p>
+
+<h5>c)</h5>
+
+<p>
+Make a 45 degree angle?
+</p>
+
+<br>
+<br>
+
 
 	</div>
 
@@ -101,6 +377,177 @@
 
 		<br /><br />
 
+			<b>Attachments:</b>
+			<table>
+
+			<tr><td><a href='./Homework_2/equation.png'>equation.png</a></td><td>&nbsp;</td><td>907b</td></tr>
+
+
+			<tr><td><a href='./Homework_2/equation.tex'>equation.tex</a></td><td>&nbsp;</td><td>105b</td></tr>
+
+
+			<tr><td><a href='./Homework_2/equation001.png'>equation001.png</a></td><td>&nbsp;</td><td>501b</td></tr>
+
+
+			<tr><td><a href='./Homework_2/equation001.tex'>equation001.tex</a></td><td>&nbsp;</td><td>33b</td></tr>
+
+
+			<tr><td><a href='./Homework_2/equation002.png'>equation002.png</a></td><td>&nbsp;</td><td>1.01kb</td></tr>
+
+
+			<tr><td><a href='./Homework_2/equation002.tex'>equation002.tex</a></td><td>&nbsp;</td><td>107b</td></tr>
+
+
+			<tr><td><a href='./Homework_2/equation003.png'>equation003.png</a></td><td>&nbsp;</td><td>940b</td></tr>
+
+
+			<tr><td><a href='./Homework_2/equation003.tex'>equation003.tex</a></td><td>&nbsp;</td><td>61b</td></tr>
+
+
+			<tr><td><a href='./Homework_2/equation004.png'>equation004.png</a></td><td>&nbsp;</td><td>943b</td></tr>
+
+
+			<tr><td><a href='./Homework_2/equation004.tex'>equation004.tex</a></td><td>&nbsp;</td><td>56b</td></tr>
+
+
+			<tr><td><a href='./Homework_2/equation005.png'>equation005.png</a></td><td>&nbsp;</td><td>4.89kb</td></tr>
+
+
+			<tr><td><a href='./Homework_2/equation005.tex'>equation005.tex</a></td><td>&nbsp;</td><td>575b</td></tr>
+
+
+			<tr><td><a href='./Homework_2/equation006.png'>equation006.png</a></td><td>&nbsp;</td><td>4.16kb</td></tr>
+
+
+			<tr><td><a href='./Homework_2/equation006.tex'>equation006.tex</a></td><td>&nbsp;</td><td>580b</td></tr>
+
+
+			<tr><td><a href='./Homework_2/equation007.png'>equation007.png</a></td><td>&nbsp;</td><td>2.65kb</td></tr>
+
+
+			<tr><td><a href='./Homework_2/equation007.tex'>equation007.tex</a></td><td>&nbsp;</td><td>305b</td></tr>
+
+
+			<tr><td><a href='./Homework_2/equation008.png'>equation008.png</a></td><td>&nbsp;</td><td>548b</td></tr>
+
+
+			<tr><td><a href='./Homework_2/equation008.tex'>equation008.tex</a></td><td>&nbsp;</td><td>28b</td></tr>
+
+
+			<tr><td><a href='./Homework_2/equation009.png'>equation009.png</a></td><td>&nbsp;</td><td>3.18kb</td></tr>
+
+
+			<tr><td><a href='./Homework_2/equation009.tex'>equation009.tex</a></td><td>&nbsp;</td><td>382b</td></tr>
+
+
+			<tr><td><a href='./Homework_2/equation010.png'>equation010.png</a></td><td>&nbsp;</td><td>287b</td></tr>
+
+
+			<tr><td><a href='./Homework_2/equation010.tex'>equation010.tex</a></td><td>&nbsp;</td><td>11b</td></tr>
+
+
+			<tr><td><a href='./Homework_2/equation011.png'>equation011.png</a></td><td>&nbsp;</td><td>673b</td></tr>
+
+
+			<tr><td><a href='./Homework_2/equation011.tex'>equation011.tex</a></td><td>&nbsp;</td><td>41b</td></tr>
+
+
+			<tr><td><a href='./Homework_2/equation012.png'>equation012.png</a></td><td>&nbsp;</td><td>1.27kb</td></tr>
+
+
+			<tr><td><a href='./Homework_2/equation012.tex'>equation012.tex</a></td><td>&nbsp;</td><td>79b</td></tr>
+
+
+			<tr><td><a href='./Homework_2/equation013.png'>equation013.png</a></td><td>&nbsp;</td><td>949b</td></tr>
+
+
+			<tr><td><a href='./Homework_2/equation013.tex'>equation013.tex</a></td><td>&nbsp;</td><td>87b</td></tr>
+
+
+			<tr><td><a href='./Homework_2/equation014.png'>equation014.png</a></td><td>&nbsp;</td><td>599b</td></tr>
+
+
+			<tr><td><a href='./Homework_2/equation014.tex'>equation014.tex</a></td><td>&nbsp;</td><td>72b</td></tr>
+
+
+			<tr><td><a href='./Homework_2/equation015.png'>equation015.png</a></td><td>&nbsp;</td><td>2.36kb</td></tr>
+
+
+			<tr><td><a href='./Homework_2/equation015.tex'>equation015.tex</a></td><td>&nbsp;</td><td>231b</td></tr>
+
+
+			<tr><td><a href='./Homework_2/equation016.png'>equation016.png</a></td><td>&nbsp;</td><td>959b</td></tr>
+
+
+			<tr><td><a href='./Homework_2/equation016.tex'>equation016.tex</a></td><td>&nbsp;</td><td>142b</td></tr>
+
+
+			<tr><td><a href='./Homework_2/equation017.png'>equation017.png</a></td><td>&nbsp;</td><td>273b</td></tr>
+
+
+			<tr><td><a href='./Homework_2/equation017.tex'>equation017.tex</a></td><td>&nbsp;</td><td>12b</td></tr>
+
+
+			<tr><td><a href='./Homework_2/equation018.png'>equation018.png</a></td><td>&nbsp;</td><td>1.20kb</td></tr>
+
+
+			<tr><td><a href='./Homework_2/equation018.tex'>equation018.tex</a></td><td>&nbsp;</td><td>221b</td></tr>
+
+
+			<tr><td><a href='./Homework_2/equation019.png'>equation019.png</a></td><td>&nbsp;</td><td>936b</td></tr>
+
+
+			<tr><td><a href='./Homework_2/equation019.tex'>equation019.tex</a></td><td>&nbsp;</td><td>105b</td></tr>
+
+
+			<tr><td><a href='./Homework_2/equation020.png'>equation020.png</a></td><td>&nbsp;</td><td>273b</td></tr>
+
+
+			<tr><td><a href='./Homework_2/equation020.tex'>equation020.tex</a></td><td>&nbsp;</td><td>12b</td></tr>
+
+
+			<tr><td><a href='./Homework_2/equation021.png'>equation021.png</a></td><td>&nbsp;</td><td>614b</td></tr>
+
+
+			<tr><td><a href='./Homework_2/equation021.tex'>equation021.tex</a></td><td>&nbsp;</td><td>25b</td></tr>
+
+
+			<tr><td><a href='./Homework_2/equation022.png'>equation022.png</a></td><td>&nbsp;</td><td>419b</td></tr>
+
+
+			<tr><td><a href='./Homework_2/equation022.tex'>equation022.tex</a></td><td>&nbsp;</td><td>13b</td></tr>
+
+
+			<tr><td><a href='./Homework_2/equation023.png'>equation023.png</a></td><td>&nbsp;</td><td>580b</td></tr>
+
+
+			<tr><td><a href='./Homework_2/equation023.tex'>equation023.tex</a></td><td>&nbsp;</td><td>48b</td></tr>
+
+
+			<tr><td><a href='./Homework_2/equation024.png'>equation024.png</a></td><td>&nbsp;</td><td>2.21kb</td></tr>
+
+
+			<tr><td><a href='./Homework_2/equation024.tex'>equation024.tex</a></td><td>&nbsp;</td><td>252b</td></tr>
+
+
+			<tr><td><a href='./Homework_2/equation025.png'>equation025.png</a></td><td>&nbsp;</td><td>1.05kb</td></tr>
+
+
+			<tr><td><a href='./Homework_2/equation025.tex'>equation025.tex</a></td><td>&nbsp;</td><td>45b</td></tr>
+
+
+			<tr><td><a href='./Homework_2/equation026.png'>equation026.png</a></td><td>&nbsp;</td><td>3.06kb</td></tr>
+
+
+			<tr><td><a href='./Homework_2/equation026.tex'>equation026.tex</a></td><td>&nbsp;</td><td>346b</td></tr>
+
+
+			<tr><td><a href='./Homework_2/gnuplot.gnu'>gnuplot.gnu</a></td><td>&nbsp;</td><td>31b</td></tr>
+
+
+			<tr><td><a href='./Homework_2/gnuplot.png'>gnuplot.png</a></td><td>&nbsp;</td><td>2.76kb</td></tr>
+
+			</table>
 	</div>
 
 	
