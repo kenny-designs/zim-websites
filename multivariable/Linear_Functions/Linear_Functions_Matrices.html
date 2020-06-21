@@ -1,0 +1,655 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Linear Functions Matrices</title>
+	<meta name='Generator' content='Zim 0.68'>
+	<style type='text/css'>
+		a          { text-decoration: none      }
+		a:hover    { text-decoration: underline }
+		a:active   { text-decoration: underline }
+		strike     { color: grey                }
+		u          { text-decoration: none;
+					 background-color: yellow   }
+		tt         { color: #2e3436;            }
+		pre        { color: #2e3436;
+					 margin-left: 20px          }
+		h1         { text-decoration: underline;
+					 color: #4e9a06; margin-bottom: 0 }
+		h2         { color: #4e9a06; margin-bottom: 0 }
+		h3         { color: #4e9a06; margin-bottom: 0 }
+		h4         { color: #4e9a06; margin-bottom: 0 }
+		h5         { color: #4e9a06; margin-bottom: 0 }
+		p          { margin-top: 0              }
+		span.zim-tag {
+			color: #ce5c00;
+		}
+		div.zim-object {
+			border-style:solid;
+			border-width:1px;
+		}
+		.checked-box {list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAANOgAADMQBiN+4gQAAAAd0SU1FB9gKGQ8sMEGsKGkAAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAEBUlEQVRIx62V22tdRRTGf7Nn73P2ybntnNOe3NqkPTGgLTVUUZF6QatSLOKTPgqCIqLgQ0H/A1sQQbBYCBb1QfAxiC8tSO1FqHkwJVKtjdTGNraUmObsc9nXmfGh7cGYpM1D5nHWzPetteZb3wg2eB2YqYm4zSadsMtoboiNBH/3TE0awx6j+MRoxoTg/IYRvP19TQrJS0bzhdHGSyKFkLTtjSKwMjyiEz43ynhtP6bdjBCWyFobAf7eT7VhNF/q1FRbjYjmUohlCVPwnB+6FUxMTJipqSmUUhhjEGKd3bMT4ks/Y6oLBK2Yth8hHYtCJXOix7Nf7xLMzc0xOzvLzp078TyPNE3viW3QJPXzhNWbxFFKHCmMhoLn/FHodd48vGfhapdAacXQlkFK5dL6wIUm6fuTZPuvqDQhaMUYYyiVyuQr6rXDexYuAdi3tSv1ZJNs/R/CaszzT+1na88uXFnCEnJVgivBNN8uTJKmHQI/ptOOcXNZzMz9mOqFs90OHpipWcYwlo5P4ebnuOkrvr5wgrH+h3im7y36MzuwRXYZeKha/OhP0EkadFoxQSdGSotedR/+XwMc2XvKdNUFOFqZx6LKZWIiwjgkikNmLp/hm8sH+K1zjFTHXfBYdTi+eJArzXM0GxFxoBDCopLvo/fqEwi1XPkWkGqjFo2TgB1jOYZUKZTS/D1/ncmLh7jon0IbRWoiTi59ymzzJEEQE3cStNZsGxqlfPE57MBbOR8fP3hDGalOO9fq2DlBvmZw8xa2IxACGn6TydlD/O6f5OzSV/zif0cYhLQaEXGkKBbz7Ov/AOlXV1cxgBJRI3fuSTrpTawt18kWIZN1CFuaONI0w0WOXfsI43YIggh/KUSlhqxrMz74AkOZcWBm9QkH+Gw8NDLuITi+m0yzhluSyJzBLcpblUhFxywSRAEtPwQjsKVN30CNh0uvYuOubSHLtN3J0TO1j0pmBNuFbFWRK0gyPRZpktL2I5JQkclKakNlnh54g6ocvevUr/Ai2a7wineEkcJupA3S1Wg0nVZM2E6wbEF5U5G9Q++wI7sfR7h3N8HVNstykBfzH+KJEZwiWD0aIwxCgJ0R1Mu7GXOeJSuK93bZtQIle4D9pUNU5DC5jEsu55AvZakM5NicGyEj8uuz8bUCQgj67QfY671P3vEoeC69gy695U1U7NG7XV0pUwBjDJa1/JJlWWxzHuflzQe5FJ/GsgUVuZ2t8lEkTvfc0aNHb72flBhjVicQQqCUuvM3/M+WDVguWBrMVdDXEGZlBVEUrVCU9d9s5+fnaTQa2PZyPxEIhJaI1EEoZwX4ncynp6fXrmB4eJjR0VFarRbNZnP9P9rt9gohqNVq1Ov1ZbF/AZGev3hLJ2/zAAAAAElFTkSuQmCC)}
+		.xchecked-box {list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAANOgAADMQBiN+4gQAAAAd0SU1FB9gKGQ8bDYnDxEwAAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAEK0lEQVRIx9WVS2hTWRjHf/eR3CY1nbxMH2YiZRQS6qO13YlMVxY3SnVcuNIBFezGpSADLoQqLu1sHJCqdCFSXFpw4YOCSH3BtFqttTNamabX3DS5bfO6uffMoglja3RGcDMHzuac7/z/53++//cd+L8P6VuCPQYZ8ADNgBd4J31DcDcQs+GnHByRocEDv0kfBSjAOlYCs11Q+gpwDegS8LMJ+3QIK0ATzEhV8Odnz5bzw8P4dJ25aJQ/WlvJ1df/K7hSLtOcTNI+Pk69rpMTgqIQhCDvh1/VSpw79+gRrRMTmLZNezLJJsPg+a5dmOEwQlFqg1sWG16/Jv7sGWXDwBACFQjC9HcwIMONKkGp4PGAJGEDS0IQmZlhnWnye3c3eiyGo6qr3WHbrJ+dJf7gAXI6zSIr72T7/fgzmT4FHnTBsgrQBfYvTU0km5vxz86iADnAm0rRPTWFt7cXZccOJJcLAGHb2K9ekT93jmwmwwdAAFpjI6Ntbfxw5879ag7l6o1sr5eHHR3IsRgeQK/M4sQE+YEB7JcvEY6zAj45SWFgAPPxYwzHoQxIkQjTPT0kIxE+Noj8sexFn4/xnh58iQTeSpHkHAdrbIzi0BCOrmNPTpK/eJHM3bt8sCyKQCiR4NWePWSiUZw1+ZLXJm4pFKLhzBlCsRh2RUXacVgeGaF47RrL58+zcP8+RrmMkCQinZ1EL1zAjERqmkH+tLYl1G3bCJw4QUjT0IA0MJfLMX/5MqmHD0nZNiUgtGULG/r7ccXjINWuWbnmqsuFu7sb/4EDNLlcBIEioNs2KUAFGmMxmk6dQm1tRZI+3xBqEkiShBQOox05Ql1nJ26gvuIUAWiKQnj/ftStW5Fk+YuF+NldsbBA4cYN9KdPmaso8Fc62ZJtk7l1C2t0FGdxESHE1xE4hkHh6lX0oSHSpRIewC/LrPf7CSgKNpCamkI/fZr8pUuIZBIcpyaBunahPp1mub+fDyMjGKUSChCsq6Nh717q9u2jbnSU0uAgRrFIwTThyhUCqRS+hgZKLS1fJvDm87SNjZGcnsYUAjcQ8vsJ9/Xh7u1FDgRQN20iks3iDA+zZFmYhQLqzZtsj8WY3L0baY2Sf55ICCKpFHUzM2SEQAJCHg+hY8fQDh5EDgRWDoRC1J88SePRo2geD0XAcBy8b98Sv3ePYDZbbf2rFQjLIphMsmDbaEBQVQkePox26BCSz7e6i4bDrDt+nGYhmBscpFAskheC4Js3bPR4qHphFYEnlcI7P4/jdqNpGu8TCe4oCsXr1z//F2ga3+/cSfTJE0qmSVYIsKzaOZDcbjKyzFIiwfvt21kMBLA07YsetzWNd+3tLLW0sH5igvT8PH9Go/z44kX+E4LGjg7GDYOcy4XlOEgLC//5P/5LCFzxOPLmzWyIx+m6fduu7v0NVGqyTSycKksAAAAASUVORK5CYII=)}
+		.unchecked-box {list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAANOgAADMQBiN+4gQAAAAd0SU1FB9gKGQ8qAt8h3m8AAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAA60lEQVRIx+2VsQqDMBRF70sCLg5OLoKgjk7+lJ/hh+STXBwcnRz8ArMEkrxOFktbaC3tULzTg5e8k5vADXDq70VbobXmvu/hvQczg4heHrJfXxQFuq67blZbMc8zpmlCXddIkgTOuZcBUko45zCOI6y1Nz2xFSEEZFmGOI7fGg4A3nsQEZqmuXOu9jallACAtm3fvmutNaIoAjM/dkBECCF89KCbk4eAb+kEnIAT8EsAM0OIz3hSyrssUvss8t5fg+uIrLXPs0gIgWVZYIyBUurQyYdheO4gz3NUVQVjDNZ1PfSjpWmKsixvehfB9GBZ3NndrgAAAABJRU5ErkJggg==)}
+		.migrated-box {list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAANOgAADMQBiN+4gQAAAAd0SU1FB+AKHREFA8vJSnkAAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAC1klEQVRIx+2VT0hUURTGf/e958w4Tc3TYowMw1GyEgwr1MqsFmbZIrIWQZsWJUjbdoHQpl3Qps0swnCRECQFYkR/TC1iKkqmfzAKTo2Vf8hoRsfR995tkRMT87RRWkUHHhy495zvnvvu933wP/75EKkkEAjIYDCIaZpIKRFCZN0kfX9xcTGtra2/irVUEolECIfDlJeXo+s6hmFkDaCqKoZhEAqFSCaTv60pqcSyLAoLC/F4PEtqDmCaJkIIKisrMybX0sdUVRWA5ubmPzdNjjI1cpXkZC/O1fV03PXgdDqRUtpPIITAsqxsDz0Z/3CZQv8uqo4N4C8/Tp2/DdM0MiZQlvk41OTkI/LW1SGtCVb5drD3eCc71wcA+VcAHA5vDd8+3UGakxiJV7i9pdQevU5T1R35pJ3MV5QW1pf+0kWBheJ2SWua8EQXZXsu4fVVYEz1sEKvof5EuxjoPvzpcRvrdp9C2gGMx6cpOHBmbImMesds7BZubwMVDTfXDnQ3vQfK7AC8wLfExMX5whyQc3q2OEnjGm5vE76SQxsfBLr77a7CNf+n0r/l6sSMtsBSnurckiIILCobAtVZhpF4gZF4jubaymj4Ch/fd380LE7bAnjc0NPxk2yqpmEuwGxF0ag+0k5uTpzZeBeaazvj0We8fXojainsb2xh2BZgbe0gSIllzSIUh63wfQ6dZ/O2fbjcKlOj58jJ3cVENESw5yErc9nf2MLQ4jwQAkV1Lqiq37/cZ9WaahJjF9AcmxiPDhLs7ePe23oOnmUwg2hSShQle96tKDjA2HAniusgo9FxnvY9Jxw7RWzGYy92QghM00x5g53qp9sHmtB58/o2umOI2NwGolMnMYUHIb7aAyiKwsjICLqu2/qBEIKUUAohMaSHSLyBSMoPTINQ6CX5+fn2AEVFRZSUlBCPx4nFYhl3L4RESjF/GEgX3pSj+Xw+/H7/b3U/AEOZFnp7O5+5AAAAAElFTkSuQmCC)}
+		ul {list-style-image: none}
+		/* ul rule needed to reset style for sub-bullets */
+
+		span.insen { color: grey                }
+
+		.pages {
+			max-width: 1000px;
+			 padding-left: 320px;
+		}
+		.menu{
+			float:left; width: 300px;
+		}
+		hr{clear:both;}
+	</style>
+</head>
+<body>
+
+<!-- Header -->
+<div class='header'>
+	[ <a href='../Linear_Functions.html'>Prev</a> ]
+
+	[ <span class='insen'>Index</span> ]
+
+	[ <a href='./Linear_Functions_Matrices_Pt._2.html'>Next</a> ]
+</div>
+
+<hr />
+
+<div class="menu">
+<ul>
+<li><a href="../Home.html" title="Home" class="page">Home</a></li>
+<li><a href="../Homework.html" title="Homework" class="page">Homework</a></li>
+<li><a href="../Introduction.html" title="Introduction" class="page">Introduction</a></li>
+<li><a href="../Linear_Functions.html" title="Linear Functions" class="page">Linear Functions</a>
+<ul>
+<li><b>Linear Functions Matrices</b></li>
+<li><a href="./Linear_Functions_Matrices_Pt._2.html" title="Linear Functions Matrices Pt. 2" class="page">Linear Functions Matrices Pt. 2</a></li>
+</ul>
+</li>
+<li><a href="../Lines_and_Planes.html" title="Lines and Planes" class="page">Lines and Planes</a></li>
+<li><a href="../Matrices.html" title="Matrices" class="page">Matrices</a></li>
+<li><a href="../Monday_Meetings.html" title="Monday Meetings" class="page">Monday Meetings</a></li>
+<li><a href="../Udemy_Practice.html" title="Udemy Practice" class="page">Udemy Practice</a></li>
+<li><a href="../Vectors.html" title="Vectors" class="page">Vectors</a></li>
+</ul>
+
+</div>
+
+<!-- Wiki content -->
+
+<div class='pages'>
+	<div class='heading'>
+	<h1>Linear Functions Matrices <a name='Linear Functions:Linear Functions Matrices'></a></h1>
+	</div>
+
+	<div class='content'>
+	<p>
+Created Tuesday16 June 2020
+</p>
+
+<p>
+We just finished Lines and Planes and now we're onto our last topic of vectors. Soon, we shall be learning about derivatives.
+</p>
+
+<h3>Linear Functions</h3>
+
+<p>
+Linear Functions will be the main topic of today. But what are they?
+</p>
+
+<p>
+Take a vector space like so:<br>
+<img src="./Linear_Functions_Matrices/equation.png"><br>
+This reads that T is a function that takes a vector space m and produce a vector space n.
+</p>
+
+<p>
+Def: We say that T is a Linear function iff, for any 2 vectors <b>u</b>, <b>v</b> <img src="./Linear_Functions_Matrices/equation001.png"> and any 2 real numbers λ , μ, we get the following:<br>
+<img src="./Linear_Functions_Matrices/equation002.png">
+</p>
+
+<p>
+This reads, "λ times the <i>image</i> of <b>u</b> plus μ times the <i>image</i> of <b>v</b>." Note the word image.
+</p>
+
+<p>
+<b>Please note!</b> If we can't separate our variables as we did above, then we <b>do not</b> have a linear function between two vector space! Otherwise, we <b>do</b> have one.
+</p>
+
+<p>
+So then, a linear function respects the scalar product along with the addition of our vectors.0
+</p>
+
+<p>
+This implies that T(3<b>u</b>) = 3T(<b>u</b>). Also, that T(<b>u</b> + <b>v</b>) = T(<b>u</b>) + T(<b>v</b>).
+</p>
+
+<p>
+So <b>T is a linear function if it respects the sum and scalar multiplication of of vectors.</b>
+</p>
+
+<p>
+Sum goes to the sum of the image.<br>
+Scalar multiple goes the the scalar multiple of the image.
+</p>
+
+<p>
+So then, our <img src="./Linear_Functions_Matrices/equation003.png"> should be able to do the above 2 things.<br>
+However! The scalar product of <img src="./Linear_Functions_Matrices/equation004.png"> is not the same as the scalar multiplication of <img src="./Linear_Functions_Matrices/equation005.png">. m and n is different afterall.<br>
+Likewise, the addition and scalar multiplication on the left and right sides of the equal sign of the equation below are <b>not</b> the same!<br>
+<img src="./Linear_Functions_Matrices/equation006.png">
+</p>
+
+<p>
+Yes, we separated our vectors and scalars n' whatnot out but the addition and scalar multiplication on both sides are not the same. 
+</p>
+
+<h3>Properties of Linear Functions</h3>
+
+<p>
+1) If T is a linear function then we have the following:<br>
+<img src="./Linear_Functions_Matrices/equation007.png"><br>
+In other words, the <b>0</b> vector of the R<sup>m</sup> gives us the <b>0</b> vector of R<sup>n</sup>.
+</p>
+
+<p>
+How do we prove this?<br>
+<img src="./Linear_Functions_Matrices/equation008.png">
+</p>
+
+<p>
+2) He says this second one is very important. We'll need it a lot of the time in the future.<br>
+A function <img src="./Linear_Functions_Matrices/equation009.png"> is one-to-one iff <img src="./Linear_Functions_Matrices/equation010.png"><br>
+The A -&gt; B reads, "from space A to B."<br>
+Also, if the image maps to the same value then the only way for this to happen in 1-1 (one-to-one) is if they were fed the same value.
+</p>
+
+<p>
+Continuing on:<br>
+If <img src="./Linear_Functions_Matrices/equation011.png"> is 1-1 then this is equivalent to the following proposition:<br>
+<img src="./Linear_Functions_Matrices/equation012.png">
+</p>
+
+<p>
+In other words, if we have a linear function and the only vector that goes to the R<sup>n</sup> <b>0</b> vector is the R<sup>m</sup> <b>0</b> vector, then your function is 1-1.<br>
+Once again, <b>if there's only one way we can get to R</b><sup>m</sup>'s <b>0 vector is via the 0 vector in R</b><sup>n</sup>, <b>then we have a 1-1 function! </b>
+</p>
+
+<p>
+Proof:<br>
+We want to prove that T is 1-1.<br>
+i.e., if <img src="./Linear_Functions_Matrices/equation014.png"><br>
+but T is Linear so we also get the following:<br>
+<img src="./Linear_Functions_Matrices/equation015.png"><br>
+The above implies from hypothesis that:<br>
+<img src="./Linear_Functions_Matrices/equation016.png">
+</p>
+
+<p>
+We assume that T is 1-1. We shall prove that the only element that goes to <b>0 </b>is <b>0.</b> <br>
+Let <img src="./Linear_Functions_Matrices/equation017.png"><br>
+SInce T is linear from property 1 we know that:<br>
+<img src="./Linear_Functions_Matrices/equation018.png">
+</p>
+
+<p>
+So, <img src="./Linear_Functions_Matrices/equation019.png">. But T is 1-1, this implies that <img src="./Linear_Functions_Matrices/equation020.png">
+</p>
+
+<p>
+3) <img src="./Linear_Functions_Matrices/equation021.png"><br>
+Remember, any vectors can be written as a linear combination of the vectors of the base (remember, <b>i</b>, <b>j</b>, and <b>k</b> like when we find the cross product). <br>
+So then also let us have <img src="./Linear_Functions_Matrices/equation022.png"> be the natural basis of R<sup>2</sup>.
+</p>
+
+<p>
+Then <img src="./Linear_Functions_Matrices/equation023.png">. Now if T is a <i>linear function</i>, then:<br>
+<img src="./Linear_Functions_Matrices/equation024.png"><br>
+So, we have x times the image of the first basis. Then we add that to y times the image of the second basis.
+</p>
+
+<p>
+He then also writes that we have this:<br>
+<img src="./Linear_Functions_Matrices/equation025.png">
+</p>
+
+<h3>Theorem from Linear Algebra</h3>
+
+<p>
+If <img src="./Linear_Functions_Matrices/equation026.png"> is a Linear function and <img src="./Linear_Functions_Matrices/equation027.png"> is a basis of R<sup>m</sup>, then if:<br>
+<img src="./Linear_Functions_Matrices/equation028.png"><br>
+We have:<br>
+<img src="./Linear_Functions_Matrices/equation029.png"><br>
+By the way, each T(<b>e</b><sub>i</sub>) from 1 to m is a column. As such, we will have m columns. One for each image of the base as per we see with <b>e</b>. Likewise, <b>we will have n rows!</b><br>
+So then, we shall multiply our mxn matrix by our <b>x</b> vector. How many rows does our <b>x</b> have? Think about it... It's m. It has m rows.
+</p>
+
+<p>
+What this all boils down to is that any time we have a <i>linear function,</i> we can instead write a <b>matrix.</b> Remember how we separated everything out with plus signs manually when we went over the function T earlier? Well, we can simplify that into just making it a matrix as we just saw. Useful!
+</p>
+
+<h3>Example:</h3>
+
+<p>
+Consider the following function:<br>
+<img src="./Linear_Functions_Matrices/equation030.png"><br>
+given by <img src="./Linear_Functions_Matrices/equation031.png">
+</p>
+
+<p>
+1) First we must check if T is <b>Linear.</b>
+</p>
+
+<p>
+<img src="./Linear_Functions_Matrices/equation032.png">
+</p>
+
+<p>
+After all of this, the professor exclaims that yes, it is linear.<br>
+Despite his indepth proof, it's still a little mysterious to as of just what happened here. I'm wrapping my head around it still. If anything, we showed that the scalar multiplication and the addition holds with the function we defined at the beginning of this example. Therefore, it is a linear function.
+</p>
+
+<p>
+2) Check that the elements:<br>
+<img src="./Linear_Functions_Matrices/equation033.png"><br>
+form a basis in R<sup>2</sup>.
+</p>
+
+<p>
+So, we just need to prove that they are linearly independent. Let us refer to them as <b>v</b><sub>1</sub> and <b>v</b><sub>2</sub>.
+</p>
+
+<p>
+As you may remember, for our vectors to be linearly independent they need to add to a <b>0</b> vector. Not only that, the <b>only</b> way for them to add to a zero vector is when they are both multiplied by a scalar of 0. If we can multiply them by anything else and have them add to a <b>0</b> vector, then they are not linearly independent. With that in mind, we have the following:<br>
+<img src="./Linear_Functions_Matrices/equation034.png"><br>
+This implies that:<br>
+<img src="./Linear_Functions_Matrices/equation035.png"><br>
+The above them implies the following two statements:<br>
+<img src="./Linear_Functions_Matrices/equation036.png"><br>
+Last but not least, we now have this implication:<br>
+<img src="./Linear_Functions_Matrices/equation037.png">
+</p>
+
+<p>
+As such, <b>yes, they are linearly independent!</b> <br>
+Because we have only two and the dimension of the space is two, they form a <b>basis.</b>
+</p>
+
+<h3>So how do we write as a matrix?</h3>
+
+<p>
+Okay, we've gone through a lot and proved that the original function was indeed a linear function. Hurray! But we're not done yet...<br>
+How do we find the matrix of T relatively to the given basis?
+</p>
+
+<p>
+Remember, this is our function: <img src="./Linear_Functions_Matrices/equation038.png"><br>
+Also, we are working with the vectors (1, -1) and (1, 1) as we did in part two of the example above.
+</p>
+
+<p>
+Let us begin as follows:<br>
+<img src="./Linear_Functions_Matrices/equation039.png">
+</p>
+
+<p>
+And there we have it! That's the corresponding matrix to our linear function!<br>
+Don't believe me? Well, we can check it too! Observe:<br>
+<img src="./Linear_Functions_Matrices/equation040.png">
+</p>
+
+<h3>Mistakes</h3>
+
+<p>
+Apparently he made a mistake. The matrix is all off. We should have instead have the following:
+</p>
+
+<p>
+<img src="./Linear_Functions_Matrices/equation041.png"><br>
+<img src="./Linear_Functions_Matrices/equation042.png">
+</p>
+
+<p>
+So then, we have:<br>
+<img src="./Linear_Functions_Matrices/equation043.png"><br>
+<img src="./Linear_Functions_Matrices/equation044.png">
+</p>
+
+<p>
+When we write the column, then we get:<br>
+<img src="./Linear_Functions_Matrices/equation045.png">
+</p>
+
+<p>
+We can then check it like so:<br>
+<img src="./Linear_Functions_Matrices/equation046.png">
+</p>
+
+<p>
+<i>I'm not quite sure if he got that all right...</i>
+</p>
+
+<h3>The Next Quiz</h3>
+
+<p>
+He says this will be on the last quiz we take but <b>not</b> on the first one. 
+</p>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+	</div>
+
+	<br />
+
+	<div class='page-footer'>
+		<b>Backlinks:</b>
+
+		<a href='./Linear_Functions_Matrices_Pt._2.html'>Linear Functions:Linear Functions Matrices Pt. 2</a>
+
+		<br /><br />
+
+			<b>Attachments:</b>
+			<table>
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation.png'>equation.png</a></td><td>&nbsp;</td><td>627b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation.tex'>equation.tex</a></td><td>&nbsp;</td><td>47b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation001.png'>equation001.png</a></td><td>&nbsp;</td><td>322b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation001.tex'>equation001.tex</a></td><td>&nbsp;</td><td>16b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation002.png'>equation002.png</a></td><td>&nbsp;</td><td>1.01kb</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation002.tex'>equation002.tex</a></td><td>&nbsp;</td><td>114b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation003.png'>equation003.png</a></td><td>&nbsp;</td><td>273b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation003.tex'>equation003.tex</a></td><td>&nbsp;</td><td>12b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation004.png'>equation004.png</a></td><td>&nbsp;</td><td>273b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation004.tex'>equation004.tex</a></td><td>&nbsp;</td><td>12b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation005.png'>equation005.png</a></td><td>&nbsp;</td><td>266b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation005.tex'>equation005.tex</a></td><td>&nbsp;</td><td>12b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation006.png'>equation006.png</a></td><td>&nbsp;</td><td>1.01kb</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation006.tex'>equation006.tex</a></td><td>&nbsp;</td><td>114b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation007.png'>equation007.png</a></td><td>&nbsp;</td><td>615b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation007.tex'>equation007.tex</a></td><td>&nbsp;</td><td>72b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation008.png'>equation008.png</a></td><td>&nbsp;</td><td>1.33kb</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation008.tex'>equation008.tex</a></td><td>&nbsp;</td><td>274b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation009.png'>equation009.png</a></td><td>&nbsp;</td><td>447b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation009.tex'>equation009.tex</a></td><td>&nbsp;</td><td>19b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation010.png'>equation010.png</a></td><td>&nbsp;</td><td>694b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation010.tex'>equation010.tex</a></td><td>&nbsp;</td><td>41b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation011.png'>equation011.png</a></td><td>&nbsp;</td><td>505b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation011.tex'>equation011.tex</a></td><td>&nbsp;</td><td>41b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation012.png'>equation012.png</a></td><td>&nbsp;</td><td>901b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation012.tex'>equation012.tex</a></td><td>&nbsp;</td><td>120b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation013.png'>equation013.png</a></td><td>&nbsp;</td><td>608b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation013.tex'>equation013.tex</a></td><td>&nbsp;</td><td>57b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation014.png'>equation014.png</a></td><td>&nbsp;</td><td>1.07kb</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation014.tex'>equation014.tex</a></td><td>&nbsp;</td><td>145b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation015.png'>equation015.png</a></td><td>&nbsp;</td><td>728b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation015.tex'>equation015.tex</a></td><td>&nbsp;</td><td>81b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation016.png'>equation016.png</a></td><td>&nbsp;</td><td>770b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation016.tex'>equation016.tex</a></td><td>&nbsp;</td><td>132b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation017.png'>equation017.png</a></td><td>&nbsp;</td><td>615b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation017.tex'>equation017.tex</a></td><td>&nbsp;</td><td>57b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation018.png'>equation018.png</a></td><td>&nbsp;</td><td>618b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation018.tex'>equation018.tex</a></td><td>&nbsp;</td><td>72b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation019.png'>equation019.png</a></td><td>&nbsp;</td><td>710b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation019.tex'>equation019.tex</a></td><td>&nbsp;</td><td>60b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation020.png'>equation020.png</a></td><td>&nbsp;</td><td>455b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation020.tex'>equation020.tex</a></td><td>&nbsp;</td><td>54b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation021.png'>equation021.png</a></td><td>&nbsp;</td><td>1.08kb</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation021.tex'>equation021.tex</a></td><td>&nbsp;</td><td>88b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation022.png'>equation022.png</a></td><td>&nbsp;</td><td>409b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation022.tex'>equation022.tex</a></td><td>&nbsp;</td><td>76b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation023.png'>equation023.png</a></td><td>&nbsp;</td><td>750b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation023.tex'>equation023.tex</a></td><td>&nbsp;</td><td>100b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation024.png'>equation024.png</a></td><td>&nbsp;</td><td>1.65kb</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation024.tex'>equation024.tex</a></td><td>&nbsp;</td><td>207b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation025.png'>equation025.png</a></td><td>&nbsp;</td><td>509b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation025.tex'>equation025.tex</a></td><td>&nbsp;</td><td>81b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation026.png'>equation026.png</a></td><td>&nbsp;</td><td>505b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation026.tex'>equation026.tex</a></td><td>&nbsp;</td><td>41b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation027.png'>equation027.png</a></td><td>&nbsp;</td><td>425b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation027.tex'>equation027.tex</a></td><td>&nbsp;</td><td>47b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation028.png'>equation028.png</a></td><td>&nbsp;</td><td>686b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation028.tex'>equation028.tex</a></td><td>&nbsp;</td><td>62b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation029.png'>equation029.png</a></td><td>&nbsp;</td><td>977b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation029.tex'>equation029.tex</a></td><td>&nbsp;</td><td>153b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation030.png'>equation030.png</a></td><td>&nbsp;</td><td>445b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation030.tex'>equation030.tex</a></td><td>&nbsp;</td><td>41b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation031.png'>equation031.png</a></td><td>&nbsp;</td><td>806b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation031.tex'>equation031.tex</a></td><td>&nbsp;</td><td>26b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation032.png'>equation032.png</a></td><td>&nbsp;</td><td>4.83kb</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation032.tex'>equation032.tex</a></td><td>&nbsp;</td><td>459b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation033.png'>equation033.png</a></td><td>&nbsp;</td><td>531b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation033.tex'>equation033.tex</a></td><td>&nbsp;</td><td>82b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation034.png'>equation034.png</a></td><td>&nbsp;</td><td>757b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation034.tex'>equation034.tex</a></td><td>&nbsp;</td><td>127b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation035.png'>equation035.png</a></td><td>&nbsp;</td><td>1.04kb</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation035.tex'>equation035.tex</a></td><td>&nbsp;</td><td>195b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation036.png'>equation036.png</a></td><td>&nbsp;</td><td>424b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation036.tex'>equation036.tex</a></td><td>&nbsp;</td><td>38b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation037.png'>equation037.png</a></td><td>&nbsp;</td><td>372b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation037.tex'>equation037.tex</a></td><td>&nbsp;</td><td>17b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation038.png'>equation038.png</a></td><td>&nbsp;</td><td>806b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation038.tex'>equation038.tex</a></td><td>&nbsp;</td><td>26b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation039.png'>equation039.png</a></td><td>&nbsp;</td><td>2.02kb</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation039.tex'>equation039.tex</a></td><td>&nbsp;</td><td>253b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation040.png'>equation040.png</a></td><td>&nbsp;</td><td>741b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation040.tex'>equation040.tex</a></td><td>&nbsp;</td><td>117b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation041.png'>equation041.png</a></td><td>&nbsp;</td><td>1.01kb</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation041.tex'>equation041.tex</a></td><td>&nbsp;</td><td>146b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation042.png'>equation042.png</a></td><td>&nbsp;</td><td>999b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation042.tex'>equation042.tex</a></td><td>&nbsp;</td><td>144b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation043.png'>equation043.png</a></td><td>&nbsp;</td><td>758b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation043.tex'>equation043.tex</a></td><td>&nbsp;</td><td>72b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation044.png'>equation044.png</a></td><td>&nbsp;</td><td>742b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation044.tex'>equation044.tex</a></td><td>&nbsp;</td><td>71b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation045.png'>equation045.png</a></td><td>&nbsp;</td><td>412b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation045.tex'>equation045.tex</a></td><td>&nbsp;</td><td>43b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation046.png'>equation046.png</a></td><td>&nbsp;</td><td>823b</td></tr>
+
+
+			<tr><td><a href='./Linear_Functions_Matrices/equation046.tex'>equation046.tex</a></td><td>&nbsp;</td><td>121b</td></tr>
+
+			</table>
+	</div>
+
+	
+
+</div>
+
+</body>
+</html>
