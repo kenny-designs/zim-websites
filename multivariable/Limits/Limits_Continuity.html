@@ -1,0 +1,689 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Limits Continuity</title>
+	<meta name='Generator' content='Zim 0.68'>
+	<style type='text/css'>
+		a          { text-decoration: none      }
+		a:hover    { text-decoration: underline }
+		a:active   { text-decoration: underline }
+		strike     { color: grey                }
+		u          { text-decoration: none;
+					 background-color: yellow   }
+		tt         { color: #2e3436;            }
+		pre        { color: #2e3436;
+					 margin-left: 20px          }
+		h1         { text-decoration: underline;
+					 color: #4e9a06; margin-bottom: 0 }
+		h2         { color: #4e9a06; margin-bottom: 0 }
+		h3         { color: #4e9a06; margin-bottom: 0 }
+		h4         { color: #4e9a06; margin-bottom: 0 }
+		h5         { color: #4e9a06; margin-bottom: 0 }
+		p          { margin-top: 0              }
+		span.zim-tag {
+			color: #ce5c00;
+		}
+		div.zim-object {
+			border-style:solid;
+			border-width:1px;
+		}
+		.checked-box {list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAANOgAADMQBiN+4gQAAAAd0SU1FB9gKGQ8sMEGsKGkAAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAEBUlEQVRIx62V22tdRRTGf7Nn73P2ybntnNOe3NqkPTGgLTVUUZF6QatSLOKTPgqCIqLgQ0H/A1sQQbBYCBb1QfAxiC8tSO1FqHkwJVKtjdTGNraUmObsc9nXmfGh7cGYpM1D5nHWzPetteZb3wg2eB2YqYm4zSadsMtoboiNBH/3TE0awx6j+MRoxoTg/IYRvP19TQrJS0bzhdHGSyKFkLTtjSKwMjyiEz43ynhtP6bdjBCWyFobAf7eT7VhNF/q1FRbjYjmUohlCVPwnB+6FUxMTJipqSmUUhhjEGKd3bMT4ks/Y6oLBK2Yth8hHYtCJXOix7Nf7xLMzc0xOzvLzp078TyPNE3viW3QJPXzhNWbxFFKHCmMhoLn/FHodd48vGfhapdAacXQlkFK5dL6wIUm6fuTZPuvqDQhaMUYYyiVyuQr6rXDexYuAdi3tSv1ZJNs/R/CaszzT+1na88uXFnCEnJVgivBNN8uTJKmHQI/ptOOcXNZzMz9mOqFs90OHpipWcYwlo5P4ebnuOkrvr5wgrH+h3im7y36MzuwRXYZeKha/OhP0EkadFoxQSdGSotedR/+XwMc2XvKdNUFOFqZx6LKZWIiwjgkikNmLp/hm8sH+K1zjFTHXfBYdTi+eJArzXM0GxFxoBDCopLvo/fqEwi1XPkWkGqjFo2TgB1jOYZUKZTS/D1/ncmLh7jon0IbRWoiTi59ymzzJEEQE3cStNZsGxqlfPE57MBbOR8fP3hDGalOO9fq2DlBvmZw8xa2IxACGn6TydlD/O6f5OzSV/zif0cYhLQaEXGkKBbz7Ov/AOlXV1cxgBJRI3fuSTrpTawt18kWIZN1CFuaONI0w0WOXfsI43YIggh/KUSlhqxrMz74AkOZcWBm9QkH+Gw8NDLuITi+m0yzhluSyJzBLcpblUhFxywSRAEtPwQjsKVN30CNh0uvYuOubSHLtN3J0TO1j0pmBNuFbFWRK0gyPRZpktL2I5JQkclKakNlnh54g6ocvevUr/Ai2a7wineEkcJupA3S1Wg0nVZM2E6wbEF5U5G9Q++wI7sfR7h3N8HVNstykBfzH+KJEZwiWD0aIwxCgJ0R1Mu7GXOeJSuK93bZtQIle4D9pUNU5DC5jEsu55AvZakM5NicGyEj8uuz8bUCQgj67QfY671P3vEoeC69gy695U1U7NG7XV0pUwBjDJa1/JJlWWxzHuflzQe5FJ/GsgUVuZ2t8lEkTvfc0aNHb72flBhjVicQQqCUuvM3/M+WDVguWBrMVdDXEGZlBVEUrVCU9d9s5+fnaTQa2PZyPxEIhJaI1EEoZwX4ncynp6fXrmB4eJjR0VFarRbNZnP9P9rt9gohqNVq1Ov1ZbF/AZGev3hLJ2/zAAAAAElFTkSuQmCC)}
+		.xchecked-box {list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAANOgAADMQBiN+4gQAAAAd0SU1FB9gKGQ8bDYnDxEwAAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAEK0lEQVRIx9WVS2hTWRjHf/eR3CY1nbxMH2YiZRQS6qO13YlMVxY3SnVcuNIBFezGpSADLoQqLu1sHJCqdCFSXFpw4YOCSH3BtFqttTNamabX3DS5bfO6uffMoglja3RGcDMHzuac7/z/53++//cd+L8P6VuCPQYZ8ADNgBd4J31DcDcQs+GnHByRocEDv0kfBSjAOlYCs11Q+gpwDegS8LMJ+3QIK0ATzEhV8Odnz5bzw8P4dJ25aJQ/WlvJ1df/K7hSLtOcTNI+Pk69rpMTgqIQhCDvh1/VSpw79+gRrRMTmLZNezLJJsPg+a5dmOEwQlFqg1sWG16/Jv7sGWXDwBACFQjC9HcwIMONKkGp4PGAJGEDS0IQmZlhnWnye3c3eiyGo6qr3WHbrJ+dJf7gAXI6zSIr72T7/fgzmT4FHnTBsgrQBfYvTU0km5vxz86iADnAm0rRPTWFt7cXZccOJJcLAGHb2K9ekT93jmwmwwdAAFpjI6Ntbfxw5879ag7l6o1sr5eHHR3IsRgeQK/M4sQE+YEB7JcvEY6zAj45SWFgAPPxYwzHoQxIkQjTPT0kIxE+Noj8sexFn4/xnh58iQTeSpHkHAdrbIzi0BCOrmNPTpK/eJHM3bt8sCyKQCiR4NWePWSiUZw1+ZLXJm4pFKLhzBlCsRh2RUXacVgeGaF47RrL58+zcP8+RrmMkCQinZ1EL1zAjERqmkH+tLYl1G3bCJw4QUjT0IA0MJfLMX/5MqmHD0nZNiUgtGULG/r7ccXjINWuWbnmqsuFu7sb/4EDNLlcBIEioNs2KUAFGmMxmk6dQm1tRZI+3xBqEkiShBQOox05Ql1nJ26gvuIUAWiKQnj/ftStW5Fk+YuF+NldsbBA4cYN9KdPmaso8Fc62ZJtk7l1C2t0FGdxESHE1xE4hkHh6lX0oSHSpRIewC/LrPf7CSgKNpCamkI/fZr8pUuIZBIcpyaBunahPp1mub+fDyMjGKUSChCsq6Nh717q9u2jbnSU0uAgRrFIwTThyhUCqRS+hgZKLS1fJvDm87SNjZGcnsYUAjcQ8vsJ9/Xh7u1FDgRQN20iks3iDA+zZFmYhQLqzZtsj8WY3L0baY2Sf55ICCKpFHUzM2SEQAJCHg+hY8fQDh5EDgRWDoRC1J88SePRo2geD0XAcBy8b98Sv3ePYDZbbf2rFQjLIphMsmDbaEBQVQkePox26BCSz7e6i4bDrDt+nGYhmBscpFAskheC4Js3bPR4qHphFYEnlcI7P4/jdqNpGu8TCe4oCsXr1z//F2ga3+/cSfTJE0qmSVYIsKzaOZDcbjKyzFIiwfvt21kMBLA07YsetzWNd+3tLLW0sH5igvT8PH9Go/z44kX+E4LGjg7GDYOcy4XlOEgLC//5P/5LCFzxOPLmzWyIx+m6fduu7v0NVGqyTSycKksAAAAASUVORK5CYII=)}
+		.unchecked-box {list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAANOgAADMQBiN+4gQAAAAd0SU1FB9gKGQ8qAt8h3m8AAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAA60lEQVRIx+2VsQqDMBRF70sCLg5OLoKgjk7+lJ/hh+STXBwcnRz8ArMEkrxOFktbaC3tULzTg5e8k5vADXDq70VbobXmvu/hvQczg4heHrJfXxQFuq67blZbMc8zpmlCXddIkgTOuZcBUko45zCOI6y1Nz2xFSEEZFmGOI7fGg4A3nsQEZqmuXOu9jallACAtm3fvmutNaIoAjM/dkBECCF89KCbk4eAb+kEnIAT8EsAM0OIz3hSyrssUvss8t5fg+uIrLXPs0gIgWVZYIyBUurQyYdheO4gz3NUVQVjDNZ1PfSjpWmKsixvehfB9GBZ3NndrgAAAABJRU5ErkJggg==)}
+		.migrated-box {list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAANOgAADMQBiN+4gQAAAAd0SU1FB+AKHREFA8vJSnkAAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAC1klEQVRIx+2VT0hUURTGf/e958w4Tc3TYowMw1GyEgwr1MqsFmbZIrIWQZsWJUjbdoHQpl3Qps0swnCRECQFYkR/TC1iKkqmfzAKTo2Vf8hoRsfR995tkRMT87RRWkUHHhy495zvnvvu933wP/75EKkkEAjIYDCIaZpIKRFCZN0kfX9xcTGtra2/irVUEolECIfDlJeXo+s6hmFkDaCqKoZhEAqFSCaTv60pqcSyLAoLC/F4PEtqDmCaJkIIKisrMybX0sdUVRWA5ubmPzdNjjI1cpXkZC/O1fV03PXgdDqRUtpPIITAsqxsDz0Z/3CZQv8uqo4N4C8/Tp2/DdM0MiZQlvk41OTkI/LW1SGtCVb5drD3eCc71wcA+VcAHA5vDd8+3UGakxiJV7i9pdQevU5T1R35pJ3MV5QW1pf+0kWBheJ2SWua8EQXZXsu4fVVYEz1sEKvof5EuxjoPvzpcRvrdp9C2gGMx6cpOHBmbImMesds7BZubwMVDTfXDnQ3vQfK7AC8wLfExMX5whyQc3q2OEnjGm5vE76SQxsfBLr77a7CNf+n0r/l6sSMtsBSnurckiIILCobAtVZhpF4gZF4jubaymj4Ch/fd380LE7bAnjc0NPxk2yqpmEuwGxF0ag+0k5uTpzZeBeaazvj0We8fXojainsb2xh2BZgbe0gSIllzSIUh63wfQ6dZ/O2fbjcKlOj58jJ3cVENESw5yErc9nf2MLQ4jwQAkV1Lqiq37/cZ9WaahJjF9AcmxiPDhLs7ePe23oOnmUwg2hSShQle96tKDjA2HAniusgo9FxnvY9Jxw7RWzGYy92QghM00x5g53qp9sHmtB58/o2umOI2NwGolMnMYUHIb7aAyiKwsjICLqu2/qBEIKUUAohMaSHSLyBSMoPTINQ6CX5+fn2AEVFRZSUlBCPx4nFYhl3L4RESjF/GEgX3pSj+Xw+/H7/b3U/AEOZFnp7O5+5AAAAAElFTkSuQmCC)}
+		ul {list-style-image: none}
+		/* ul rule needed to reset style for sub-bullets */
+
+		span.insen { color: grey                }
+
+		.pages {
+			max-width: 1000px;
+			 padding-left: 320px;
+		}
+		.menu{
+			float:left; width: 300px;
+		}
+		hr{clear:both;}
+	</style>
+</head>
+<body>
+
+<!-- Header -->
+<div class='header'>
+	[ <a href='../Limits.html'>Prev</a> ]
+
+	[ <span class='insen'>Index</span> ]
+
+	[ <a href='./Open_Sets_Limits.html'>Next</a> ]
+</div>
+
+<hr />
+
+<div class="menu">
+<ul>
+<li><a href="../Home.html" title="Home" class="page">Home</a></li>
+<li><a href="../Homework.html" title="Homework" class="page">Homework</a></li>
+<li><a href="../Introduction.html" title="Introduction" class="page">Introduction</a></li>
+<li><a href="../Limits.html" title="Limits" class="page">Limits</a>
+<ul>
+<li><b>Limits Continuity</b></li>
+<li><a href="./Open_Sets_Limits.html" title="Open Sets Limits" class="page">Open Sets Limits</a></li>
+</ul>
+</li>
+<li><a href="../Linear_Functions.html" title="Linear Functions" class="page">Linear Functions</a></li>
+<li><a href="../Lines_and_Planes.html" title="Lines and Planes" class="page">Lines and Planes</a></li>
+<li><a href="../Matrices.html" title="Matrices" class="page">Matrices</a></li>
+<li><a href="../Monday_Meetings.html" title="Monday Meetings" class="page">Monday Meetings</a></li>
+<li><a href="../Udemy_Practice.html" title="Udemy Practice" class="page">Udemy Practice</a></li>
+<li><a href="../Vectors.html" title="Vectors" class="page">Vectors</a></li>
+</ul>
+
+</div>
+
+<!-- Wiki content -->
+
+<div class='pages'>
+	<div class='heading'>
+	<h1>Limits Continuity <a name='Limits:Limits Continuity'></a></h1>
+	</div>
+
+	<div class='content'>
+	<p>
+Created Monday 22 June 2020
+</p>
+
+<p>
+We shall finish with limits and learn what the continuity of the vector function is.
+</p>
+
+<p>
+In a vector space, we only have vector addition and scalar multiplication. We can't divide two vectors as well as you may have inferred.
+</p>
+
+<h3>Theorems or Properties of Limits</h3>
+
+<p>
+Assume we have a space of <img src="./Limits_Continuity/equation.png"> a function <i>f</i> that takes us from that <img src="./Limits_Continuity/equation001.png"> space to a <img src="./Limits_Continuity/equation002.png"> space.<br>
+In other words: <img src="./Limits_Continuity/equation003.png">
+</p>
+
+<p>
+Next, let <img src="./Limits_Continuity/equation004.png"> be an open set and let <img src="./Limits_Continuity/equation005.png">. Vector <b>a</b> in this case is either in U or on the edge/border of it.
+</p>
+
+<p>
+Now for limits.<br>
+Let us have the following <b>open interval:</b><br>
+<img src="./Limits_Continuity/equation006.png"><br>
+And yes, I do mean interval and not a vector as we've been used to.
+</p>
+
+<p>
+Now then, we also have this:<br>
+<img src="./Limits_Continuity/equation007.png">
+</p>
+
+<p>
+Our professor then states that we must check the following properties:<br>
+1) (<b>x</b> and <b>a</b> are in <img src="./Limits_Continuity/equation009.png"> by the way!)<br>
+If <img src="./Limits_Continuity/equation008.png">and <img src="./Limits_Continuity/equation010.png"> we get <img src="./Limits_Continuity/equation011.png">
+</p>
+
+<p>
+2)  If <img src="./Limits_Continuity/equation012.png"><br>
+Then <img src="./Limits_Continuity/equation013.png">
+</p>
+
+<p>
+3) Since <img src="./Limits_Continuity/equation014.png"> is a vector function, we can think of it as: <img src="./Limits_Continuity/equation015.png">. Remember, <b>y</b> is the image of vector <b>x</b> under the function <i>f</i>.<br>
+It's also good to note that each y<sub>i</sub> is an algebraic expression of the vector <b>x</b>. In fact, it is good to note this because we can take (y<sub>1</sub>, ..., y<sub>m</sub>) and write it as this:<br>
+<img src="./Limits_Continuity/equation016.png"> with <img src="./Limits_Continuity/equation017.png">
+</p>
+
+<h3>Example</h3>
+
+<p>
+So, let's say we have the following: <img src="./Limits_Continuity/equation018.png"><br>
+Now then, say we have this: <img src="./Limits_Continuity/equation019.png"><br>
+As per property from above, we get this:<br>
+<img src="./Limits_Continuity/equation020.png">
+</p>
+
+<h3>Further Definition</h3>
+
+<p>
+So then, we have the following:<br>
+<img src="./Limits_Continuity/equation021.png">
+</p>
+
+<h3>Proof of 2</h3>
+
+<p>
+I believe he's referring to the second property from before.
+</p>
+
+<p>
+Anyways, let's begin!<br>
+Let <img src="./Limits_Continuity/equation022.png"> and <img src="./Limits_Continuity/equation023.png"> where under the right arrow we have 'f, g'<br>
+We also have this:<br>
+<img src="./Limits_Continuity/equation024.png">
+</p>
+
+<p>
+Okay now for something rather lengthy:<br>
+<img src="./Limits_Continuity/equation025.png">
+</p>
+
+<p>
+Now then, we want to prove that the limit of the sums is the sum of the limits.  How do we do this? Like so:<br>
+<img src="./Limits_Continuity/equation026.png"><br>
+If you were wondering why we had ε/2 earlier, the above equation is why. In case that's not obvious, it's so we can add ε/2 to just ε.
+</p>
+
+<p>
+Now then, we wish to take the minimum of <img src="./Limits_Continuity/equation027.png">.<br>
+So, we get this:<br>
+<img src="./Limits_Continuity/equation028.png">
+</p>
+
+<p>
+This is the proof he says.
+</p>
+
+<h3>Note on HW</h3>
+
+<p>
+He says that this upcoming Thursday (06/25/2020) he will post the answers to homework 3. Also, the next homework will be uploaded as well.
+</p>
+
+<h3>Sample Exercises</h3>
+
+<br>
+
+<h5>Example 1</h5>
+
+<p>
+Prove the following:<br>
+<img src="./Limits_Continuity/equation029.png">
+</p>
+
+<p>
+This is rather easy back in single variable calculus but now we must take into consideration two variables! Hence the <i>multi</i> in multivariable calculus.
+</p>
+
+<p>
+Anyways, what the previous limit gives us is a function <img src="./Limits_Continuity/equation030.png">
+</p>
+
+<p>
+<b>Solution</b><br>
+First off, we know that x<sup>2</sup> is always positive or 0. In other words: <br>
+<img src="./Limits_Continuity/equation032.png"><br>
+Notice that we also tacked on the y<sup>2</sup> there.<br>
+Also, <img src="./Limits_Continuity/equation031.png">. (0, 0) is the origin.
+</p>
+
+<p>
+Knowing what we know now, we can infer the following:<br>
+<img src="./Limits_Continuity/equation033.png">
+</p>
+
+<p>
+Multiplying everything by y, we have:<br>
+<img src="./Limits_Continuity/equation034.png"><br>
+Likewise, if y is negative then we have:<br>
+<img src="./Limits_Continuity/equation035.png">
+</p>
+
+<p>
+You may have noticed something interesting here. So, if x and y are both approaching 0 then we are bounded by those equations we just wrote. You might remember a little term known as the <b>squeeze theorem.</b>
+</p>
+
+<p>
+<b>So then, by the squeeze theorem we can see that the limit is 0!</b><br>
+Replace the y's with 0 in the previous two equations and you'll that it is indeed 0.
+</p>
+
+<h5>Example 2</h5>
+
+<p>
+Solve the following limit:<br>
+<img src="./Limits_Continuity/equation036.png">
+</p>
+
+
+<hr>
+
+<p>
+<i>Quick aside:</i><br>
+Firstly, remember from Calculus 1 that:<br>
+<img src="./Limits_Continuity/equation037.png">
+</p>
+
+<p>
+Thinking about this carefully, we see that:<br>
+<img src="./Limits_Continuity/equation038.png"> <br>
+where the ∼ is a weaker = sign essentially. Moving on, we have:<br>
+<img src="./Limits_Continuity/equation039.png"><br>
+If not that, then:<br>
+<img src="./Limits_Continuity/equation040.png">
+</p>
+
+<hr>
+
+<p>
+We can apply what we just discussed in the aside like so:<br>
+<img src="./Limits_Continuity/equation041.png">
+</p>
+
+<p>
+As such, <b>our final answer is:</b> 0. Yup. Just zero.
+</p>
+
+<p>
+You might be wondering why 0? How did we glean that information? Well, if our <img src="./Limits_Continuity/equation042.png"> is less than or equal to <img src="./Limits_Continuity/equation043.png"> then what happens when x and y approach 0? They become 0! That is my own interpretation at least. Here is what the professor wrote:<br>
+<img src="./Limits_Continuity/equation044.png"><br>
+Then of course, <img src="./Limits_Continuity/equation045.png">
+</p>
+
+<h5>Example 3</h5>
+
+<p>
+<img src="./Limits_Continuity/equation046.png">
+</p>
+
+<p>
+My first instinct was to split the fraction into 2 different ones with the numerator sinx and -y. However, the professor shows us the following:
+</p>
+
+<p>
+<img src="./Limits_Continuity/equation047.png">
+</p>
+
+<p>
+So, we have the limits 1 and -1. <b>This isn't good!</b> As such, <b>THE LIMIT DOESN'T EXIST!</b><br>
+And that is our solution.
+</p>
+
+<h5>Example 4</h5>
+
+<p>
+<img src="./Limits_Continuity/equation048.png">
+</p>
+
+<p>
+We shall do something similar to what we saw in example 3. Observe:<br>
+<img src="./Limits_Continuity/equation049.png">
+</p>
+
+<p>
+So then, we have the limits 0 and 1/2. Since they are different, the final solution is that <b>THE LIMIT DOESN'T EXIST!</b>
+</p>
+
+<h3>Continuity</h3>
+
+<p>
+Only 3 minutes of the lecture left. We shall end it with a quick definition of continuity.<br>
+Let <img src="./Limits_Continuity/equation050.png"><br>
+Then: <img src="./Limits_Continuity/equation051.png"><br>
+<i>f</i> is continuous at <b>a</b> iff <img src="./Limits_Continuity/equation052.png"><br>
+<i>f</i> is continuous iff <img src="./Limits_Continuity/equation053.png">
+</p>
+
+<p>
+Also, remember that the sum of two continuous functions is a continuous function. The same applies for the difference and also the multiples of continuous functions.
+</p>
+
+<p>
+We can't multiply/divide unless <img src="./Limits_Continuity/equation054.png">. Notice, R is in 1 dimension.
+</p>
+
+
+	</div>
+
+	<br />
+
+	<div class='page-footer'>
+
+			<b>Attachments:</b>
+			<table>
+
+			<tr><td><a href='./Limits_Continuity/equation.png'>equation.png</a></td><td>&nbsp;</td><td>266b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation.tex'>equation.tex</a></td><td>&nbsp;</td><td>12b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation001.png'>equation001.png</a></td><td>&nbsp;</td><td>266b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation001.tex'>equation001.tex</a></td><td>&nbsp;</td><td>12b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation002.png'>equation002.png</a></td><td>&nbsp;</td><td>273b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation002.tex'>equation002.tex</a></td><td>&nbsp;</td><td>13b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation003.png'>equation003.png</a></td><td>&nbsp;</td><td>465b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation003.tex'>equation003.tex</a></td><td>&nbsp;</td><td>41b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation004.png'>equation004.png</a></td><td>&nbsp;</td><td>387b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation004.tex'>equation004.tex</a></td><td>&nbsp;</td><td>22b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation005.png'>equation005.png</a></td><td>&nbsp;</td><td>588b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation005.tex'>equation005.tex</a></td><td>&nbsp;</td><td>70b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation006.png'>equation006.png</a></td><td>&nbsp;</td><td>558b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation006.tex'>equation006.tex</a></td><td>&nbsp;</td><td>31b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation007.png'>equation007.png</a></td><td>&nbsp;</td><td>518b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation007.tex'>equation007.tex</a></td><td>&nbsp;</td><td>27b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation008.png'>equation008.png</a></td><td>&nbsp;</td><td>948b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation008.tex'>equation008.tex</a></td><td>&nbsp;</td><td>116b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation009.png'>equation009.png</a></td><td>&nbsp;</td><td>266b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation009.tex'>equation009.tex</a></td><td>&nbsp;</td><td>12b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation010.png'>equation010.png</a></td><td>&nbsp;</td><td>335b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation010.tex'>equation010.tex</a></td><td>&nbsp;</td><td>16b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation011.png'>equation011.png</a></td><td>&nbsp;</td><td>848b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation011.tex'>equation011.tex</a></td><td>&nbsp;</td><td>101b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation012.png'>equation012.png</a></td><td>&nbsp;</td><td>1.18kb</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation012.tex'>equation012.tex</a></td><td>&nbsp;</td><td>143b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation013.png'>equation013.png</a></td><td>&nbsp;</td><td>1.16kb</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation013.tex'>equation013.tex</a></td><td>&nbsp;</td><td>150b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation014.png'>equation014.png</a></td><td>&nbsp;</td><td>465b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation014.tex'>equation014.tex</a></td><td>&nbsp;</td><td>41b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation015.png'>equation015.png</a></td><td>&nbsp;</td><td>905b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation015.tex'>equation015.tex</a></td><td>&nbsp;</td><td>91b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation016.png'>equation016.png</a></td><td>&nbsp;</td><td>861b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation016.tex'>equation016.tex</a></td><td>&nbsp;</td><td>80b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation017.png'>equation017.png</a></td><td>&nbsp;</td><td>547b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation017.tex'>equation017.tex</a></td><td>&nbsp;</td><td>29b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation018.png'>equation018.png</a></td><td>&nbsp;</td><td>477b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation018.tex'>equation018.tex</a></td><td>&nbsp;</td><td>41b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation019.png'>equation019.png</a></td><td>&nbsp;</td><td>1.07kb</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation019.tex'>equation019.tex</a></td><td>&nbsp;</td><td>70b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation020.png'>equation020.png</a></td><td>&nbsp;</td><td>1.55kb</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation020.tex'>equation020.tex</a></td><td>&nbsp;</td><td>138b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation021.png'>equation021.png</a></td><td>&nbsp;</td><td>1.71kb</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation021.tex'>equation021.tex</a></td><td>&nbsp;</td><td>245b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation022.png'>equation022.png</a></td><td>&nbsp;</td><td>387b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation022.tex'>equation022.tex</a></td><td>&nbsp;</td><td>22b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation023.png'>equation023.png</a></td><td>&nbsp;</td><td>404b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation023.tex'>equation023.tex</a></td><td>&nbsp;</td><td>26b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation024.png'>equation024.png</a></td><td>&nbsp;</td><td>1.21kb</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation024.tex'>equation024.tex</a></td><td>&nbsp;</td><td>201b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation025.png'>equation025.png</a></td><td>&nbsp;</td><td>2.86kb</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation025.tex'>equation025.tex</a></td><td>&nbsp;</td><td>476b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation026.png'>equation026.png</a></td><td>&nbsp;</td><td>2.12kb</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation026.tex'>equation026.tex</a></td><td>&nbsp;</td><td>339b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation027.png'>equation027.png</a></td><td>&nbsp;</td><td>512b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation027.tex'>equation027.tex</a></td><td>&nbsp;</td><td>54b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation028.png'>equation028.png</a></td><td>&nbsp;</td><td>1.30kb</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation028.tex'>equation028.tex</a></td><td>&nbsp;</td><td>154b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation029.png'>equation029.png</a></td><td>&nbsp;</td><td>939b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation029.tex'>equation029.tex</a></td><td>&nbsp;</td><td>71b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation030.png'>equation030.png</a></td><td>&nbsp;</td><td>499b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation030.tex'>equation030.tex</a></td><td>&nbsp;</td><td>39b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation031.png'>equation031.png</a></td><td>&nbsp;</td><td>648b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation031.tex'>equation031.tex</a></td><td>&nbsp;</td><td>29b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation032.png'>equation032.png</a></td><td>&nbsp;</td><td>526b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation032.tex'>equation032.tex</a></td><td>&nbsp;</td><td>25b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation033.png'>equation033.png</a></td><td>&nbsp;</td><td>659b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation033.tex'>equation033.tex</a></td><td>&nbsp;</td><td>35b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation034.png'>equation034.png</a></td><td>&nbsp;</td><td>934b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation034.tex'>equation034.tex</a></td><td>&nbsp;</td><td>60b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation035.png'>equation035.png</a></td><td>&nbsp;</td><td>927b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation035.tex'>equation035.tex</a></td><td>&nbsp;</td><td>60b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation036.png'>equation036.png</a></td><td>&nbsp;</td><td>1.17kb</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation036.tex'>equation036.tex</a></td><td>&nbsp;</td><td>85b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation037.png'>equation037.png</a></td><td>&nbsp;</td><td>581b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation037.tex'>equation037.tex</a></td><td>&nbsp;</td><td>41b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation038.png'>equation038.png</a></td><td>&nbsp;</td><td>299b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation038.tex'>equation038.tex</a></td><td>&nbsp;</td><td>8b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation039.png'>equation039.png</a></td><td>&nbsp;</td><td>374b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation039.tex'>equation039.tex</a></td><td>&nbsp;</td><td>13b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation040.png'>equation040.png</a></td><td>&nbsp;</td><td>385b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation040.tex'>equation040.tex</a></td><td>&nbsp;</td><td>8b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation041.png'>equation041.png</a></td><td>&nbsp;</td><td>743b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation041.tex'>equation041.tex</a></td><td>&nbsp;</td><td>30b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation042.png'>equation042.png</a></td><td>&nbsp;</td><td>574b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation042.tex'>equation042.tex</a></td><td>&nbsp;</td><td>15b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation043.png'>equation043.png</a></td><td>&nbsp;</td><td>367b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation043.tex'>equation043.tex</a></td><td>&nbsp;</td><td>9b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation044.png'>equation044.png</a></td><td>&nbsp;</td><td>1.95kb</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation044.tex'>equation044.tex</a></td><td>&nbsp;</td><td>147b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation045.png'>equation045.png</a></td><td>&nbsp;</td><td>572b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation045.tex'>equation045.tex</a></td><td>&nbsp;</td><td>31b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation046.png'>equation046.png</a></td><td>&nbsp;</td><td>881b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation046.tex'>equation046.tex</a></td><td>&nbsp;</td><td>70b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation047.png'>equation047.png</a></td><td>&nbsp;</td><td>1.86kb</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation047.tex'>equation047.tex</a></td><td>&nbsp;</td><td>174b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation048.png'>equation048.png</a></td><td>&nbsp;</td><td>785b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation048.tex'>equation048.tex</a></td><td>&nbsp;</td><td>66b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation049.png'>equation049.png</a></td><td>&nbsp;</td><td>1.76kb</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation049.tex'>equation049.tex</a></td><td>&nbsp;</td><td>226b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation050.png'>equation050.png</a></td><td>&nbsp;</td><td>387b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation050.tex'>equation050.tex</a></td><td>&nbsp;</td><td>22b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation051.png'>equation051.png</a></td><td>&nbsp;</td><td>480b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation051.tex'>equation051.tex</a></td><td>&nbsp;</td><td>30b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation052.png'>equation052.png</a></td><td>&nbsp;</td><td>844b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation052.tex'>equation052.tex</a></td><td>&nbsp;</td><td>102b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation053.png'>equation053.png</a></td><td>&nbsp;</td><td>451b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation053.tex'>equation053.tex</a></td><td>&nbsp;</td><td>34b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation054.png'>equation054.png</a></td><td>&nbsp;</td><td>455b</td></tr>
+
+
+			<tr><td><a href='./Limits_Continuity/equation054.tex'>equation054.tex</a></td><td>&nbsp;</td><td>28b</td></tr>
+
+			</table>
+	</div>
+
+	
+
+</div>
+
+</body>
+</html>

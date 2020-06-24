@@ -1,0 +1,409 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Homework 3</title>
+	<meta name='Generator' content='Zim 0.68'>
+	<style type='text/css'>
+		a          { text-decoration: none      }
+		a:hover    { text-decoration: underline }
+		a:active   { text-decoration: underline }
+		strike     { color: grey                }
+		u          { text-decoration: none;
+					 background-color: yellow   }
+		tt         { color: #2e3436;            }
+		pre        { color: #2e3436;
+					 margin-left: 20px          }
+		h1         { text-decoration: underline;
+					 color: #4e9a06; margin-bottom: 0 }
+		h2         { color: #4e9a06; margin-bottom: 0 }
+		h3         { color: #4e9a06; margin-bottom: 0 }
+		h4         { color: #4e9a06; margin-bottom: 0 }
+		h5         { color: #4e9a06; margin-bottom: 0 }
+		p          { margin-top: 0              }
+		span.zim-tag {
+			color: #ce5c00;
+		}
+		div.zim-object {
+			border-style:solid;
+			border-width:1px;
+		}
+		.checked-box {list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAANOgAADMQBiN+4gQAAAAd0SU1FB9gKGQ8sMEGsKGkAAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAEBUlEQVRIx62V22tdRRTGf7Nn73P2ybntnNOe3NqkPTGgLTVUUZF6QatSLOKTPgqCIqLgQ0H/A1sQQbBYCBb1QfAxiC8tSO1FqHkwJVKtjdTGNraUmObsc9nXmfGh7cGYpM1D5nHWzPetteZb3wg2eB2YqYm4zSadsMtoboiNBH/3TE0awx6j+MRoxoTg/IYRvP19TQrJS0bzhdHGSyKFkLTtjSKwMjyiEz43ynhtP6bdjBCWyFobAf7eT7VhNF/q1FRbjYjmUohlCVPwnB+6FUxMTJipqSmUUhhjEGKd3bMT4ks/Y6oLBK2Yth8hHYtCJXOix7Nf7xLMzc0xOzvLzp078TyPNE3viW3QJPXzhNWbxFFKHCmMhoLn/FHodd48vGfhapdAacXQlkFK5dL6wIUm6fuTZPuvqDQhaMUYYyiVyuQr6rXDexYuAdi3tSv1ZJNs/R/CaszzT+1na88uXFnCEnJVgivBNN8uTJKmHQI/ptOOcXNZzMz9mOqFs90OHpipWcYwlo5P4ebnuOkrvr5wgrH+h3im7y36MzuwRXYZeKha/OhP0EkadFoxQSdGSotedR/+XwMc2XvKdNUFOFqZx6LKZWIiwjgkikNmLp/hm8sH+K1zjFTHXfBYdTi+eJArzXM0GxFxoBDCopLvo/fqEwi1XPkWkGqjFo2TgB1jOYZUKZTS/D1/ncmLh7jon0IbRWoiTi59ymzzJEEQE3cStNZsGxqlfPE57MBbOR8fP3hDGalOO9fq2DlBvmZw8xa2IxACGn6TydlD/O6f5OzSV/zif0cYhLQaEXGkKBbz7Ov/AOlXV1cxgBJRI3fuSTrpTawt18kWIZN1CFuaONI0w0WOXfsI43YIggh/KUSlhqxrMz74AkOZcWBm9QkH+Gw8NDLuITi+m0yzhluSyJzBLcpblUhFxywSRAEtPwQjsKVN30CNh0uvYuOubSHLtN3J0TO1j0pmBNuFbFWRK0gyPRZpktL2I5JQkclKakNlnh54g6ocvevUr/Ai2a7wineEkcJupA3S1Wg0nVZM2E6wbEF5U5G9Q++wI7sfR7h3N8HVNstykBfzH+KJEZwiWD0aIwxCgJ0R1Mu7GXOeJSuK93bZtQIle4D9pUNU5DC5jEsu55AvZakM5NicGyEj8uuz8bUCQgj67QfY671P3vEoeC69gy695U1U7NG7XV0pUwBjDJa1/JJlWWxzHuflzQe5FJ/GsgUVuZ2t8lEkTvfc0aNHb72flBhjVicQQqCUuvM3/M+WDVguWBrMVdDXEGZlBVEUrVCU9d9s5+fnaTQa2PZyPxEIhJaI1EEoZwX4ncynp6fXrmB4eJjR0VFarRbNZnP9P9rt9gohqNVq1Ov1ZbF/AZGev3hLJ2/zAAAAAElFTkSuQmCC)}
+		.xchecked-box {list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAANOgAADMQBiN+4gQAAAAd0SU1FB9gKGQ8bDYnDxEwAAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAEK0lEQVRIx9WVS2hTWRjHf/eR3CY1nbxMH2YiZRQS6qO13YlMVxY3SnVcuNIBFezGpSADLoQqLu1sHJCqdCFSXFpw4YOCSH3BtFqttTNamabX3DS5bfO6uffMoglja3RGcDMHzuac7/z/53++//cd+L8P6VuCPQYZ8ADNgBd4J31DcDcQs+GnHByRocEDv0kfBSjAOlYCs11Q+gpwDegS8LMJ+3QIK0ATzEhV8Odnz5bzw8P4dJ25aJQ/WlvJ1df/K7hSLtOcTNI+Pk69rpMTgqIQhCDvh1/VSpw79+gRrRMTmLZNezLJJsPg+a5dmOEwQlFqg1sWG16/Jv7sGWXDwBACFQjC9HcwIMONKkGp4PGAJGEDS0IQmZlhnWnye3c3eiyGo6qr3WHbrJ+dJf7gAXI6zSIr72T7/fgzmT4FHnTBsgrQBfYvTU0km5vxz86iADnAm0rRPTWFt7cXZccOJJcLAGHb2K9ekT93jmwmwwdAAFpjI6Ntbfxw5879ag7l6o1sr5eHHR3IsRgeQK/M4sQE+YEB7JcvEY6zAj45SWFgAPPxYwzHoQxIkQjTPT0kIxE+Noj8sexFn4/xnh58iQTeSpHkHAdrbIzi0BCOrmNPTpK/eJHM3bt8sCyKQCiR4NWePWSiUZw1+ZLXJm4pFKLhzBlCsRh2RUXacVgeGaF47RrL58+zcP8+RrmMkCQinZ1EL1zAjERqmkH+tLYl1G3bCJw4QUjT0IA0MJfLMX/5MqmHD0nZNiUgtGULG/r7ccXjINWuWbnmqsuFu7sb/4EDNLlcBIEioNs2KUAFGmMxmk6dQm1tRZI+3xBqEkiShBQOox05Ql1nJ26gvuIUAWiKQnj/ftStW5Fk+YuF+NldsbBA4cYN9KdPmaso8Fc62ZJtk7l1C2t0FGdxESHE1xE4hkHh6lX0oSHSpRIewC/LrPf7CSgKNpCamkI/fZr8pUuIZBIcpyaBunahPp1mub+fDyMjGKUSChCsq6Nh717q9u2jbnSU0uAgRrFIwTThyhUCqRS+hgZKLS1fJvDm87SNjZGcnsYUAjcQ8vsJ9/Xh7u1FDgRQN20iks3iDA+zZFmYhQLqzZtsj8WY3L0baY2Sf55ICCKpFHUzM2SEQAJCHg+hY8fQDh5EDgRWDoRC1J88SePRo2geD0XAcBy8b98Sv3ePYDZbbf2rFQjLIphMsmDbaEBQVQkePox26BCSz7e6i4bDrDt+nGYhmBscpFAskheC4Js3bPR4qHphFYEnlcI7P4/jdqNpGu8TCe4oCsXr1z//F2ga3+/cSfTJE0qmSVYIsKzaOZDcbjKyzFIiwfvt21kMBLA07YsetzWNd+3tLLW0sH5igvT8PH9Go/z44kX+E4LGjg7GDYOcy4XlOEgLC//5P/5LCFzxOPLmzWyIx+m6fduu7v0NVGqyTSycKksAAAAASUVORK5CYII=)}
+		.unchecked-box {list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAANOgAADMQBiN+4gQAAAAd0SU1FB9gKGQ8qAt8h3m8AAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAA60lEQVRIx+2VsQqDMBRF70sCLg5OLoKgjk7+lJ/hh+STXBwcnRz8ArMEkrxOFktbaC3tULzTg5e8k5vADXDq70VbobXmvu/hvQczg4heHrJfXxQFuq67blZbMc8zpmlCXddIkgTOuZcBUko45zCOI6y1Nz2xFSEEZFmGOI7fGg4A3nsQEZqmuXOu9jallACAtm3fvmutNaIoAjM/dkBECCF89KCbk4eAb+kEnIAT8EsAM0OIz3hSyrssUvss8t5fg+uIrLXPs0gIgWVZYIyBUurQyYdheO4gz3NUVQVjDNZ1PfSjpWmKsixvehfB9GBZ3NndrgAAAABJRU5ErkJggg==)}
+		.migrated-box {list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAANOgAADMQBiN+4gQAAAAd0SU1FB+AKHREFA8vJSnkAAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAC1klEQVRIx+2VT0hUURTGf/e958w4Tc3TYowMw1GyEgwr1MqsFmbZIrIWQZsWJUjbdoHQpl3Qps0swnCRECQFYkR/TC1iKkqmfzAKTo2Vf8hoRsfR995tkRMT87RRWkUHHhy495zvnvvu933wP/75EKkkEAjIYDCIaZpIKRFCZN0kfX9xcTGtra2/irVUEolECIfDlJeXo+s6hmFkDaCqKoZhEAqFSCaTv60pqcSyLAoLC/F4PEtqDmCaJkIIKisrMybX0sdUVRWA5ubmPzdNjjI1cpXkZC/O1fV03PXgdDqRUtpPIITAsqxsDz0Z/3CZQv8uqo4N4C8/Tp2/DdM0MiZQlvk41OTkI/LW1SGtCVb5drD3eCc71wcA+VcAHA5vDd8+3UGakxiJV7i9pdQevU5T1R35pJ3MV5QW1pf+0kWBheJ2SWua8EQXZXsu4fVVYEz1sEKvof5EuxjoPvzpcRvrdp9C2gGMx6cpOHBmbImMesds7BZubwMVDTfXDnQ3vQfK7AC8wLfExMX5whyQc3q2OEnjGm5vE76SQxsfBLr77a7CNf+n0r/l6sSMtsBSnurckiIILCobAtVZhpF4gZF4jubaymj4Ch/fd380LE7bAnjc0NPxk2yqpmEuwGxF0ag+0k5uTpzZeBeaazvj0We8fXojainsb2xh2BZgbe0gSIllzSIUh63wfQ6dZ/O2fbjcKlOj58jJ3cVENESw5yErc9nf2MLQ4jwQAkV1Lqiq37/cZ9WaahJjF9AcmxiPDhLs7ePe23oOnmUwg2hSShQle96tKDjA2HAniusgo9FxnvY9Jxw7RWzGYy92QghM00x5g53qp9sHmtB58/o2umOI2NwGolMnMYUHIb7aAyiKwsjICLqu2/qBEIKUUAohMaSHSLyBSMoPTINQ6CX5+fn2AEVFRZSUlBCPx4nFYhl3L4RESjF/GEgX3pSj+Xw+/H7/b3U/AEOZFnp7O5+5AAAAAElFTkSuQmCC)}
+		ul {list-style-image: none}
+		/* ul rule needed to reset style for sub-bullets */
+
+		span.insen { color: grey                }
+
+		.pages {
+			max-width: 1000px;
+			 padding-left: 320px;
+		}
+		.menu{
+			float:left; width: 300px;
+		}
+		hr{clear:both;}
+	</style>
+</head>
+<body>
+
+<!-- Header -->
+<div class='header'>
+	[ <a href='./Homework_2.html'>Prev</a> ]
+
+	[ <span class='insen'>Index</span> ]
+
+	[ <a href='../Introduction.html'>Next</a> ]
+</div>
+
+<hr />
+
+<div class="menu">
+<ul>
+<li><a href="../Home.html" title="Home" class="page">Home</a></li>
+<li><a href="../Homework.html" title="Homework" class="page">Homework</a>
+<ul>
+<li><a href="./Homework_1.html" title="Homework 1" class="page">Homework 1</a></li>
+<li><a href="./Homework_2.html" title="Homework 2" class="page">Homework 2</a></li>
+<li><b>Homework 3</b></li>
+</ul>
+</li>
+<li><a href="../Introduction.html" title="Introduction" class="page">Introduction</a></li>
+<li><a href="../Limits.html" title="Limits" class="page">Limits</a></li>
+<li><a href="../Linear_Functions.html" title="Linear Functions" class="page">Linear Functions</a></li>
+<li><a href="../Lines_and_Planes.html" title="Lines and Planes" class="page">Lines and Planes</a></li>
+<li><a href="../Matrices.html" title="Matrices" class="page">Matrices</a></li>
+<li><a href="../Monday_Meetings.html" title="Monday Meetings" class="page">Monday Meetings</a></li>
+<li><a href="../Udemy_Practice.html" title="Udemy Practice" class="page">Udemy Practice</a></li>
+<li><a href="../Vectors.html" title="Vectors" class="page">Vectors</a></li>
+</ul>
+
+</div>
+
+<!-- Wiki content -->
+
+<div class='pages'>
+	<div class='heading'>
+	<h1>Homework 3 <a name='Homework:Homework 3'></a></h1>
+	</div>
+
+	<div class='content'>
+	<p>
+1) Show that every <i>linear map</i> from a one-dimensional vector space to itself is multiplication by some scalar.
+</p>
+
+<p>
+<b>My Answer</b><br>
+I'm not 100% sure what is being asked but here is my attempt:<br>
+Let <img src="./Homework_3/equation.png">, <img src="./Homework_3/equation001.png">, <img src="./Homework_3/equation002.png">
+</p>
+
+<p>
+<img src="./Homework_3/equation003.png"><br>
+Therefore, we see that every linear map from a one-dimensional vector space to itself is a multiplication by some scalar due to λ.
+</p>
+
+<p>
+2) Give an example of a function <img src="./Homework_3/equation004.png"> such that <img src="./Homework_3/equation005.png"> for all <img src="./Homework_3/equation006.png"> and all <img src="./Homework_3/equation007.png"> but <i>f</i> is not linear.
+</p>
+
+<p>
+<b>My Answer</b><br>
+To be a linear map, it must be able to do the following:<br>
+<img src="./Homework_3/equation009.png">
+</p>
+
+<p>
+In our case, <i>f</i> works with scalars such that <img src="./Homework_3/equation010.png">.
+</p>
+
+<p>
+To give an example of a function <i>f </i>that is not linear, let us have the following:<br>
+<img src="./Homework_3/equation013.png">
+</p>
+
+<p>
+Let us find a matrix A that corresponds to our function <i>f</i>. To do this, let us use the basis vectors for R<sup>2</sup>. 
+</p>
+
+<p>
+<img src="./Homework_3/equation014.png">
+</p>
+
+<p>
+This gives us the matrix:<br>
+<img src="./Homework_3/equation015.png"><br>
+Which implies the following:<br>
+<img src="./Homework_3/equation016.png">
+</p>
+
+<p>
+3) Define the map <img src="./Homework_3/equation017.png">.<br>
+<ol type="1" start="1">
+<li>Show that T is linear.</li>
+</ol>
+</p>
+
+<p>
+<b>My Solution:</b><br>
+To show that it's linear, we must see if addition and scalar multiplication holds like so:<br>
+<img src="./Homework_3/equation019.png">
+</p>
+
+<p>
+As you can (hopefully) see, it all holds!
+</p>
+
+<p>
+<ol type="1" start="2">
+<li>Show that T is surjective</li>
+</ol>
+I don't believe we ever went over this term. I'll try to answer anyways.<br>
+A quick search online reveals the following definition: Suppose <img src="./Homework_3/equation020.png"> is a linear transformation. Then T is <b>surjective</b> if for every <img src="./Homework_3/equation021.png">. From what I understand, that means from every possible <b>u</b> there should be a corresponding <b>r</b> after applying the transformation (aka, we run it through the T function).
+</p>
+
+<p>
+I can up with the following proof. I'm not sure if it's correct but here we go anyways:<br>
+<img src="./Homework_3/equation022.png">
+</p>
+
+<p>
+<ol type="1" start="3">
+<li>Find the matrix for T with respect to the canonical basis of R<sup>2</sup></li>
+</ol>
+Oh! I think I got this one! We're just finding the matrix that goes along with the linear map. Let's begin!<br>
+First, we have the basis vectors (1, 0) and (0, 1). With those, we have the following:<br>
+<img src="./Homework_3/equation023.png">
+</p>
+
+<p>
+Great!, so the resulting vectors make up each column of our matrix! Observe:<br>
+<img src="./Homework_3/equation024.png">
+</p>
+
+<p>
+And that's it! We can double check our work like so:<br>
+<img src="./Homework_3/equation025.png">
+</p>
+
+<p>
+Wow! Just like we saw earlier! Hurray.
+</p>
+
+<p>
+<ol type="1" start="4">
+<li>Show that the map <img src="./Homework_3/equation018.png"></li>
+</ol>
+Here, we just do what we did in part 1 of the question. However, we'll soon see that the '+ 1' portion of the function gives us trouble!<br>
+<img src="./Homework_3/equation026.png">
+</p>
+
+<p>
+As you can hopefully tell, we end up with a single lingering +1. However, that is not enough! We need two +1's if anything to make this all work. Plus, we can't distribute the λ or μ over the +1 without just changing it to λ or μ. As such, scalar multiplication and addition do <b>not</b> hold! Therefore, we do not have a linear map/function.
+</p>
+
+<p>
+4) Let M<sub>2x2</sub> be the vector space for all 2 x 2 matrices with entries the real numbers, and let B be a fixed 2 x 2 matrix. If we define the map <img src="./Homework_3/equation027.png"> by:<br>
+<img src="./Homework_3/equation028.png"><br>
+verify that T is a linear function.
+</p>
+
+<br>
+<br>
+<br>
+<br>
+
+
+	</div>
+
+	<br />
+
+	<div class='page-footer'>
+
+			<b>Attachments:</b>
+			<table>
+
+			<tr><td><a href='./Homework_3/equation.png'>equation.png</a></td><td>&nbsp;</td><td>461b</td></tr>
+
+
+			<tr><td><a href='./Homework_3/equation.tex'>equation.tex</a></td><td>&nbsp;</td><td>37b</td></tr>
+
+
+			<tr><td><a href='./Homework_3/equation001.png'>equation001.png</a></td><td>&nbsp;</td><td>401b</td></tr>
+
+
+			<tr><td><a href='./Homework_3/equation001.tex'>equation001.tex</a></td><td>&nbsp;</td><td>33b</td></tr>
+
+
+			<tr><td><a href='./Homework_3/equation002.png'>equation002.png</a></td><td>&nbsp;</td><td>350b</td></tr>
+
+
+			<tr><td><a href='./Homework_3/equation002.tex'>equation002.tex</a></td><td>&nbsp;</td><td>22b</td></tr>
+
+
+			<tr><td><a href='./Homework_3/equation003.png'>equation003.png</a></td><td>&nbsp;</td><td>784b</td></tr>
+
+
+			<tr><td><a href='./Homework_3/equation003.tex'>equation003.tex</a></td><td>&nbsp;</td><td>92b</td></tr>
+
+
+			<tr><td><a href='./Homework_3/equation004.png'>equation004.png</a></td><td>&nbsp;</td><td>499b</td></tr>
+
+
+			<tr><td><a href='./Homework_3/equation004.tex'>equation004.tex</a></td><td>&nbsp;</td><td>39b</td></tr>
+
+
+			<tr><td><a href='./Homework_3/equation005.png'>equation005.png</a></td><td>&nbsp;</td><td>559b</td></tr>
+
+
+			<tr><td><a href='./Homework_3/equation005.tex'>equation005.tex</a></td><td>&nbsp;</td><td>27b</td></tr>
+
+
+			<tr><td><a href='./Homework_3/equation006.png'>equation006.png</a></td><td>&nbsp;</td><td>350b</td></tr>
+
+
+			<tr><td><a href='./Homework_3/equation006.tex'>equation006.tex</a></td><td>&nbsp;</td><td>22b</td></tr>
+
+
+			<tr><td><a href='./Homework_3/equation007.png'>equation007.png</a></td><td>&nbsp;</td><td>366b</td></tr>
+
+
+			<tr><td><a href='./Homework_3/equation007.tex'>equation007.tex</a></td><td>&nbsp;</td><td>18b</td></tr>
+
+
+			<tr><td><a href='./Homework_3/equation008.png'>equation008.png</a></td><td>&nbsp;</td><td>437b</td></tr>
+
+
+			<tr><td><a href='./Homework_3/equation008.tex'>equation008.tex</a></td><td>&nbsp;</td><td>35b</td></tr>
+
+
+			<tr><td><a href='./Homework_3/equation009.png'>equation009.png</a></td><td>&nbsp;</td><td>1.01kb</td></tr>
+
+
+			<tr><td><a href='./Homework_3/equation009.tex'>equation009.tex</a></td><td>&nbsp;</td><td>114b</td></tr>
+
+
+			<tr><td><a href='./Homework_3/equation010.png'>equation010.png</a></td><td>&nbsp;</td><td>635b</td></tr>
+
+
+			<tr><td><a href='./Homework_3/equation010.tex'>equation010.tex</a></td><td>&nbsp;</td><td>61b</td></tr>
+
+
+			<tr><td><a href='./Homework_3/equation011.png'>equation011.png</a></td><td>&nbsp;</td><td>815b</td></tr>
+
+
+			<tr><td><a href='./Homework_3/equation011.tex'>equation011.tex</a></td><td>&nbsp;</td><td>90b</td></tr>
+
+
+			<tr><td><a href='./Homework_3/equation012.png'>equation012.png</a></td><td>&nbsp;</td><td>575b</td></tr>
+
+
+			<tr><td><a href='./Homework_3/equation012.tex'>equation012.tex</a></td><td>&nbsp;</td><td>70b</td></tr>
+
+
+			<tr><td><a href='./Homework_3/equation013.png'>equation013.png</a></td><td>&nbsp;</td><td>869b</td></tr>
+
+
+			<tr><td><a href='./Homework_3/equation013.tex'>equation013.tex</a></td><td>&nbsp;</td><td>52b</td></tr>
+
+
+			<tr><td><a href='./Homework_3/equation014.png'>equation014.png</a></td><td>&nbsp;</td><td>1.17kb</td></tr>
+
+
+			<tr><td><a href='./Homework_3/equation014.tex'>equation014.tex</a></td><td>&nbsp;</td><td>96b</td></tr>
+
+
+			<tr><td><a href='./Homework_3/equation015.png'>equation015.png</a></td><td>&nbsp;</td><td>361b</td></tr>
+
+
+			<tr><td><a href='./Homework_3/equation015.tex'>equation015.tex</a></td><td>&nbsp;</td><td>40b</td></tr>
+
+
+			<tr><td><a href='./Homework_3/equation016.png'>equation016.png</a></td><td>&nbsp;</td><td>1.07kb</td></tr>
+
+
+			<tr><td><a href='./Homework_3/equation016.tex'>equation016.tex</a></td><td>&nbsp;</td><td>111b</td></tr>
+
+
+			<tr><td><a href='./Homework_3/equation017.png'>equation017.png</a></td><td>&nbsp;</td><td>1.02kb</td></tr>
+
+
+			<tr><td><a href='./Homework_3/equation017.tex'>equation017.tex</a></td><td>&nbsp;</td><td>74b</td></tr>
+
+
+			<tr><td><a href='./Homework_3/equation018.png'>equation018.png</a></td><td>&nbsp;</td><td>1.59kb</td></tr>
+
+
+			<tr><td><a href='./Homework_3/equation018.tex'>equation018.tex</a></td><td>&nbsp;</td><td>107b</td></tr>
+
+
+			<tr><td><a href='./Homework_3/equation019.png'>equation019.png</a></td><td>&nbsp;</td><td>3.28kb</td></tr>
+
+
+			<tr><td><a href='./Homework_3/equation019.tex'>equation019.tex</a></td><td>&nbsp;</td><td>297b</td></tr>
+
+
+			<tr><td><a href='./Homework_3/equation020.png'>equation020.png</a></td><td>&nbsp;</td><td>429b</td></tr>
+
+
+			<tr><td><a href='./Homework_3/equation020.tex'>equation020.tex</a></td><td>&nbsp;</td><td>19b</td></tr>
+
+
+			<tr><td><a href='./Homework_3/equation021.png'>equation021.png</a></td><td>&nbsp;</td><td>1.31kb</td></tr>
+
+
+			<tr><td><a href='./Homework_3/equation021.tex'>equation021.tex</a></td><td>&nbsp;</td><td>131b</td></tr>
+
+
+			<tr><td><a href='./Homework_3/equation022.png'>equation022.png</a></td><td>&nbsp;</td><td>1.78kb</td></tr>
+
+
+			<tr><td><a href='./Homework_3/equation022.tex'>equation022.tex</a></td><td>&nbsp;</td><td>137b</td></tr>
+
+
+			<tr><td><a href='./Homework_3/equation023.png'>equation023.png</a></td><td>&nbsp;</td><td>1.23kb</td></tr>
+
+
+			<tr><td><a href='./Homework_3/equation023.tex'>equation023.tex</a></td><td>&nbsp;</td><td>100b</td></tr>
+
+
+			<tr><td><a href='./Homework_3/equation024.png'>equation024.png</a></td><td>&nbsp;</td><td>471b</td></tr>
+
+
+			<tr><td><a href='./Homework_3/equation024.tex'>equation024.tex</a></td><td>&nbsp;</td><td>49b</td></tr>
+
+
+			<tr><td><a href='./Homework_3/equation025.png'>equation025.png</a></td><td>&nbsp;</td><td>725b</td></tr>
+
+
+			<tr><td><a href='./Homework_3/equation025.tex'>equation025.tex</a></td><td>&nbsp;</td><td>124b</td></tr>
+
+
+			<tr><td><a href='./Homework_3/equation026.png'>equation026.png</a></td><td>&nbsp;</td><td>3.56kb</td></tr>
+
+
+			<tr><td><a href='./Homework_3/equation026.tex'>equation026.tex</a></td><td>&nbsp;</td><td>312b</td></tr>
+
+
+			<tr><td><a href='./Homework_3/equation027.png'>equation027.png</a></td><td>&nbsp;</td><td>623b</td></tr>
+
+
+			<tr><td><a href='./Homework_3/equation027.tex'>equation027.tex</a></td><td>&nbsp;</td><td>45b</td></tr>
+
+
+			<tr><td><a href='./Homework_3/equation028.png'>equation028.png</a></td><td>&nbsp;</td><td>591b</td></tr>
+
+
+			<tr><td><a href='./Homework_3/equation028.tex'>equation028.tex</a></td><td>&nbsp;</td><td>14b</td></tr>
+
+			</table>
+	</div>
+
+	
+
+</div>
+
+</body>
+</html>
