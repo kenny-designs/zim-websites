@@ -1,0 +1,878 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Chain Rule - Tangent Plane</title>
+	<meta name='Generator' content='Zim 0.68'>
+	<style type='text/css'>
+		a          { text-decoration: none      }
+		a:hover    { text-decoration: underline }
+		a:active   { text-decoration: underline }
+		strike     { color: grey                }
+		u          { text-decoration: none;
+					 background-color: yellow   }
+		tt         { color: #2e3436;            }
+		pre        { color: #2e3436;
+					 margin-left: 20px          }
+		h1         { text-decoration: underline;
+					 color: #4e9a06; margin-bottom: 0 }
+		h2         { color: #4e9a06; margin-bottom: 0 }
+		h3         { color: #4e9a06; margin-bottom: 0 }
+		h4         { color: #4e9a06; margin-bottom: 0 }
+		h5         { color: #4e9a06; margin-bottom: 0 }
+		p          { margin-top: 0              }
+		span.zim-tag {
+			color: #ce5c00;
+		}
+		div.zim-object {
+			border-style:solid;
+			border-width:1px;
+		}
+		.checked-box {list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAANOgAADMQBiN+4gQAAAAd0SU1FB9gKGQ8sMEGsKGkAAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAEBUlEQVRIx62V22tdRRTGf7Nn73P2ybntnNOe3NqkPTGgLTVUUZF6QatSLOKTPgqCIqLgQ0H/A1sQQbBYCBb1QfAxiC8tSO1FqHkwJVKtjdTGNraUmObsc9nXmfGh7cGYpM1D5nHWzPetteZb3wg2eB2YqYm4zSadsMtoboiNBH/3TE0awx6j+MRoxoTg/IYRvP19TQrJS0bzhdHGSyKFkLTtjSKwMjyiEz43ynhtP6bdjBCWyFobAf7eT7VhNF/q1FRbjYjmUohlCVPwnB+6FUxMTJipqSmUUhhjEGKd3bMT4ks/Y6oLBK2Yth8hHYtCJXOix7Nf7xLMzc0xOzvLzp078TyPNE3viW3QJPXzhNWbxFFKHCmMhoLn/FHodd48vGfhapdAacXQlkFK5dL6wIUm6fuTZPuvqDQhaMUYYyiVyuQr6rXDexYuAdi3tSv1ZJNs/R/CaszzT+1na88uXFnCEnJVgivBNN8uTJKmHQI/ptOOcXNZzMz9mOqFs90OHpipWcYwlo5P4ebnuOkrvr5wgrH+h3im7y36MzuwRXYZeKha/OhP0EkadFoxQSdGSotedR/+XwMc2XvKdNUFOFqZx6LKZWIiwjgkikNmLp/hm8sH+K1zjFTHXfBYdTi+eJArzXM0GxFxoBDCopLvo/fqEwi1XPkWkGqjFo2TgB1jOYZUKZTS/D1/ncmLh7jon0IbRWoiTi59ymzzJEEQE3cStNZsGxqlfPE57MBbOR8fP3hDGalOO9fq2DlBvmZw8xa2IxACGn6TydlD/O6f5OzSV/zif0cYhLQaEXGkKBbz7Ov/AOlXV1cxgBJRI3fuSTrpTawt18kWIZN1CFuaONI0w0WOXfsI43YIggh/KUSlhqxrMz74AkOZcWBm9QkH+Gw8NDLuITi+m0yzhluSyJzBLcpblUhFxywSRAEtPwQjsKVN30CNh0uvYuOubSHLtN3J0TO1j0pmBNuFbFWRK0gyPRZpktL2I5JQkclKakNlnh54g6ocvevUr/Ai2a7wineEkcJupA3S1Wg0nVZM2E6wbEF5U5G9Q++wI7sfR7h3N8HVNstykBfzH+KJEZwiWD0aIwxCgJ0R1Mu7GXOeJSuK93bZtQIle4D9pUNU5DC5jEsu55AvZakM5NicGyEj8uuz8bUCQgj67QfY671P3vEoeC69gy695U1U7NG7XV0pUwBjDJa1/JJlWWxzHuflzQe5FJ/GsgUVuZ2t8lEkTvfc0aNHb72flBhjVicQQqCUuvM3/M+WDVguWBrMVdDXEGZlBVEUrVCU9d9s5+fnaTQa2PZyPxEIhJaI1EEoZwX4ncynp6fXrmB4eJjR0VFarRbNZnP9P9rt9gohqNVq1Ov1ZbF/AZGev3hLJ2/zAAAAAElFTkSuQmCC)}
+		.xchecked-box {list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAANOgAADMQBiN+4gQAAAAd0SU1FB9gKGQ8bDYnDxEwAAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAEK0lEQVRIx9WVS2hTWRjHf/eR3CY1nbxMH2YiZRQS6qO13YlMVxY3SnVcuNIBFezGpSADLoQqLu1sHJCqdCFSXFpw4YOCSH3BtFqttTNamabX3DS5bfO6uffMoglja3RGcDMHzuac7/z/53++//cd+L8P6VuCPQYZ8ADNgBd4J31DcDcQs+GnHByRocEDv0kfBSjAOlYCs11Q+gpwDegS8LMJ+3QIK0ATzEhV8Odnz5bzw8P4dJ25aJQ/WlvJ1df/K7hSLtOcTNI+Pk69rpMTgqIQhCDvh1/VSpw79+gRrRMTmLZNezLJJsPg+a5dmOEwQlFqg1sWG16/Jv7sGWXDwBACFQjC9HcwIMONKkGp4PGAJGEDS0IQmZlhnWnye3c3eiyGo6qr3WHbrJ+dJf7gAXI6zSIr72T7/fgzmT4FHnTBsgrQBfYvTU0km5vxz86iADnAm0rRPTWFt7cXZccOJJcLAGHb2K9ekT93jmwmwwdAAFpjI6Ntbfxw5879ag7l6o1sr5eHHR3IsRgeQK/M4sQE+YEB7JcvEY6zAj45SWFgAPPxYwzHoQxIkQjTPT0kIxE+Noj8sexFn4/xnh58iQTeSpHkHAdrbIzi0BCOrmNPTpK/eJHM3bt8sCyKQCiR4NWePWSiUZw1+ZLXJm4pFKLhzBlCsRh2RUXacVgeGaF47RrL58+zcP8+RrmMkCQinZ1EL1zAjERqmkH+tLYl1G3bCJw4QUjT0IA0MJfLMX/5MqmHD0nZNiUgtGULG/r7ccXjINWuWbnmqsuFu7sb/4EDNLlcBIEioNs2KUAFGmMxmk6dQm1tRZI+3xBqEkiShBQOox05Ql1nJ26gvuIUAWiKQnj/ftStW5Fk+YuF+NldsbBA4cYN9KdPmaso8Fc62ZJtk7l1C2t0FGdxESHE1xE4hkHh6lX0oSHSpRIewC/LrPf7CSgKNpCamkI/fZr8pUuIZBIcpyaBunahPp1mub+fDyMjGKUSChCsq6Nh717q9u2jbnSU0uAgRrFIwTThyhUCqRS+hgZKLS1fJvDm87SNjZGcnsYUAjcQ8vsJ9/Xh7u1FDgRQN20iks3iDA+zZFmYhQLqzZtsj8WY3L0baY2Sf55ICCKpFHUzM2SEQAJCHg+hY8fQDh5EDgRWDoRC1J88SePRo2geD0XAcBy8b98Sv3ePYDZbbf2rFQjLIphMsmDbaEBQVQkePox26BCSz7e6i4bDrDt+nGYhmBscpFAskheC4Js3bPR4qHphFYEnlcI7P4/jdqNpGu8TCe4oCsXr1z//F2ga3+/cSfTJE0qmSVYIsKzaOZDcbjKyzFIiwfvt21kMBLA07YsetzWNd+3tLLW0sH5igvT8PH9Go/z44kX+E4LGjg7GDYOcy4XlOEgLC//5P/5LCFzxOPLmzWyIx+m6fduu7v0NVGqyTSycKksAAAAASUVORK5CYII=)}
+		.unchecked-box {list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAANOgAADMQBiN+4gQAAAAd0SU1FB9gKGQ8qAt8h3m8AAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAA60lEQVRIx+2VsQqDMBRF70sCLg5OLoKgjk7+lJ/hh+STXBwcnRz8ArMEkrxOFktbaC3tULzTg5e8k5vADXDq70VbobXmvu/hvQczg4heHrJfXxQFuq67blZbMc8zpmlCXddIkgTOuZcBUko45zCOI6y1Nz2xFSEEZFmGOI7fGg4A3nsQEZqmuXOu9jallACAtm3fvmutNaIoAjM/dkBECCF89KCbk4eAb+kEnIAT8EsAM0OIz3hSyrssUvss8t5fg+uIrLXPs0gIgWVZYIyBUurQyYdheO4gz3NUVQVjDNZ1PfSjpWmKsixvehfB9GBZ3NndrgAAAABJRU5ErkJggg==)}
+		.migrated-box {list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAANOgAADMQBiN+4gQAAAAd0SU1FB+AKHREFA8vJSnkAAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAC1klEQVRIx+2VT0hUURTGf/e958w4Tc3TYowMw1GyEgwr1MqsFmbZIrIWQZsWJUjbdoHQpl3Qps0swnCRECQFYkR/TC1iKkqmfzAKTo2Vf8hoRsfR995tkRMT87RRWkUHHhy495zvnvvu933wP/75EKkkEAjIYDCIaZpIKRFCZN0kfX9xcTGtra2/irVUEolECIfDlJeXo+s6hmFkDaCqKoZhEAqFSCaTv60pqcSyLAoLC/F4PEtqDmCaJkIIKisrMybX0sdUVRWA5ubmPzdNjjI1cpXkZC/O1fV03PXgdDqRUtpPIITAsqxsDz0Z/3CZQv8uqo4N4C8/Tp2/DdM0MiZQlvk41OTkI/LW1SGtCVb5drD3eCc71wcA+VcAHA5vDd8+3UGakxiJV7i9pdQevU5T1R35pJ3MV5QW1pf+0kWBheJ2SWua8EQXZXsu4fVVYEz1sEKvof5EuxjoPvzpcRvrdp9C2gGMx6cpOHBmbImMesds7BZubwMVDTfXDnQ3vQfK7AC8wLfExMX5whyQc3q2OEnjGm5vE76SQxsfBLr77a7CNf+n0r/l6sSMtsBSnurckiIILCobAtVZhpF4gZF4jubaymj4Ch/fd380LE7bAnjc0NPxk2yqpmEuwGxF0ag+0k5uTpzZeBeaazvj0We8fXojainsb2xh2BZgbe0gSIllzSIUh63wfQ6dZ/O2fbjcKlOj58jJ3cVENESw5yErc9nf2MLQ4jwQAkV1Lqiq37/cZ9WaahJjF9AcmxiPDhLs7ePe23oOnmUwg2hSShQle96tKDjA2HAniusgo9FxnvY9Jxw7RWzGYy92QghM00x5g53qp9sHmtB58/o2umOI2NwGolMnMYUHIb7aAyiKwsjICLqu2/qBEIKUUAohMaSHSLyBSMoPTINQ6CX5+fn2AEVFRZSUlBCPx4nFYhl3L4RESjF/GEgX3pSj+Xw+/H7/b3U/AEOZFnp7O5+5AAAAAElFTkSuQmCC)}
+		ul {list-style-image: none}
+		/* ul rule needed to reset style for sub-bullets */
+
+		span.insen { color: grey                }
+
+		.pages {
+			max-width: 1000px;
+			 padding-left: 320px;
+		}
+		.menu{
+			float:left; width: 300px;
+		}
+		hr{clear:both;}
+	</style>
+</head>
+<body>
+
+<!-- Header -->
+<div class='header'>
+	[ <a href='../Derivatives.html'>Prev</a> ]
+
+	[ <span class='insen'>Index</span> ]
+
+	[ <a href='./Jacobian_Derivative.html'>Next</a> ]
+</div>
+
+<hr />
+
+<div class="menu">
+<ul>
+<li><a href="../Derivatives.html" title="Derivatives" class="page">Derivatives</a>
+<ul>
+<li><b>Chain Rule - Tangent Plane</b></li>
+<li><a href="./Jacobian_Derivative.html" title="Jacobian Derivative" class="page">Jacobian Derivative</a></li>
+<li><a href="./Partial_Derivatives_-_Gradient.html" title="Partial Derivatives - Gradient" class="page">Partial Derivatives - Gradient</a></li>
+</ul>
+</li>
+<li><a href="../Home.html" title="Home" class="page">Home</a></li>
+<li><a href="../Homework.html" title="Homework" class="page">Homework</a></li>
+<li><a href="../Introduction.html" title="Introduction" class="page">Introduction</a></li>
+<li><a href="../Limits.html" title="Limits" class="page">Limits</a></li>
+<li><a href="../Linear_Functions.html" title="Linear Functions" class="page">Linear Functions</a></li>
+<li><a href="../Lines_and_Planes.html" title="Lines and Planes" class="page">Lines and Planes</a></li>
+<li><a href="../Matrices.html" title="Matrices" class="page">Matrices</a></li>
+<li><a href="../Monday_Meetings.html" title="Monday Meetings" class="page">Monday Meetings</a></li>
+<li><a href="../Udemy_Practice.html" title="Udemy Practice" class="page">Udemy Practice</a></li>
+<li><a href="../Vectors.html" title="Vectors" class="page">Vectors</a></li>
+</ul>
+
+</div>
+
+<!-- Wiki content -->
+
+<div class='pages'>
+	<div class='heading'>
+	<h1>Chain Rule - Tangent Plane <a name='Derivatives:Chain Rule - Tangent Plane'></a></h1>
+	</div>
+
+	<div class='content'>
+	<p>
+Created Thursday 25 June 2020
+</p>
+
+<p>
+To begin, remember that the derivative is a linear function between two spaces.<br>
+Not only that, a linear function has a matrix that represents it that of which is mxn.
+</p>
+
+<p>
+And of course, we have the Jacobian matrix like so:<br>
+<img src="./Chain_Rule_-_Tangent_Plane/equation.png">
+</p>
+
+<h3>Properties of the Derivative</h3>
+
+<p>
+1) <img src="./Chain_Rule_-_Tangent_Plane/equation001.png"><br>
+Which essentially just means we can pull out the constant in a linear map.
+</p>
+
+<p>
+2) <img src="./Chain_Rule_-_Tangent_Plane/equation002.png"><br>
+This is because they are linear functions that we can do this.
+</p>
+
+<p>
+3) <b>Chain Rule</b><br>
+This is just like the chain rule back in calculus 1.<br>
+In case you forgot what that was, observe:<br>
+<img src="./Chain_Rule_-_Tangent_Plane/equation003.png"><br>
+This was my own example and not his.
+</p>
+
+<p>
+His example of the chain rule is this:<br>
+<img src="./Chain_Rule_-_Tangent_Plane/equation004.png">
+</p>
+
+<h3>Special Case</h3>
+
+<p>
+Let m = 1 so we have the following: <img src="./Chain_Rule_-_Tangent_Plane/equation005.png">. Notice I didn't write m on the second R. This is because it is 1 so we don't need to write anything.
+</p>
+
+<p>
+Consider the following (γ is gamma and we are using it as a function by the way):<br>
+<img src="./Chain_Rule_-_Tangent_Plane/equation006.png"><br>
+Also, the 3 is being used in place of n to make things easier to understand. So then, γ is going from our 2nd space to our first space.
+</p>
+
+<p>
+Here is a diagram to illustrate a bit about what is occuring:<br>
+<img src="../images/gamma-diagram.png"><br>
+We also have the following:<br>
+<img src="./Chain_Rule_-_Tangent_Plane/equation007.png">
+</p>
+
+<p>
+And also this:<br>
+<img src="./Chain_Rule_-_Tangent_Plane/equation008.png">
+</p>
+
+<p>
+And here is a derivative:<br>
+<img src="./Chain_Rule_-_Tangent_Plane/equation009.png">
+</p>
+
+<p>
+In turn, the <img src="./Chain_Rule_-_Tangent_Plane/equation010.png"> will give us a 1x3 matrix as follows:<br>
+<img src="./Chain_Rule_-_Tangent_Plane/equation011.png"><br>
+And:<br>
+ <img src="./Chain_Rule_-_Tangent_Plane/equation012.png">
+</p>
+
+<p>
+Putting this together, we get the following which is an <b>inner (dot) product </b>between two vectors.<b>:</b><br>
+<img src="./Chain_Rule_-_Tangent_Plane/equation013.png"><br>
+It might be hard to tell, but the very last <img src="./Chain_Rule_-_Tangent_Plane/equation014.png"> in the above equation has a dot above γ. This means the <b>derivative</b> of gamma.<br>
+Also, remember that ∇ is known as nabla. Refer to <a href="./Jacobian_Derivative.html" title="Jacobian Derivative" class="page">Jacobian Derivative</a> to learn about what this does.
+</p>
+
+<h3>Proof of the Chain Rule</h3>
+
+<p>
+He prewrote this portion of the video. Needless to say, it will but quite the gauntlet to decipher everything he wrote...
+</p>
+
+<p>
+Let <img src="./Chain_Rule_-_Tangent_Plane/equation015.png"><br>
+Then:<br>
+<img src="./Chain_Rule_-_Tangent_Plane/equation016.png">
+</p>
+
+<p>
+But! We also have this:<br>
+<img src="./Chain_Rule_-_Tangent_Plane/equation017.png">
+</p>
+
+<p>
+So then, we now have this hot mess:<br>
+<img src="./Chain_Rule_-_Tangent_Plane/equation018.png">
+</p>
+
+<p>
+If you look closely, though, you'll see in that final monstrosity of a fraction a lot of this stuff actually cancels out!<br>
+Also good to note that each one of the above he says is a partial derivative. At least, for the last fraction.
+</p>
+
+<p>
+He wrote a little bit more after this but I couldn't quite tell what it was. We should inquire about him sending us a photo of his proof of the chain rule. Nonetheless, I don't think it's too important. He's merely proving the chain rule which we should all have ingrained within us already.
+</p>
+
+<p>
+He has another paper with a bunch of matrices that he uses to further prove the chain rule. He essentially just says that we take the Jacobian of <i>f</i> and multiply it by the Jacobian of <i>g</i>. 
+</p>
+
+<p>
+He gives us this formula <b>but I am unsure if it is correct. I could hardly see it! </b>This is the best I could make out so double check it:<br>
+<img src="./Chain_Rule_-_Tangent_Plane/equation019.png">
+</p>
+
+<h3>Examples</h3>
+
+<p>
+Oh no... He prewrote these as well!
+</p>
+
+<h5>Example 1</h5>
+
+<p>
+Verify the chain rule in the following example:<br>
+<img src="../images/chain-rule-example-1.png"><br>
+Where we have the following:<br>
+<img src="./Chain_Rule_-_Tangent_Plane/equation020.png">
+</p>
+
+<p>
+This in turn gives us:<br>
+<img src="./Chain_Rule_-_Tangent_Plane/equation021.png">
+</p>
+
+<p>
+This implies that the partial derivative of h in regards to x is as follows:<br>
+<img src="./Chain_Rule_-_Tangent_Plane/equation022.png">
+</p>
+
+<p>
+Also, based on what we were studying earlier in the lecture we have:<br>
+<img src="./Chain_Rule_-_Tangent_Plane/equation023.png">
+</p>
+
+<p>
+He writes out the details of calculating this but I can't really see it. It's essentially just the long way to get the same answer we got above. Which was:<br>
+<img src="./Chain_Rule_-_Tangent_Plane/equation024.png"><br>
+In case you already forgot.
+</p>
+
+<h5>Example 2</h5>
+
+<p>
+This problem isn't so bad. We just want to find <img src="./Chain_Rule_-_Tangent_Plane/equation025.png"> at (1, 1).
+</p>
+
+<p>
+Imagine a triangle that looks like this:<br>
+<img src="../images/chain-rule-example-2.png"><br>
+Let our functions be defined as:<br>
+<img src="./Chain_Rule_-_Tangent_Plane/equation026.png">
+</p>
+
+<p>
+To begin, we need to find the Jacobian matrix for both functions.<br>
+Starting with function <i>g</i>, we have the following:<br>
+Let:<br>
+<img src="./Chain_Rule_-_Tangent_Plane/equation028.png"><br>
+Then:<br>
+<img src="./Chain_Rule_-_Tangent_Plane/equation027.png">
+</p>
+
+<p>
+Now for function <i>f</i>:<br>
+Let:<br>
+<img src="./Chain_Rule_-_Tangent_Plane/equation029.png"><br>
+Then:<br>
+<img src="./Chain_Rule_-_Tangent_Plane/equation030.png">
+</p>
+
+<p>
+Great! So we have the Jacobian matrices for both f and g. But now we wanna find <img src="./Chain_Rule_-_Tangent_Plane/equation031.png"> at (1, 1).
+</p>
+
+<p>
+First off, let's plug this into our Jacobian matrix for g like so:<br>
+<img src="./Chain_Rule_-_Tangent_Plane/equation032.png">
+</p>
+
+<p>
+We also have this: g(1, 1) = (1<sup>2</sup> + 1, 1<sup>2</sup>) = (2, 1).<br>
+Since we are going from <i>g</i> to <i>f</i>, let's plug (2, 1) into <i>f </i>like so:<br>
+<img src="./Chain_Rule_-_Tangent_Plane/equation033.png">
+</p>
+
+<p>
+Fantastic! We're almost done. Now we can just multiply these matrices and get our <b>final answer</b>!<br>
+<img src="./Chain_Rule_-_Tangent_Plane/equation034.png">
+</p>
+
+<h3>Now for something important (again)</h3>
+
+<p>
+Consider the case m = 1. This means that our function <img src="./Chain_Rule_-_Tangent_Plane/equation035.png">.<br>
+This implies the following:<br>
+<img src="./Chain_Rule_-_Tangent_Plane/equation036.png"><br>
+By the way, this is read as, "the derivative at point <b>a</b>..." in case you weren't sure why it was written like that.
+</p>
+
+<p>
+Anyways...<br>
+There is a theorem which states that if:<br>
+<img src="./Chain_Rule_-_Tangent_Plane/equation037.png"> is a linear function, then we can find a vector <img src="./Chain_Rule_-_Tangent_Plane/equation038.png">.<br>
+We can find the inner (dot) product like this so long as <b>w</b> is a constant vector in <img src="./Chain_Rule_-_Tangent_Plane/equation039.png"> space.<br>
+He also notes that: <b>w</b> depends on l (which is a lowercase l).
+</p>
+
+<p>
+Moving forward, <b>w</b> is also known as the gradient of <i>f</i> at point <b>a</b>. We write that like so:<br>
+<img src="./Chain_Rule_-_Tangent_Plane/equation041.png">
+</p>
+
+<p>
+We also have this important equation:<br>
+<img src="./Chain_Rule_-_Tangent_Plane/equation042.png">
+</p>
+
+<p>
+<b>And now for another important theorem!</b><br>
+Let <b>u</b> be a direction vector. We have this theorem:<br>
+<img src="./Chain_Rule_-_Tangent_Plane/equation043.png">
+</p>
+
+<p>
+To get the above theorem, you apply from the equation above it the following:<br>
+<img src="./Chain_Rule_-_Tangent_Plane/equation044.png">
+</p>
+
+<h3>Prove the Following</h3>
+
+<p>
+Let <img src="./Chain_Rule_-_Tangent_Plane/equation045.png"> be the <b>directional derivative</b> of <i>f</i> at the point <b>a </b>in the direction <b>u</b>. As such, we have:<br>
+<img src="./Chain_Rule_-_Tangent_Plane/equation046.png"> is the maximum value when the direction <b>u</b> is <img src="./Chain_Rule_-_Tangent_Plane/equation047.png">.
+</p>
+
+<p>
+He states that the proof is <i>easy.</i><br>
+<img src="./Chain_Rule_-_Tangent_Plane/equation048.png"><br>
+Do not forget the formula for the inner (dot) product! It is as follows:<br>
+<img src="./Chain_Rule_-_Tangent_Plane/equation049.png"><br>
+Also, do not forget that cos(0) = 1. As such, if the angle between is the vectors is 0 then they are parallel.
+</p>
+
+<h3>Remark:</h3>
+
+<p>
+So, let's observe the following partial dertivative. Remember, <b>e</b><sub>i</sub> is the canonical direction. I.e., the natural basis directions! You know, (1, 0, 0), (0, 1, 0), and (0, 0, 1) for the third dimension. I hope you remember this... Anyways, here it is:<br>
+<img src="./Chain_Rule_-_Tangent_Plane/equation050.png">
+</p>
+
+<p>
+As you can probably tell, it's similar to what we were working with before but instead of the direction vector <b>u</b> we're using the canonical directions of <b>e</b>.
+</p>
+
+<h3>Curves</h3>
+
+<p>
+Now we talk a little bit about curves.<br>
+Let <img src="./Chain_Rule_-_Tangent_Plane/equation051.png"> be a differentiable curve. Also, γ is known as gamma in case you forgot.<br>
+So then, let us take the derivative of gamma like so:<br>
+<img src="./Chain_Rule_-_Tangent_Plane/equation052.png"><br>
+He says that the derivative of γ is the, "derivative of each component." I would write what those components were but I cannot see them for the life of me.<br>
+Anyways, in simple terms the derivative of γ gives us the <b>velocity. </b>Not only that, it is <b>the tangent line</b> to <img src="./Chain_Rule_-_Tangent_Plane/equation053.png"> at the point t. The second derivative gives us acceleration.
+</p>
+
+<h3>Another important theorem</h3>
+
+<p>
+Another very hard to read thing...
+</p>
+
+<p>
+Let <img src="./Chain_Rule_-_Tangent_Plane/equation054.png"> which is an open set.<br>
+We also have <img src="./Chain_Rule_-_Tangent_Plane/equation055.png"> which is a differentiable function.
+</p>
+
+<p>
+The <b>level set</b> c of <i>f</i> is a set as follows:<br>
+<img src="./Chain_Rule_-_Tangent_Plane/equation056.png">
+</p>
+
+<p>
+For example, the sphere.<br>
+<img src="./Chain_Rule_-_Tangent_Plane/equation057.png"><br>
+The <b>level</b> will be a sphere <img src="./Chain_Rule_-_Tangent_Plane/equation058.png"> where 1 is the radius of the sphere.
+</p>
+
+<p>
+The set S<sub>c</sub> is known as the <b>hyper surface </b>in <img src="./Chain_Rule_-_Tangent_Plane/equation059.png"> and has the dimension m = 1.
+</p>
+
+<h5>Now for another theorem</h5>
+
+<p>
+If <img src="./Chain_Rule_-_Tangent_Plane/equation060.png"><br>
+I.e., if <b>v</b> is the tangent vector at t = 0 of the curve <img src="./Chain_Rule_-_Tangent_Plane/equation061.png"> with <img src="./Chain_Rule_-_Tangent_Plane/equation062.png"> then we have the following:<br>
+<img src="./Chain_Rule_-_Tangent_Plane/equation063.png">
+</p>
+
+<h3>Proof</h3>
+
+<p>
+Please note, I did the best I could to copy what he wrote. Some of this might not be accurate though...<br>
+Let <img src="./Chain_Rule_-_Tangent_Plane/equation064.png"> with <img src="./Chain_Rule_-_Tangent_Plane/equation065.png">. Then the tangent of <b>a</b> will be the derivative of your function when t = 0 and <img src="./Chain_Rule_-_Tangent_Plane/equation066.png">.
+</p>
+
+<p>
+In other words, <i>f</i> is a constant function in t.<br>
+Applying the chain rule, we say:<br>
+<img src="./Chain_Rule_-_Tangent_Plane/equation067.png"><br>
+and for t = 0 we have<br>
+<img src="./Chain_Rule_-_Tangent_Plane/equation068.png">
+</p>
+
+<p>
+So the tangent vector at <b>a</b> of all curves passing through <b>a</b> from a plane <img src="./Chain_Rule_-_Tangent_Plane/equation069.png">
+</p>
+
+<p>
+This is called the <b>tangent hyperplane</b> to the surface S<sub>c</sub> at <b>a</b> and its equation is (I don't know if this is right. Once again, could hardly tell what he wrote. Here's my best crack at it nonetheless):<br>
+<img src="./Chain_Rule_-_Tangent_Plane/equation070.png">
+</p>
+
+
+	</div>
+
+	<br />
+
+	<div class='page-footer'>
+
+			<b>Attachments:</b>
+			<table>
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation.png'>equation.png</a></td><td>&nbsp;</td><td>1.93kb</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation.tex'>equation.tex</a></td><td>&nbsp;</td><td>411b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation001.png'>equation001.png</a></td><td>&nbsp;</td><td>1.07kb</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation001.tex'>equation001.tex</a></td><td>&nbsp;</td><td>104b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation002.png'>equation002.png</a></td><td>&nbsp;</td><td>1.03kb</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation002.tex'>equation002.tex</a></td><td>&nbsp;</td><td>78b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation003.png'>equation003.png</a></td><td>&nbsp;</td><td>1.24kb</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation003.tex'>equation003.tex</a></td><td>&nbsp;</td><td>121b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation004.png'>equation004.png</a></td><td>&nbsp;</td><td>1.09kb</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation004.tex'>equation004.tex</a></td><td>&nbsp;</td><td>54b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation005.png'>equation005.png</a></td><td>&nbsp;</td><td>487b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation005.tex'>equation005.tex</a></td><td>&nbsp;</td><td>39b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation006.png'>equation006.png</a></td><td>&nbsp;</td><td>791b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation006.tex'>equation006.tex</a></td><td>&nbsp;</td><td>67b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation007.png'>equation007.png</a></td><td>&nbsp;</td><td>852b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation007.tex'>equation007.tex</a></td><td>&nbsp;</td><td>53b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation008.png'>equation008.png</a></td><td>&nbsp;</td><td>912b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation008.tex'>equation008.tex</a></td><td>&nbsp;</td><td>41b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation009.png'>equation009.png</a></td><td>&nbsp;</td><td>1.08kb</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation009.tex'>equation009.tex</a></td><td>&nbsp;</td><td>52b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation010.png'>equation010.png</a></td><td>&nbsp;</td><td>458b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation010.tex'>equation010.tex</a></td><td>&nbsp;</td><td>14b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation011.png'>equation011.png</a></td><td>&nbsp;</td><td>845b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation011.tex'>equation011.tex</a></td><td>&nbsp;</td><td>106b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation012.png'>equation012.png</a></td><td>&nbsp;</td><td>1.40kb</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation012.tex'>equation012.tex</a></td><td>&nbsp;</td><td>82b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation013.png'>equation013.png</a></td><td>&nbsp;</td><td>4.09kb</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation013.tex'>equation013.tex</a></td><td>&nbsp;</td><td>452b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation014.png'>equation014.png</a></td><td>&nbsp;</td><td>342b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation014.tex'>equation014.tex</a></td><td>&nbsp;</td><td>15b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation015.png'>equation015.png</a></td><td>&nbsp;</td><td>401b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation015.tex'>equation015.tex</a></td><td>&nbsp;</td><td>18b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation016.png'>equation016.png</a></td><td>&nbsp;</td><td>991b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation016.tex'>equation016.tex</a></td><td>&nbsp;</td><td>70b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation017.png'>equation017.png</a></td><td>&nbsp;</td><td>798b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation017.tex'>equation017.tex</a></td><td>&nbsp;</td><td>26b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation018.png'>equation018.png</a></td><td>&nbsp;</td><td>4.01kb</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation018.tex'>equation018.tex</a></td><td>&nbsp;</td><td>306b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation019.png'>equation019.png</a></td><td>&nbsp;</td><td>1.05kb</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation019.tex'>equation019.tex</a></td><td>&nbsp;</td><td>127b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation020.png'>equation020.png</a></td><td>&nbsp;</td><td>1.47kb</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation020.tex'>equation020.tex</a></td><td>&nbsp;</td><td>84b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation021.png'>equation021.png</a></td><td>&nbsp;</td><td>1.27kb</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation021.tex'>equation021.tex</a></td><td>&nbsp;</td><td>70b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation022.png'>equation022.png</a></td><td>&nbsp;</td><td>1.64kb</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation022.tex'>equation022.tex</a></td><td>&nbsp;</td><td>107b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation023.png'>equation023.png</a></td><td>&nbsp;</td><td>1.27kb</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation023.tex'>equation023.tex</a></td><td>&nbsp;</td><td>233b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation024.png'>equation024.png</a></td><td>&nbsp;</td><td>559b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation024.tex'>equation024.tex</a></td><td>&nbsp;</td><td>18b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation025.png'>equation025.png</a></td><td>&nbsp;</td><td>478b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation025.tex'>equation025.tex</a></td><td>&nbsp;</td><td>12b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation026.png'>equation026.png</a></td><td>&nbsp;</td><td>1.28kb</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation026.tex'>equation026.tex</a></td><td>&nbsp;</td><td>72b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation027.png'>equation027.png</a></td><td>&nbsp;</td><td>1.40kb</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation027.tex'>equation027.tex</a></td><td>&nbsp;</td><td>219b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation028.png'>equation028.png</a></td><td>&nbsp;</td><td>581b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation028.tex'>equation028.tex</a></td><td>&nbsp;</td><td>26b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation029.png'>equation029.png</a></td><td>&nbsp;</td><td>703b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation029.tex'>equation029.tex</a></td><td>&nbsp;</td><td>33b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation030.png'>equation030.png</a></td><td>&nbsp;</td><td>1.67kb</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation030.tex'>equation030.tex</a></td><td>&nbsp;</td><td>293b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation031.png'>equation031.png</a></td><td>&nbsp;</td><td>478b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation031.tex'>equation031.tex</a></td><td>&nbsp;</td><td>12b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation032.png'>equation032.png</a></td><td>&nbsp;</td><td>1.34kb</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation032.tex'>equation032.tex</a></td><td>&nbsp;</td><td>108b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation033.png'>equation033.png</a></td><td>&nbsp;</td><td>1.57kb</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation033.tex'>equation033.tex</a></td><td>&nbsp;</td><td>119b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation034.png'>equation034.png</a></td><td>&nbsp;</td><td>1.80kb</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation034.tex'>equation034.tex</a></td><td>&nbsp;</td><td>171b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation035.png'>equation035.png</a></td><td>&nbsp;</td><td>487b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation035.tex'>equation035.tex</a></td><td>&nbsp;</td><td>39b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation036.png'>equation036.png</a></td><td>&nbsp;</td><td>1.05kb</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation036.tex'>equation036.tex</a></td><td>&nbsp;</td><td>91b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation037.png'>equation037.png</a></td><td>&nbsp;</td><td>412b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation037.tex'>equation037.tex</a></td><td>&nbsp;</td><td>39b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation038.png'>equation038.png</a></td><td>&nbsp;</td><td>1.09kb</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation038.tex'>equation038.tex</a></td><td>&nbsp;</td><td>145b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation039.png'>equation039.png</a></td><td>&nbsp;</td><td>266b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation039.tex'>equation039.tex</a></td><td>&nbsp;</td><td>12b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation040.png'>equation040.png</a></td><td>&nbsp;</td><td>618b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation040.tex'>equation040.tex</a></td><td>&nbsp;</td><td>40b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation041.png'>equation041.png</a></td><td>&nbsp;</td><td>512b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation041.tex'>equation041.tex</a></td><td>&nbsp;</td><td>49b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation042.png'>equation042.png</a></td><td>&nbsp;</td><td>1.33kb</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation042.tex'>equation042.tex</a></td><td>&nbsp;</td><td>145b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation043.png'>equation043.png</a></td><td>&nbsp;</td><td>931b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation043.tex'>equation043.tex</a></td><td>&nbsp;</td><td>96b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation044.png'>equation044.png</a></td><td>&nbsp;</td><td>532b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation044.tex'>equation044.tex</a></td><td>&nbsp;</td><td>61b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation045.png'>equation045.png</a></td><td>&nbsp;</td><td>446b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation045.tex'>equation045.tex</a></td><td>&nbsp;</td><td>43b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation046.png'>equation046.png</a></td><td>&nbsp;</td><td>473b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation046.tex'>equation046.tex</a></td><td>&nbsp;</td><td>45b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation047.png'>equation047.png</a></td><td>&nbsp;</td><td>362b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation047.tex'>equation047.tex</a></td><td>&nbsp;</td><td>28b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation048.png'>equation048.png</a></td><td>&nbsp;</td><td>1.83kb</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation048.tex'>equation048.tex</a></td><td>&nbsp;</td><td>242b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation049.png'>equation049.png</a></td><td>&nbsp;</td><td>968b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation049.tex'>equation049.tex</a></td><td>&nbsp;</td><td>112b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation050.png'>equation050.png</a></td><td>&nbsp;</td><td>1.10kb</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation050.tex'>equation050.tex</a></td><td>&nbsp;</td><td>125b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation051.png'>equation051.png</a></td><td>&nbsp;</td><td>417b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation051.tex'>equation051.tex</a></td><td>&nbsp;</td><td>44b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation052.png'>equation052.png</a></td><td>&nbsp;</td><td>367b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation052.tex'>equation052.tex</a></td><td>&nbsp;</td><td>34b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation053.png'>equation053.png</a></td><td>&nbsp;</td><td>338b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation053.tex'>equation053.tex</a></td><td>&nbsp;</td><td>9b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation054.png'>equation054.png</a></td><td>&nbsp;</td><td>395b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation054.tex'>equation054.tex</a></td><td>&nbsp;</td><td>18b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation055.png'>equation055.png</a></td><td>&nbsp;</td><td>344b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation055.tex'>equation055.tex</a></td><td>&nbsp;</td><td>35b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation056.png'>equation056.png</a></td><td>&nbsp;</td><td>896b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation056.tex'>equation056.tex</a></td><td>&nbsp;</td><td>62b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation057.png'>equation057.png</a></td><td>&nbsp;</td><td>770b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation057.tex'>equation057.tex</a></td><td>&nbsp;</td><td>28b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation058.png'>equation058.png</a></td><td>&nbsp;</td><td>625b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation058.tex'>equation058.tex</a></td><td>&nbsp;</td><td>18b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation059.png'>equation059.png</a></td><td>&nbsp;</td><td>266b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation059.tex'>equation059.tex</a></td><td>&nbsp;</td><td>12b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation060.png'>equation060.png</a></td><td>&nbsp;</td><td>739b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation060.tex'>equation060.tex</a></td><td>&nbsp;</td><td>74b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation061.png'>equation061.png</a></td><td>&nbsp;</td><td>473b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation061.tex'>equation061.tex</a></td><td>&nbsp;</td><td>18b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation062.png'>equation062.png</a></td><td>&nbsp;</td><td>502b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation062.tex'>equation062.tex</a></td><td>&nbsp;</td><td>30b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation063.png'>equation063.png</a></td><td>&nbsp;</td><td>434b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation063.tex'>equation063.tex</a></td><td>&nbsp;</td><td>52b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation064.png'>equation064.png</a></td><td>&nbsp;</td><td>473b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation064.tex'>equation064.tex</a></td><td>&nbsp;</td><td>17b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation065.png'>equation065.png</a></td><td>&nbsp;</td><td>502b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation065.tex'>equation065.tex</a></td><td>&nbsp;</td><td>30b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation066.png'>equation066.png</a></td><td>&nbsp;</td><td>482b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation066.tex'>equation066.tex</a></td><td>&nbsp;</td><td>16b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation067.png'>equation067.png</a></td><td>&nbsp;</td><td>1.13kb</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation067.tex'>equation067.tex</a></td><td>&nbsp;</td><td>58b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation068.png'>equation068.png</a></td><td>&nbsp;</td><td>635b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation068.tex'>equation068.tex</a></td><td>&nbsp;</td><td>54b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation069.png'>equation069.png</a></td><td>&nbsp;</td><td>404b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation069.tex'>equation069.tex</a></td><td>&nbsp;</td><td>34b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation070.png'>equation070.png</a></td><td>&nbsp;</td><td>831b</td></tr>
+
+
+			<tr><td><a href='./Chain_Rule_-_Tangent_Plane/equation070.tex'>equation070.tex</a></td><td>&nbsp;</td><td>77b</td></tr>
+
+			</table>
+	</div>
+
+	
+
+</div>
+
+</body>
+</html>
