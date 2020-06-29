@@ -96,6 +96,308 @@
 Created Saturday 27 June 2020
 </p>
 
+<p>
+I'm starting this Monday the 29th. Gotta rush through and balance with the new lectures.
+</p>
+
+<h3>Question 1</h3>
+
+<p>
+If <img src="./Homework_4/equation.png">, find the following partial derivatives:
+</p>
+
+<p>
+1) <i>f</i><sub>x</sub><br>
+<img src="./Homework_4/equation001.png">
+</p>
+
+<p>
+2) <i>f</i><sub>y</sub><br>
+<img src="./Homework_4/equation002.png"><br>
+Remember, sin(x) is essentially a static value so we get rid of it.
+</p>
+
+<p>
+3) <i>f</i><sub>xx</sub><br>
+<img src="./Homework_4/equation003.png"><br>
+In case it wasn't obvious, the x<sup>2</sup> denotes we are taking a second derivative.
+</p>
+
+<p>
+4) <i>f</i><sub>xy</sub><br>
+<img src="./Homework_4/equation004.png">
+</p>
+
+<p>
+5) <i>f</i><sub>yy</sub><br>
+<img src="./Homework_4/equation005.png">
+</p>
+
+<p>
+6) <i>f</i><sub>xxy</sub><br>
+<img src="./Homework_4/equation006.png">
+</p>
+
+<p>
+7) <i>f</i><sub>xyx</sub><br>
+<img src="./Homework_4/equation007.png">
+</p>
+
+<h3>Question 2</h3>
+
+<p>
+This question is pretty much just the first one. All you need to know is what a <b>second-order partial derivative</b> is to solve this question. We pretty much just double up on the partial derivative. Observe the following:
+</p>
+
+<p>
+To save time, I'm just gonna write the answers.
+</p>
+
+<h3>Question 2 pt. 1</h3>
+
+<p>
+<img src="./Homework_4/equation008.png">
+</p>
+
+<p>
+To help me find the second-order partial derivatives, I shall first take just a regular ol' derivative in regards to x and y.<br>
+<img src="./Homework_4/equation009.png">
+</p>
+
+<p>
+<img src="./Homework_4/equation010.png"><br>
+We can simplify the above with the trig identity sin2θ = 2sinθ cosθ 
+</p>
+
+<p>
+Now for the second-order partial derivatives!<br>
+<i>f</i><sub>xx</sub><br>
+<img src="./Homework_4/equation011.png">
+</p>
+
+<p>
+<i>f</i><sub>yy</sub><br>
+<img src="./Homework_4/equation012.png">
+</p>
+
+<p>
+<i>f</i><sub>xy</sub><br>
+<img src="./Homework_4/equation013.png">
+</p>
+
+<p>
+<i>f</i><sub>yx</sub><br>
+<img src="./Homework_4/equation014.png">
+</p>
+
+<p>
+I believe the professor got that last one wrong on his answer sheet when cross referencing an online calculator.
+</p>
+
+<h3>Question 2 pt. 2</h3>
+
+<p>
+I'm skipping this to save time. Should be the same principle as part 1.<br>
+You'll have to find all of the following if you choose to do it.<br>
+<i>f</i><sub>xx, </sub><i>f</i><sub>xy, </sub><i>f</i><sub>xz</sub><br>
+<i>f</i><sub>yx, </sub><i>f</i><sub>yy, </sub><i>f</i><sub>yz</sub><br>
+<i>f</i><sub>zx, </sub><i>f</i><sub>zy, </sub><i>f</i><sub>zz</sub>
+</p>
+
+<h3>Question 3</h3>
+
+<p>
+Let <img src="./Homework_4/equation015.png">. Find the directional derivative of <i>f</i> at <b>a</b> = (2, 1, 3) in the direction <b>v</b> = (1, 0, -2). What is the largest value of the directional derivative of <i>f</i> at <b>a</b> and in what direction does it occurs?
+</p>
+
+<p>
+So you're probably askin' yourself: wtf is a <b>directional derivative? </b>I'm wonderin' the same damn thing.<br>
+For more information, check out the <a href="../Derivatives.html" title="Derivatives" class="page">Derivatives</a> section of the wiki. However, you'll likely find that it won't help you solve this problem. That's because the professor left out some important formulas that would really help us out here. So, I'll do that for us.
+</p>
+
+<p>
+According to <a href="https://mathworld.wolfram.com/DirectionalDerivative.html#:~:text=The%20directional%20derivative%20is%20the,and%20can%20be%20defined%20as" title="mathworld," class="https">mathworld,</a> <b>the directional derivative can be defined like so:</b><br>
+<img src="./Homework_4/equation018.png">
+</p>
+
+<p>
+This means that we take the dot (inner) product of the <b>gradient </b>of <i>f</i> and a normalized direction <b>u</b>.
+</p>
+
+<p>
+Alright, so let's break this down by starting with the gradient.
+</p>
+
+<p>
+Remember, the gradient is just the following vector:<br>
+<img src="./Homework_4/equation019.png">
+</p>
+
+<p>
+So, we just take the partial derivative of each parameter for function <i>f </i>like so:<br>
+<img src="./Homework_4/equation020.png">
+</p>
+
+<p>
+So then, our gradient ∇<i>f</i> is just (4x, 6y, 2z)
+</p>
+
+<p>
+Now we need to normalize our direction vector. Let <b>u</b> be or normalized vector. We do the following:<br>
+<img src="./Homework_4/equation021.png">
+</p>
+
+<p>
+Finally! We can wrap this up. Let's return to the equation for the direction derivative:<br>
+<img src="./Homework_4/equation022.png">
+</p>
+
+<p>
+Right before we plug our values in, let's pass our vector <b>a </b>= (2, 1, 3) into our gradient.<br>
+<img src="./Homework_4/equation024.png">
+</p>
+
+<p>
+<b>The following is the directional derivative:</b><br>
+<img src="./Homework_4/equation023.png">
+</p>
+
+<p>
+Yay! We did it. Now we need to know the largest value of the directional derivative. To do this, just find the <b>norm</b> of the gradient of <i>f</i> at point <b>a</b>.<br>
+<img src="./Homework_4/equation025.png">
+</p>
+
+<p>
+<b>That's it! That's the largest directional derivative at point a! </b><img src="./Homework_4/equation026.png">
+</p>
+
+<p>
+But what direction does it occur in? Well, just divide our gradient with <img src="./Homework_4/equation028.png"> like so:<br>
+<img src="./Homework_4/equation027.png">
+</p>
+
+<p>
+<b>And that's the direction it occurs in!</b>
+</p>
+
+<h3>Question 4</h3>
+
+<p>
+At first glance, this problem seems a bit intimidating. My first instinct was that we need to bust out the definition of a derivative which is a limit in the form of:<br>
+<img src="./Homework_4/equation029.png">
+</p>
+
+<p>
+Hopefully, this brings back memories of calculus 1.
+</p>
+
+<p>
+This is on the right track to the solution but not quite there. I feel as though I have a good understanding of why the professor's answer works though.
+</p>
+
+<p>
+To begin, let's find the partial derivative of the function <i>f</i> in regards to x.<br>
+<img src="./Homework_4/equation030.png">
+</p>
+
+<p>
+If you're wondering why we get "0 - 0" for the numerator at one point, it's because we know that if any value passed into <i>f</i> is 0 then we have 0. So, <i>f</i>(t, 0) will be 0 because the y is 0 and the piecewise function says that the result is 0 when either x or y are 0.
+</p>
+
+<p>
+I hope that made sense... My explanation was rather redundant.
+</p>
+
+<p>
+Finding the partial derivative of <i>f</i> in regards to y, we get the same answer: 0.
+</p>
+
+<p>
+<b>So, function</b> <i>f</i> <b>has partial derivatives at both x and y!</b>
+</p>
+
+<p>
+And we just showed it.
+</p>
+
+<p>
+<b>However</b>, <i>f</i> is clearly not continuous at (0, 0) due to that sudden jump from 1 to 0. We can tell that the <img src="./Homework_4/equation031.png"> <b>does not exist.</b> It is <b>discontinuous.</b> And because it is discontinuous, it is not differentiable at (0, 0).
+</p>
+
+<h5>Question 5</h5>
+
+<p>
+Let <img src="./Homework_4/equation032.png"> be defined by:<br>
+<img src="./Homework_4/equation033.png">
+</p>
+
+<p>
+Find D<i>f</i>(3, 2, -1).
+</p>
+
+<p>
+Believe it or not, this is actually <b>pretty easy!</b><br>
+At least, it will be in a second here.
+</p>
+
+<p>
+To begin, we just need to find the <b>Jacobian matrix. </b>The general form looks like this:<br>
+<img src="./Homework_4/equation034.png">
+</p>
+
+<p>
+Let's get started.
+</p>
+
+<p>
+First, define what our functions are like so:<br>
+<img src="./Homework_4/equation035.png"><br>
+Remember, we are going from a 3D space to a 2D one. As such, we'll have two functions that will make up the rows of our Jacobian matrix for this new space.
+</p>
+
+<p>
+Since we are coming from a 3D space, we'll have 3 columns. One for each input essentially.
+</p>
+
+<p>
+<b>Let's find that Jacobian Matrix!</b><br>
+<img src="./Homework_4/equation036.png">
+</p>
+
+<p>
+Nice.
+</p>
+
+<p>
+So... Uh. Hmm. How about that D<i>f</i>(3, 2, -1)? What do we do now?
+</p>
+
+<p>
+<b>It's </b><i>obvious </i>(for once :\)
+</p>
+
+<p>
+Just plug it in to our Jacobian matrix like so:<br>
+<img src="./Homework_4/equation037.png">
+</p>
+
+<p>
+<b>We're done!</b>
+</p>
+
+<h3>Question 6</h3>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
 
 	</div>
 
@@ -103,6 +405,237 @@ Created Saturday 27 June 2020
 
 	<div class='page-footer'>
 
+			<b>Attachments:</b>
+			<table>
+
+			<tr><td><a href='./Homework_4/equation.png'>equation.png</a></td><td>&nbsp;</td><td>795b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation.tex'>equation.tex</a></td><td>&nbsp;</td><td>24b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation001.png'>equation001.png</a></td><td>&nbsp;</td><td>1.16kb</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation001.tex'>equation001.tex</a></td><td>&nbsp;</td><td>61b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation002.png'>equation002.png</a></td><td>&nbsp;</td><td>1.06kb</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation002.tex'>equation002.tex</a></td><td>&nbsp;</td><td>56b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation003.png'>equation003.png</a></td><td>&nbsp;</td><td>2.47kb</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation003.tex'>equation003.tex</a></td><td>&nbsp;</td><td>202b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation004.png'>equation004.png</a></td><td>&nbsp;</td><td>2.51kb</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation004.tex'>equation004.tex</a></td><td>&nbsp;</td><td>203b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation005.png'>equation005.png</a></td><td>&nbsp;</td><td>2.44kb</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation005.tex'>equation005.tex</a></td><td>&nbsp;</td><td>194b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation006.png'>equation006.png</a></td><td>&nbsp;</td><td>2.69kb</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation006.tex'>equation006.tex</a></td><td>&nbsp;</td><td>290b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation007.png'>equation007.png</a></td><td>&nbsp;</td><td>3.28kb</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation007.tex'>equation007.tex</a></td><td>&nbsp;</td><td>310b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation008.png'>equation008.png</a></td><td>&nbsp;</td><td>742b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation008.tex'>equation008.tex</a></td><td>&nbsp;</td><td>21b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation009.png'>equation009.png</a></td><td>&nbsp;</td><td>1.12kb</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation009.tex'>equation009.tex</a></td><td>&nbsp;</td><td>61b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation010.png'>equation010.png</a></td><td>&nbsp;</td><td>1.50kb</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation010.tex'>equation010.tex</a></td><td>&nbsp;</td><td>82b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation011.png'>equation011.png</a></td><td>&nbsp;</td><td>1.63kb</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation011.tex'>equation011.tex</a></td><td>&nbsp;</td><td>110b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation012.png'>equation012.png</a></td><td>&nbsp;</td><td>1.61kb</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation012.tex'>equation012.tex</a></td><td>&nbsp;</td><td>105b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation013.png'>equation013.png</a></td><td>&nbsp;</td><td>1.73kb</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation013.tex'>equation013.tex</a></td><td>&nbsp;</td><td>117b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation014.png'>equation014.png</a></td><td>&nbsp;</td><td>2.21kb</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation014.tex'>equation014.tex</a></td><td>&nbsp;</td><td>146b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation015.png'>equation015.png</a></td><td>&nbsp;</td><td>842b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation015.tex'>equation015.tex</a></td><td>&nbsp;</td><td>30b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation016.png'>equation016.png</a></td><td>&nbsp;</td><td>1.42kb</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation016.tex'>equation016.tex</a></td><td>&nbsp;</td><td>147b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation017.png'>equation017.png</a></td><td>&nbsp;</td><td>777b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation017.tex'>equation017.tex</a></td><td>&nbsp;</td><td>61b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation018.png'>equation018.png</a></td><td>&nbsp;</td><td>856b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation018.tex'>equation018.tex</a></td><td>&nbsp;</td><td>97b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation019.png'>equation019.png</a></td><td>&nbsp;</td><td>1.10kb</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation019.tex'>equation019.tex</a></td><td>&nbsp;</td><td>95b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation020.png'>equation020.png</a></td><td>&nbsp;</td><td>2.17kb</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation020.tex'>equation020.tex</a></td><td>&nbsp;</td><td>248b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation021.png'>equation021.png</a></td><td>&nbsp;</td><td>2.40kb</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation021.tex'>equation021.tex</a></td><td>&nbsp;</td><td>215b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation022.png'>equation022.png</a></td><td>&nbsp;</td><td>856b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation022.tex'>equation022.tex</a></td><td>&nbsp;</td><td>97b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation023.png'>equation023.png</a></td><td>&nbsp;</td><td>2.57kb</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation023.tex'>equation023.tex</a></td><td>&nbsp;</td><td>194b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation024.png'>equation024.png</a></td><td>&nbsp;</td><td>1.21kb</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation024.tex'>equation024.tex</a></td><td>&nbsp;</td><td>47b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation025.png'>equation025.png</a></td><td>&nbsp;</td><td>1.31kb</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation025.tex'>equation025.tex</a></td><td>&nbsp;</td><td>83b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation026.png'>equation026.png</a></td><td>&nbsp;</td><td>391b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation026.tex'>equation026.tex</a></td><td>&nbsp;</td><td>10b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation027.png'>equation027.png</a></td><td>&nbsp;</td><td>2.66kb</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation027.tex'>equation027.tex</a></td><td>&nbsp;</td><td>228b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation028.png'>equation028.png</a></td><td>&nbsp;</td><td>391b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation028.tex'>equation028.tex</a></td><td>&nbsp;</td><td>10b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation029.png'>equation029.png</a></td><td>&nbsp;</td><td>906b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation029.tex'>equation029.tex</a></td><td>&nbsp;</td><td>50b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation030.png'>equation030.png</a></td><td>&nbsp;</td><td>1.84kb</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation030.tex'>equation030.tex</a></td><td>&nbsp;</td><td>184b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation031.png'>equation031.png</a></td><td>&nbsp;</td><td>778b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation031.tex'>equation031.tex</a></td><td>&nbsp;</td><td>40b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation032.png'>equation032.png</a></td><td>&nbsp;</td><td>479b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation032.tex'>equation032.tex</a></td><td>&nbsp;</td><td>41b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation033.png'>equation033.png</a></td><td>&nbsp;</td><td>1.25kb</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation033.tex'>equation033.tex</a></td><td>&nbsp;</td><td>56b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation034.png'>equation034.png</a></td><td>&nbsp;</td><td>1.52kb</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation034.tex'>equation034.tex</a></td><td>&nbsp;</td><td>292b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation035.png'>equation035.png</a></td><td>&nbsp;</td><td>1.08kb</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation035.tex'>equation035.tex</a></td><td>&nbsp;</td><td>68b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation036.png'>equation036.png</a></td><td>&nbsp;</td><td>1.81kb</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation036.tex'>equation036.tex</a></td><td>&nbsp;</td><td>318b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation037.png'>equation037.png</a></td><td>&nbsp;</td><td>1.74kb</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation037.tex'>equation037.tex</a></td><td>&nbsp;</td><td>145b</td></tr>
+
+			</table>
 	</div>
 
 	
