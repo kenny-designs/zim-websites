@@ -1,0 +1,899 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Extrema Lagrange Mult</title>
+	<meta name='Generator' content='Zim 0.68'>
+	<style type='text/css'>
+		a          { text-decoration: none      }
+		a:hover    { text-decoration: underline }
+		a:active   { text-decoration: underline }
+		strike     { color: grey                }
+		u          { text-decoration: none;
+					 background-color: yellow   }
+		tt         { color: #2e3436;            }
+		pre        { color: #2e3436;
+					 margin-left: 20px          }
+		h1         { text-decoration: underline;
+					 color: #4e9a06; margin-bottom: 0 }
+		h2         { color: #4e9a06; margin-bottom: 0 }
+		h3         { color: #4e9a06; margin-bottom: 0 }
+		h4         { color: #4e9a06; margin-bottom: 0 }
+		h5         { color: #4e9a06; margin-bottom: 0 }
+		p          { margin-top: 0              }
+		span.zim-tag {
+			color: #ce5c00;
+		}
+		div.zim-object {
+			border-style:solid;
+			border-width:1px;
+		}
+		.checked-box {list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAANOgAADMQBiN+4gQAAAAd0SU1FB9gKGQ8sMEGsKGkAAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAEBUlEQVRIx62V22tdRRTGf7Nn73P2ybntnNOe3NqkPTGgLTVUUZF6QatSLOKTPgqCIqLgQ0H/A1sQQbBYCBb1QfAxiC8tSO1FqHkwJVKtjdTGNraUmObsc9nXmfGh7cGYpM1D5nHWzPetteZb3wg2eB2YqYm4zSadsMtoboiNBH/3TE0awx6j+MRoxoTg/IYRvP19TQrJS0bzhdHGSyKFkLTtjSKwMjyiEz43ynhtP6bdjBCWyFobAf7eT7VhNF/q1FRbjYjmUohlCVPwnB+6FUxMTJipqSmUUhhjEGKd3bMT4ks/Y6oLBK2Yth8hHYtCJXOix7Nf7xLMzc0xOzvLzp078TyPNE3viW3QJPXzhNWbxFFKHCmMhoLn/FHodd48vGfhapdAacXQlkFK5dL6wIUm6fuTZPuvqDQhaMUYYyiVyuQr6rXDexYuAdi3tSv1ZJNs/R/CaszzT+1na88uXFnCEnJVgivBNN8uTJKmHQI/ptOOcXNZzMz9mOqFs90OHpipWcYwlo5P4ebnuOkrvr5wgrH+h3im7y36MzuwRXYZeKha/OhP0EkadFoxQSdGSotedR/+XwMc2XvKdNUFOFqZx6LKZWIiwjgkikNmLp/hm8sH+K1zjFTHXfBYdTi+eJArzXM0GxFxoBDCopLvo/fqEwi1XPkWkGqjFo2TgB1jOYZUKZTS/D1/ncmLh7jon0IbRWoiTi59ymzzJEEQE3cStNZsGxqlfPE57MBbOR8fP3hDGalOO9fq2DlBvmZw8xa2IxACGn6TydlD/O6f5OzSV/zif0cYhLQaEXGkKBbz7Ov/AOlXV1cxgBJRI3fuSTrpTawt18kWIZN1CFuaONI0w0WOXfsI43YIggh/KUSlhqxrMz74AkOZcWBm9QkH+Gw8NDLuITi+m0yzhluSyJzBLcpblUhFxywSRAEtPwQjsKVN30CNh0uvYuOubSHLtN3J0TO1j0pmBNuFbFWRK0gyPRZpktL2I5JQkclKakNlnh54g6ocvevUr/Ai2a7wineEkcJupA3S1Wg0nVZM2E6wbEF5U5G9Q++wI7sfR7h3N8HVNstykBfzH+KJEZwiWD0aIwxCgJ0R1Mu7GXOeJSuK93bZtQIle4D9pUNU5DC5jEsu55AvZakM5NicGyEj8uuz8bUCQgj67QfY671P3vEoeC69gy695U1U7NG7XV0pUwBjDJa1/JJlWWxzHuflzQe5FJ/GsgUVuZ2t8lEkTvfc0aNHb72flBhjVicQQqCUuvM3/M+WDVguWBrMVdDXEGZlBVEUrVCU9d9s5+fnaTQa2PZyPxEIhJaI1EEoZwX4ncynp6fXrmB4eJjR0VFarRbNZnP9P9rt9gohqNVq1Ov1ZbF/AZGev3hLJ2/zAAAAAElFTkSuQmCC)}
+		.xchecked-box {list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAANOgAADMQBiN+4gQAAAAd0SU1FB9gKGQ8bDYnDxEwAAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAEK0lEQVRIx9WVS2hTWRjHf/eR3CY1nbxMH2YiZRQS6qO13YlMVxY3SnVcuNIBFezGpSADLoQqLu1sHJCqdCFSXFpw4YOCSH3BtFqttTNamabX3DS5bfO6uffMoglja3RGcDMHzuac7/z/53++//cd+L8P6VuCPQYZ8ADNgBd4J31DcDcQs+GnHByRocEDv0kfBSjAOlYCs11Q+gpwDegS8LMJ+3QIK0ATzEhV8Odnz5bzw8P4dJ25aJQ/WlvJ1df/K7hSLtOcTNI+Pk69rpMTgqIQhCDvh1/VSpw79+gRrRMTmLZNezLJJsPg+a5dmOEwQlFqg1sWG16/Jv7sGWXDwBACFQjC9HcwIMONKkGp4PGAJGEDS0IQmZlhnWnye3c3eiyGo6qr3WHbrJ+dJf7gAXI6zSIr72T7/fgzmT4FHnTBsgrQBfYvTU0km5vxz86iADnAm0rRPTWFt7cXZccOJJcLAGHb2K9ekT93jmwmwwdAAFpjI6Ntbfxw5879ag7l6o1sr5eHHR3IsRgeQK/M4sQE+YEB7JcvEY6zAj45SWFgAPPxYwzHoQxIkQjTPT0kIxE+Noj8sexFn4/xnh58iQTeSpHkHAdrbIzi0BCOrmNPTpK/eJHM3bt8sCyKQCiR4NWePWSiUZw1+ZLXJm4pFKLhzBlCsRh2RUXacVgeGaF47RrL58+zcP8+RrmMkCQinZ1EL1zAjERqmkH+tLYl1G3bCJw4QUjT0IA0MJfLMX/5MqmHD0nZNiUgtGULG/r7ccXjINWuWbnmqsuFu7sb/4EDNLlcBIEioNs2KUAFGmMxmk6dQm1tRZI+3xBqEkiShBQOox05Ql1nJ26gvuIUAWiKQnj/ftStW5Fk+YuF+NldsbBA4cYN9KdPmaso8Fc62ZJtk7l1C2t0FGdxESHE1xE4hkHh6lX0oSHSpRIewC/LrPf7CSgKNpCamkI/fZr8pUuIZBIcpyaBunahPp1mub+fDyMjGKUSChCsq6Nh717q9u2jbnSU0uAgRrFIwTThyhUCqRS+hgZKLS1fJvDm87SNjZGcnsYUAjcQ8vsJ9/Xh7u1FDgRQN20iks3iDA+zZFmYhQLqzZtsj8WY3L0baY2Sf55ICCKpFHUzM2SEQAJCHg+hY8fQDh5EDgRWDoRC1J88SePRo2geD0XAcBy8b98Sv3ePYDZbbf2rFQjLIphMsmDbaEBQVQkePox26BCSz7e6i4bDrDt+nGYhmBscpFAskheC4Js3bPR4qHphFYEnlcI7P4/jdqNpGu8TCe4oCsXr1z//F2ga3+/cSfTJE0qmSVYIsKzaOZDcbjKyzFIiwfvt21kMBLA07YsetzWNd+3tLLW0sH5igvT8PH9Go/z44kX+E4LGjg7GDYOcy4XlOEgLC//5P/5LCFzxOPLmzWyIx+m6fduu7v0NVGqyTSycKksAAAAASUVORK5CYII=)}
+		.unchecked-box {list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAANOgAADMQBiN+4gQAAAAd0SU1FB9gKGQ8qAt8h3m8AAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAA60lEQVRIx+2VsQqDMBRF70sCLg5OLoKgjk7+lJ/hh+STXBwcnRz8ArMEkrxOFktbaC3tULzTg5e8k5vADXDq70VbobXmvu/hvQczg4heHrJfXxQFuq67blZbMc8zpmlCXddIkgTOuZcBUko45zCOI6y1Nz2xFSEEZFmGOI7fGg4A3nsQEZqmuXOu9jallACAtm3fvmutNaIoAjM/dkBECCF89KCbk4eAb+kEnIAT8EsAM0OIz3hSyrssUvss8t5fg+uIrLXPs0gIgWVZYIyBUurQyYdheO4gz3NUVQVjDNZ1PfSjpWmKsixvehfB9GBZ3NndrgAAAABJRU5ErkJggg==)}
+		.migrated-box {list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAANOgAADMQBiN+4gQAAAAd0SU1FB+AKHREFA8vJSnkAAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAC1klEQVRIx+2VT0hUURTGf/e958w4Tc3TYowMw1GyEgwr1MqsFmbZIrIWQZsWJUjbdoHQpl3Qps0swnCRECQFYkR/TC1iKkqmfzAKTo2Vf8hoRsfR995tkRMT87RRWkUHHhy495zvnvvu933wP/75EKkkEAjIYDCIaZpIKRFCZN0kfX9xcTGtra2/irVUEolECIfDlJeXo+s6hmFkDaCqKoZhEAqFSCaTv60pqcSyLAoLC/F4PEtqDmCaJkIIKisrMybX0sdUVRWA5ubmPzdNjjI1cpXkZC/O1fV03PXgdDqRUtpPIITAsqxsDz0Z/3CZQv8uqo4N4C8/Tp2/DdM0MiZQlvk41OTkI/LW1SGtCVb5drD3eCc71wcA+VcAHA5vDd8+3UGakxiJV7i9pdQevU5T1R35pJ3MV5QW1pf+0kWBheJ2SWua8EQXZXsu4fVVYEz1sEKvof5EuxjoPvzpcRvrdp9C2gGMx6cpOHBmbImMesds7BZubwMVDTfXDnQ3vQfK7AC8wLfExMX5whyQc3q2OEnjGm5vE76SQxsfBLr77a7CNf+n0r/l6sSMtsBSnurckiIILCobAtVZhpF4gZF4jubaymj4Ch/fd380LE7bAnjc0NPxk2yqpmEuwGxF0ag+0k5uTpzZeBeaazvj0We8fXojainsb2xh2BZgbe0gSIllzSIUh63wfQ6dZ/O2fbjcKlOj58jJ3cVENESw5yErc9nf2MLQ4jwQAkV1Lqiq37/cZ9WaahJjF9AcmxiPDhLs7ePe23oOnmUwg2hSShQle96tKDjA2HAniusgo9FxnvY9Jxw7RWzGYy92QghM00x5g53qp9sHmtB58/o2umOI2NwGolMnMYUHIb7aAyiKwsjICLqu2/qBEIKUUAohMaSHSLyBSMoPTINQ6CX5+fn2AEVFRZSUlBCPx4nFYhl3L4RESjF/GEgX3pSj+Xw+/H7/b3U/AEOZFnp7O5+5AAAAAElFTkSuQmCC)}
+		ul {list-style-image: none}
+		/* ul rule needed to reset style for sub-bullets */
+
+		span.insen { color: grey                }
+
+		.pages {
+			max-width: 1000px;
+			 padding-left: 320px;
+		}
+		.menu{
+			float:left; width: 300px;
+		}
+		hr{clear:both;}
+	</style>
+</head>
+<body>
+
+<!-- Header -->
+<div class='header'>
+	[ <a href='./Derivatives/Partial_Derivatives_-_Gradient.html'>Prev</a> ]
+
+	[ <span class='insen'>Index</span> ]
+
+	[ <a href='./Home.html'>Next</a> ]
+</div>
+
+<hr />
+
+<div class="menu">
+<ul>
+<li><a href="./Derivatives.html" title="Derivatives" class="page">Derivatives</a></li>
+<li><b>Extrema Lagrange Mult</b></li>
+<li><a href="./Home.html" title="Home" class="page">Home</a></li>
+<li><a href="./Homework.html" title="Homework" class="page">Homework</a></li>
+<li><a href="./Introduction.html" title="Introduction" class="page">Introduction</a></li>
+<li><a href="./Limits.html" title="Limits" class="page">Limits</a></li>
+<li><a href="./Linear_Functions.html" title="Linear Functions" class="page">Linear Functions</a></li>
+<li><a href="./Lines_and_Planes.html" title="Lines and Planes" class="page">Lines and Planes</a></li>
+<li><a href="./Matrices.html" title="Matrices" class="page">Matrices</a></li>
+<li><a href="./Monday_Meetings.html" title="Monday Meetings" class="page">Monday Meetings</a></li>
+<li><a href="./Udemy_Practice.html" title="Udemy Practice" class="page">Udemy Practice</a></li>
+<li><a href="./Vectors.html" title="Vectors" class="page">Vectors</a></li>
+</ul>
+
+</div>
+
+<!-- Wiki content -->
+
+<div class='pages'>
+	<div class='heading'>
+	<h1>Extrema Lagrange Mult <a name='Extrema Lagrange Mult'></a></h1>
+	</div>
+
+	<div class='content'>
+	<p>
+Created Monday 29 June 2020
+</p>
+
+<p>
+We just finished with tangent stuff back in lecture <a href="./Derivatives/Chain_Rule_-_Tangent_Plane.html" title="Derivatives:Chain Rule - Tangent Plane" class="page">Derivatives:Chain Rule - Tangent Plane</a>.<br>
+Now we do other stuff before moving onto integration in the following week.
+</p>
+
+<h3>Let's Begin</h3>
+
+<p>
+A <b>hypersurface</b> is one in which has <b>more</b> than 3 dimensions. Also known as the <b>level surface</b>.
+</p>
+
+<p>
+We learned that if we do the following:<br>
+<img src="./Extrema_Lagrange_Mult/equation.png">
+</p>
+
+<p>
+Then we get a vector perpendicular to the surface S<sub>k</sub> at point <b>x</b>.
+</p>
+
+<p>
+We have these two equations on that note:<br>
+<img src="./Extrema_Lagrange_Mult/equation001.png">
+</p>
+
+<p>
+These help us to find the equation for the <b>tangent plane.</b> 
+</p>
+
+<p>
+Consider the tangent plane to the surface S<sub>k</sub> at the point <img src="./Extrema_Lagrange_Mult/equation002.png"><br>
+We have this equation which is the equation for the <b>tangent plane</b>:<br>
+<img src="./Extrema_Lagrange_Mult/equation003.png">
+</p>
+
+<p>
+Where the coefficients (a, b, c) is a vector <b>perpendicular</b> to the tangent plane at <b>x</b><sub>0</sub>.
+</p>
+
+<p>
+<b>But!</b><br>
+Is what we call <b>n. </b>The normal vector.<br>
+<b>However!</b><br>
+a, b, and c are the following partials:<br>
+<img src="./Extrema_Lagrange_Mult/equation004.png">
+</p>
+
+<p>
+Each one can be read in the format of, "the partial relative to x (or y or z) at <b>x</b><sub>0</sub>."
+</p>
+
+<p>
+Putting this all together, we have this <b>expanded equation</b> for the <b>tangent plane:</b><br>
+<img src="./Extrema_Lagrange_Mult/equation005.png">
+</p>
+
+<h3>Example</h3>
+
+<p>
+Find the equation of the tangent plane to the surface z = 4x<sup>3</sup>y<sup>2</sup> + 2y at the point (1, -2, 12).<br>
+He goes on at the 10:04 mark to <b>rewrite z</b> as the following function:<br>
+<img src="./Extrema_Lagrange_Mult/equation009.png"><br>
+As such, all points that satisfy this equation equal 0.
+</p>
+
+<p>
+First things first, we need the <b>gradient</b>. Remember, that gradient is just a vector consisting of the partial derivatives like so:<br>
+<img src="./Extrema_Lagrange_Mult/equation006.png"><br>
+<img src="./Extrema_Lagrange_Mult/equation007.png"><br>
+<img src="./Extrema_Lagrange_Mult/equation008.png">
+</p>
+
+<p>
+at the point (1, -2, 12) we have the following:<br>
+For simplicity, point <b>p</b> = (1, -2, 12). Okay now we have the following:<br>
+<img src="./Extrema_Lagrange_Mult/equation010.png"><br>
+<img src="./Extrema_Lagrange_Mult/equation011.png"><br>
+<img src="./Extrema_Lagrange_Mult/equation012.png">
+</p>
+
+<p>
+So, all we had to do we plug in the numbers from our point (1, -2, 12) into our partial derivatives.
+</p>
+
+<p>
+Continuing on, the <b>equation of the plane</b> is as follows:<br>
+<img src="./Extrema_Lagrange_Mult/equation013.png"><br>
+We can then simplify like so for our <b>final equation</b>:<br>
+<img src="./Extrema_Lagrange_Mult/equation015.png">
+</p>
+
+<p>
+In case you didn't make the connection, remember that this is the equation for the tangent plane:<br>
+<img src="./Extrema_Lagrange_Mult/equation014.png">
+</p>
+
+<h3>Critical Points</h3>
+
+<p>
+Next, we shall cover, as our professor writes, the following:<br>
+<b>CRITICAL POINTS</b> of a function <img src="./Extrema_Lagrange_Mult/equation016.png">
+</p>
+
+<p>
+Soon, we will cover maxima and minima so we will need to know this. This <b>will be on quiz 2</b> by the way! I believe so anyways.
+</p>
+
+<p>
+Let's begin.
+</p>
+
+<p>
+Let us have an open set <img src="./Extrema_Lagrange_Mult/equation017.png"> such that:<br>
+<img src="./Extrema_Lagrange_Mult/equation018.png">
+</p>
+
+<h3>Definition</h3>
+
+<p>
+We say that the point <img src="./Extrema_Lagrange_Mult/equation019.png"> is a <b>local minimum</b> of <i>f</i> iff there is a <b>neighborhood</b> we shall refer to as <img src="./Extrema_Lagrange_Mult/equation020.png"> (which can be read as, "V of the point <b>x</b><sub>0</sub>") such that:<br>
+<img src="./Extrema_Lagrange_Mult/equation021.png">
+</p>
+
+<p>
+So, it's just a bunch of points really close to our <b>x</b><sub>0</sub> from my understanding.
+</p>
+
+<p>
+Anyways...
+</p>
+
+<p>
+<b>x</b><sub>0</sub> is a <b>critical maximum </b>if we have the opposite like so:<br>
+<img src="./Extrema_Lagrange_Mult/equation022.png">
+</p>
+
+<h3>Another Definition</h3>
+
+<p>
+We say that the point <img src="./Extrema_Lagrange_Mult/equation023.png"> is an <b>extremum </b>of the function iff <b>p</b> is a <b>local maximum</b> or a <b>local minimum.</b>
+</p>
+
+<p>
+So, an <b>extremum</b> is either <b>max</b> or <b>min </b>point<b>.</b> That's it. That's what it is. 
+</p>
+
+<p>
+<b>Def:</b> We say that <img src="./Extrema_Lagrange_Mult/equation024.png"> is a <b>critical point</b> for the function <i>f</i> if <i>f</i> is <b>differentiable</b> at <b>x</b><sub>0</sub> and if:<br>
+<img src="./Extrema_Lagrange_Mult/equation025.png">
+</p>
+
+<h3>One Last Definition</h3>
+
+<p>
+A <b>critical point</b> which is <b>not</b> a local maximum or a local minimum is called a <b>saddle point.</b>
+</p>
+
+<h3>Theorem</h3>
+
+<p>
+Remember, U is a open set in <img src="./Extrema_Lagrange_Mult/equation026.png">. Moving on...<br>
+If <img src="./Extrema_Lagrange_Mult/equation027.png"> and <i>f</i> is differentiable and <b>x</b><sub>0</sub> is a <b>local extremum </b>(which means it is either a local max or local min) then:<br>
+<img src="./Extrema_Lagrange_Mult/equation028.png">
+</p>
+
+<p>
+In other words, <b>x</b><sub>0</sub> is a <b>critical point.</b>
+</p>
+
+<p>
+He says that we should know from calculus one that if a point is a maximum or a minimum <b>then its derivative is 0!</b>
+</p>
+
+<h3>Proof</h3>
+
+<p>
+Assume that <b>x</b><sub>0</sub> is a local maximum (or local minimum. Doesn't matter).<br>
+Then, <img src="./Extrema_Lagrange_Mult/equation029.png"> the function (which is a <b>real function of one variable</b>):<br>
+<img src="./Extrema_Lagrange_Mult/equation030.png">
+</p>
+
+<p>
+Then the previous equation has a local maximum at t = 0. Why? Because t<b>h</b> becomes <b>0</b>. Then we just have <i>f</i>(<b>x</b><sub>0</sub>). Then by assumption, <i>f</i>(<b>x</b><sub>0</sub>) must be a maximum of <i>g</i>(t).
+</p>
+
+<p>
+From calculus 1, we know that for this to happen the derivative of the function <i>g</i> is 0 like so:<br>
+<img src="./Extrema_Lagrange_Mult/equation031.png">
+</p>
+
+<p>
+By applying the chain rule, we know that:<br>
+<img src="./Extrema_Lagrange_Mult/equation032.png">
+</p>
+
+<p>
+<b>Please note!</b> In general, <b>h</b> is <b>not</b> 0. As such, the derivative D<i>f</i>(<b>x</b><sub>0</sub>) <b>must</b> be 0.
+</p>
+
+<h3>Example</h3>
+
+<p>
+Find the critical points of <img src="./Extrema_Lagrange_Mult/equation033.png">.
+</p>
+
+<p>
+First off, we have the following derivatives:<br>
+<img src="./Extrema_Lagrange_Mult/equation034.png">
+</p>
+
+<p>
+Now then, for us to have a <b>critical point </b>the derivative must be 0 for both partials at the same time. As you may be able to tell, this only happens at the point (0, 0).
+</p>
+
+<p>
+As such, <b>the only critical point</b> is the point (0, 0).
+</p>
+
+<p>
+By taking a glance at our function <i>f</i>(x, y) = x<sup>2</sup> + y<sup>2</sup>, we see that (0, 0) <b>must</b> be a minimum. Why? Because our function only produces values bigger than 0 except when both x and y are 0.
+</p>
+
+<h3>Two Definitions</h3>
+
+<p>
+We say that the point <b>p</b> = (a, b) is a <b>saddle point</b> for a function <i>f</i> if in one direction you have <b>p</b> as local minimum and in another direction you have as local maximum.
+</p>
+
+<p>
+Now the other definition (he says that for the following, if we go beyond 2 dimensions then the definition will need to change a little. Just keep that i mind).
+</p>
+
+<p>
+If we have the function <img src="./Extrema_Lagrange_Mult/equation035.png"> we call the <b>Hessian</b> of <i>f</i> at the point <b>p</b> is the following Hessian matrix (H stands for, "the Hessian" by the way):<br>
+<img src="./Extrema_Lagrange_Mult/equation036.png">
+</p>
+
+<p>
+If the function is differentiable, then the top-right and bottom-left elements of the Hessian matrix are equal.<br>
+Also, the above equation is referred to as <b>the Hessian.</b>
+</p>
+
+<p>
+Also, <b>it has a determinant.</b> Which makes sense considering it's square-ish shape.<br>
+If you already forgot what a determinant is, refer to <a href="./Matrices/Dot_Cross_Prod.html" title="Matrices:Dot Cross Prod" class="page">Matrices:Dot Cross Prod</a> for more information.<br>
+Anyways, here's <s>wonder wall</s> the determinant:<br>
+<img src="./Extrema_Lagrange_Mult/equation037.png">
+</p>
+
+<p>
+If you're wondering why we squared that last bit in the equation, it's because the bottom-left and top-right portions of our Hessian matrix are equal if the function is differentiable. So, we can just square it.
+</p>
+
+<h3>A Theorem (Without Proof)</h3>
+
+<p>
+He says the proof is super complicated so we won't go over it. Anyways...
+</p>
+
+<p>
+Let <img src="./Extrema_Lagrange_Mult/equation038.png">. If the derivative of your function at a given point is 0, then:<br>
+1) If the determinate Hessian of <i>f </i>is <b>positive</b>, then we have the following:<br>
+<img src="./Extrema_Lagrange_Mult/equation040.png">
+</p>
+
+<p>
+2) If the determinate Hessian of <i>f</i> is <b>negative</b>, then we have the following:<br>
+<img src="./Extrema_Lagrange_Mult/equation041.png">
+</p>
+
+<p>
+He also makes a quick note about how <b>x</b><sub>0</sub> = <b>p</b>.
+</p>
+
+<p>
+3) If the determinate of the Hessian of <i>f</i> is <b>zero</b>, then we have <b>nothing to conclude.</b> We got no idea what do here.
+</p>
+
+<h3>Example</h3>
+
+<p>
+Find the critical points of <img src="./Extrema_Lagrange_Mult/equation042.png">
+</p>
+
+<p>
+First, find the partials relative to x and y.<br>
+<img src="./Extrema_Lagrange_Mult/equation043.png">
+</p>
+
+<p>
+Remember, for us to have a critical point we need the derivative to be 0. As such, the previous two partials need an x and y value that makes them become 0. We quickly see that (0, 0) does this because:<br>
+<img src="./Extrema_Lagrange_Mult/equation044.png">
+</p>
+
+<p>
+As such, <b>our critical point is </b>(0, 0).
+</p>
+
+<p>
+Next, what kind of critical point do we have? A max or min? To solve this, we must find the <b>second derivative</b> like so:<br>
+<img src="./Extrema_Lagrange_Mult/equation045.png">
+</p>
+
+<p>
+Notice how the mixed partials give us the same result.
+</p>
+
+<p>
+Now then, we can plug this all into a <b>Hessian </b>matrix like so:<br>
+<img src="./Extrema_Lagrange_Mult/equation046.png">
+</p>
+
+<p>
+Plugging in (0, 0), we have:<br>
+<img src="./Extrema_Lagrange_Mult/equation047.png">
+</p>
+
+<p>
+Finding the <b>determinate</b> of that, we have -1 because 0*0 -1*1 = -1
+</p>
+
+<p>
+Because the determinate of our Hessian is -1, we have a <b>saddle point.</b> Why is it a saddle point? Because:<br>
+<img src="./Extrema_Lagrange_Mult/equation048.png">
+</p>
+
+<h3>Lagrange Multipliers</h3>
+
+<p>
+The final topic of this lecture.
+</p>
+
+<p>
+Lagrange multipliers is about constraining the maximum and the minimum. It's all about optimization.
+</p>
+
+<h3>Theorem</h3>
+
+<p>
+If <img src="./Extrema_Lagrange_Mult/equation049.png"> and <img src="./Extrema_Lagrange_Mult/equation050.png"> with continuous derivatives.
+</p>
+
+<p>
+Assume that <img src="./Extrema_Lagrange_Mult/equation051.png"> and take the <b>surface</b> <img src="./Extrema_Lagrange_Mult/equation052.png"> and assume that <img src="./Extrema_Lagrange_Mult/equation053.png">. Then, there is <b>restriction </b>(which means we only plug in points to <i>f</i> that belong to our surface) of <i>f</i> on <img src="./Extrema_Lagrange_Mult/equation054.png"> has an extreme value at:<br>
+<img src="./Extrema_Lagrange_Mult/equation055.png">
+</p>
+
+<p>
+Okay, now for an example. He says that if we know one example then we know everything. It's all very similar. I'll take your word for it professor...
+</p>
+
+<h3>Example</h3>
+
+<p>
+Optimize <img src="./Extrema_Lagrange_Mult/equation056.png"> given that x<sup>2</sup> + y<sup>2</sup> = 1.
+</p>
+
+<p>
+So basically, we want to know if our function <i>f</i> has a maximum or minimum when we only plug in points from x<sup>2</sup> + y<sup>2</sup> = 1 (which is the unit circle by the way).
+</p>
+
+<p>
+<b>Solution</b><br>
+<img src="./Extrema_Lagrange_Mult/equation057.png"><br>
+So then, when <i>g</i>(x, y) becomes 0 we get x<sup>2</sup> + y<sup>2</sup> = 1.
+</p>
+
+<p>
+Moving forward, we have:<br>
+<img src="./Extrema_Lagrange_Mult/equation058.png">
+</p>
+
+<p>
+Taking the derivative of both <i>f</i> and <i>g</i>, we have:<br>
+<img src="./Extrema_Lagrange_Mult/equation059.png">
+</p>
+
+<p>
+So, remember that <i>g</i>(x, y) = x<sup>2</sup> + y<sup>2</sup> - 1 and f(x, y) = x<sup>2</sup> - y<sup>2</sup>. <br>
+As such, to get the matrices of their derivatives equal to each other we can do the following:<br>
+<img src="./Extrema_Lagrange_Mult/equation060.png"><br>
+or<br>
+<img src="./Extrema_Lagrange_Mult/equation061.png">
+</p>
+
+<p>
+Why the plus/minus for y or x? It's because we want x<sup>2</sup> + y<sup>2</sup> - 1 to be 0.
+</p>
+
+<p>
+Bringing this all together, our <b>potential critical points</b> are <img src="./Extrema_Lagrange_Mult/equation062.png">
+</p>
+
+<p>
+Now then, if <br>
+<img src="./Extrema_Lagrange_Mult/equation063.png">
+</p>
+
+<p>
+This shows that the points (1, 0) and (-1, 0) are maxima. Also, points (0, 1) and (0, -1) are minima.
+</p>
+
+<br>
+<br>
+
+
+	</div>
+
+	<br />
+
+	<div class='page-footer'>
+
+			<b>Attachments:</b>
+			<table>
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation.png'>equation.png</a></td><td>&nbsp;</td><td>632b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation.tex'>equation.tex</a></td><td>&nbsp;</td><td>38b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation001.png'>equation001.png</a></td><td>&nbsp;</td><td>844b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation001.tex'>equation001.tex</a></td><td>&nbsp;</td><td>56b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation002.png'>equation002.png</a></td><td>&nbsp;</td><td>596b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation002.tex'>equation002.tex</a></td><td>&nbsp;</td><td>38b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation003.png'>equation003.png</a></td><td>&nbsp;</td><td>1.02kb</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation003.tex'>equation003.tex</a></td><td>&nbsp;</td><td>40b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation004.png'>equation004.png</a></td><td>&nbsp;</td><td>966b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation004.tex'>equation004.tex</a></td><td>&nbsp;</td><td>222b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation005.png'>equation005.png</a></td><td>&nbsp;</td><td>1.63kb</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation005.tex'>equation005.tex</a></td><td>&nbsp;</td><td>237b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation006.png'>equation006.png</a></td><td>&nbsp;</td><td>656b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation006.tex'>equation006.tex</a></td><td>&nbsp;</td><td>40b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation007.png'>equation007.png</a></td><td>&nbsp;</td><td>733b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation007.tex'>equation007.tex</a></td><td>&nbsp;</td><td>41b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation008.png'>equation008.png</a></td><td>&nbsp;</td><td>458b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation008.tex'>equation008.tex</a></td><td>&nbsp;</td><td>34b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation009.png'>equation009.png</a></td><td>&nbsp;</td><td>857b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation009.tex'>equation009.tex</a></td><td>&nbsp;</td><td>29b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation010.png'>equation010.png</a></td><td>&nbsp;</td><td>1.20kb</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation010.tex'>equation010.tex</a></td><td>&nbsp;</td><td>105b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation011.png'>equation011.png</a></td><td>&nbsp;</td><td>1.28kb</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation011.tex'>equation011.tex</a></td><td>&nbsp;</td><td>107b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation012.png'>equation012.png</a></td><td>&nbsp;</td><td>641b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation012.tex'>equation012.tex</a></td><td>&nbsp;</td><td>75b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation013.png'>equation013.png</a></td><td>&nbsp;</td><td>981b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation013.tex'>equation013.tex</a></td><td>&nbsp;</td><td>36b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation014.png'>equation014.png</a></td><td>&nbsp;</td><td>1.02kb</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation014.tex'>equation014.tex</a></td><td>&nbsp;</td><td>40b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation015.png'>equation015.png</a></td><td>&nbsp;</td><td>578b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation015.tex'>equation015.tex</a></td><td>&nbsp;</td><td>18b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation016.png'>equation016.png</a></td><td>&nbsp;</td><td>487b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation016.tex'>equation016.tex</a></td><td>&nbsp;</td><td>39b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation017.png'>equation017.png</a></td><td>&nbsp;</td><td>387b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation017.tex'>equation017.tex</a></td><td>&nbsp;</td><td>22b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation018.png'>equation018.png</a></td><td>&nbsp;</td><td>455b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation018.tex'>equation018.tex</a></td><td>&nbsp;</td><td>28b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation019.png'>equation019.png</a></td><td>&nbsp;</td><td>413b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation019.tex'>equation019.tex</a></td><td>&nbsp;</td><td>26b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation020.png'>equation020.png</a></td><td>&nbsp;</td><td>325b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation020.tex'>equation020.tex</a></td><td>&nbsp;</td><td>24b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation021.png'>equation021.png</a></td><td>&nbsp;</td><td>891b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation021.tex'>equation021.tex</a></td><td>&nbsp;</td><td>89b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation022.png'>equation022.png</a></td><td>&nbsp;</td><td>893b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation022.tex'>equation022.tex</a></td><td>&nbsp;</td><td>89b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation023.png'>equation023.png</a></td><td>&nbsp;</td><td>410b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation023.tex'>equation023.tex</a></td><td>&nbsp;</td><td>24b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation024.png'>equation024.png</a></td><td>&nbsp;</td><td>413b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation024.tex'>equation024.tex</a></td><td>&nbsp;</td><td>26b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation025.png'>equation025.png</a></td><td>&nbsp;</td><td>620b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation025.tex'>equation025.tex</a></td><td>&nbsp;</td><td>45b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation026.png'>equation026.png</a></td><td>&nbsp;</td><td>266b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation026.tex'>equation026.tex</a></td><td>&nbsp;</td><td>12b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation027.png'>equation027.png</a></td><td>&nbsp;</td><td>413b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation027.tex'>equation027.tex</a></td><td>&nbsp;</td><td>26b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation028.png'>equation028.png</a></td><td>&nbsp;</td><td>620b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation028.tex'>equation028.tex</a></td><td>&nbsp;</td><td>45b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation029.png'>equation029.png</a></td><td>&nbsp;</td><td>505b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation029.tex'>equation029.tex</a></td><td>&nbsp;</td><td>43b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation030.png'>equation030.png</a></td><td>&nbsp;</td><td>809b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation030.tex'>equation030.tex</a></td><td>&nbsp;</td><td>52b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation031.png'>equation031.png</a></td><td>&nbsp;</td><td>579b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation031.tex'>equation031.tex</a></td><td>&nbsp;</td><td>20b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation032.png'>equation032.png</a></td><td>&nbsp;</td><td>772b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation032.tex'>equation032.tex</a></td><td>&nbsp;</td><td>65b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation033.png'>equation033.png</a></td><td>&nbsp;</td><td>639b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation033.tex'>equation033.tex</a></td><td>&nbsp;</td><td>19b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation034.png'>equation034.png</a></td><td>&nbsp;</td><td>857b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation034.tex'>equation034.tex</a></td><td>&nbsp;</td><td>71b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation035.png'>equation035.png</a></td><td>&nbsp;</td><td>499b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation035.tex'>equation035.tex</a></td><td>&nbsp;</td><td>39b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation036.png'>equation036.png</a></td><td>&nbsp;</td><td>1.33kb</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation036.tex'>equation036.tex</a></td><td>&nbsp;</td><td>216b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation037.png'>equation037.png</a></td><td>&nbsp;</td><td>2.38kb</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation037.tex'>equation037.tex</a></td><td>&nbsp;</td><td>290b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation038.png'>equation038.png</a></td><td>&nbsp;</td><td>499b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation038.tex'>equation038.tex</a></td><td>&nbsp;</td><td>39b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation039.png'>equation039.png</a></td><td>&nbsp;</td><td>592b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation039.tex'>equation039.tex</a></td><td>&nbsp;</td><td>28b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation040.png'>equation040.png</a></td><td>&nbsp;</td><td>2.16kb</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation040.tex'>equation040.tex</a></td><td>&nbsp;</td><td>295b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation041.png'>equation041.png</a></td><td>&nbsp;</td><td>851b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation041.tex'>equation041.tex</a></td><td>&nbsp;</td><td>38b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation042.png'>equation042.png</a></td><td>&nbsp;</td><td>529b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation042.tex'>equation042.tex</a></td><td>&nbsp;</td><td>20b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation043.png'>equation043.png</a></td><td>&nbsp;</td><td>1.82kb</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation043.tex'>equation043.tex</a></td><td>&nbsp;</td><td>137b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation044.png'>equation044.png</a></td><td>&nbsp;</td><td>2.07kb</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation044.tex'>equation044.tex</a></td><td>&nbsp;</td><td>134b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation045.png'>equation045.png</a></td><td>&nbsp;</td><td>1.84kb</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation045.tex'>equation045.tex</a></td><td>&nbsp;</td><td>214b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation046.png'>equation046.png</a></td><td>&nbsp;</td><td>1.14kb</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation046.tex'>equation046.tex</a></td><td>&nbsp;</td><td>80b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation047.png'>equation047.png</a></td><td>&nbsp;</td><td>354b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation047.tex'>equation047.tex</a></td><td>&nbsp;</td><td>44b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation048.png'>equation048.png</a></td><td>&nbsp;</td><td>851b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation048.tex'>equation048.tex</a></td><td>&nbsp;</td><td>38b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation049.png'>equation049.png</a></td><td>&nbsp;</td><td>387b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation049.tex'>equation049.tex</a></td><td>&nbsp;</td><td>22b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation050.png'>equation050.png</a></td><td>&nbsp;</td><td>523b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation050.tex'>equation050.tex</a></td><td>&nbsp;</td><td>31b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation051.png'>equation051.png</a></td><td>&nbsp;</td><td>523b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation051.tex'>equation051.tex</a></td><td>&nbsp;</td><td>29b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation052.png'>equation052.png</a></td><td>&nbsp;</td><td>535b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation052.tex'>equation052.tex</a></td><td>&nbsp;</td><td>21b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation053.png'>equation053.png</a></td><td>&nbsp;</td><td>560b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation053.tex'>equation053.tex</a></td><td>&nbsp;</td><td>54b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation054.png'>equation054.png</a></td><td>&nbsp;</td><td>282b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation054.tex'>equation054.tex</a></td><td>&nbsp;</td><td>7b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation055.png'>equation055.png</a></td><td>&nbsp;</td><td>1.01kb</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation055.tex'>equation055.tex</a></td><td>&nbsp;</td><td>139b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation056.png'>equation056.png</a></td><td>&nbsp;</td><td>920b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation056.tex'>equation056.tex</a></td><td>&nbsp;</td><td>61b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation057.png'>equation057.png</a></td><td>&nbsp;</td><td>716b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation057.tex'>equation057.tex</a></td><td>&nbsp;</td><td>23b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation058.png'>equation058.png</a></td><td>&nbsp;</td><td>706b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation058.tex'>equation058.tex</a></td><td>&nbsp;</td><td>45b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation059.png'>equation059.png</a></td><td>&nbsp;</td><td>992b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation059.tex'>equation059.tex</a></td><td>&nbsp;</td><td>145b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation060.png'>equation060.png</a></td><td>&nbsp;</td><td>626b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation060.tex'>equation060.tex</a></td><td>&nbsp;</td><td>46b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation061.png'>equation061.png</a></td><td>&nbsp;</td><td>596b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation061.tex'>equation061.tex</a></td><td>&nbsp;</td><td>37b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation062.png'>equation062.png</a></td><td>&nbsp;</td><td>661b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation062.tex'>equation062.tex</a></td><td>&nbsp;</td><td>32b</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation063.png'>equation063.png</a></td><td>&nbsp;</td><td>1.89kb</td></tr>
+
+
+			<tr><td><a href='./Extrema_Lagrange_Mult/equation063.tex'>equation063.tex</a></td><td>&nbsp;</td><td>115b</td></tr>
+
+			</table>
+	</div>
+
+	
+
+</div>
+
+</body>
+</html>

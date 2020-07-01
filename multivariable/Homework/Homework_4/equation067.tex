@@ -1,0 +1,47 @@
+D_{(x, y, z)}(g \circ f) =\\
+\nabla f =\\
+\begin{bmatrix}
+\frac{\partial g_1}{\partial u} &
+\frac{\partial g_1}{\partial v} &
+\frac{\partial g_1}{\partial w}
+\end{bmatrix}
+
+\begin{bmatrix}
+\frac{\partial f_1}{\partial x} &
+\frac{\partial f_1}{\partial y} &
+\frac{\partial f_1}{\partial z} \\
+
+\frac{\partial f_2}{\partial x} &
+\frac{\partial f_2}{\partial y} &
+\frac{\partial f_3}{\partial z} \\
+
+\frac{\partial f_3}{\partial x} &
+\frac{\partial f_3}{\partial y} &
+\frac{\partial f_3}{\partial z}
+\end{bmatrix} =\\
+
+\begin{bmatrix}
+2u & -2v & -1
+\end{bmatrix}
+
+\begin{bmatrix}
+2xy & x^2 & 0 \\
+0 & 2y & 0 \\
+-ze^{-xz} & 0 & -xe^{-xz}
+\end{bmatrix} =\\
+
+\begin{bmatrix}
+2x^2y & -2y^2 & -1
+\end{bmatrix}
+
+\begin{bmatrix}
+2xy & x^2 & 0 \\
+0 & 2y & 0 \\
+-ze^{-xz} & 0 & -xe^{-xz}
+\end{bmatrix} =\\
+
+\begin{bmatrix}
+4x^3y^2 + ze^{-xz} &
+2x^4y - 4y^3 &
+xe^{-xz}
+\end{bmatrix}

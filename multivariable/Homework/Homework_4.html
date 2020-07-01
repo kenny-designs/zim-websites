@@ -63,6 +63,7 @@
 <div class="menu">
 <ul>
 <li><a href="../Derivatives.html" title="Derivatives" class="page">Derivatives</a></li>
+<li><a href="../Extrema_Lagrange_Mult.html" title="Extrema Lagrange Mult" class="page">Extrema Lagrange Mult</a></li>
 <li><a href="../Home.html" title="Home" class="page">Home</a></li>
 <li><a href="../Homework.html" title="Homework" class="page">Homework</a>
 <ul>
@@ -387,7 +388,164 @@ Just plug it in to our Jacobian matrix like so:<br>
 
 <h3>Question 6</h3>
 
-<br>
+<p>
+Let <img src="./Homework_4/equation038.png"> and suppose that x = tcos(t) and y = tsin(t).<br>
+Find <img src="./Homework_4/equation039.png">
+</p>
+
+<p>
+My initial reaction was huh... Can't I just replace everything with the t versions and just try to derive like that?<br>
+Sadly, this gave me a (I presume) unsolvable mess. The professor proposes we do something that I didn't quite think of though. Apparently, we have this:<br>
+<img src="./Homework_4/equation040.png">
+</p>
+
+<p>
+On the solution sheet, he had a typo where instead of y we have x. This is wrong.<br>
+To make this easy on ourselves, let's start with the derivatives of functions x and y like so:<br>
+<img src="./Homework_4/equation041.png">
+</p>
+
+<p>
+To save time, I didn't write everything out. If you're not sure how to differentiate tcost and tsint, refer to the product rule when taking derivatives.
+</p>
+
+<p>
+Now let's do the next part:<br>
+<img src="./Homework_4/equation042.png">
+</p>
+
+<p>
+Putting these together, we have this:<br>
+<img src="./Homework_4/equation043.png">
+</p>
+
+<p>
+Now, we just plug in! So, let us have the following:<br>
+<img src="./Homework_4/equation044.png">
+</p>
+
+<p>
+For x and y, we just passed in π/2 for t.
+</p>
+
+<p>
+Finally! We can finish this darn thing.<br>
+<img src="./Homework_4/equation045.png">
+</p>
+
+<p>
+So there we have it! The <b>final answer</b> is <img src="./Homework_4/equation046.png">.<br>
+I'm quite surprised I managed to end up with the same answer as the professor. I was quite certain something was going to go wrong. Oh well. Hurray!
+</p>
+
+<h3>Question 7</h3>
+
+<p>
+Suppose <img src="./Homework_4/equation047.png"> is the polar coordinate map defined by:<br>
+<img src="./Homework_4/equation048.png">
+</p>
+
+<p>
+Let <img src="./Homework_4/equation051.png"> be a differentiable function and set <img src="./Homework_4/equation052.png">. Find <img src="./Homework_4/equation053.png"> and <img src="./Homework_4/equation054.png">.
+</p>
+
+<p>
+<b>Quick note</b><br>
+In case you were wondering, <img src="./Homework_4/equation049.png"> is just <img src="./Homework_4/equation050.png"> which is read as 'phi.' The version of phi the professor uses in the equation above is the version of phi commonly used in Europe. Just a little semantic detail that I hope won't throw you off.
+</p>
+
+<p>
+Also, r is radius and theta is the degrees of rotation.
+</p>
+
+<p>
+Remember, <b>polar coordinates</b> are just another way of graphing vectors and whatnot. Instead of moving along a grid x units then y units, we instead rotate to match the orientation we want to be in then extend the desire amount. It's as though we found the hypotnuse of x and y then rotated.
+</p>
+
+<p>
+I hope my explanation makes sense...
+</p>
+
+<p>
+Great. Cause after working through the problem it doesn't even matter...<br>
+<b>Back to the problem at hand!</b>
+</p>
+
+<p>
+After looking at the professor's solution, it's apparent that this problem is rather simple. No polar coordinate knowledge needed!<br>
+So, we have the composite function <img src="./Homework_4/equation055.png">. We can get our final answer by <b>applying the chain rule!</b>
+</p>
+
+<p>
+Observe:<br>
+<img src="./Homework_4/equation056.png"><br>
+<img src="./Homework_4/equation057.png">
+</p>
+
+<p>
+<b>That's it. </b>Yeah, I'm surprised to.
+</p>
+
+<h3>Question 8</h3>
+
+<p>
+Let <img src="./Homework_4/equation058.png"> and <img src="./Homework_4/equation059.png">. Find the derivative of <img src="./Homework_4/equation060.png">.
+</p>
+
+<p>
+Not a bad problem. To save time, I went straight to the professor's answer and it makes perfect sense. Let's begin!
+</p>
+
+<p>
+Let us have function F as defined below:<br>
+ <img src="./Homework_4/equation061.png">
+</p>
+
+<p>
+1) Directly<br>
+With our nicely defined function <i>F</i>, we just find the gradient like so:<br>
+<img src="./Homework_4/equation062.png">
+</p>
+
+<p>
+And that's it! <b>Were done!</b> I didn't bother write our all the steps for taking the derivative. It's rather easy so I hope you'll be able to do it on your own.
+</p>
+
+<p>
+2) Chain Rule<br>
+This one is still easy but a bit... Intense.
+</p>
+
+<p>
+I'm going to just retype the professor's solution but with some slight changes and comments.
+</p>
+
+<p>
+Let us have the following:<br>
+<img src="./Homework_4/equation063.png"><br>
+<img src="./Homework_4/equation064.png"><br>
+<img src="./Homework_4/equation065.png"><br>
+<img src="./Homework_4/equation066.png">
+</p>
+
+<p>
+Now let's dive into that chain rule!
+</p>
+
+<p>
+<img src="./Homework_4/equation067.png">
+</p>
+
+<p>
+<b>And we're done!</b>
+</p>
+
+<h3>Question 9</h3>
+
+<p>
+Let <img src="./Homework_4/equation068.png"> and <img src="./Homework_4/equation069.png"> a curve in <img src="./Homework_4/equation070.png"> with <img src="./Homework_4/equation071.png"> and <img src="./Homework_4/equation072.png">. Find the <b>tangent vector</b> to the image of the curve <img src="./Homework_4/equation073.png"> under <i>f</i> at the point t = 0.
+</p>
+
 <br>
 <br>
 <br>
@@ -634,6 +792,222 @@ Just plug it in to our Jacobian matrix like so:<br>
 
 
 			<tr><td><a href='./Homework_4/equation037.tex'>equation037.tex</a></td><td>&nbsp;</td><td>145b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation038.png'>equation038.png</a></td><td>&nbsp;</td><td>343b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation038.tex'>equation038.tex</a></td><td>&nbsp;</td><td>12b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation039.png'>equation039.png</a></td><td>&nbsp;</td><td>597b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation039.tex'>equation039.tex</a></td><td>&nbsp;</td><td>43b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation040.png'>equation040.png</a></td><td>&nbsp;</td><td>979b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation040.tex'>equation040.tex</a></td><td>&nbsp;</td><td>105b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation041.png'>equation041.png</a></td><td>&nbsp;</td><td>1.15kb</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation041.tex'>equation041.tex</a></td><td>&nbsp;</td><td>71b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation042.png'>equation042.png</a></td><td>&nbsp;</td><td>1.16kb</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation042.tex'>equation042.tex</a></td><td>&nbsp;</td><td>107b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation043.png'>equation043.png</a></td><td>&nbsp;</td><td>2.04kb</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation043.tex'>equation043.tex</a></td><td>&nbsp;</td><td>169b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation044.png'>equation044.png</a></td><td>&nbsp;</td><td>571b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation044.tex'>equation044.tex</a></td><td>&nbsp;</td><td>45b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation045.png'>equation045.png</a></td><td>&nbsp;</td><td>5.35kb</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation045.tex'>equation045.tex</a></td><td>&nbsp;</td><td>443b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation046.png'>equation046.png</a></td><td>&nbsp;</td><td>341b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation046.tex'>equation046.tex</a></td><td>&nbsp;</td><td>16b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation047.png'>equation047.png</a></td><td>&nbsp;</td><td>528b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation047.tex'>equation047.tex</a></td><td>&nbsp;</td><td>47b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation048.png'>equation048.png</a></td><td>&nbsp;</td><td>957b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation048.tex'>equation048.tex</a></td><td>&nbsp;</td><td>54b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation049.png'>equation049.png</a></td><td>&nbsp;</td><td>231b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation049.tex'>equation049.tex</a></td><td>&nbsp;</td><td>7b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation050.png'>equation050.png</a></td><td>&nbsp;</td><td>238b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation050.tex'>equation050.tex</a></td><td>&nbsp;</td><td>4b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation051.png'>equation051.png</a></td><td>&nbsp;</td><td>499b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation051.tex'>equation051.tex</a></td><td>&nbsp;</td><td>39b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation052.png'>equation052.png</a></td><td>&nbsp;</td><td>402b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation052.tex'>equation052.tex</a></td><td>&nbsp;</td><td>19b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation053.png'>equation053.png</a></td><td>&nbsp;</td><td>391b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation053.tex'>equation053.tex</a></td><td>&nbsp;</td><td>29b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation054.png'>equation054.png</a></td><td>&nbsp;</td><td>406b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation054.tex'>equation054.tex</a></td><td>&nbsp;</td><td>34b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation055.png'>equation055.png</a></td><td>&nbsp;</td><td>876b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation055.tex'>equation055.tex</a></td><td>&nbsp;</td><td>40b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation056.png'>equation056.png</a></td><td>&nbsp;</td><td>1.60kb</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation056.tex'>equation056.tex</a></td><td>&nbsp;</td><td>237b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation057.png'>equation057.png</a></td><td>&nbsp;</td><td>1.70kb</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation057.tex'>equation057.tex</a></td><td>&nbsp;</td><td>267b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation058.png'>equation058.png</a></td><td>&nbsp;</td><td>840b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation058.tex'>equation058.tex</a></td><td>&nbsp;</td><td>33b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation059.png'>equation059.png</a></td><td>&nbsp;</td><td>692b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation059.tex'>equation059.tex</a></td><td>&nbsp;</td><td>26b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation060.png'>equation060.png</a></td><td>&nbsp;</td><td>342b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation060.tex'>equation060.tex</a></td><td>&nbsp;</td><td>9b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation061.png'>equation061.png</a></td><td>&nbsp;</td><td>1.92kb</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation061.tex'>equation061.tex</a></td><td>&nbsp;</td><td>121b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation062.png'>equation062.png</a></td><td>&nbsp;</td><td>2.18kb</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation062.tex'>equation062.tex</a></td><td>&nbsp;</td><td>176b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation063.png'>equation063.png</a></td><td>&nbsp;</td><td>490b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation063.tex'>equation063.tex</a></td><td>&nbsp;</td><td>19b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation064.png'>equation064.png</a></td><td>&nbsp;</td><td>421b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation064.tex'>equation064.tex</a></td><td>&nbsp;</td><td>10b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation065.png'>equation065.png</a></td><td>&nbsp;</td><td>383b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation065.tex'>equation065.tex</a></td><td>&nbsp;</td><td>9b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation066.png'>equation066.png</a></td><td>&nbsp;</td><td>379b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation066.tex'>equation066.tex</a></td><td>&nbsp;</td><td>13b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation067.png'>equation067.png</a></td><td>&nbsp;</td><td>5.38kb</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation067.tex'>equation067.tex</a></td><td>&nbsp;</td><td>869b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation068.png'>equation068.png</a></td><td>&nbsp;</td><td>711b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation068.tex'>equation068.tex</a></td><td>&nbsp;</td><td>32b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation069.png'>equation069.png</a></td><td>&nbsp;</td><td>422b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation069.tex'>equation069.tex</a></td><td>&nbsp;</td><td>44b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation070.png'>equation070.png</a></td><td>&nbsp;</td><td>273b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation070.tex'>equation070.tex</a></td><td>&nbsp;</td><td>12b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation071.png'>equation071.png</a></td><td>&nbsp;</td><td>501b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation071.tex'>equation071.tex</a></td><td>&nbsp;</td><td>18b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation072.png'>equation072.png</a></td><td>&nbsp;</td><td>663b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation072.tex'>equation072.tex</a></td><td>&nbsp;</td><td>31b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation073.png'>equation073.png</a></td><td>&nbsp;</td><td>338b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation073.tex'>equation073.tex</a></td><td>&nbsp;</td><td>9b</td></tr>
 
 			</table>
 	</div>
