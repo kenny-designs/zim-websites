@@ -55,13 +55,14 @@
 
 	[ <span class='insen'>Index</span> ]
 
-	[ <a href='../Introduction.html'>Next</a> ]
+	[ <a href='../Integrals.html'>Next</a> ]
 </div>
 
 <hr />
 
 <div class="menu">
 <ul>
+<li><a href="../Cheat_Sheet.html" title="Cheat Sheet" class="page">Cheat Sheet</a></li>
 <li><a href="../Derivatives.html" title="Derivatives" class="page">Derivatives</a></li>
 <li><a href="../Extrema_Lagrange_Mult.html" title="Extrema Lagrange Mult" class="page">Extrema Lagrange Mult</a></li>
 <li><a href="../Home.html" title="Home" class="page">Home</a></li>
@@ -73,6 +74,7 @@
 <li><b>Homework 4</b></li>
 </ul>
 </li>
+<li><a href="../Integrals.html" title="Integrals" class="page">Integrals</a></li>
 <li><a href="../Introduction.html" title="Introduction" class="page">Introduction</a></li>
 <li><a href="../Limits.html" title="Limits" class="page">Limits</a></li>
 <li><a href="../Linear_Functions.html" title="Linear Functions" class="page">Linear Functions</a></li>
@@ -546,22 +548,454 @@ Now let's dive into that chain rule!
 Let <img src="./Homework_4/equation068.png"> and <img src="./Homework_4/equation069.png"> a curve in <img src="./Homework_4/equation070.png"> with <img src="./Homework_4/equation071.png"> and <img src="./Homework_4/equation072.png">. Find the <b>tangent vector</b> to the image of the curve <img src="./Homework_4/equation073.png"> under <i>f</i> at the point t = 0.
 </p>
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+<p>
+This is actually a fairly easy question once you get past the new terminology.
+</p>
 
+<p>
+Perhaps the best way to begin explaining this problem is with this picture:<br>
+<img src="../images/gamma-diagram.png"><br>
+Our γ (gamma) function takes a single real number. In turn, it gives us a point on a curve (the diagram has that curve in the third dimension but the question itself has it in the 2nd).
+</p>
+
+<p>
+Moving on, the derivative of <img src="./Homework_4/equation074.png"> will <b>give us our tangent vector.</b>
+</p>
+
+<p>
+Alright, so let's delve a bit deeper into this. First, let us have the following:<br>
+<img src="./Homework_4/equation075.png">
+</p>
+
+<p>
+The function Y will just be a shorthand for our composite function <i>f</i> o γ.
+</p>
+
+<p>
+Next, let us take the derivative of Y via <b>the chain rule </b>like so:<br>
+<img src="./Homework_4/equation076.png">
+</p>
+
+<p>
+With this form, we can start on the actual problem.<br>
+First off, we want to find the tangent vector to the image of the curve γ(t) under <i>f</i> at the point t = 0. As such, let us pass in t as 0 to the equation we just wrote out like so:<br>
+<img src="./Homework_4/equation077.png">
+</p>
+
+<p>
+We're not done yet but I want to point out a couple of things. First off, the problem states that γ(0) = (0, 0). As such, we will find the derivative of <i>f </i>in regards to (0, 0). Also, we are given that <img src="./Homework_4/equation078.png">. As such, we just replace γ' with the vector (1, 1).
+</p>
+
+<p>
+Before we can finish, we need to know what D<sub>(0, 0)</sub>(<i>f</i>) is. We do that with a Jacobian matrix like so:<br>
+<img src="./Homework_4/equation079.png">
+</p>
+
+<p>
+<img src="./Homework_4/equation080.png">
+</p>
+
+<p>
+Now we can plug this result in and get <b>our answer:</b><br>
+<img src="./Homework_4/equation081.png">
+</p>
+
+<p>
+<b>Finally</b>, we have Y'(0) = (2, 0)
+</p>
+
+<h3>Question 10</h3>
+
+<p>
+Find the equation of the <b>tangent plane </b>to the graph of:<br>
+<img src="./Homework_4/equation082.png"><br>
+at the point (1, 0, 2).
+</p>
+
+<p>
+Easy! Remember, the equation of a plane takes this general form:<br>
+<img src="./Homework_4/equation083.png">
+</p>
+
+<p>
+a, b, and c are the partial derivatives of x, y, and z respectively when given our point (1, 0, 2). So then, let us find those partial derivatives!
+</p>
+
+<p>
+<img src="./Homework_4/equation085.png">
+</p>
+
+<p>
+We don't look for a partial in regards to z because our function <i>f</i> doesn't take a z.
+</p>
+
+<p>
+Likewise, we get the following for our point (1, 0, 2):<br>
+<img src="./Homework_4/equation086.png">
+</p>
+
+<p>
+In this case, our a = 2, b = 1, and c = 2. Remember, our point itself has z = 2 so we shall use that.
+</p>
+
+<p>
+Putting it all together, we get:<br>
+<img src="./Homework_4/equation087.png">
+</p>
+
+<p>
+So then, our <b>final answer</b>is z = 2x + y.
+</p>
+
+<h3>Question 11</h3>
+
+<p>
+Let <img src="./Homework_4/equation088.png">. Find the tangent hyperplane for the following three scenarios:<br>
+Don't let the word <i>hyperplane</i> scare you. It's just a plane with n-1 dimensions. One less dimension than what we're currently in.
+</p>
+
+<p>
+1) at <img src="./Homework_4/equation089.png"> with <b>a</b> ≠ <b>0</b><br>
+In know that a plane has this general form:<br>
+<img src="./Homework_4/equation092.png">
+</p>
+
+<p>
+We also know that for a, b, and c we take the partial derivative in regards x, y, and z respectively. So then, let's generalize this for n-dimensions. We'll get something that will look like this:<br>
+<img src="./Homework_4/equation093.png">
+</p>
+
+<p>
+I'm not sure if that's the proper syntax. This is my own interpretation of the problem.
+</p>
+
+<p>
+Moving forward, let's find the derivative in general for <b>a</b>.<br>
+<img src="./Homework_4/equation094.png">
+</p>
+
+<p>
+Our professor did only wrote a<sub>i</sub> instead of 2a<sub>i</sub>. I believe this was a mistake.
+</p>
+
+<p>
+We now have:<br>
+<img src="./Homework_4/equation095.png">
+</p>
+
+<p>
+This isn't quite the answer the professor got. As of now, I can't seem to achieve his final answer which was:<br>
+<img src="./Homework_4/equation096.png">
+</p>
+
+<p>
+I'm not sure what I'm doing wrong.
+</p>
+
+<p>
+2) at <img src="./Homework_4/equation090.png"><br>
+The professor states that we get y = x<sub>j</sub>.
+</p>
+
+<p>
+3) at <img src="./Homework_4/equation091.png"><br>
+Our professor touches upon some limit stuff I'm too sleepy to examine right now. I'll return to this problem if I can.
+</p>
+
+<h3>Question 12</h3>
+
+<p>
+Show that the function:<br>
+<img src="./Homework_4/equation097.png"><br>
+is harmonic in <img src="./Homework_4/equation098.png">.
+</p>
+
+<p>
+<i>At this point, I'm doing questions 12 onward the day before quiz 2. Been feelin' real sick and tired lately. Fingers crossed I'll be ready for tomorrow. As such, I'm going to be skipping questions and being messier so I can at least have them roughly understood.</i>
+</p>
+
+<p>
+The bread and butter for this problem is the <b>Laplacian operator</b>. If we find the laplacian of the function and it all adds to 0, then it's harmonic.
+</p>
+
+<p>
+I tried taking the derivatives by hand and it was a rather lengthy and time consuming process. Would not recommend on an exam.
+</p>
+
+<h3>Question 13</h3>
+
+<p>
+Write the Laplacian <img src="./Homework_4/equation099.png"> in <b>polar coordinates </b>x = rcosθ and y = rsinθ.
+</p>
+
+<p>
+To begin, he wants us to approach this problem similar to how we did with question 7. To quote question 7:
+</p>
+
+<p>
+"Suppose that φ (phi) is the function <img src="./Homework_4/equation101.png"> that maps like so:<br>
+<img src="./Homework_4/equation102.png">
+</p>
+
+<p>
+<s>Let </s><img src="./Homework_4/equation103.png"><s> be a differentiable function and set </s><img src="./Homework_4/equation104.png"><s>."</s>
+</p>
+
+<p>
+First, let's find the first partial derivative in regards to r and θ.<br>
+<img src="./Homework_4/equation105.png">
+</p>
+
+<p>
+<img src="./Homework_4/equation106.png">
+</p>
+
+<p>
+He forgot the negative in the second equation above.
+</p>
+
+<p>
+<b>I'm having trouble figuring out how he did this question. I'm skipping it.</b>
+</p>
+
+<h3>Question 14</h3>
+
+<p>
+Let <img src="./Homework_4/equation107.png"> be defined by:
+</p>
+
+<p>
+<img src="./Homework_4/equation108.png">
+</p>
+
+<p>
+Show that the <b>directional derivative</b> of <i>f</i> at (0, 0) exist along any direction but <i>f</i> is not differentiable at the origin.
+</p>
+
+<p>
+There's a lot to take in here and I don't have time.
+</p>
+
+<h3>Question 15</h3>
+
+<p>
+He says it's very easy. I'm a little confused as to how to approach. I'm skipping for now.
+</p>
+
+<h3>Question 16</h3>
+
+<p>
+Find the equation of a <b>tangent plane</b> and the euqation of a <b>normal line</b> to the surface <img src="./Homework_4/equation109.png"> at the point P(3, 5, -4).
+</p>
+
+<p>
+Finally! Something that's doable.
+</p>
+
+<p>
+Remember that the following is the equation of a plane:<br>
+<img src="./Homework_4/equation110.png">
+</p>
+
+<p>
+Let <img src="./Homework_4/equation111.png"><br>
+Then we have the gradient<br>
+<img src="./Homework_4/equation112.png"><br>
+Remember, we take the partial of <i>f</i> in regards to x, y, and then z to get that gradient.
+</p>
+
+<p>
+Next, we pass P into <i>f</i> like so:<br>
+<img src="./Homework_4/equation113.png">
+</p>
+
+<p>
+6, 10, and 8 will be our a, b, and c respectively for the <b>final tangent plane equation</b> that is as follows:<br>
+<img src="./Homework_4/equation114.png">
+</p>
+
+<p>
+The 3, 5, and -4 are from our original point P which was the vector (3, 5, -4).
+</p>
+
+<p>
+Next, we need the normal line at P. We get that from the following:<br>
+<img src="./Homework_4/equation115.png">
+</p>
+
+<p>
+Let <b>v</b> = (6, 10, 8) and <b>a</b> = (3, 5, -4).<br>
+<img src="./Homework_4/equation116.png">
+</p>
+
+<p>
+And that's our final answer
+</p>
+
+<h3>Question 17</h3>
+
+<p>
+Find the parametric equations for the line tangent to the curve given by the intersection of the surfaces <img src="./Homework_4/equation117.png"> at the point <img src="./Homework_4/equation118.png">.
+</p>
+
+<p>
+First, we have two surfaces that we shall refer to as the following two functions:<br>
+<img src="./Homework_4/equation119.png">
+</p>
+
+<p>
+To quote the professor, "we need to find two normal vectors to these surfaces and then calculate their cross product to produce a vector which is tangent to both surface and, so, tangent to their intersection."
+</p>
+
+<p>
+Essentially, we need to find <b>the normal line</b> for each surface and then take their <b>cross product</b> which will produce a vector orthogonal to both normal lines.
+</p>
+
+<p>
+To achieve this, first you need to find the gradient vector for both <i>f</i> and <i>g</i>.<br>
+<img src="./Homework_4/equation120.png">
+</p>
+
+<p>
+Now pass in our given point <img src="./Homework_4/equation121.png"> like so:<br>
+<img src="./Homework_4/equation122.png">
+</p>
+
+<p>
+To save time, I'm not going to go through the motions but, as stated by the professor, the cross product is:<br>
+<img src="./Homework_4/equation123.png">
+</p>
+
+<p>
+To get that normal line, we do:<br>
+<img src="./Homework_4/equation124.png">
+</p>
+
+<p>
+Where <img src="./Homework_4/equation125.png"> and <b>v</b> was the cross product <img src="./Homework_4/equation127.png">.
+</p>
+
+<p>
+As such, our final solution is:<br>
+<img src="./Homework_4/equation126.png">
+</p>
+
+<h3>Question 18</h3>
+
+<p>
+Find the points on the ellipsoid (it's like a sphere but a bit stretched out) represented by <img src="./Homework_4/equation128.png"> where the tangent plane is parallel to the plane <img src="./Homework_4/equation129.png"><br>
+Let <img src="./Homework_4/equation130.png">.<br>
+The <b>normal</b> to the tangent plane at a point (x, y, z) on the ellipsoid is given by:<br>
+<img src="./Homework_4/equation131.png">
+</p>
+
+<p>
+Likewise, let <b>n</b> = (3, -2, 3) which were the coefficients of the plane <img src="./Homework_4/equation132.png">.
+</p>
+
+<p>
+Now then, if ∇<i>f</i> is a <b>scalar multiple</b> of <b>n</b> at a point on the ellipsoid, then, the tangent plane at that point will be parallel to the plane 3x - 2y + 3z = 1. This happens as follows:<br>
+<img src="./Homework_4/equation133.png">
+</p>
+
+<p>
+In case you couldn't tell, λ is some scalar multiple. We can now solve for x, y, and z.<br>
+<img src="./Homework_4/equation134.png">
+</p>
+
+<p>
+We can now plug these into our ellipsoid equation like so:<br>
+<img src="./Homework_4/equation135.png">
+</p>
+
+<p>
+We can then solve for λ which gives us x, y, and z.
+</p>
+
+<h3>Question 19</h3>
+
+<p>
+Find the critical points of the function <img src="./Homework_4/equation136.png"> such that <img src="./Homework_4/equation137.png"> and investigate their nature.
+</p>
+
+<p>
+To begin, we need to find the critical points. To do this, we take the partial derivatives of <i>f</i> in regards to x and y then see where they equal 0.<br>
+<img src="./Homework_4/equation138.png">
+</p>
+
+<p>
+Now we can solve for what x and y are. To do this, use systems of linear equations. I hope you remember how to do that... I'll get you started at least:<br>
+<img src="./Homework_4/equation139.png">
+</p>
+
+<p>
+Remember, a critical point appears when the derivative is 0. As such, we set both derivatives equal to 0 and solve for our critical point.
+</p>
+
+<p>
+By the end, you should have the following as your <b>critical point:</b><br>
+<img src="./Homework_4/equation140.png">
+</p>
+
+<p>
+This is the answer the professor gave us and I got the same answer when solving for x and y on my whiteboard. 
+</p>
+
+<p>
+Now then, by <i>investigate their nature</i> our professor is asking if the critical point is a local minimum, a local maximum, or a saddle point. To figure this out, we need a <b>Hessian matrix</b>.
+</p>
+
+<p>
+In general, it looks like this:<br>
+<img src="./Homework_4/equation141.png">
+</p>
+
+<p>
+So, let's find those second partial derivatives!<br>
+<img src="./Homework_4/equation142.png">
+</p>
+
+<p>
+We then have the Hessian matrix:<br>
+<img src="./Homework_4/equation143.png">
+</p>
+
+<p>
+The <b>determinate</b> of this is:<br>
+2*2 - 1 = 4 - 1 = 3
+</p>
+
+<p>
+Since the determinate of our Hessian matrix is 3 which is &gt; 0 we have a <b>local minimum!</b>
+</p>
+
+<h3>Question 20</h3>
+
+<p>
+Finally... And it's only 11:53pm the night before quiz 2.
+</p>
+
+<p>
+Let a &gt; 0, b &gt; 0, and c &gt; 0. Determine the <b>minima</b> and <b>maxima</b> of<br>
+<img src="./Homework_4/equation144.png"><br>
+on the ellipsoid<br>
+<img src="./Homework_4/equation145.png">
+</p>
+
+<p>
+I'm tired. I'll touch more upon this in the morning. Maybe...
+</p>
 
 	</div>
 
 	<br />
 
 	<div class='page-footer'>
+		<b>Backlinks:</b>
+
+		<a href='../Cheat_Sheet.html'>Cheat Sheet</a>
+
+		<br /><br />
 
 			<b>Attachments:</b>
 			<table>
@@ -1008,6 +1442,438 @@ Let <img src="./Homework_4/equation068.png"> and <img src="./Homework_4/equation
 
 
 			<tr><td><a href='./Homework_4/equation073.tex'>equation073.tex</a></td><td>&nbsp;</td><td>9b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation074.png'>equation074.png</a></td><td>&nbsp;</td><td>333b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation074.tex'>equation074.tex</a></td><td>&nbsp;</td><td>14b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation075.png'>equation075.png</a></td><td>&nbsp;</td><td>552b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation075.tex'>equation075.tex</a></td><td>&nbsp;</td><td>19b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation076.png'>equation076.png</a></td><td>&nbsp;</td><td>772b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation076.tex'>equation076.tex</a></td><td>&nbsp;</td><td>34b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation077.png'>equation077.png</a></td><td>&nbsp;</td><td>1.12kb</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation077.tex'>equation077.tex</a></td><td>&nbsp;</td><td>87b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation078.png'>equation078.png</a></td><td>&nbsp;</td><td>663b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation078.tex'>equation078.tex</a></td><td>&nbsp;</td><td>30b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation079.png'>equation079.png</a></td><td>&nbsp;</td><td>646b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation079.tex'>equation079.tex</a></td><td>&nbsp;</td><td>47b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation080.png'>equation080.png</a></td><td>&nbsp;</td><td>2.52kb</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation080.tex'>equation080.tex</a></td><td>&nbsp;</td><td>463b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation081.png'>equation081.png</a></td><td>&nbsp;</td><td>1.51kb</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation081.tex'>equation081.tex</a></td><td>&nbsp;</td><td>212b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation082.png'>equation082.png</a></td><td>&nbsp;</td><td>809b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation082.tex'>equation082.tex</a></td><td>&nbsp;</td><td>32b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation083.png'>equation083.png</a></td><td>&nbsp;</td><td>1.02kb</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation083.tex'>equation083.tex</a></td><td>&nbsp;</td><td>40b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation084.png'>equation084.png</a></td><td>&nbsp;</td><td>784b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation084.tex'>equation084.tex</a></td><td>&nbsp;</td><td>27b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation085.png'>equation085.png</a></td><td>&nbsp;</td><td>1.45kb</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation085.tex'>equation085.tex</a></td><td>&nbsp;</td><td>106b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation086.png'>equation086.png</a></td><td>&nbsp;</td><td>2.00kb</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation086.tex'>equation086.tex</a></td><td>&nbsp;</td><td>146b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation087.png'>equation087.png</a></td><td>&nbsp;</td><td>1.98kb</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation087.tex'>equation087.tex</a></td><td>&nbsp;</td><td>125b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation088.png'>equation088.png</a></td><td>&nbsp;</td><td>1.07kb</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation088.tex'>equation088.tex</a></td><td>&nbsp;</td><td>61b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation089.png'>equation089.png</a></td><td>&nbsp;</td><td>426b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation089.tex'>equation089.tex</a></td><td>&nbsp;</td><td>35b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation090.png'>equation090.png</a></td><td>&nbsp;</td><td>450b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation090.tex'>equation090.tex</a></td><td>&nbsp;</td><td>37b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation091.png'>equation091.png</a></td><td>&nbsp;</td><td>439b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation091.tex'>equation091.tex</a></td><td>&nbsp;</td><td>35b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation092.png'>equation092.png</a></td><td>&nbsp;</td><td>1.02kb</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation092.tex'>equation092.tex</a></td><td>&nbsp;</td><td>40b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation093.png'>equation093.png</a></td><td>&nbsp;</td><td>1.41kb</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation093.tex'>equation093.tex</a></td><td>&nbsp;</td><td>144b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation094.png'>equation094.png</a></td><td>&nbsp;</td><td>2.52kb</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation094.tex'>equation094.tex</a></td><td>&nbsp;</td><td>310b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation095.png'>equation095.png</a></td><td>&nbsp;</td><td>2.56kb</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation095.tex'>equation095.tex</a></td><td>&nbsp;</td><td>346b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation096.png'>equation096.png</a></td><td>&nbsp;</td><td>615b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation096.tex'>equation096.tex</a></td><td>&nbsp;</td><td>71b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation097.png'>equation097.png</a></td><td>&nbsp;</td><td>930b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation097.tex'>equation097.tex</a></td><td>&nbsp;</td><td>45b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation098.png'>equation098.png</a></td><td>&nbsp;</td><td>523b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation098.tex'>equation098.tex</a></td><td>&nbsp;</td><td>37b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation099.png'>equation099.png</a></td><td>&nbsp;</td><td>695b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation099.tex'>equation099.tex</a></td><td>&nbsp;</td><td>69b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation100.png'>equation100.png</a></td><td>&nbsp;</td><td>686b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation100.tex'>equation100.tex</a></td><td>&nbsp;</td><td>28b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation101.png'>equation101.png</a></td><td>&nbsp;</td><td>528b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation101.tex'>equation101.tex</a></td><td>&nbsp;</td><td>47b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation102.png'>equation102.png</a></td><td>&nbsp;</td><td>957b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation102.tex'>equation102.tex</a></td><td>&nbsp;</td><td>54b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation103.png'>equation103.png</a></td><td>&nbsp;</td><td>499b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation103.tex'>equation103.tex</a></td><td>&nbsp;</td><td>39b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation104.png'>equation104.png</a></td><td>&nbsp;</td><td>402b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation104.tex'>equation104.tex</a></td><td>&nbsp;</td><td>19b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation105.png'>equation105.png</a></td><td>&nbsp;</td><td>1.42kb</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation105.tex'>equation105.tex</a></td><td>&nbsp;</td><td>237b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation106.png'>equation106.png</a></td><td>&nbsp;</td><td>1.51kb</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation106.tex'>equation106.tex</a></td><td>&nbsp;</td><td>255b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation107.png'>equation107.png</a></td><td>&nbsp;</td><td>499b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation107.tex'>equation107.tex</a></td><td>&nbsp;</td><td>39b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation108.png'>equation108.png</a></td><td>&nbsp;</td><td>1.76kb</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation108.tex'>equation108.tex</a></td><td>&nbsp;</td><td>165b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation109.png'>equation109.png</a></td><td>&nbsp;</td><td>575b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation109.tex'>equation109.tex</a></td><td>&nbsp;</td><td>20b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation110.png'>equation110.png</a></td><td>&nbsp;</td><td>1.02kb</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation110.tex'>equation110.tex</a></td><td>&nbsp;</td><td>40b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation111.png'>equation111.png</a></td><td>&nbsp;</td><td>841b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation111.tex'>equation111.tex</a></td><td>&nbsp;</td><td>33b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation112.png'>equation112.png</a></td><td>&nbsp;</td><td>678b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation112.tex'>equation112.tex</a></td><td>&nbsp;</td><td>21b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation113.png'>equation113.png</a></td><td>&nbsp;</td><td>1.19kb</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation113.tex'>equation113.tex</a></td><td>&nbsp;</td><td>47b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation114.png'>equation114.png</a></td><td>&nbsp;</td><td>968b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation114.tex'>equation114.tex</a></td><td>&nbsp;</td><td>35b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation115.png'>equation115.png</a></td><td>&nbsp;</td><td>1.20kb</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation115.tex'>equation115.tex</a></td><td>&nbsp;</td><td>68b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation116.png'>equation116.png</a></td><td>&nbsp;</td><td>862b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation116.tex'>equation116.tex</a></td><td>&nbsp;</td><td>38b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation117.png'>equation117.png</a></td><td>&nbsp;</td><td>736b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation117.tex'>equation117.tex</a></td><td>&nbsp;</td><td>44b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation118.png'>equation118.png</a></td><td>&nbsp;</td><td>621b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation118.tex'>equation118.tex</a></td><td>&nbsp;</td><td>24b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation119.png'>equation119.png</a></td><td>&nbsp;</td><td>1.03kb</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation119.tex'>equation119.tex</a></td><td>&nbsp;</td><td>49b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation120.png'>equation120.png</a></td><td>&nbsp;</td><td>1.10kb</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation120.tex'>equation120.tex</a></td><td>&nbsp;</td><td>48b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation121.png'>equation121.png</a></td><td>&nbsp;</td><td>621b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation121.tex'>equation121.tex</a></td><td>&nbsp;</td><td>24b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation122.png'>equation122.png</a></td><td>&nbsp;</td><td>1.76kb</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation122.tex'>equation122.tex</a></td><td>&nbsp;</td><td>112b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation123.png'>equation123.png</a></td><td>&nbsp;</td><td>1.03kb</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation123.tex'>equation123.tex</a></td><td>&nbsp;</td><td>56b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation124.png'>equation124.png</a></td><td>&nbsp;</td><td>1.20kb</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation124.tex'>equation124.tex</a></td><td>&nbsp;</td><td>68b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation125.png'>equation125.png</a></td><td>&nbsp;</td><td>645b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation125.tex'>equation125.tex</a></td><td>&nbsp;</td><td>44b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation126.png'>equation126.png</a></td><td>&nbsp;</td><td>847b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation126.tex'>equation126.tex</a></td><td>&nbsp;</td><td>61b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation127.png'>equation127.png</a></td><td>&nbsp;</td><td>584b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation127.tex'>equation127.tex</a></td><td>&nbsp;</td><td>23b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation128.png'>equation128.png</a></td><td>&nbsp;</td><td>633b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation128.tex'>equation128.tex</a></td><td>&nbsp;</td><td>21b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation129.png'>equation129.png</a></td><td>&nbsp;</td><td>550b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation129.tex'>equation129.tex</a></td><td>&nbsp;</td><td>16b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation130.png'>equation130.png</a></td><td>&nbsp;</td><td>894b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation130.tex'>equation130.tex</a></td><td>&nbsp;</td><td>34b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation131.png'>equation131.png</a></td><td>&nbsp;</td><td>905b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation131.tex'>equation131.tex</a></td><td>&nbsp;</td><td>32b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation132.png'>equation132.png</a></td><td>&nbsp;</td><td>550b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation132.tex'>equation132.tex</a></td><td>&nbsp;</td><td>16b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation133.png'>equation133.png</a></td><td>&nbsp;</td><td>1.35kb</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation133.tex'>equation133.tex</a></td><td>&nbsp;</td><td>82b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation134.png'>equation134.png</a></td><td>&nbsp;</td><td>1.57kb</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation134.tex'>equation134.tex</a></td><td>&nbsp;</td><td>184b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation135.png'>equation135.png</a></td><td>&nbsp;</td><td>1.41kb</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation135.tex'>equation135.tex</a></td><td>&nbsp;</td><td>116b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation136.png'>equation136.png</a></td><td>&nbsp;</td><td>499b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation136.tex'>equation136.tex</a></td><td>&nbsp;</td><td>39b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation137.png'>equation137.png</a></td><td>&nbsp;</td><td>911b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation137.tex'>equation137.tex</a></td><td>&nbsp;</td><td>34b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation138.png'>equation138.png</a></td><td>&nbsp;</td><td>1.03kb</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation138.tex'>equation138.tex</a></td><td>&nbsp;</td><td>87b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation139.png'>equation139.png</a></td><td>&nbsp;</td><td>693b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation139.tex'>equation139.tex</a></td><td>&nbsp;</td><td>31b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation140.png'>equation140.png</a></td><td>&nbsp;</td><td>632b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation140.tex'>equation140.tex</a></td><td>&nbsp;</td><td>41b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation141.png'>equation141.png</a></td><td>&nbsp;</td><td>1.33kb</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation141.tex'>equation141.tex</a></td><td>&nbsp;</td><td>216b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation142.png'>equation142.png</a></td><td>&nbsp;</td><td>1.23kb</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation142.tex'>equation142.tex</a></td><td>&nbsp;</td><td>175b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation143.png'>equation143.png</a></td><td>&nbsp;</td><td>370b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation143.tex'>equation143.tex</a></td><td>&nbsp;</td><td>43b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation144.png'>equation144.png</a></td><td>&nbsp;</td><td>841b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation144.tex'>equation144.tex</a></td><td>&nbsp;</td><td>52b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation145.png'>equation145.png</a></td><td>&nbsp;</td><td>709b</td></tr>
+
+
+			<tr><td><a href='./Homework_4/equation145.tex'>equation145.tex</a></td><td>&nbsp;</td><td>55b</td></tr>
 
 			</table>
 	</div>
