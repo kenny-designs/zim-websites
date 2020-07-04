@@ -108,7 +108,7 @@ The rest of Chapter 7: Applications of Integration in the book I am following (S
 ==== Techniques of Integration ====
 Thus far, we've learned basic integration and how to use the substitution rule. Now, it's time we get a little more complex! Unlike finding the derivative, integration isn't so straight foward.
 
-It's good to note that every differentiation rule has a corresponding integration rule. For instance, the **Substitution Rule** for integration corresponds to the **Chain Rule** for differentiation. Likewise, the rule that corresopnds to the **Product Rule** for differentiation is called the rule for **integration by parts.** As such, let us begin learning about this rule!
+It's good to note that every differentiation rule has a corresponding integration rule. For instance, the **Substitution Rule** for integration corresponds to the **Chain Rule** for differentiation. Likewise, the rule that corresponds to the **Product Rule** for differentiation is called the rule for **integration by parts.** As such, let us begin learning about this rule!
 
 ==== Integration by Parts ====
 As a refresher, the Product Rule states that if //f// and //g// are differentiable functions, then we have the following:

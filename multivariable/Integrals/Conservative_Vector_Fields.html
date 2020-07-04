@@ -1,0 +1,744 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Conservative Vector Fields</title>
+	<meta name='Generator' content='Zim 0.68'>
+	<style type='text/css'>
+		a          { text-decoration: none      }
+		a:hover    { text-decoration: underline }
+		a:active   { text-decoration: underline }
+		strike     { color: grey                }
+		u          { text-decoration: none;
+					 background-color: yellow   }
+		tt         { color: #2e3436;            }
+		pre        { color: #2e3436;
+					 margin-left: 20px          }
+		h1         { text-decoration: underline;
+					 color: #4e9a06; margin-bottom: 0 }
+		h2         { color: #4e9a06; margin-bottom: 0 }
+		h3         { color: #4e9a06; margin-bottom: 0 }
+		h4         { color: #4e9a06; margin-bottom: 0 }
+		h5         { color: #4e9a06; margin-bottom: 0 }
+		p          { margin-top: 0              }
+		span.zim-tag {
+			color: #ce5c00;
+		}
+		div.zim-object {
+			border-style:solid;
+			border-width:1px;
+		}
+		.checked-box {list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAANOgAADMQBiN+4gQAAAAd0SU1FB9gKGQ8sMEGsKGkAAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAEBUlEQVRIx62V22tdRRTGf7Nn73P2ybntnNOe3NqkPTGgLTVUUZF6QatSLOKTPgqCIqLgQ0H/A1sQQbBYCBb1QfAxiC8tSO1FqHkwJVKtjdTGNraUmObsc9nXmfGh7cGYpM1D5nHWzPetteZb3wg2eB2YqYm4zSadsMtoboiNBH/3TE0awx6j+MRoxoTg/IYRvP19TQrJS0bzhdHGSyKFkLTtjSKwMjyiEz43ynhtP6bdjBCWyFobAf7eT7VhNF/q1FRbjYjmUohlCVPwnB+6FUxMTJipqSmUUhhjEGKd3bMT4ks/Y6oLBK2Yth8hHYtCJXOix7Nf7xLMzc0xOzvLzp078TyPNE3viW3QJPXzhNWbxFFKHCmMhoLn/FHodd48vGfhapdAacXQlkFK5dL6wIUm6fuTZPuvqDQhaMUYYyiVyuQr6rXDexYuAdi3tSv1ZJNs/R/CaszzT+1na88uXFnCEnJVgivBNN8uTJKmHQI/ptOOcXNZzMz9mOqFs90OHpipWcYwlo5P4ebnuOkrvr5wgrH+h3im7y36MzuwRXYZeKha/OhP0EkadFoxQSdGSotedR/+XwMc2XvKdNUFOFqZx6LKZWIiwjgkikNmLp/hm8sH+K1zjFTHXfBYdTi+eJArzXM0GxFxoBDCopLvo/fqEwi1XPkWkGqjFo2TgB1jOYZUKZTS/D1/ncmLh7jon0IbRWoiTi59ymzzJEEQE3cStNZsGxqlfPE57MBbOR8fP3hDGalOO9fq2DlBvmZw8xa2IxACGn6TydlD/O6f5OzSV/zif0cYhLQaEXGkKBbz7Ov/AOlXV1cxgBJRI3fuSTrpTawt18kWIZN1CFuaONI0w0WOXfsI43YIggh/KUSlhqxrMz74AkOZcWBm9QkH+Gw8NDLuITi+m0yzhluSyJzBLcpblUhFxywSRAEtPwQjsKVN30CNh0uvYuOubSHLtN3J0TO1j0pmBNuFbFWRK0gyPRZpktL2I5JQkclKakNlnh54g6ocvevUr/Ai2a7wineEkcJupA3S1Wg0nVZM2E6wbEF5U5G9Q++wI7sfR7h3N8HVNstykBfzH+KJEZwiWD0aIwxCgJ0R1Mu7GXOeJSuK93bZtQIle4D9pUNU5DC5jEsu55AvZakM5NicGyEj8uuz8bUCQgj67QfY671P3vEoeC69gy695U1U7NG7XV0pUwBjDJa1/JJlWWxzHuflzQe5FJ/GsgUVuZ2t8lEkTvfc0aNHb72flBhjVicQQqCUuvM3/M+WDVguWBrMVdDXEGZlBVEUrVCU9d9s5+fnaTQa2PZyPxEIhJaI1EEoZwX4ncynp6fXrmB4eJjR0VFarRbNZnP9P9rt9gohqNVq1Ov1ZbF/AZGev3hLJ2/zAAAAAElFTkSuQmCC)}
+		.xchecked-box {list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAANOgAADMQBiN+4gQAAAAd0SU1FB9gKGQ8bDYnDxEwAAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAEK0lEQVRIx9WVS2hTWRjHf/eR3CY1nbxMH2YiZRQS6qO13YlMVxY3SnVcuNIBFezGpSADLoQqLu1sHJCqdCFSXFpw4YOCSH3BtFqttTNamabX3DS5bfO6uffMoglja3RGcDMHzuac7/z/53++//cd+L8P6VuCPQYZ8ADNgBd4J31DcDcQs+GnHByRocEDv0kfBSjAOlYCs11Q+gpwDegS8LMJ+3QIK0ATzEhV8Odnz5bzw8P4dJ25aJQ/WlvJ1df/K7hSLtOcTNI+Pk69rpMTgqIQhCDvh1/VSpw79+gRrRMTmLZNezLJJsPg+a5dmOEwQlFqg1sWG16/Jv7sGWXDwBACFQjC9HcwIMONKkGp4PGAJGEDS0IQmZlhnWnye3c3eiyGo6qr3WHbrJ+dJf7gAXI6zSIr72T7/fgzmT4FHnTBsgrQBfYvTU0km5vxz86iADnAm0rRPTWFt7cXZccOJJcLAGHb2K9ekT93jmwmwwdAAFpjI6Ntbfxw5879ag7l6o1sr5eHHR3IsRgeQK/M4sQE+YEB7JcvEY6zAj45SWFgAPPxYwzHoQxIkQjTPT0kIxE+Noj8sexFn4/xnh58iQTeSpHkHAdrbIzi0BCOrmNPTpK/eJHM3bt8sCyKQCiR4NWePWSiUZw1+ZLXJm4pFKLhzBlCsRh2RUXacVgeGaF47RrL58+zcP8+RrmMkCQinZ1EL1zAjERqmkH+tLYl1G3bCJw4QUjT0IA0MJfLMX/5MqmHD0nZNiUgtGULG/r7ccXjINWuWbnmqsuFu7sb/4EDNLlcBIEioNs2KUAFGmMxmk6dQm1tRZI+3xBqEkiShBQOox05Ql1nJ26gvuIUAWiKQnj/ftStW5Fk+YuF+NldsbBA4cYN9KdPmaso8Fc62ZJtk7l1C2t0FGdxESHE1xE4hkHh6lX0oSHSpRIewC/LrPf7CSgKNpCamkI/fZr8pUuIZBIcpyaBunahPp1mub+fDyMjGKUSChCsq6Nh717q9u2jbnSU0uAgRrFIwTThyhUCqRS+hgZKLS1fJvDm87SNjZGcnsYUAjcQ8vsJ9/Xh7u1FDgRQN20iks3iDA+zZFmYhQLqzZtsj8WY3L0baY2Sf55ICCKpFHUzM2SEQAJCHg+hY8fQDh5EDgRWDoRC1J88SePRo2geD0XAcBy8b98Sv3ePYDZbbf2rFQjLIphMsmDbaEBQVQkePox26BCSz7e6i4bDrDt+nGYhmBscpFAskheC4Js3bPR4qHphFYEnlcI7P4/jdqNpGu8TCe4oCsXr1z//F2ga3+/cSfTJE0qmSVYIsKzaOZDcbjKyzFIiwfvt21kMBLA07YsetzWNd+3tLLW0sH5igvT8PH9Go/z44kX+E4LGjg7GDYOcy4XlOEgLC//5P/5LCFzxOPLmzWyIx+m6fduu7v0NVGqyTSycKksAAAAASUVORK5CYII=)}
+		.unchecked-box {list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAANOgAADMQBiN+4gQAAAAd0SU1FB9gKGQ8qAt8h3m8AAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAA60lEQVRIx+2VsQqDMBRF70sCLg5OLoKgjk7+lJ/hh+STXBwcnRz8ArMEkrxOFktbaC3tULzTg5e8k5vADXDq70VbobXmvu/hvQczg4heHrJfXxQFuq67blZbMc8zpmlCXddIkgTOuZcBUko45zCOI6y1Nz2xFSEEZFmGOI7fGg4A3nsQEZqmuXOu9jallACAtm3fvmutNaIoAjM/dkBECCF89KCbk4eAb+kEnIAT8EsAM0OIz3hSyrssUvss8t5fg+uIrLXPs0gIgWVZYIyBUurQyYdheO4gz3NUVQVjDNZ1PfSjpWmKsixvehfB9GBZ3NndrgAAAABJRU5ErkJggg==)}
+		.migrated-box {list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAANOgAADMQBiN+4gQAAAAd0SU1FB+AKHREFA8vJSnkAAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAC1klEQVRIx+2VT0hUURTGf/e958w4Tc3TYowMw1GyEgwr1MqsFmbZIrIWQZsWJUjbdoHQpl3Qps0swnCRECQFYkR/TC1iKkqmfzAKTo2Vf8hoRsfR995tkRMT87RRWkUHHhy495zvnvvu933wP/75EKkkEAjIYDCIaZpIKRFCZN0kfX9xcTGtra2/irVUEolECIfDlJeXo+s6hmFkDaCqKoZhEAqFSCaTv60pqcSyLAoLC/F4PEtqDmCaJkIIKisrMybX0sdUVRWA5ubmPzdNjjI1cpXkZC/O1fV03PXgdDqRUtpPIITAsqxsDz0Z/3CZQv8uqo4N4C8/Tp2/DdM0MiZQlvk41OTkI/LW1SGtCVb5drD3eCc71wcA+VcAHA5vDd8+3UGakxiJV7i9pdQevU5T1R35pJ3MV5QW1pf+0kWBheJ2SWua8EQXZXsu4fVVYEz1sEKvof5EuxjoPvzpcRvrdp9C2gGMx6cpOHBmbImMesds7BZubwMVDTfXDnQ3vQfK7AC8wLfExMX5whyQc3q2OEnjGm5vE76SQxsfBLr77a7CNf+n0r/l6sSMtsBSnurckiIILCobAtVZhpF4gZF4jubaymj4Ch/fd380LE7bAnjc0NPxk2yqpmEuwGxF0ag+0k5uTpzZeBeaazvj0We8fXojainsb2xh2BZgbe0gSIllzSIUh63wfQ6dZ/O2fbjcKlOj58jJ3cVENESw5yErc9nf2MLQ4jwQAkV1Lqiq37/cZ9WaahJjF9AcmxiPDhLs7ePe23oOnmUwg2hSShQle96tKDjA2HAniusgo9FxnvY9Jxw7RWzGYy92QghM00x5g53qp9sHmtB58/o2umOI2NwGolMnMYUHIb7aAyiKwsjICLqu2/qBEIKUUAohMaSHSLyBSMoPTINQ6CX5+fn2AEVFRZSUlBCPx4nFYhl3L4RESjF/GEgX3pSj+Xw+/H7/b3U/AEOZFnp7O5+5AAAAAElFTkSuQmCC)}
+		ul {list-style-image: none}
+		/* ul rule needed to reset style for sub-bullets */
+
+		span.insen { color: grey                }
+
+		.pages {
+			max-width: 1000px;
+			 padding-left: 320px;
+		}
+		.menu{
+			float:left; width: 300px;
+		}
+		hr{clear:both;}
+	</style>
+</head>
+<body>
+
+<!-- Header -->
+<div class='header'>
+	[ <a href='../Integrals.html'>Prev</a> ]
+
+	[ <span class='insen'>Index</span> ]
+
+	[ <a href='./Double_Triple_Integrals.html'>Next</a> ]
+</div>
+
+<hr />
+
+<div class="menu">
+<ul>
+<li><a href="../Cheat_Sheet.html" title="Cheat Sheet" class="page">Cheat Sheet</a></li>
+<li><a href="../Derivatives.html" title="Derivatives" class="page">Derivatives</a></li>
+<li><a href="../Extrema_Lagrange_Mult.html" title="Extrema Lagrange Mult" class="page">Extrema Lagrange Mult</a></li>
+<li><a href="../Home.html" title="Home" class="page">Home</a></li>
+<li><a href="../Homework.html" title="Homework" class="page">Homework</a></li>
+<li><a href="../Integrals.html" title="Integrals" class="page">Integrals</a>
+<ul>
+<li><b>Conservative Vector Fields</b></li>
+<li><a href="./Double_Triple_Integrals.html" title="Double Triple Integrals" class="page">Double Triple Integrals</a></li>
+<li><a href="./Path_Integral-Green_Theorem.html" title="Path Integral-Green Theorem" class="page">Path Integral-Green Theorem</a></li>
+</ul>
+</li>
+<li><a href="../Introduction.html" title="Introduction" class="page">Introduction</a></li>
+<li><a href="../Limits.html" title="Limits" class="page">Limits</a></li>
+<li><a href="../Linear_Functions.html" title="Linear Functions" class="page">Linear Functions</a></li>
+<li><a href="../Lines_and_Planes.html" title="Lines and Planes" class="page">Lines and Planes</a></li>
+<li><a href="../Matrices.html" title="Matrices" class="page">Matrices</a></li>
+<li><a href="../Monday_Meetings.html" title="Monday Meetings" class="page">Monday Meetings</a></li>
+<li><a href="../Udemy_Practice.html" title="Udemy Practice" class="page">Udemy Practice</a></li>
+<li><a href="../Vectors.html" title="Vectors" class="page">Vectors</a></li>
+</ul>
+
+</div>
+
+<!-- Wiki content -->
+
+<div class='pages'>
+	<div class='heading'>
+	<h1>Conservative Vector Fields <a name='Integrals:Conservative Vector Fields'></a></h1>
+	</div>
+
+	<div class='content'>
+	<p>
+Created Saturday 04 July 2020
+</p>
+
+<p>
+Let us start with a review of Green's Theorem.<br>
+<img src="./Conservative_Vector_Fields/equation.png">
+</p>
+
+<p>
+So, we have the <b>vector field</b> <img src="./Conservative_Vector_Fields/equation001.png">.<br>
+<img src="./Conservative_Vector_Fields/equation002.png">
+</p>
+
+<p>
+By the way, <img src="./Conservative_Vector_Fields/equation003.png"> is a closed contour / line integral. Also, according to Wikipedia a <b>line integral</b> is, "an integral where the function to be integrated is evaluated along a curve."
+</p>
+
+<h3>Example</h3>
+
+<p>
+Calculate the <b>line integral</b> over the closed curve γ <br>
+<img src="./Conservative_Vector_Fields/equation004.png"><br>
+γ = the unit circle that is <b>oriented </b>counter-clockwise.
+</p>
+
+<p>
+By <b>Green's Theorem</b>, we get:<br>
+First, let us have the following:<br>
+<img src="./Conservative_Vector_Fields/equation005.png">
+</p>
+
+<p>
+<img src="./Conservative_Vector_Fields/equation006.png">
+</p>
+
+<p>
+Remember, the disk has a radius of 1 since γ is the unit circle. The area of a circle is <img src="./Conservative_Vector_Fields/equation007.png">. So, π * 1 = π. As such, the final result is 7π.
+</p>
+
+<p>
+Also, you probably noticed that I changed D to Disk. That was to make it clear that it was representing the area of the disk i.e. the unit circle we are working with.
+</p>
+
+<p>
+Also, another example I wrote out completely by hand:<br>
+<img src="../images/area-greens.png">
+</p>
+
+<h3>Another Example</h3>
+
+<p>
+Back in Calculus 2, we had to find the area of a ellipse. We used polar coordinates and whatnot do to this. However, we now have an even easier way of doing this!
+</p>
+
+<p>
+So then, let us find the area of the ellipse represented by:<br>
+<img src="./Conservative_Vector_Fields/equation008.png">
+</p>
+
+<p>
+<img src="../images/area-ellipse.png"><br>
+If you're wondering why I made the S look all purple, I don't know. I did it for fun. The color doesn't mean anything. 
+</p>
+
+<h3>Conservative Vector Fields</h3>
+
+<p>
+Time for some stuff we do a lot in physics.
+</p>
+
+<p>
+Let <img src="./Conservative_Vector_Fields/equation009.png">
+</p>
+
+<p>
+<b>Def: </b>We say that the <b>vector</b> <b>field</b> <img src="./Conservative_Vector_Fields/equation010.png"> is <b>conservative</b> if and only if there is a function <img src="./Conservative_Vector_Fields/equation011.png"> (φ is known as 'phi' by the way) such that <img src="./Conservative_Vector_Fields/equation012.png"> (remember, ∇ is the derivative). Then we say it is a conservative vector field.
+</p>
+
+<p>
+<b>The above is very important! Don't forget!</b>
+</p>
+
+<p>
+Now then, the function φ is called the <b>potential function</b> or <b>the potential energy</b>. This is from physics of course.
+</p>
+
+<p>
+<b>2nd Law of Newton: </b>If γ(t) is a curve in <img src="./Conservative_Vector_Fields/equation014.png">, then a particle of mass m moving on γ(t) satisfies the equation:<br>
+<img src="./Conservative_Vector_Fields/equation015.png"><br>
+The second derivative of γ gives us <b>acceleration.</b> 
+</p>
+
+<p>
+<b>Another Definition: </b>The particle moving on γ(t) has <b>kinetic energy </b>such that <img src="./Conservative_Vector_Fields/equation016.png">.<br>
+Also, when he writes <img src="./Conservative_Vector_Fields/equation017.png"> it's actually a vector. So in reality we have: <img src="./Conservative_Vector_Fields/equation018.png">
+</p>
+
+<h3>Theorem</h3>
+
+<p>
+If <img src="./Conservative_Vector_Fields/equation019.png"> is a conservative vector, a particle of mass m moving on γ(t) (which is the curve) under the 2nd Law of Newton, the sum of <b>kinetic</b> and <b>potential energy</b> is constant.
+</p>
+
+<p>
+<b>Proof:</b><br>
+<img src="./Conservative_Vector_Fields/equation020.png"><br>
+Everything to the left of the + sign is for <b>kinetic energy.</b> Everything on the right of the + sign is for <b>potential energy</b>.
+</p>
+
+<p>
+Now then, let's find the derivative of the above equation.<br>
+First, let's make things easy for ourselves by finding the derivative for the dot product from before like so:<br>
+<img src="./Conservative_Vector_Fields/equation021.png">
+</p>
+
+<p>
+With this, we can now work with the following:<br>
+<img src="./Conservative_Vector_Fields/equation022.png">
+</p>
+
+<p>
+Before we continue on, I want to note that we use the <b>chain rule</b> for finding the derivative of φ(γ(t)). That's why we end up with <img src="./Conservative_Vector_Fields/equation023.png">.
+</p>
+
+<p>
+Also, remember that the<b> vector field </b>is <img src="./Conservative_Vector_Fields/equation024.png">. With this knowledge, let us continue where we left off:<br>
+<img src="./Conservative_Vector_Fields/equation025.png">
+</p>
+
+<p>
+The gravity is <b>conservative.</b> Remember, that gravity is:<br>
+<img src="./Conservative_Vector_Fields/equation026.png">
+</p>
+
+<p>
+Potential energy is <img src="./Conservative_Vector_Fields/equation027.png"> because:<br>
+<img src="./Conservative_Vector_Fields/equation028.png">
+</p>
+
+<h3>Important Theorem</h3>
+
+<p>
+If <img src="./Conservative_Vector_Fields/equation029.png"> is a <b>conservative vector field</b>, and φ is its <b>potential energy</b>, and γ is a <b>smooth path</b> from point <img src="./Conservative_Vector_Fields/equation030.png"> to point <img src="./Conservative_Vector_Fields/equation031.png">. Then we have the following <b>line integral:</b><br>
+<img src="./Conservative_Vector_Fields/equation032.png"><br>
+So, we have the potential energy at point <b>b</b> minus the potential energy at point <b>a</b>. 
+</p>
+
+<p>
+Now, does this remind you of anything?<br>
+...
+</p>
+
+<p>
+...
+</p>
+
+<p>
+...
+</p>
+
+<p>
+I sure as hell can't remember.
+</p>
+
+<p>
+Anyways, it's the <b>fundamental theorem of calculus!</b><br>
+<img src="../images/fundamental-theorem.png">
+</p>
+
+<p>
+Moving forward now...<br>
+If we have a conservative <img src="./Conservative_Vector_Fields/equation033.png"> then we have:<br>
+<img src="./Conservative_Vector_Fields/equation034.png"><br>
+Regardless of the curve we follow to get from point <b>a</b> to <b>b</b>. Also, here is another integral:<br>
+<img src="./Conservative_Vector_Fields/equation035.png">
+</p>
+
+<p>
+As a consequence of that, we have the following:<br>
+If <img src="./Conservative_Vector_Fields/equation036.png"> is a <b>conservative vector field</b> then we have:<br>
+<img src="./Conservative_Vector_Fields/equation037.png"><br>
+The reason it's zero is because if γ is a closed simple curve then <b>a</b> and <b>b</b> should be equal.
+</p>
+
+<p>
+Moving forward...<br>
+Take <img src="./Conservative_Vector_Fields/equation038.png">. <b>Is this field conservative?</b><br>
+The answer is <b>no.</b> It is not. The reason is because if it was then there exists a <img src="./Conservative_Vector_Fields/equation039.png">. Then, we have <img src="./Conservative_Vector_Fields/equation040.png"> (not gonna lie, I can't really see how he wrote this).
+</p>
+
+<h3>Checking if Vector Field is Conservative</h3>
+
+<p>
+<img src="./Conservative_Vector_Fields/equation041.png"><br>
+If the previous is true, then it is conservative (or at least maybe). If it's not <b>0</b>, then it is for sure <b>not conservative</b>.
+</p>
+
+<p>
+<b>Question: </b>When a <b>vector field is conservative</b>, then:<br>
+If <br>
+<img src="./Conservative_Vector_Fields/equation042.png">
+</p>
+
+<p>
+So then, we see that for us to have a conservative vector field then this must hold:<br>
+<img src="./Conservative_Vector_Fields/equation043.png"><br>
+Where <img src="./Conservative_Vector_Fields/equation044.png">
+</p>
+
+<p>
+This also shows that the <b>Jacobian</b> is a <b>symmetric matrix.</b> 
+</p>
+
+<h3>For the Converse</h3>
+
+<p>
+<b>Poincare Lemma </b>(I can hardly see what he wrote so I'm not sure if this is the right name)<br>
+Anyways, this lemma says the following:<br>
+If <img src="./Conservative_Vector_Fields/equation045.png"> is a differentiable <b>vector field</b> whose domain is an <b>open ball</b> in <img src="./Conservative_Vector_Fields/equation046.png"> and <img src="./Conservative_Vector_Fields/equation047.png"> then <img src="./Conservative_Vector_Fields/equation048.png"> is conservative.
+</p>
+
+<p>
+Also, an <b>open ball</b> means there are no <i>small holes </i>in the domain.
+</p>
+
+<h3>Example</h3>
+
+<p>
+Let<br>
+<img src="./Conservative_Vector_Fields/equation049.png">
+</p>
+
+<p>
+We can check that the <img src="./Conservative_Vector_Fields/equation050.png">.
+</p>
+
+<p>
+So it is <b>conservative.</b><br>
+Now we have to find the <b>potential function.</b><br>
+Let the <b>potential function</b> be <img src="./Conservative_Vector_Fields/equation051.png">.
+</p>
+
+<p>
+<img src="./Conservative_Vector_Fields/equation052.png">
+</p>
+
+<p>
+Now then, we find that:<br>
+<img src="./Conservative_Vector_Fields/equation053.png">
+</p>
+
+<p>
+<b>But!</b><br>
+<img src="./Conservative_Vector_Fields/equation054.png"><br>
+So then,<br>
+<img src="./Conservative_Vector_Fields/equation055.png"> must be equal to <img src="./Conservative_Vector_Fields/equation056.png">.
+</p>
+
+<p>
+<img src="./Conservative_Vector_Fields/equation057.png">
+</p>
+
+<p>
+<b>Finally, we find that:</b><br>
+<img src="./Conservative_Vector_Fields/equation058.png">
+</p>
+
+<h3>Done</h3>
+
+<p>
+That's it! Congratulations on making it this far. We're completely done with all of the lectures. Guten luck on the final o7
+</p>
+
+<br>
+
+
+	</div>
+
+	<br />
+
+	<div class='page-footer'>
+
+			<b>Attachments:</b>
+			<table>
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation.png'>equation.png</a></td><td>&nbsp;</td><td>2.11kb</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation.tex'>equation.tex</a></td><td>&nbsp;</td><td>130b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation001.png'>equation001.png</a></td><td>&nbsp;</td><td>506b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation001.tex'>equation001.tex</a></td><td>&nbsp;</td><td>58b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation002.png'>equation002.png</a></td><td>&nbsp;</td><td>1.06kb</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation002.tex'>equation002.tex</a></td><td>&nbsp;</td><td>64b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation003.png'>equation003.png</a></td><td>&nbsp;</td><td>338b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation003.tex'>equation003.tex</a></td><td>&nbsp;</td><td>5b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation004.png'>equation004.png</a></td><td>&nbsp;</td><td>1.49kb</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation004.tex'>equation004.tex</a></td><td>&nbsp;</td><td>85b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation005.png'>equation005.png</a></td><td>&nbsp;</td><td>1.16kb</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation005.tex'>equation005.tex</a></td><td>&nbsp;</td><td>44b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation006.png'>equation006.png</a></td><td>&nbsp;</td><td>6.41kb</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation006.tex'>equation006.tex</a></td><td>&nbsp;</td><td>392b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation007.png'>equation007.png</a></td><td>&nbsp;</td><td>282b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation007.tex'>equation007.tex</a></td><td>&nbsp;</td><td>7b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation008.png'>equation008.png</a></td><td>&nbsp;</td><td>583b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation008.tex'>equation008.tex</a></td><td>&nbsp;</td><td>37b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation009.png'>equation009.png</a></td><td>&nbsp;</td><td>504b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation009.tex'>equation009.tex</a></td><td>&nbsp;</td><td>58b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation010.png'>equation010.png</a></td><td>&nbsp;</td><td>293b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation010.tex'>equation010.tex</a></td><td>&nbsp;</td><td>18b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation011.png'>equation011.png</a></td><td>&nbsp;</td><td>505b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation011.tex'>equation011.tex</a></td><td>&nbsp;</td><td>42b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation012.png'>equation012.png</a></td><td>&nbsp;</td><td>481b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation012.tex'>equation012.tex</a></td><td>&nbsp;</td><td>33b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation013.png'>equation013.png</a></td><td>&nbsp;</td><td>481b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation013.tex'>equation013.tex</a></td><td>&nbsp;</td><td>33b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation014.png'>equation014.png</a></td><td>&nbsp;</td><td>278b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation014.tex'>equation014.tex</a></td><td>&nbsp;</td><td>12b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation015.png'>equation015.png</a></td><td>&nbsp;</td><td>904b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation015.tex'>equation015.tex</a></td><td>&nbsp;</td><td>57b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation016.png'>equation016.png</a></td><td>&nbsp;</td><td>825b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation016.tex'>equation016.tex</a></td><td>&nbsp;</td><td>49b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation017.png'>equation017.png</a></td><td>&nbsp;</td><td>662b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation017.tex'>equation017.tex</a></td><td>&nbsp;</td><td>35b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation018.png'>equation018.png</a></td><td>&nbsp;</td><td>1.06kb</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation018.tex'>equation018.tex</a></td><td>&nbsp;</td><td>79b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation019.png'>equation019.png</a></td><td>&nbsp;</td><td>303b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation019.tex'>equation019.tex</a></td><td>&nbsp;</td><td>18b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation020.png'>equation020.png</a></td><td>&nbsp;</td><td>1.18kb</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation020.tex'>equation020.tex</a></td><td>&nbsp;</td><td>86b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation021.png'>equation021.png</a></td><td>&nbsp;</td><td>1.58kb</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation021.tex'>equation021.tex</a></td><td>&nbsp;</td><td>208b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation022.png'>equation022.png</a></td><td>&nbsp;</td><td>3.38kb</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation022.tex'>equation022.tex</a></td><td>&nbsp;</td><td>373b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation023.png'>equation023.png</a></td><td>&nbsp;</td><td>524b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation023.tex'>equation023.tex</a></td><td>&nbsp;</td><td>30b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation024.png'>equation024.png</a></td><td>&nbsp;</td><td>481b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation024.tex'>equation024.tex</a></td><td>&nbsp;</td><td>33b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation025.png'>equation025.png</a></td><td>&nbsp;</td><td>3.94kb</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation025.tex'>equation025.tex</a></td><td>&nbsp;</td><td>466b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation026.png'>equation026.png</a></td><td>&nbsp;</td><td>1.14kb</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation026.tex'>equation026.tex</a></td><td>&nbsp;</td><td>135b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation027.png'>equation027.png</a></td><td>&nbsp;</td><td>535b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation027.tex'>equation027.tex</a></td><td>&nbsp;</td><td>20b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation028.png'>equation028.png</a></td><td>&nbsp;</td><td>1.32kb</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation028.tex'>equation028.tex</a></td><td>&nbsp;</td><td>88b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation029.png'>equation029.png</a></td><td>&nbsp;</td><td>293b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation029.tex'>equation029.tex</a></td><td>&nbsp;</td><td>18b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation030.png'>equation030.png</a></td><td>&nbsp;</td><td>275b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation030.tex'>equation030.tex</a></td><td>&nbsp;</td><td>18b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation031.png'>equation031.png</a></td><td>&nbsp;</td><td>280b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation031.tex'>equation031.tex</a></td><td>&nbsp;</td><td>18b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation032.png'>equation032.png</a></td><td>&nbsp;</td><td>898b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation032.tex'>equation032.tex</a></td><td>&nbsp;</td><td>68b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation033.png'>equation033.png</a></td><td>&nbsp;</td><td>481b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation033.tex'>equation033.tex</a></td><td>&nbsp;</td><td>33b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation034.png'>equation034.png</a></td><td>&nbsp;</td><td>1.13kb</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation034.tex'>equation034.tex</a></td><td>&nbsp;</td><td>112b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation035.png'>equation035.png</a></td><td>&nbsp;</td><td>936b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation035.tex'>equation035.tex</a></td><td>&nbsp;</td><td>34b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation036.png'>equation036.png</a></td><td>&nbsp;</td><td>293b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation036.tex'>equation036.tex</a></td><td>&nbsp;</td><td>18b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation037.png'>equation037.png</a></td><td>&nbsp;</td><td>1.66kb</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation037.tex'>equation037.tex</a></td><td>&nbsp;</td><td>105b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation038.png'>equation038.png</a></td><td>&nbsp;</td><td>764b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation038.tex'>equation038.tex</a></td><td>&nbsp;</td><td>40b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation039.png'>equation039.png</a></td><td>&nbsp;</td><td>521b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation039.tex'>equation039.tex</a></td><td>&nbsp;</td><td>39b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation040.png'>equation040.png</a></td><td>&nbsp;</td><td>564b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation040.tex'>equation040.tex</a></td><td>&nbsp;</td><td>58b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation041.png'>equation041.png</a></td><td>&nbsp;</td><td>516b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation041.tex'>equation041.tex</a></td><td>&nbsp;</td><td>53b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation042.png'>equation042.png</a></td><td>&nbsp;</td><td>3.39kb</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation042.tex'>equation042.tex</a></td><td>&nbsp;</td><td>398b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation043.png'>equation043.png</a></td><td>&nbsp;</td><td>620b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation043.tex'>equation043.tex</a></td><td>&nbsp;</td><td>69b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation044.png'>equation044.png</a></td><td>&nbsp;</td><td>468b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation044.tex'>equation044.tex</a></td><td>&nbsp;</td><td>14b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation045.png'>equation045.png</a></td><td>&nbsp;</td><td>615b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation045.tex'>equation045.tex</a></td><td>&nbsp;</td><td>36b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation046.png'>equation046.png</a></td><td>&nbsp;</td><td>278b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation046.tex'>equation046.tex</a></td><td>&nbsp;</td><td>12b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation047.png'>equation047.png</a></td><td>&nbsp;</td><td>620b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation047.tex'>equation047.tex</a></td><td>&nbsp;</td><td>69b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation048.png'>equation048.png</a></td><td>&nbsp;</td><td>293b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation048.tex'>equation048.tex</a></td><td>&nbsp;</td><td>18b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation049.png'>equation049.png</a></td><td>&nbsp;</td><td>1.08kb</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation049.tex'>equation049.tex</a></td><td>&nbsp;</td><td>44b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation050.png'>equation050.png</a></td><td>&nbsp;</td><td>1.03kb</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation050.tex'>equation050.tex</a></td><td>&nbsp;</td><td>85b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation051.png'>equation051.png</a></td><td>&nbsp;</td><td>437b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation051.tex'>equation051.tex</a></td><td>&nbsp;</td><td>10b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation052.png'>equation052.png</a></td><td>&nbsp;</td><td>2.66kb</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation052.tex'>equation052.tex</a></td><td>&nbsp;</td><td>167b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation053.png'>equation053.png</a></td><td>&nbsp;</td><td>1.32kb</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation053.tex'>equation053.tex</a></td><td>&nbsp;</td><td>84b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation054.png'>equation054.png</a></td><td>&nbsp;</td><td>724b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation054.tex'>equation054.tex</a></td><td>&nbsp;</td><td>44b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation055.png'>equation055.png</a></td><td>&nbsp;</td><td>467b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation055.tex'>equation055.tex</a></td><td>&nbsp;</td><td>9b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation056.png'>equation056.png</a></td><td>&nbsp;</td><td>688b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation056.tex'>equation056.tex</a></td><td>&nbsp;</td><td>22b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation057.png'>equation057.png</a></td><td>&nbsp;</td><td>1.82kb</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation057.tex'>equation057.tex</a></td><td>&nbsp;</td><td>93b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation058.png'>equation058.png</a></td><td>&nbsp;</td><td>747b</td></tr>
+
+
+			<tr><td><a href='./Conservative_Vector_Fields/equation058.tex'>equation058.tex</a></td><td>&nbsp;</td><td>27b</td></tr>
+
+			</table>
+	</div>
+
+	
+
+</div>
+
+</body>
+</html>

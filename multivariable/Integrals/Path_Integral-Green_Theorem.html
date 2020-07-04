@@ -51,7 +51,7 @@
 
 <!-- Header -->
 <div class='header'>
-	[ <a href='../Integrals.html'>Prev</a> ]
+	[ <a href='./Double_Triple_Integrals.html'>Prev</a> ]
 
 	[ <span class='insen'>Index</span> ]
 
@@ -69,6 +69,8 @@
 <li><a href="../Homework.html" title="Homework" class="page">Homework</a></li>
 <li><a href="../Integrals.html" title="Integrals" class="page">Integrals</a>
 <ul>
+<li><a href="./Conservative_Vector_Fields.html" title="Conservative Vector Fields" class="page">Conservative Vector Fields</a></li>
+<li><a href="./Double_Triple_Integrals.html" title="Double Triple Integrals" class="page">Double Triple Integrals</a></li>
 <li><b>Path Integral-Green Theorem</b></li>
 </ul>
 </li>
@@ -108,12 +110,722 @@ Well. Quiz 2 is almost here.
 I believe integrals will only be on the final so I'm going to skip this lecture to focus on reviewing for the quiz and finishing HW 4. 
 </p>
 
+<p>
+— 
+</p>
+
+<p>
+Quiz is done. Felt okay. Let's learn to integrate and get this course over with.
+</p>
+
+<h3>Curves</h3>
+
+<p>
+We begin we a review about curves.<br>
+<b>Def:</b> A curve γ (gamma) in <img src="./Path_Integral-Green_Theorem/equation.png"> is just a continuous map:<br>
+<img src="./Path_Integral-Green_Theorem/equation001.png"><br>
+So, we have an interval, I, from a to b on the number line. And we go from this to <img src="./Path_Integral-Green_Theorem/equation002.png">.
+</p>
+
+<p>
+<img src="./Path_Integral-Green_Theorem/equation003.png"><br>
+<img src="./Path_Integral-Green_Theorem/equation004.png"> is gamma by the way.
+</p>
+
+<p>
+<b>Def: </b>If <img src="./Path_Integral-Green_Theorem/equation005.png">
+</p>
+
+<p>
+<b>Def: </b>A curve γ is called a <b>simple curve</b> if two things happen. If γ is <b>continuous</b> and it is <b>one-to-one</b>.<br>
+So, the curve γ has no self-intersecting points.
+</p>
+
+<p>
+<img src="../images/curve-gamma.png"><br>
+So <img src="./Path_Integral-Green_Theorem/equation006.png"> is called a <b>reparameterization </b>of the curve γ and <img src="./Path_Integral-Green_Theorem/equation007.png"> is called the <b>parameterization </b>of the curve.
+</p>
+
+<p>
+<img src="../images/param-unit-circle.png">
+</p>
+
+<p>
+Another parameterization is <img src="./Path_Integral-Green_Theorem/equation008.png">.<br>
+Then our function will be <img src="./Path_Integral-Green_Theorem/equation009.png">
+</p>
+
+<p>
+Or if <img src="./Path_Integral-Green_Theorem/equation010.png"> then<br>
+<img src="./Path_Integral-Green_Theorem/equation011.png">
+</p>
+
+<p>
+No matter what, our unit circle always has a radius of 1.
+</p>
+
+<h3>Another Example</h3>
+
+<p>
+<img src="./Path_Integral-Green_Theorem/equation012.png"><br>
+The above will be a curve.
+</p>
+
+<p>
+<img src="./Path_Integral-Green_Theorem/equation013.png">
+</p>
+
+<p>
+So then, s is the interval [0, 2] and s<sup>2</sup> is [0, 4].
+</p>
+
+<p>
+<img src="./Path_Integral-Green_Theorem/equation014.png">
+</p>
+
+<p>
+So, despite being a bit different the following <b>graphs</b>:<br>
+<img src="./Path_Integral-Green_Theorem/equation015.png"><br>
+<img src="./Path_Integral-Green_Theorem/equation016.png">
+</p>
+
+<p>
+<b>Are the same!</b>
+</p>
+
+<p>
+Moving on...
+</p>
+
+<p>
+Say we have the parabola <img src="./Path_Integral-Green_Theorem/equation017.png">.<br>
+Graphing this, we get the same parabola as we would <img src="./Path_Integral-Green_Theorem/equation018.png">.
+</p>
+
+<p>
+All of these are examples of <b>parameterization.</b>
+</p>
+
+<h3>Orientation</h3>
+
+<p>
+Orientation of a closed simple curve.
+</p>
+
+<p>
+So then, on a number line we have two directions: positive and negative.
+</p>
+
+<p>
+Similarly, on a curve γ(t), we start at t=a and end at t=b. We can also have the inverse where we start at t=b and go to t=a.
+</p>
+
+<p>
+What about a closed curve though? One that looks like this:<br>
+<img src="../images/closed-curve.png"><br>
+<b>Def:</b> In a closed curve the <b>positive direction</b> (or <b>orientation</b>) taken is the one such that when we move we have the interior of the closed curve on our <b>left side</b>. In other words, we move along the curve in a <b>counter-clockwise</b> motion.
+</p>
+
+<p>
+If we move and have the interior of the closed curve on our <b>right side</b>, then we are moving in the <b>negative</b> <b>direction</b>. In other words, we are moving <b>clockwise</b>.
+</p>
+
+<p>
+Counter-clockwise: Positive<br>
+Clockwise: Negative
+</p>
+
+<h3>Line Integrals</h3>
+
+<p>
+Let γ(t) be a curve in <img src="./Path_Integral-Green_Theorem/equation019.png"> and <img src="./Path_Integral-Green_Theorem/equation020.png">.<br>
+<b>Def: </b>We define the <b>line integral</b> of <i>f</i> along the curve γ as:<br>
+<img src="./Path_Integral-Green_Theorem/equation021.png">
+</p>
+
+<p>
+In case you can't see, the lower bound is γ. Also, s is the length of the curve. Also, <i>f</i>(γ(t)) is a real number. We are also taking length of the derivative of γ in respect to t. <br>
+So then, <img src="./Path_Integral-Green_Theorem/equation022.png">
+</p>
+
+<h3>Example</h3>
+
+<p>
+Find <img src="./Path_Integral-Green_Theorem/equation023.png"> where γ(t) = (cos(t), sin(t), t) and <img src="./Path_Integral-Green_Theorem/equation024.png">
+</p>
+
+<p>
+<b>Solution</b><br>
+<img src="./Path_Integral-Green_Theorem/equation025.png"><br>
+If you're wondering how we got two, remember that sin<sup>2</sup>θ + cos<sup>2</sup>θ = 1. Remember, trig identities.
+</p>
+
+<p>
+So...<br>
+<img src="./Path_Integral-Green_Theorem/equation026.png">
+</p>
+
+<p>
+I tried solving this by hand but sorta forgot how to integrate. I'll take his word that that's the answer for now.
+</p>
+
+<p>
+Anyways, <b>this was an example of how to calculate the line integral.</b>
+</p>
+
+<h3>General Case of Line Integrals</h3>
+
+<p>
+Suppose <img src="./Path_Integral-Green_Theorem/equation027.png"> and <img src="./Path_Integral-Green_Theorem/equation028.png"><br>
+<i>F</i> is a vector function. For any vector, we associate another vector.
+</p>
+
+<p>
+<b>Def: </b>A function <br>
+<img src="./Path_Integral-Green_Theorem/equation030.png"><br>
+is called a <b>vector field.</b>
+</p>
+
+<p>
+<b>Def: </b>We define the line integral:<br>
+<img src="./Path_Integral-Green_Theorem/equation029.png">
+</p>
+
+<p>
+Remember, the dot is for the dot (inner) product. 
+</p>
+
+<p>
+Now then, we notice that if <img src="./Path_Integral-Green_Theorem/equation031.png">, then we have <img src="./Path_Integral-Green_Theorem/equation032.png"> is the target space is <img src="./Path_Integral-Green_Theorem/equation033.png">.
+</p>
+
+<p>
+So, since <img src="./Path_Integral-Green_Theorem/equation034.png"> we can write that:<br>
+<img src="./Path_Integral-Green_Theorem/equation035.png">
+</p>
+
+<p>
+But! We know that <img src="./Path_Integral-Green_Theorem/equation036.png">. Same deal for y, z, etc.
+</p>
+
+<p>
+So then, continuing from the long ass integral from before, we have <b>this general form</b>:<br>
+<img src="./Path_Integral-Green_Theorem/equation037.png">
+</p>
+
+<h3>Properties</h3>
+
+<p>
+1) The <b>Line integral</b> is <b>independent</b> of the parameterization of γ(t). For example:<br>
+<img src="./Path_Integral-Green_Theorem/equation038.png"><br>
+In case you're wondering, this <i>parameterization</i> he's referring to is the γ(t) as we see in the integral above. So, if we have a different parameter then we'd get the same result. No matter what, the integral will be the same.
+</p>
+
+<p>
+Let's see an example of this:
+</p>
+
+<p>
+Consider <img src="./Path_Integral-Green_Theorem/equation039.png"> where <img src="./Path_Integral-Green_Theorem/equation040.png">. Also, γ(t) is a segment from (0, 0) to (1, 1).<br>
+So this, let's say that our γ(t) = (t, t). That also means y'(t) = (1, 1).<br>
+<img src="./Path_Integral-Green_Theorem/equation041.png"><br>
+I didn't crunch the numbers so I'll assume 3/2 is correct.
+</p>
+
+<p>
+<i>Now let's change the </i><b>parameterization!</b><br>
+So, let <img src="./Path_Integral-Green_Theorem/equation042.png">
+</p>
+
+<p>
+Now we have:<br>
+<img src="./Path_Integral-Green_Theorem/equation043.png"><br>
+<img src="./Path_Integral-Green_Theorem/equation044.png">
+</p>
+
+<p>
+Just like before, we got 3/2. As such, <b>changing parameterization doesn't change the result of the integral!</b>
+</p>
+
+<p>
+<b>However, this is not true when you change orientation!</b>
+</p>
+
+<h3>Changing Orientation</h3>
+
+<p>
+When changing the orientation of the curve we <b>change the sign of the integral.</b><br>
+As in Calculus 2, we have:<br>
+<img src="./Path_Integral-Green_Theorem/equation045.png">
+</p>
+
+<p>
+<b>Example of the previous case</b><br>
+Instead of γ going from (0, 0) to (1, 1), <b>we shall now go in the reverse!</b> That is, from (1, 1) to (0, 0).<br>
+Gamma is now <img src="./Path_Integral-Green_Theorem/equation046.png"><br>
+We also now have <img src="./Path_Integral-Green_Theorem/equation047.png"> with the above change.
+</p>
+
+<p>
+<img src="./Path_Integral-Green_Theorem/equation048.png">
+</p>
+
+<h3>Green's Theorem</h3>
+
+<p>
+Connects in <img src="./Path_Integral-Green_Theorem/equation049.png"> the double integral with the path integral.<br>
+Here we consider <b>closed simple curves</b> γ. In that case, instead of writing <img src="./Path_Integral-Green_Theorem/equation050.png"> we write <img src="./Path_Integral-Green_Theorem/equation051.png">.<br>
+If <img src="./Path_Integral-Green_Theorem/equation052.png"> then <img src="./Path_Integral-Green_Theorem/equation053.png"><br>
+We write <img src="./Path_Integral-Green_Theorem/equation054.png">
+</p>
+
+<p>
+So now when we take the dot (inner) product we do the following:<br>
+<img src="./Path_Integral-Green_Theorem/equation055.png">
+</p>
+
+<p>
+<b>Green's Theorem</b><br>
+Says that:<br>
+<img src="./Path_Integral-Green_Theorem/equation056.png"><br>
+where in our closed simple curve γ we have D which is the interior which is the <b>domain. </b>To reiterate, D is the domain include within the closed simple curve by γ. Remember, what makes it a closed simple curve is that it completes the circuit and doesn't intersect with itself.
+</p>
+
+<p>
+Here is an illustration of what I mean:<br>
+<img src="../images/closed-simple-curve-d.png">
+</p>
+
+<h3>Example</h3>
+
+<p>
+Calculate<br>
+<img src="./Path_Integral-Green_Theorem/equation057.png"><br>
+where γ is the circle <img src="./Path_Integral-Green_Theorem/equation058.png">.
+</p>
+
+<p>
+By <b>Green's Theorem</b>, we have<br>
+Let<br>
+ <img src="./Path_Integral-Green_Theorem/equation060.png">
+</p>
+
+<p>
+Then we have:<br>
+<img src="./Path_Integral-Green_Theorem/equation059.png"> <br>
+Also, x = rcosθ and y = rsinθ. So then, x<sup>2</sup> + y<sup>2</sup> = r<sup>2</sup>.<br>
+In turn, we have <img src="./Path_Integral-Green_Theorem/equation061.png">.<br>
+Likewise, <img src="./Path_Integral-Green_Theorem/equation062.png"><br>
+<img src="./Path_Integral-Green_Theorem/equation063.png">
+</p>
+
+<p>
+<b>I won't lie. I'm pretty confused. This is a lot to take in.</b><br>
+Oh, I think I know why. I did this before his double-triple integral video... I thought this one came first :\
+</p>
+
+<br>
+<br>
+
+
 	</div>
 
 	<br />
 
 	<div class='page-footer'>
+		<b>Backlinks:</b>
 
+		<a href='./Double_Triple_Integrals.html'>Integrals:Double Triple Integrals</a>
+
+		<br /><br />
+
+			<b>Attachments:</b>
+			<table>
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation.png'>equation.png</a></td><td>&nbsp;</td><td>266b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation.tex'>equation.tex</a></td><td>&nbsp;</td><td>12b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation001.png'>equation001.png</a></td><td>&nbsp;</td><td>622b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation001.tex'>equation001.tex</a></td><td>&nbsp;</td><td>44b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation002.png'>equation002.png</a></td><td>&nbsp;</td><td>266b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation002.tex'>equation002.tex</a></td><td>&nbsp;</td><td>12b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation003.png'>equation003.png</a></td><td>&nbsp;</td><td>1.05kb</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation003.tex'>equation003.tex</a></td><td>&nbsp;</td><td>66b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation004.png'>equation004.png</a></td><td>&nbsp;</td><td>215b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation004.tex'>equation004.tex</a></td><td>&nbsp;</td><td>6b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation005.png'>equation005.png</a></td><td>&nbsp;</td><td>1.37kb</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation005.tex'>equation005.tex</a></td><td>&nbsp;</td><td>74b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation006.png'>equation006.png</a></td><td>&nbsp;</td><td>360b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation006.tex'>equation006.tex</a></td><td>&nbsp;</td><td>19b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation007.png'>equation007.png</a></td><td>&nbsp;</td><td>338b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation007.tex'>equation007.tex</a></td><td>&nbsp;</td><td>9b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation008.png'>equation008.png</a></td><td>&nbsp;</td><td>478b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation008.tex'>equation008.tex</a></td><td>&nbsp;</td><td>30b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation009.png'>equation009.png</a></td><td>&nbsp;</td><td>1.19kb</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation009.tex'>equation009.tex</a></td><td>&nbsp;</td><td>65b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation010.png'>equation010.png</a></td><td>&nbsp;</td><td>322b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation010.tex'>equation010.tex</a></td><td>&nbsp;</td><td>16b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation011.png'>equation011.png</a></td><td>&nbsp;</td><td>912b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation011.tex'>equation011.tex</a></td><td>&nbsp;</td><td>47b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation012.png'>equation012.png</a></td><td>&nbsp;</td><td>987b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation012.tex'>equation012.tex</a></td><td>&nbsp;</td><td>59b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation013.png'>equation013.png</a></td><td>&nbsp;</td><td>853b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation013.tex'>equation013.tex</a></td><td>&nbsp;</td><td>56b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation014.png'>equation014.png</a></td><td>&nbsp;</td><td>856b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation014.tex'>equation014.tex</a></td><td>&nbsp;</td><td>46b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation015.png'>equation015.png</a></td><td>&nbsp;</td><td>987b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation015.tex'>equation015.tex</a></td><td>&nbsp;</td><td>59b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation016.png'>equation016.png</a></td><td>&nbsp;</td><td>856b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation016.tex'>equation016.tex</a></td><td>&nbsp;</td><td>46b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation017.png'>equation017.png</a></td><td>&nbsp;</td><td>935b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation017.tex'>equation017.tex</a></td><td>&nbsp;</td><td>76b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation018.png'>equation018.png</a></td><td>&nbsp;</td><td>480b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation018.tex'>equation018.tex</a></td><td>&nbsp;</td><td>45b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation019.png'>equation019.png</a></td><td>&nbsp;</td><td>273b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation019.tex'>equation019.tex</a></td><td>&nbsp;</td><td>12b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation020.png'>equation020.png</a></td><td>&nbsp;</td><td>499b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation020.tex'>equation020.tex</a></td><td>&nbsp;</td><td>39b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation021.png'>equation021.png</a></td><td>&nbsp;</td><td>1.61kb</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation021.tex'>equation021.tex</a></td><td>&nbsp;</td><td>92b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation022.png'>equation022.png</a></td><td>&nbsp;</td><td>574b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation022.tex'>equation022.tex</a></td><td>&nbsp;</td><td>40b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation023.png'>equation023.png</a></td><td>&nbsp;</td><td>598b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation023.tex'>equation023.tex</a></td><td>&nbsp;</td><td>22b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation024.png'>equation024.png</a></td><td>&nbsp;</td><td>475b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation024.tex'>equation024.tex</a></td><td>&nbsp;</td><td>15b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation025.png'>equation025.png</a></td><td>&nbsp;</td><td>2.00kb</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation025.tex'>equation025.tex</a></td><td>&nbsp;</td><td>128b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation026.png'>equation026.png</a></td><td>&nbsp;</td><td>1.64kb</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation026.tex'>equation026.tex</a></td><td>&nbsp;</td><td>113b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation027.png'>equation027.png</a></td><td>&nbsp;</td><td>492b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation027.tex'>equation027.tex</a></td><td>&nbsp;</td><td>58b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation028.png'>equation028.png</a></td><td>&nbsp;</td><td>622b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation028.tex'>equation028.tex</a></td><td>&nbsp;</td><td>44b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation029.png'>equation029.png</a></td><td>&nbsp;</td><td>2.08kb</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation029.tex'>equation029.tex</a></td><td>&nbsp;</td><td>207b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation030.png'>equation030.png</a></td><td>&nbsp;</td><td>492b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation030.tex'>equation030.tex</a></td><td>&nbsp;</td><td>58b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation031.png'>equation031.png</a></td><td>&nbsp;</td><td>504b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation031.tex'>equation031.tex</a></td><td>&nbsp;</td><td>58b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation032.png'>equation032.png</a></td><td>&nbsp;</td><td>615b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation032.tex'>equation032.tex</a></td><td>&nbsp;</td><td>36b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation033.png'>equation033.png</a></td><td>&nbsp;</td><td>278b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation033.tex'>equation033.tex</a></td><td>&nbsp;</td><td>12b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation034.png'>equation034.png</a></td><td>&nbsp;</td><td>895b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation034.tex'>equation034.tex</a></td><td>&nbsp;</td><td>45b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation035.png'>equation035.png</a></td><td>&nbsp;</td><td>2.25kb</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation035.tex'>equation035.tex</a></td><td>&nbsp;</td><td>170b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation036.png'>equation036.png</a></td><td>&nbsp;</td><td>855b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation036.tex'>equation036.tex</a></td><td>&nbsp;</td><td>49b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation037.png'>equation037.png</a></td><td>&nbsp;</td><td>1.02kb</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation037.tex'>equation037.tex</a></td><td>&nbsp;</td><td>43b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation038.png'>equation038.png</a></td><td>&nbsp;</td><td>1.01kb</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation038.tex'>equation038.tex</a></td><td>&nbsp;</td><td>127b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation039.png'>equation039.png</a></td><td>&nbsp;</td><td>714b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation039.tex'>equation039.tex</a></td><td>&nbsp;</td><td>34b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation040.png'>equation040.png</a></td><td>&nbsp;</td><td>506b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation040.tex'>equation040.tex</a></td><td>&nbsp;</td><td>58b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation041.png'>equation041.png</a></td><td>&nbsp;</td><td>2.37kb</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation041.tex'>equation041.tex</a></td><td>&nbsp;</td><td>203b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation042.png'>equation042.png</a></td><td>&nbsp;</td><td>793b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation042.tex'>equation042.tex</a></td><td>&nbsp;</td><td>43b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation043.png'>equation043.png</a></td><td>&nbsp;</td><td>1.38kb</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation043.tex'>equation043.tex</a></td><td>&nbsp;</td><td>93b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation044.png'>equation044.png</a></td><td>&nbsp;</td><td>1.33kb</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation044.tex'>equation044.tex</a></td><td>&nbsp;</td><td>101b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation045.png'>equation045.png</a></td><td>&nbsp;</td><td>1.02kb</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation045.tex'>equation045.tex</a></td><td>&nbsp;</td><td>50b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation046.png'>equation046.png</a></td><td>&nbsp;</td><td>599b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation046.tex'>equation046.tex</a></td><td>&nbsp;</td><td>28b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation047.png'>equation047.png</a></td><td>&nbsp;</td><td>597b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation047.tex'>equation047.tex</a></td><td>&nbsp;</td><td>29b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation048.png'>equation048.png</a></td><td>&nbsp;</td><td>1.19kb</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation048.tex'>equation048.tex</a></td><td>&nbsp;</td><td>137b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation049.png'>equation049.png</a></td><td>&nbsp;</td><td>273b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation049.tex'>equation049.tex</a></td><td>&nbsp;</td><td>12b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation050.png'>equation050.png</a></td><td>&nbsp;</td><td>338b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation050.tex'>equation050.tex</a></td><td>&nbsp;</td><td>13b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation051.png'>equation051.png</a></td><td>&nbsp;</td><td>368b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation051.tex'>equation051.tex</a></td><td>&nbsp;</td><td>14b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation052.png'>equation052.png</a></td><td>&nbsp;</td><td>506b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation052.tex'>equation052.tex</a></td><td>&nbsp;</td><td>58b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation053.png'>equation053.png</a></td><td>&nbsp;</td><td>452b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation053.tex'>equation053.tex</a></td><td>&nbsp;</td><td>45b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation054.png'>equation054.png</a></td><td>&nbsp;</td><td>827b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation054.tex'>equation054.tex</a></td><td>&nbsp;</td><td>39b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation055.png'>equation055.png</a></td><td>&nbsp;</td><td>1.22kb</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation055.tex'>equation055.tex</a></td><td>&nbsp;</td><td>73b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation056.png'>equation056.png</a></td><td>&nbsp;</td><td>1.96kb</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation056.tex'>equation056.tex</a></td><td>&nbsp;</td><td>121b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation057.png'>equation057.png</a></td><td>&nbsp;</td><td>906b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation057.tex'>equation057.tex</a></td><td>&nbsp;</td><td>38b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation058.png'>equation058.png</a></td><td>&nbsp;</td><td>451b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation058.tex'>equation058.tex</a></td><td>&nbsp;</td><td>13b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation059.png'>equation059.png</a></td><td>&nbsp;</td><td>3.04kb</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation059.tex'>equation059.tex</a></td><td>&nbsp;</td><td>190b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation060.png'>equation060.png</a></td><td>&nbsp;</td><td>992b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation060.tex'>equation060.tex</a></td><td>&nbsp;</td><td>40b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation061.png'>equation061.png</a></td><td>&nbsp;</td><td>422b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation061.tex'>equation061.tex</a></td><td>&nbsp;</td><td>12b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation062.png'>equation062.png</a></td><td>&nbsp;</td><td>488b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation062.tex'>equation062.tex</a></td><td>&nbsp;</td><td>20b</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation063.png'>equation063.png</a></td><td>&nbsp;</td><td>1.36kb</td></tr>
+
+
+			<tr><td><a href='./Path_Integral-Green_Theorem/equation063.tex'>equation063.tex</a></td><td>&nbsp;</td><td>120b</td></tr>
+
+			</table>
 	</div>
 
 	
