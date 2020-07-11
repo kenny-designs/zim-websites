@@ -1,0 +1,340 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>Interpolation Indexed Draws and Projections</title>
+	<meta name="generator" content="Zim 0.68">
+	<meta name="viewport" content="width=device-width">
+	<!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:300&subset=latin,greek,latin-ext' rel='stylesheet' type='text/css'> -->
+	<![if !IE]>
+	<!-- comment out for IE since it spams the user with warnings -->
+	<script type='text/javascript' src='http://code.jquery.com/jquery-1.7.1.js'></script>
+	<script type='text/javascript'>
+		$(window).load(function(){$("#navigation").height( $("#content").height()+65 );});
+	</script>
+	<![endif]>
+	<style>
+		*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+		}
+		body, html {
+			height:100%;
+			font-family:'Open Sans', sans-serif;
+			line-height:1.5em;
+			font-weight:300;
+			background-color:#FAFAFA;
+			text-rendering:geometricPrecision;
+			margin:0;
+			padding:0;
+		}
+		.wrapper {
+			height:100%;
+			padding: 1.25em;
+			margin: .5em;
+		}
+		#navigation {
+			background-color: #F3F3F3;
+			border-right:1px solid #EAEAEA;
+			padding: 1.25em;
+		}
+		
+
+		#content {
+			padding: 1.25em;
+			margin-bottom: .5em;
+			
+		}
+		#navigation ul {
+			margin-top:0;
+			margin-bottom:0;
+			padding-left:40px;
+		}
+		#navigation li {
+			list-style-type:none;
+		}
+		#navigation a {
+			text-decoration:none;
+			color:gray;
+		}
+		#navigation strong {
+			color: #6E1308;
+			font-weight:400;
+		}
+		#navigation a:hover {
+			text-decoration:underline;
+		}
+		#content h1:nth-child(1) {
+			margin-top:0;
+		}
+		h1,h2,h3,h4,h5,h6 {
+			color: #6E6408;
+			font-weight:300;
+		}
+		
+			
+		#content a {
+			color :#6E1308;
+		}
+		#content a {
+			text-decoration: none;
+		}
+		#content a:hover {
+			text-decoration: underline;
+		}
+		#content a:active {
+			text-decoration: underline;
+		}
+		#content strike {
+			color: grey;
+		}
+		#content u {
+			text-decoration: none;
+			background-color: yellow;
+		}
+		#content tt {
+			color: #6E1308;
+		}
+		#content pre {
+			color: #6E1308;
+			margin-left: 20px;
+		}
+		.backlinks {
+			color:gray;
+		}
+		hr.footnotes {
+			width: 20%;
+			margin-left: 0;
+		}
+
+	@media (min-width: 47.5em ) and (orientation: landscape) {
+	#content { margin-right: 19.5em; }
+
+	#navigation { position: absolute; top: 0; right: 0; width: 18.75em;}   
+	}
+		
+
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<div id="navigation"> <ul>
+<li><b>Interpolation Indexed Draws and Projections</b></li>
+<li><a href="./Introduction.html" title="Introduction" class="page">Introduction</a></li>
+<li><a href="./Shaders_and_the_Rendering_Pipeline.html" title="Shaders and the Rendering Pipeline" class="page">Shaders and the Rendering Pipeline</a></li>
+<li><a href="./Vectors_Matrices_and_Uniform_Variables.html" title="Vectors Matrices and Uniform Variables" class="page">Vectors Matrices and Uniform Variables</a></li>
+</ul>
+ </div>
+		<div id="content">
+			<h1>Interpolation Indexed Draws and Projections <a name='Interpolation Indexed Draws and Projections'></a></h1>
+
+			<p>
+Created Sunday 07 June 2020
+</p>
+
+<h3>Interpolation</h3>
+
+<p>
+<ul>
+<li>Per-vertex attributes passed on are <i>interpolated</i> using the other values on the primitive.
+<ul>
+<li>In other words: A weighted average of the three vertices on a triangle is passed on.</li>
+</ul>
+</li>
+<li>Fragment Shader picks up the interpolated value and uses that.</li>
+<li>The value is effectively an estimate of what the value should be at that position, had we defined it ourself.</li>
+<li>Classic Example: Using position coordinates as RGB values.</li>
+<li>Top of triangle is green, because in (x, y, z) the y is high.</li>
+<li>Convert to RGB, then G(green) is high.</li>
+<li>Midway between red and green areas, colors blend, but we didn't define that vertex position!</li>
+<li>The value was <b>interpolated.</b></li>
+<li>Interpolation is used for quickly and accurately estimating values without defining them.</li>
+<li>Can be used for interpolating Texture Coordinates when mapping textures.</li>
+<li>Can be used for interpolating Normal Vectors when handling lighting.</li>
+<li>Especially useful in Phong Shading to create the illusion of smooth/rounded surfaces.</li>
+</ul>
+</p>
+
+<p>
+<img src="./images/interpolated-triangle.png"><br>
+Notice that we only defined the colors of the vertices! The blending inbetween we <b>did not</b> define! The fragment shader interpolates this for us.
+</p>
+
+<h3>Indexed Draws</h3>
+
+<p>
+<ul>
+<li>Define vertices to draw a cube.</li>
+<li>Cube will consist of 12 triangles (two for each face).</li>
+<li>12 x 3 vertices per triangle = 36 vertices.</li>
+<li>But a cube only has 8 vertices!</li>
+<li>Some will be defined multiple times, very messy!</li>
+<li>Instead, why not define the 8 vertices of the cube...</li>
+<li>Number them 1 to 8 (or 0 to 7 in C++)...</li>
+<li>And refer to them by their number!</li>
+</ul>
+</p>
+
+<p>
+<ul>
+<li>Just bind them to an Element Array Buffer in the VAO glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, IBO);</li>
+<li>Somethings they're called an <i>Element</i> instead of an <i>Index</i>. They mean the same thing.</li>
+<li>Can still be a bit of a pain...</li>
+<li>Solution: 3D modeling software!</li>
+<li>Load in models (we will do this later in the course).</li>
+</ul>
+</p>
+
+<h3>Projections</h3>
+
+<p>
+<ul>
+<li>Used to convert from <i>View Space</i> to <i>Clip Space.</i></li>
+<li>Can be used to give the scene a <i>3D</i> look.
+<ul>
+<li>Alternatively can be used to create a 2D style for projects that require it.</li>
+<li>Perspective vs orthographic projections (more on that later).</li>
+</ul>
+</li>
+<li>Need to understand coordinate systems.</li>
+</ul>
+</p>
+
+<h3>Projections: Coordinate Systems</h3>
+
+<p>
+<ul>
+<li><b>Local Space: </b>Raw position of each vertex drawn relative to the origin. Multiply by <b>Model Matrix </b>to get... (note the ..., that means we get the following bullet point from that matrix)</li>
+<li><b>World Space: </b>Position of vertex in the world itself if camera is assumed to be positioned at the origin. Multiply by <b>View Matrix</b> to get...</li>
+<li><b>View Space: </b>Position of vertex in the world, relative to the camera position and orientation. Multiply by <b>Projection Matrix</b> to get...</li>
+<li><b>Clip Space: </b>Position of vertex in the world, relative to the camera position and orientation, as viewed in the area not to be <i>clipped</i> from the final output.</li>
+<li><b>Screen Space: </b>After clipping takes place, the final image is created and placed on the coordinate system of the window itself.</li>
+</ul>
+</p>
+
+<h3>Projections: Continued</h3>
+
+<p>
+<ul>
+<li>To create <b>Clip Space</b> we define an area (<b>frustum</b>) of what is not to be clipped with a <b>Projection Matrix.</b></li>
+<li>Two commonly used types of Projection:
+<ul>
+<li><b>Orthographic</b> (most common in 2D applications)</li>
+<li><b>Perspective </b>(most common in 3D applications)</li>
+</ul></li>
+</ul>
+</p>
+
+<h3>Projections: Orthographic</h3>
+
+<p>
+<ul>
+<li>The frustum for orthographic projections is cuboid.</li>
+<li>Everything between the <b>Far Plane</b> and <b>Near Plane</b> is kept. Rest is discarded.</li>
+<li>Parallel nature of Orthographic means 3D depth is not visible.</li>
+<li>Move object closer/further and it won't change size on screen.</li>
+</ul>
+</p>
+
+<p>
+<img src="./images/ortho-projection.png"><br>
+Once again, notice how our frustum consists of 4 parallel lines that make up a sort of rectangular shape. This prevents us from having any real depth to the scene. Despite moving towards and away the green-ish cube, it won't appear to get any larger or smaller. It will appear at a single consistent size. Hence why game engines such as Unity make use of an orthographic camera for making 2D games. Such games are still taking place in 3D space but we can't really <i>see</i> the z-axis due to this orthographic projeciton.
+</p>
+
+<h3>Projections: Perspective</h3>
+
+<p>
+<ul>
+<li>The frustum for the orthographic projections is a <i>truncated pyramid.</i></li>
+<li>Each pixel on the Near Plane diverges at an angle to reach a matching point on the Far Plane.</li>
+<li>This gives the illusion of depth!</li>
+</ul>
+</p>
+
+<p>
+<img src="./images/perspective-projection.png">
+</p>
+
+<h3>Projections Comparison</h3>
+
+<p>
+<ul>
+<li><b>Orthographic: </b>The one furthest back looks to be the same size as the one at the front, implying it's actually larger.</li>
+<li><b>Perspective: </b>The one at the back looks smaller than the one at the front, due to it being more distant, as it should.</li>
+</ul>
+</p>
+
+<p>
+<img src="./images/projection-comparison.png"><br>
+The above image shows a visual comparison between the two styles of projection.
+</p>
+
+<h3>Projections with GLM and OpenGL</h3>
+
+<p>
+<ul>
+<li>glm::mat4 proj = glm::perspective(fov, aspect, near far);</li>
+<li><b>fov</b> = field-of-view, the angle of the frustum</li>
+<li><b>aspect</b> = aspect ratio of the viewport (usually its width divided by its height).</li>
+<li><b>near</b> = distance of the near plane.</li>
+<li><b>far</b> = distance of the far plane.</li>
+<li>Bind the given matrix to a uniform in the shader.</li>
+<li>gl_Position = projection * view * model * vec4(pos, 1.0);
+<ul>
+<li>This is the correct order we want to multiply our matrices by. If we don't, then we'll get a lot of strange effects...</li>
+<li>Also remember that multiplication happens in reverse order than what we're used to!</li>
+</ul></li>
+</ul>
+</p>
+
+<h3>Summary</h3>
+
+<p>
+<ul>
+<li><b>Interpolation</b> calculates weighted values between vertices during rasterization.</li>
+<li><b>Indexed Draws</b> let us define vertices once then reference them to draw them.</li>
+<li><b>Projection Matrices</b> convert <b>View Space</b> into <b>Clip Space.</b></li>
+<li><b>Orthographic Projections</b> are used for 2D applications and don't allow depth perception.</li>
+<li><b>Perspective Projections</b> are for 3D applications and create the illusion of depth.</li>
+<li>GLM has the glm::perspective function to create perspective matrices.</li>
+</ul>
+</p>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+			<br>
+			<span class="backlinks">
+			</span>
+
+			
+		</div>
+	</div>
+</body>
+</html>
+

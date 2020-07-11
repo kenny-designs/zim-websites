@@ -14,4 +14,4 @@ Wiki websites I made with [Zim](https://zim-wiki.org/) the desktop wiki!
 [Multivariable Calculus](https://kenny-designs.github.io/zim-websites/multivariable/Home.html)
 
 ### Personal Notes
-uwu (I'm about to add this)
+[OpenGL](https://kenny-designs.github.io/zim-websites/opengl/Introduction.html)
