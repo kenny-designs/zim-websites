@@ -1,5 +1,7 @@
 # zim-websites
-Wiki websites I made with zim
+Wiki websites I made with [Zim](https://zim-wiki.org/) the desktop wiki!
+
+### School Notes
 
 [Special Topics](https://kenny-designs.github.io/zim-websites/special-topics/Day_1.html)
 
@@ -10,3 +12,6 @@ Wiki websites I made with zim
 [Calculus Review](https://kenny-designs.github.io/zim-websites/calc-review/website/Home.html)
 
 [Multivariable Calculus](https://kenny-designs.github.io/zim-websites/multivariable/Home.html)
+
+### Personal Notes
+uwu (I'm about to add this)
